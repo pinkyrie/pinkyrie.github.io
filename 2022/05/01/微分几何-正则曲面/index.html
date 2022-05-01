@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/blog/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/blog/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="basics       ref regular curve vs surface                     regular parameterized surface                           条件：       -                     regular surface">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微分几何-正则曲面">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="basics       ref regular curve vs surface                     regular parameterized surface                           条件：       -                     regular surface">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-01T01:57:06.000Z">
+<meta property="article:modified_time" content="2022-05-01T06:33:17.277Z">
+<meta property="article:author" content="rye">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary"><title>微分几何-正则曲面 | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/blog/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/blog/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">微分几何-正则曲面</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-01</span></span></div></header><div class="post-body">
+        <h1 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h1>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://max.book118.com/html/2018/0314/157269918.shtm" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/141422390" >regular curve vs surface</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="regular-parameterized-surface"   >
+          <a href="#regular-parameterized-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-parameterized-surface" class="headerlink" title="regular parameterized surface"></a>regular parameterized surface</h2>
+      
+        <h3 id="条件："   >
+          <a href="#条件：" class="heading-link"><i class="fas fa-link"></i></a><a href="#条件：" class="headerlink" title="条件："></a>条件：</h3>
+      <h2 id=""><a href="#" class="headerlink" title="- "></a>- </h2>
+        <h2 id="regular-surface"   >
+          <a href="#regular-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-surface" class="headerlink" title="regular surface"></a>regular surface</h2>
+      
+        <h3 id="条件：-1"   >
+          <a href="#条件：-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#条件：-1" class="headerlink" title="条件："></a>条件：</h3>
+      
+        <h3 id="判断方法："   >
+          <a href="#判断方法：" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断方法：" class="headerlink" title="判断方法："></a>判断方法：</h3>
+      <ol>
+<li>坐标卡覆盖</li>
+<li>正则值</li>
+</ol>
+
+        <h2 id="graph"   >
+          <a href="#graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#graph" class="headerlink" title="graph"></a>graph</h2>
+      
+        <h3 id="condition："   >
+          <a href="#condition：" class="heading-link"><i class="fas fa-link"></i></a><a href="#condition：" class="headerlink" title="condition："></a>condition：</h3>
+      <ul>
+<li>由一个坐标卡覆盖（将空间上一个点在z轴上拉伸）<ul>
+<li><ol>
+<li>smooth</li>
+<li>full rank</li>
+<li>homeomorphism</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>graph -&gt; regular surface </li>
+<li>但是regular surface只是在局部为graph</li>
+</ul>
+
+        <h3 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li>球的三种坐标卡覆盖</li>
+</ul>
+
+        <h2 id="regular-value"   >
+          <a href="#regular-value" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-value" class="headerlink" title="regular value"></a>regular value</h2>
+      <ul>
+<li>f(x,y,z)&#x3D;a 且f的梯度不为0</li>
+</ul>
+
+        <h3 id="example-1"   >
+          <a href="#example-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-1" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li><p>二次曲面(不是所有二次曲面都是正则曲面)</p>
+</li>
+<li><p>旋转面</p>
+<ul>
+<li>曲线C:x&#x3D;f(v) z&#x3D;g(v) 沿着哪个轴转，那个轴的方程就是不变的 另外两个轴上的方程需要满足 x^2+y^2&#x3D;z^2 (<strong>会写旋转面方程</strong>)</li>
+<li>r(u,v)&#x3D;(f(v)cos(u),f(v)sin(v),g(v)) u-curve 是<strong>latitude line</strong> v-curve是<strong>longitude line</strong></li>
+<li>判断旋转曲面是否正则曲面：曲线为正则曲线+f(v)&gt;0</li>
+</ul>
+</li>
+<li><p>torus</p>
+<ul>
+<li>方程：</li>
+</ul>
+</li>
+<li><p>helicoid</p>
+<ul>
+<li>方程：</li>
+<li>判断：r(u) x r(v)</li>
+</ul>
+</li>
+<li><p>直纹面 ruled surface</p>
+<ul>
+<li>r(u,v)&#x3D;a(u)+vl(u)</li>
+<li>a(u):准线 directrix l(u):直母线 generating line</li>
+<li>柱面</li>
+<li>锥面</li>
+<li>切线曲面</li>
+</ul>
+</li>
+</ul>
+
+        <h1 id="example-2"   >
+          <a href="#example-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-2" class="headerlink" title="example"></a>example</h1>
+      
+        <h2 id="coordinate-curves-of-parametric-surface"   >
+          <a href="#coordinate-curves-of-parametric-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#coordinate-curves-of-parametric-surface" class="headerlink" title="coordinate curves of parametric surface"></a>coordinate curves of parametric surface</h2>
+      <ul>
+<li>u曲线：u任意变化 v为常数</li>
+<li>v曲线：v任意变化 u为常数</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/">http://gitee.com/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://gitee.com/ryenney/tags/math/">math</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/blog/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%9E%8B/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">微分几何-第一基本型</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/blog/2022/04/28/post/"><span class="paginator-prev__text">null pointer as reference</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#basics"><span class="toc-number">1.</span> <span class="toc-text">
+          basics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#regular-parameterized-surface"><span class="toc-number">1.1.</span> <span class="toc-text">
+          regular parameterized surface</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          条件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">- </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#regular-surface"><span class="toc-number">1.3.</span> <span class="toc-text">
+          regular surface</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%EF%BC%9A-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">
+          条件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">
+          判断方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#graph"><span class="toc-number">1.4.</span> <span class="toc-text">
+          graph</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#condition%EF%BC%9A"><span class="toc-number">1.4.1.</span> <span class="toc-text">
+          condition：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#example"><span class="toc-number">1.4.2.</span> <span class="toc-text">
+          example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#regular-value"><span class="toc-number">1.5.</span> <span class="toc-text">
+          regular value</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#example-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">
+          example</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#example-2"><span class="toc-number">2.</span> <span class="toc-text">
+          example</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#coordinate-curves-of-parametric-surface"><span class="toc-number">2.1.</span> <span class="toc-text">
+          coordinate curves of parametric surface</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="undefined"></i></span></a><a class="sidebar-ov-social-item" href="https://plus.google.com/" target="_blank" rel="noopener" data-popover="Google" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="undefined"></i></span></a><a class="sidebar-ov-social-item" href="https://twitter.com/" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="undefined"></i></span></a><a class="sidebar-ov-social-item" href="https://youtube.com/" target="_blank" rel="noopener" data-popover="Youtube" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="undefined"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/blog/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/blog/js/utils.js?v=2.6.2"></script><script src="/blog/js/stun-boot.js?v=2.6.2"></script><script src="/blog/js/scroll.js?v=2.6.2"></script><script src="/blog/js/header.js?v=2.6.2"></script><script src="/blog/js/sidebar.js?v=2.6.2"></script></body></html>
