@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="harmonic maps(调和映射)                           define         对保角对应的弱化 Δ为laplace算子 即f求二阶导数                      参数化方法         不会出现自交  权重有可能是负的   局部质量不佳 非负                       计算参数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="maps">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/05/04/maps/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="harmonic maps(调和映射)                           define         对保角对应的弱化 Δ为laplace算子 即f求二阶导数                      参数化方法         不会出现自交  权重有可能是负的   局部质量不佳 非负                       计算参数">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041406217.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408795.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408709.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041410775.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041413723.png">
+<meta property="og:image" content="http://gitee.com/ryenney/maps.assets/image-20220504141405489.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041417625.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041419341.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041420227.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041423624.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041426633.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041427360.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041429320.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041430163.png">
+<meta property="article:published_time" content="2022-05-04T05:58:44.000Z">
+<meta property="article:modified_time" content="2022-05-04T06:31:21.951Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041406217.png"><title>maps | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/05/04/maps/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">maps</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-04</span></span></div></header><div class="post-body">
+        <h2 id="harmonic-maps-调和映射"   >
+          <a href="#harmonic-maps-调和映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#harmonic-maps-调和映射" class="headerlink" title="harmonic maps(调和映射)"></a>harmonic maps(调和映射)</h2>
+      
+        <h4 id="define"   >
+          <a href="#define" class="heading-link"><i class="fas fa-link"></i></a><a href="#define" class="headerlink" title="define"></a>define</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041406217.png" alt="image-20220504140611580"></p>
+<ul>
+<li>对保角对应的弱化</li>
+<li>Δ为laplace算子 即f求二阶导数</li>
+</ul>
+
+        <h4 id="参数化方法"   >
+          <a href="#参数化方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#参数化方法" class="headerlink" title="参数化方法"></a>参数化方法</h4>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408795.png" alt="image-20220504140836986"></p>
+<p>不会出现自交</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408709.png" alt="image-20220504140855597">权重有可能是负的</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041410775.png" alt="image-20220504141011876"></p>
+<p>局部质量不佳 非负</p>
+</li>
+</ul>
+
+        <h4 id="计算参数化的扭曲"   >
+          <a href="#计算参数化的扭曲" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算参数化的扭曲" class="headerlink" title="计算参数化的扭曲"></a>计算参数化的扭曲</h4>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041413723.png" alt="image-20220504141343764"></p>
+</li>
+<li><p><img src="/ryenney/maps.assets/image-20220504141405489.png" alt="image-20220504141405489"> 3*2雅可比矩阵 -&gt;得到两个正交矩阵（旋转)和中间的矩阵（缩放)</p>
+</li>
+<li><p>由缩放 即奇异值看出形变的大小（σ）</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041417625.png" alt="image-20220504141749629"></p>
+</li>
+<li><p>也可以通过奇异值去构造参数化</p>
+</li>
+</ul>
+
+        <h4 id="计算jacobi矩阵的奇异值"   >
+          <a href="#计算jacobi矩阵的奇异值" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算jacobi矩阵的奇异值" class="headerlink" title="计算jacobi矩阵的奇异值"></a>计算jacobi矩阵的奇异值</h4>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041419341.png" alt="image-20220504141926213"></p>
+</li>
+<li><p>通过第一基本型计算eigenvalues 然后计算奇异值</p>
+</li>
+<li><p>然后求能量函数</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041420227.png" alt="image-20220504142029407"></p>
+</li>
+<li><p>在1,1取最小值 是isometric</p>
+<p>在x,x取最小值 是conformal</p>
+</li>
+<li><p>奇异值是基于每个点计算的 因此作积分算出整个曲面的整体能量</p>
+</li>
+</ul>
+
+        <h4 id="基于形变参数化的流程"   >
+          <a href="#基于形变参数化的流程" class="heading-link"><i class="fas fa-link"></i></a><a href="#基于形变参数化的流程" class="headerlink" title="基于形变参数化的流程"></a>基于形变参数化的流程</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041423624.png" alt="image-20220504142342710"></p>
+<ul>
+<li>1.构造能量函数<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041426633.png" alt="image-20220504142610532"></li>
+<li>sigma1&#x3D;sigma2 取min</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041427360.png" alt="image-20220504142709245"></li>
+<li>sigma1&#x3D;sigma2   sigma1*sigma2&#x3D;1</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041429320.png" alt="image-20220504142905858"></li>
+<li>sigma1&#x3D;1 sigma2&#x3D;1（等距）</li>
+</ul>
+</li>
+<li>2.函数是关于u,v的</li>
+<li>3.找到最小值优化</li>
+<li>harmonic maps 线性的方法<ul>
+<li>线性方法 mean values is better</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041430163.png" alt="image-20220504143031129"></li>
+</ul>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/05/04/maps/">http://gitee.com/ryenney/2022/05/04/maps/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/05/04/developable-suface/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">developable suface</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/05/04/mapping/"><span class="paginator-prev__text">mapping</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#harmonic-maps-%E8%B0%83%E5%92%8C%E6%98%A0%E5%B0%84"><span class="toc-number">1.</span> <span class="toc-text">
+          harmonic maps(调和映射)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#define"><span class="toc-number">1.0.1.</span> <span class="toc-text">
+          define</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.2.</span> <span class="toc-text">
+          参数化方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%8F%82%E6%95%B0%E5%8C%96%E7%9A%84%E6%89%AD%E6%9B%B2"><span class="toc-number">1.0.3.</span> <span class="toc-text">
+          计算参数化的扭曲</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97jacobi%E7%9F%A9%E9%98%B5%E7%9A%84%E5%A5%87%E5%BC%82%E5%80%BC"><span class="toc-number">1.0.4.</span> <span class="toc-text">
+          计算jacobi矩阵的奇异值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%BD%A2%E5%8F%98%E5%8F%82%E6%95%B0%E5%8C%96%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="toc-number">1.0.5.</span> <span class="toc-text">
+          基于形变参数化的流程</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

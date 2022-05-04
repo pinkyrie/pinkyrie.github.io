@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="isometric correspondence()                           conformal correspondence (保角对应)                           前提and定义：        三次以上连续可微的一一映射 从s1-&gt;s2 任一点p上作切映射后 点p的切空间映射后角度不变  即保">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mapping">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/05/04/mapping/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="isometric correspondence()                           conformal correspondence (保角对应)                           前提and定义：        三次以上连续可微的一一映射 从s1-&gt;s2 任一点p上作切映射后 点p的切空间映射后角度不变  即保">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041117696.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041118780.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041120140.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041124548.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041238532.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041315032.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041323514.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041322225.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041326340.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041330618.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041332591.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041334327.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041336383.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041338876.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041339171.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041340233.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041341584.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041359835.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041342571.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041355382.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041356255.png">
+<meta property="article:published_time" content="2022-05-04T03:11:57.000Z">
+<meta property="article:modified_time" content="2022-05-04T06:03:10.726Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041117696.png"><title>mapping | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/05/04/mapping/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">mapping</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-04</span></span></div></header><div class="post-body">
+        <h2 id="isometric-correspondence"   >
+          <a href="#isometric-correspondence" class="heading-link"><i class="fas fa-link"></i></a><a href="#isometric-correspondence" class="headerlink" title="isometric correspondence()"></a>isometric correspondence()</h2>
+      
+        <h2 id="conformal-correspondence-保角对应"   >
+          <a href="#conformal-correspondence-保角对应" class="heading-link"><i class="fas fa-link"></i></a><a href="#conformal-correspondence-保角对应" class="headerlink" title="conformal correspondence (保角对应)"></a>conformal correspondence (保角对应)</h2>
+      
+        <h4 id="前提and定义："   >
+          <a href="#前提and定义：" class="heading-link"><i class="fas fa-link"></i></a><a href="#前提and定义：" class="headerlink" title="前提and定义："></a>前提and定义：</h4>
+      <ul>
+<li>三次以上连续可微的一一映射 从s1-&gt;s2</li>
+<li>任一点p上作切映射后 点p的切空间映射后角度不变</li>
+</ul>
+<p>即保证切映射角度不变</p>
+
+        <h4 id="判断是否保角对应"   >
+          <a href="#判断是否保角对应" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断是否保角对应" class="headerlink" title="判断是否保角对应"></a>判断是否保角对应</h4>
+      <ul>
+<li><p>欧氏空间具有内积（特点）每个空间都具有自己的度量</p>
+</li>
+<li><p>线性同构(双射+内积可以保持) linear isomorphism</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041117696.png" alt="image-20220504111738277"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041118780.png" alt="image-20220504111802299"></p>
+</li>
+<li><p>保角 &#x3D;&#x3D; 满足内积的等式关系</p>
+</li>
+</ul>
+
+        <h4 id="命题"   >
+          <a href="#命题" class="heading-link"><i class="fas fa-link"></i></a><a href="#命题" class="headerlink" title="命题"></a>命题</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041120140.png" alt="image-20220504112042903"></p>
+<ul>
+<li><p>如果是保角对应则必须满足存在一个<strong>正的连续函数λ</strong> 使得切映射后的内积满足该等式</p>
+</li>
+<li><p>对比等距映射 保内积(切映射之前的两个向量内积&#x3D;切映射之后两个向量的内积) 即λ恒等于1时 为等距对应(isometric correspondence)</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041124548.png" alt="image-20220504112457013"></p>
+</li>
+<li><p>φ(*)表示把I2(s2上的基本型)拉回到s1上</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041238532.png" alt="image-20220504123849222"></p>
+</li>
+<li><p>满足保角对应需要第一基本型满足上式</p>
+</li>
+<li></li>
+</ul>
+
+        <h4 id="定理"   >
+          <a href="#定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理" class="headerlink" title="定理"></a>定理</h4>
+      <ul>
+<li><p>任何正则参数曲面一定可以局部和平面构成保角对应</p>
+</li>
+<li><p>作保角参数化（应用）</p>
+</li>
+<li><p>通过一个平面 可以使得两个正则参数曲面之间建立保角对应</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041315032.png" alt="image-20220504131521344"></p>
+</li>
+</ul>
+
+        <h4 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h4>
+      <ul>
+<li>因为球和柱面的F&#x3D;0（交叉项&#x3D;0）所以一定能形成正交的参数曲线网– 判断有无正交参数曲线网用第一基本型</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041323514.png" alt="image-20220504132127771"></li>
+</ul>
+
+        <h4 id="application"   >
+          <a href="#application" class="heading-link"><i class="fas fa-link"></i></a><a href="#application" class="headerlink" title="application"></a>application</h4>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041322225.png" alt="image-20220504132238416"></p>
+</li>
+<li><p>从三维到曲面的映射</p>
+</li>
+<li><p>曲面参数化分为平面参数化和球面参数化</p>
+</li>
+<li><p>0亏格（类似球面） 可以参数化到球面上</p>
+</li>
+<li><p>轮胎面 亏格&#x3D;1 两个孔 亏格&#x3D;2</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041326340.png" alt="image-20220504132559812"></p>
+</li>
+<li><p>需要剪开开孔然后映射到平面（轮胎面-&gt;矩形）</p>
+<ul>
+<li>纹理映射(texture mapping)</li>
+<li>remeshing重新网格化  曲面-&gt;平面-&gt;曲面 逆映射回到曲面</li>
+<li>shape interpolation 形状插值 计算人和恐龙的形状插值（或者恐龙到人的形状转变） 分别将输入输出映射到平面 再逆映射回去</li>
+</ul>
+</li>
+<li><p>参数化的性质</p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041330618.png" alt="image-20220504133026992"></li>
+</ul>
+</li>
+<li><p>三种基本的参数化</p>
+<ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041332591.png" alt="image-20220504133204568"></p>
+<ul>
+<li>保长</li>
+<li>保角（共形）<ul>
+<li>相似变换 只允许旋转+均匀缩放</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041334327.png" alt="image-20220504133448147"></li>
+</ul>
+</li>
+<li>保面积</li>
+</ul>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041336383.png" alt="image-20220504133638711"></p>
+</li>
+<li><p>评估参数化</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041338876.png" alt="image-20220504133843935"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041339171.png" alt="image-20220504133941153"></p>
+</li>
+<li><p>第一基本型<img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041340233.png" alt="image-20220504134030596"></p>
+</li>
+<li><p>构造两个曲面之间的映射</p>
+<ul>
+<li><p><strong>isometric map</strong></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041341584.png" alt="image-20220504134142466"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041359835.png" alt="image-20220504134157979"></p>
+<p>等距曲面上对应点有相同的高斯曲率</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041342571.png" alt="image-20220504134250931"></p>
+</li>
+<li><p>conformal map and isometric map都是局部双射</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041355382.png" alt="image-20220504135545480"></p>
+</li>
+<li><p>面积元&#x3D;行列式值</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041356255.png" alt="image-20220504135624707"></p>
+</li>
+<li><p>如果一个映射时等距&#x3D;&#x3D;共形+保面积</p>
+<p>三个边长 &#x3D;&#x3D; 唯一一个三角形 &#x3D;&#x3D;角度+面积</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/05/04/mapping/">http://gitee.com/ryenney/2022/05/04/mapping/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/05/04/maps/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">maps</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/05/03/%E4%B9%A0%E6%A6%82%E5%A4%8D%E4%B9%A0/"><span class="paginator-prev__text">习概复习</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#isometric-correspondence"><span class="toc-number">1.</span> <span class="toc-text">
+          isometric correspondence()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#conformal-correspondence-%E4%BF%9D%E8%A7%92%E5%AF%B9%E5%BA%94"><span class="toc-number">2.</span> <span class="toc-text">
+          conformal correspondence (保角对应)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E6%8F%90and%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">2.0.1.</span> <span class="toc-text">
+          前提and定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%BF%9D%E8%A7%92%E5%AF%B9%E5%BA%94"><span class="toc-number">2.0.2.</span> <span class="toc-text">
+          判断是否保角对应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E9%A2%98"><span class="toc-number">2.0.3.</span> <span class="toc-text">
+          命题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-number">2.0.4.</span> <span class="toc-text">
+          定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#example"><span class="toc-number">2.0.5.</span> <span class="toc-text">
+          example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#application"><span class="toc-number">2.0.6.</span> <span class="toc-text">
+          application</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
