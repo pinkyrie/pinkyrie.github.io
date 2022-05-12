@@ -1,0 +1,370 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="Gauss map         将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上 将曲面的法向量 –&gt;单位球面上 曲面弯曲很大 则法向量变化也会很大 通过法向量的变化课衡量弯曲程度                      切映射         从s曲面切空间到球面的切空间 切映射是将一个切向量 映射成另一个切向量    切映射">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weingarten map">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/05/09/Weingarten%20map/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="Gauss map         将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上 将曲面的法向量 –&gt;单位球面上 曲面弯曲很大 则法向量变化也会很大 通过法向量的变化课衡量弯曲程度                      切映射         从s曲面切空间到球面的切空间 切映射是将一个切向量 映射成另一个切向量    切映射">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091635334.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091638436.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091736082.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091743421.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091745271.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091747138.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205110951306.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111007482.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111008066.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111114680.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111120155.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111123520.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111127626.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111129731.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141380.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141378.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111146358.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111214963.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111216309.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111225217.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111229885.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111232369.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111653327.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111656751.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111657549.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111658718.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111659723.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111702736.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111708172.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111715039.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111717407.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120907782.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120911040.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120931558.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120932480.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120938882.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120939661.png">
+<meta property="article:published_time" content="2022-05-09T08:35:01.000Z">
+<meta property="article:modified_time" content="2022-05-12T02:09:30.788Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png"><title>Weingarten map | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/05/09/Weingarten%20map/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Weingarten map</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-12</span></span></div></header><div class="post-body"><span id="more"></span>
+
+
+        <h2 id="Gauss-map"   >
+          <a href="#Gauss-map" class="heading-link"><i class="fas fa-link"></i></a><a href="#Gauss-map" class="headerlink" title="Gauss map"></a>Gauss map</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png" alt="image-20220509163219231"></p>
+<ul>
+<li>将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上</li>
+<li>将曲面的法向量 –&gt;单位球面上</li>
+<li>曲面弯曲很大 则法向量变化也会很大</li>
+<li>通过法向量的变化课衡量弯曲程度</li>
+</ul>
+
+        <h2 id="切映射"   >
+          <a href="#切映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#切映射" class="headerlink" title="切映射"></a>切映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091635334.png" alt="image-20220509163533988"></p>
+<ul>
+<li>从s曲面切空间到球面的切空间</li>
+<li>切映射是将一个切向量 映射成另一个切向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091638436.png" alt="image-20220509163812058"></p>
+<ul>
+<li>切映射是线性的映射 只作用在切向量上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091736082.png" alt="image-20220509173611422"></p>
+<ul>
+<li>由于切平面的映射没有作旋转 只是平移 所以法向量是平行的 单位球面的法向量是n n也是曲面s的单位法向量 所以p点处的切平面和球面的切平面是平行的 所以球面和曲面s上的切空间是一样的 球面和曲面的切向量是一样的（nu&#x3D;ru nv&#x3D;rv 向量不看位置只看方向 起点不同但方向一样）</li>
+<li>所以g*是自己对自己的映射</li>
+</ul>
+
+        <h2 id="第二基本型和w映射"   >
+          <a href="#第二基本型和w映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#第二基本型和w映射" class="headerlink" title="第二基本型和w映射"></a>第二基本型和w映射</h2>
+      <ul>
+<li>映射dr后再和dr内积得到第二基本型</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091743421.png" alt="image-20220509174353021"></p>
+
+        <h2 id="w映射是自共轭映射"   >
+          <a href="#w映射是自共轭映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射是自共轭映射" class="headerlink" title="w映射是自共轭映射"></a>w映射是自共轭映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091745271.png" alt="image-20220509174553131"></p>
+<ul>
+<li>自共轭即满足W(dr)δr&#x3D;drW(δr) 交换位置后值不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091747138.png" alt="image-20220509174735688"></p>
+<ul>
+<li>w是一个矩阵 求w的特征值和特征向量 则λ是特征值 dr是特征向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205110951306.png" alt="image-20220511095152035"></p>
+<ul>
+<li>λ是特征值法曲率 dr是切向量 </li>
+<li>w映射对应两个特征值 λ1和λ2如果相等（A&#x3D;0） 则特征向量无法确定 即这一点处任意一个切向量都是特征向量 如果λ1和λ2不相等 则可以确定两个线性无关且正交的特征向量</li>
+</ul>
+
+        <h3 id="证明特征值λ1-2对应法曲率"   >
+          <a href="#证明特征值λ1-2对应法曲率" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明特征值λ1-2对应法曲率" class="headerlink" title="证明特征值λ1,2对应法曲率"></a>证明特征值λ1,2对应法曲率</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111007482.png" alt="image-20220511100732973"></p>
+<ul>
+<li>去一组正交基底 并且使其成为该点的特征向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111008066.png" alt="image-20220511100854589"></p>
+<ul>
+<li>利用w映射的线性 可以把e表示成cos+sin形式 然后法曲率公式(e.e&#x3D;1 单位向量) e1和e2正交没有交叉项</li>
+<li>任一点法曲率等于两个主曲率的组合 所以λ1和λ2对应的是主曲率（即法曲率的最大和最小值）</li>
+</ul>
+
+        <h3 id="Euler-formula-2-第二个欧拉公式"   >
+          <a href="#Euler-formula-2-第二个欧拉公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#Euler-formula-2-第二个欧拉公式" class="headerlink" title="Euler formula 2 第二个欧拉公式"></a>Euler formula 2 第二个欧拉公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111114680.png" alt="image-20220511111411872"></p>
+<ul>
+<li>θ的意义不一样 <ul>
+<li>θ表示切向量与e1的夹角</li>
+<li>θ-θ0 切向量与u曲线的夹角-主方向与u曲线的夹角</li>
+</ul>
+</li>
+<li>脐点：法曲率与切方向无关（主曲率相等的点；第二基本型与第一基本型成比例的点） 任意du dv下恒成立得出L&#x2F;E&#x3D;M&#x2F;F&#x3D;N&#x2F;G&#x3D;Kn<ul>
+<li>分为两类：平点 第二基本型&#x3D;0即平面 局部是平面</li>
+<li>圆点：局部是球面</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111120155.png" alt="image-20220511112017808"></li>
+</ul>
+
+        <h3 id="关于脐点的定理"   >
+          <a href="#关于脐点的定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#关于脐点的定理" class="headerlink" title="关于脐点的定理"></a>关于脐点的定理</h3>
+      <ul>
+<li>判定平面：全是平点</li>
+<li>判定球面：全是圆点</li>
+</ul>
+
+        <h2 id="曲率线"   >
+          <a href="#曲率线" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线" class="headerlink" title="曲率线"></a>曲率线</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111123520.png" alt="image-20220511112307269"></p>
+<ul>
+<li>每个点处的切方向&#x3D;主方向</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111127626.png" alt="image-20220511112715283"></p>
+<ul>
+<li>主方向满足w映射的方程</li>
+<li>w映射的定义 是-g*(曲面上的切向量到单位球面的映射)</li>
+</ul>
+
+        <h3 id="曲率线第一个判定标准："   >
+          <a href="#曲率线第一个判定标准：" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线第一个判定标准：" class="headerlink" title="曲率线第一个判定标准："></a>曲率线第一个判定标准：</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111129731.png" alt="image-20220511112903563"></p>
+<ul>
+<li>曲线法向量的导数和曲线切向量的关系</li>
+</ul>
+
+        <h3 id="曲率线第二个判定标准"   >
+          <a href="#曲率线第二个判定标准" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线第二个判定标准" class="headerlink" title="曲率线第二个判定标准"></a>曲率线第二个判定标准</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141380.png" alt="image-20220511114140471"></p>
+<ul>
+<li><p><strong>当且仅当曲面沿着c的法线所构成的曲面是一个可展曲面</strong></p>
+</li>
+<li><p>由法线形成的一定是一个直纹面（法线当作母线 曲线c当作准线 法线沿着母线扫过一定形成一个直纹面）c的方程是r(s)</p>
+<ul>
+<li>得到直纹面的方程r&#x3D;r(s)+tn(s)</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141378.png" alt="image-20220511114107048"></p>
+<ul>
+<li>注意判断直纹面方程是否可展平面的条件：</li>
+<li>r’是曲线切向量 垂直 n</li>
+<li>n 垂直n‘ n是单位法向量场（对于一个常数向量函数）n同时垂直r’和n’所以n垂直r’和n’形成的平面（它们的外积）</li>
+<li>混合积交换依次顺序加一个负号</li>
+<li>λ&#x3D;0 即两个向量的外积&#x3D;0 r‘平行n’ 根据第一个判定定理 r’如果平行n’ 则是曲率线</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111146358.png" alt="image-20220511114643867"></p>
+<ul>
+<li>必要性证明：<ul>
+<li>通过r’平行n’可以得到三个向量的外积&#x3D;0 满足直纹面是可展曲面的条件</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111214963.png" alt="image-20220511121343551"></p>
+<ul>
+<li>纬线：曲面上初始的点绕z周旋转一周得到</li>
+<li>经线：经过旋转轴的平面与曲面求交线得到的 经线上的法向量都在平面上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111216309.png" alt="image-20220511121638337"></p>
+<ul>
+<li>可展曲面一定是直纹面 直母线是一组曲率线<ul>
+<li>沿着直母线的法向量是不变的 所以导数&#x3D;0 而零向量和dr&#x2F;dt（任何向量）都平行</li>
+<li>可展曲面的另一组曲率线是：和直母线正交的的直线</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="主曲率主方向的具体计算公式"   >
+          <a href="#主曲率主方向的具体计算公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#主曲率主方向的具体计算公式" class="headerlink" title="主曲率主方向的具体计算公式"></a>主曲率主方向的具体计算公式</h2>
+      
+        <h3 id="Mean-curvature-and-Gauss-curvature"   >
+          <a href="#Mean-curvature-and-Gauss-curvature" class="heading-link"><i class="fas fa-link"></i></a><a href="#Mean-curvature-and-Gauss-curvature" class="headerlink" title="Mean curvature and Gauss curvature"></a>Mean curvature and Gauss curvature</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111225217.png" alt="image-20220511122519634"></p>
+<ul>
+<li>δr是曲面s的一个主方向 主方向满足w映射等式</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111229885.png" alt="image-20220511122939594"></p>
+<ul>
+<li>上面的方程组有非零解的话 当且仅当<strong>行列式&#x3D;0</strong>（由线性代数）</li>
+<li>正则曲面的w映射一定有两个特征值 所以行列式&#x3D;0的方程一定有两个根（不同讨论b^2-4ac&lt;0 的情况）<ul>
+<li>λ1+λ2&#x3D;2H</li>
+<li>λ1*λ2&#x3D;K</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111232369.png" alt="image-20220511123227995"></p>
+<ul>
+<li>H 是平均曲率 K是高斯曲率 由主曲率构成</li>
+<li>可以由平均曲率（描述细节）和高斯曲率（有一个等于0则等于0 平面的主曲率都是0 高斯曲率都是0）求主曲率 </li>
+<li>用高斯曲率判断光滑平坦<ul>
+<li>高斯曲率还有离散化求法</li>
+</ul>
+</li>
+<li><strong>高斯曲率和平均曲率也是参数变换的不变量</strong></li>
+</ul>
+
+        <h3 id="主曲率性质"   >
+          <a href="#主曲率性质" class="heading-link"><i class="fas fa-link"></i></a><a href="#主曲率性质" class="headerlink" title="主曲率性质"></a>主曲率性质</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111653327.png" alt="image-20220511165348807"></p>
+<ul>
+<li>主曲率是连续函数 不会突变 在非脐点邻域内连续可微</li>
+</ul>
+
+        <h3 id="计算步骤："   >
+          <a href="#计算步骤：" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算步骤：" class="headerlink" title="计算步骤："></a>计算步骤：</h3>
+      
+        <h4 id="从主曲率求主方向"   >
+          <a href="#从主曲率求主方向" class="heading-link"><i class="fas fa-link"></i></a><a href="#从主曲率求主方向" class="headerlink" title="从主曲率求主方向"></a>从主曲率求主方向</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111656751.png" alt="image-20220511165655563"></p>
+<ul>
+<li>（如果是两个主曲率不相等&#x3D;&#x3D;非脐点）求第一基本型和第二基本型 利用高斯曲率和平均曲率公式解关于主曲率的二次方程 求的的解代入δu和δv的等式 可以得到δu和δv</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111657549.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111658718.png" alt="image-20220511165843527"></p>
+<ul>
+<li>（相等&#x3D;&#x3D;脐点）</li>
+</ul>
+
+        <h4 id="从主方向求主曲率"   >
+          <a href="#从主方向求主曲率" class="heading-link"><i class="fas fa-link"></i></a><a href="#从主方向求主曲率" class="headerlink" title="从主方向求主曲率"></a>从主方向求主曲率</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111659723.png" alt="image-20220511165957617"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111702736.png" alt="image-20220511170258680"></p>
+<ul>
+<li>如果把u,v看成变量 点在移动 则上面式子也是曲率线的方程</li>
+<li>重点※ 怎么求主曲率主方向和高斯曲率</li>
+</ul>
+
+        <h3 id="定理"   >
+          <a href="#定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理" class="headerlink" title="定理"></a>定理</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111708172.png" alt="image-20220511170807074"></p>
+<ul>
+<li>参数曲线方向（u曲线和v曲线）正好是主曲率方向的条件</li>
+<li>u曲线和v曲线不一定是曲面的主方向</li>
+</ul>
+
+        <h4 id="证明："   >
+          <a href="#证明：" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明：" class="headerlink" title="证明："></a>证明：</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111715039.png" alt="image-20220511171519427"></p>
+<ul>
+<li>参数曲线网正交&#x3D;&#x3D;F&#x3D;0</li>
+<li>假设u曲线的单位向量（方向）是(1,0)</li>
+<li>ru不是零向量 所以E!&#x3D;0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111717407.png" alt="image-20220511171726996"></p>
+<ul>
+<li>当F和M&#x3D;0时可以得到上式是成立的</li>
+</ul>
+
+        <h4 id="推论"   >
+          <a href="#推论" class="heading-link"><i class="fas fa-link"></i></a><a href="#推论" class="headerlink" title="推论"></a>推论</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120907782.png" alt="image-20220512090740574"></p>
+<ul>
+<li><p>参数曲线网正好是正交的曲率线的条件是 F&#x3D;M&#x3D;0 </p>
+<p>此时 第一基本型可以写成：</p>
+<p>第二基本型写成：k1E+k2G (只需代入k1&#x3D;L&#x2F;E，k2&#x3D;N&#x2F;G)</p>
+</li>
+</ul>
+
+        <h3 id="脐点处找正交曲率线网"   >
+          <a href="#脐点处找正交曲率线网" class="heading-link"><i class="fas fa-link"></i></a><a href="#脐点处找正交曲率线网" class="headerlink" title="脐点处找正交曲率线网"></a>脐点处找正交曲率线网</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120911040.png" alt="image-20220512091150945"></p>
+<ul>
+<li>正则曲面s上一定存在<strong>非脐点</strong>处的邻域内 有一个参数系u,v 这个参数系可形成一个正交的曲率线网<ul>
+<li>uv曲线可通过参数变换形成正交的曲率现网</li>
+</ul>
+</li>
+<li>如果不是孤立的<strong>脐点</strong> 则这个脐点的邻域可以形成平面或者球面 平面和球面都可以找到正交曲率线网</li>
+<li>如果是孤立<strong>脐点</strong> 邻域内没有脐点 找不到曲率线（不能保证一定存在正交的曲率线网）</li>
+</ul>
+
+        <h3 id="w映射的矩阵"   >
+          <a href="#w映射的矩阵" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射的矩阵" class="headerlink" title="w映射的矩阵"></a>w映射的矩阵</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120931558.png" alt="image-20220512093129083"></p>
+<ul>
+<li>nu和nv可以由ru和rv线性表达 求{E,F,F,G}的逆矩阵</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120932480.png" alt="image-20220512093224130"></p>
+<ul>
+<li>迹和行列式在线性变化中保持不变</li>
+<li>w映射变换矩阵的trace(迹)&#x3D;对角元素的和&#x3D;2倍平均曲率</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120938882.png" alt="image-20220512093841725"></p>
+<ul>
+<li>行列式&#x3D;高斯曲率</li>
+<li>高斯曲率的几何意义：两个切向量的外积&#x3D;高斯曲率*两个切向量外积</li>
+<li>面积元&#x3D;du x dv 所以可以用高斯曲率表示面积元的映射</li>
+<li><strong>映射之后（单位球面积）&#x2F; 原始的面积 &#x3D; 高斯曲率</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120939661.png" alt="image-20220512093925550"></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/05/09/Weingarten%20map/">http://gitee.com/ryenney/2022/05/09/Weingarten%20map/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/05/09/Untitled%202/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/05/09/chap1-internet/"><span class="paginator-prev__text">Weingarten map</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gauss-map"><span class="toc-number">1.</span> <span class="toc-text">
+          Gauss map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%98%A0%E5%B0%84"><span class="toc-number">2.</span> <span class="toc-text">
+          切映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9F%BA%E6%9C%AC%E5%9E%8B%E5%92%8Cw%E6%98%A0%E5%B0%84"><span class="toc-number">3.</span> <span class="toc-text">
+          第二基本型和w映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#w%E6%98%A0%E5%B0%84%E6%98%AF%E8%87%AA%E5%85%B1%E8%BD%AD%E6%98%A0%E5%B0%84"><span class="toc-number">4.</span> <span class="toc-text">
+          w映射是自共轭映射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%E7%89%B9%E5%BE%81%E5%80%BC%CE%BB1-2%E5%AF%B9%E5%BA%94%E6%B3%95%E6%9B%B2%E7%8E%87"><span class="toc-number">4.1.</span> <span class="toc-text">
+          证明特征值λ1,2对应法曲率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Euler-formula-2-%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Euler formula 2 第二个欧拉公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E8%84%90%E7%82%B9%E7%9A%84%E5%AE%9A%E7%90%86"><span class="toc-number">4.3.</span> <span class="toc-text">
+          关于脐点的定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B2%E7%8E%87%E7%BA%BF"><span class="toc-number">5.</span> <span class="toc-text">
+          曲率线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B2%E7%8E%87%E7%BA%BF%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%88%A4%E5%AE%9A%E6%A0%87%E5%87%86%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">
+          曲率线第一个判定标准：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B2%E7%8E%87%E7%BA%BF%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%88%A4%E5%AE%9A%E6%A0%87%E5%87%86"><span class="toc-number">5.2.</span> <span class="toc-text">
+          曲率线第二个判定标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#example"><span class="toc-number">5.3.</span> <span class="toc-text">
+          example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E6%9B%B2%E7%8E%87%E4%B8%BB%E6%96%B9%E5%90%91%E7%9A%84%E5%85%B7%E4%BD%93%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">
+          主曲率主方向的具体计算公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mean-curvature-and-Gauss-curvature"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Mean curvature and Gauss curvature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9B%B2%E7%8E%87%E6%80%A7%E8%B4%A8"><span class="toc-number">6.2.</span> <span class="toc-text">
+          主曲率性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">6.3.</span> <span class="toc-text">
+          计算步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E4%B8%BB%E6%9B%B2%E7%8E%87%E6%B1%82%E4%B8%BB%E6%96%B9%E5%90%91"><span class="toc-number">6.3.1.</span> <span class="toc-text">
+          从主曲率求主方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E4%B8%BB%E6%96%B9%E5%90%91%E6%B1%82%E4%B8%BB%E6%9B%B2%E7%8E%87"><span class="toc-number">6.3.2.</span> <span class="toc-text">
+          从主方向求主曲率</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86"><span class="toc-number">6.4.</span> <span class="toc-text">
+          定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%81%E6%98%8E%EF%BC%9A"><span class="toc-number">6.4.1.</span> <span class="toc-text">
+          证明：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E8%AE%BA"><span class="toc-number">6.4.2.</span> <span class="toc-text">
+          推论</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%90%E7%82%B9%E5%A4%84%E6%89%BE%E6%AD%A3%E4%BA%A4%E6%9B%B2%E7%8E%87%E7%BA%BF%E7%BD%91"><span class="toc-number">6.5.</span> <span class="toc-text">
+          脐点处找正交曲率线网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#w%E6%98%A0%E5%B0%84%E7%9A%84%E7%9F%A9%E9%98%B5"><span class="toc-number">6.6.</span> <span class="toc-text">
+          w映射的矩阵</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">35</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
