@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="plane curves         角度允许相差2Π倍 规定逆时针为正向 顺时针是反向    旋转之后 垂直T向量                      得到平面曲线的frenet标架         注意法向量的朝向方向 曲线是顺时针方向 法向是朝外 为什么呢 目前看起来是 粒子在这点的切向量即瞬时速度是顺时针方向 我们规定了法向量是逆时针旋转切">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curve3">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/03/14/curve3/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="plane curves         角度允许相差2Π倍 规定逆时针为正向 顺时针是反向    旋转之后 垂直T向量                      得到平面曲线的frenet标架         注意法向量的朝向方向 曲线是顺时针方向 法向是朝外 为什么呢 目前看起来是 粒子在这点的切向量即瞬时速度是顺时针方向 我们规定了法向量是逆时针旋转切">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141038285.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141039376.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141040864.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141050943.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054670.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054820.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141056168.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141100043.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141102863.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106209.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106235.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141108198.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141110904.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141121352.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141126686.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141151140.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153856.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153710.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141154422.png">
+<meta property="article:published_time" content="2022-03-14T00:46:09.000Z">
+<meta property="article:modified_time" content="2022-05-15T07:56:13.472Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141038285.png"><title>curve3 | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/03/14/curve3/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">curve3</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body">
+        <h2 id="plane-curves"   >
+          <a href="#plane-curves" class="heading-link"><i class="fas fa-link"></i></a><a href="#plane-curves" class="headerlink" title="plane curves"></a>plane curves</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141038285.png" alt="image-20220514103811739"></p>
+<ul>
+<li>角度允许相差2Π倍 规定逆时针为正向 顺时针是反向</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141039376.png" alt="image-20220514103949962"></p>
+<ul>
+<li>旋转之后 垂直T向量</li>
+</ul>
+
+        <h3 id="得到平面曲线的frenet标架"   >
+          <a href="#得到平面曲线的frenet标架" class="heading-link"><i class="fas fa-link"></i></a><a href="#得到平面曲线的frenet标架" class="headerlink" title="得到平面曲线的frenet标架"></a>得到平面曲线的frenet标架</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141040864.png" alt="image-20220514104025904"></p>
+<ul>
+<li>注意<strong>法向量的朝向方向</strong> 曲线是顺时针方向 法向是朝外</li>
+<li>为什么呢 目前看起来是 粒子在这点的切向量即瞬时速度是顺时针方向 我们规定了法向量是逆时针旋转切向量90° 因此法向量逆时针旋转后是朝向外面的</li>
+</ul>
+
+        <h3 id="相对曲率-kr"   >
+          <a href="#相对曲率-kr" class="heading-link"><i class="fas fa-link"></i></a><a href="#相对曲率-kr" class="headerlink" title="相对曲率 kr"></a>相对曲率 kr</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141050943.png" alt="image-20220514105059173"></p>
+<ul>
+<li><p>一个向量长度是常数的话 它和它的一阶导数正交</p>
+</li>
+<li><p>平面曲线一定能得到：两个向量同时垂直另一个向量 则这两个向量是平行的 所以T’平行N(空间曲线是不一定的)</p>
+</li>
+<li><p>曲线在一点的曲率&#x3D;相对曲率的绝对值</p>
+</li>
+</ul>
+
+        <h3 id="frenet公式"   >
+          <a href="#frenet公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#frenet公式" class="headerlink" title="frenet公式"></a>frenet公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054670.png" alt="image-20220514105424470"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054820.png" alt="image-20220514105454874"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141056168.png" alt="image-20220514105628915"></p>
+<ul>
+<li><p>矩阵表达式</p>
+</li>
+<li><p>曲率中心是每个点的坐标沿着法向量方向 平移相对曲率倒数距离的点</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141100043.png" alt="image-20220514110009090"></p>
+<ul>
+<li>kr描述的是方向角关于弧长的变化率</li>
+<li>平面直线的相对曲率&#x3D;0 切向量是常向量 θ不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141102863.png" alt="image-20220514110231509"></p>
+<ul>
+<li>+表示弯曲方向与法向量一致 -表示弯曲方向与它相反</li>
+<li>这里曲线是朝下弯曲而法向量是向外的 所以kr&#x3D;-k(s)</li>
+</ul>
+
+        <h3 id="fundamental-theorem-of-plane-curve"   >
+          <a href="#fundamental-theorem-of-plane-curve" class="heading-link"><i class="fas fa-link"></i></a><a href="#fundamental-theorem-of-plane-curve" class="headerlink" title="fundamental theorem of plane curve"></a>fundamental theorem of plane curve</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106209.png" alt="image-20220514110603138"></p>
+<ul>
+<li>类比三维曲线的基本定理（曲率和挠率唯一确定一个曲线 补考v其位置的话）</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106235.png" alt="image-20220514110650071"></li>
+</ul>
+
+        <h4 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141108198.png" alt="image-20220514110834427"></p>
+<ul>
+<li>关于θ求积分可以得到x和y的值 </li>
+<li>给一个kr就可以哦通过构造得到r曲线</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141110904.png" alt="image-20220514111053701"></p>
+<ul>
+<li>旋转可以使得在这点处</li>
+</ul>
+
+        <h2 id="旋转指标rotation-index"   >
+          <a href="#旋转指标rotation-index" class="heading-link"><i class="fas fa-link"></i></a><a href="#旋转指标rotation-index" class="headerlink" title="旋转指标rotation index"></a>旋转指标rotation index</h2>
+      <ul>
+<li>θ描述i轴和T(s)的方向角 i 和 T(s)实际的角度无法确定 始终相差2Π的k倍</li>
+<li>对于一个曲线 终点和起点的方向角差值一定是常数 b点和a点相差k倍2Π 是同一个k</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141121352.png" alt="image-20220514112129531"></p>
+<ul>
+<li>θ‘和θ都是度量同一个相差的角度 两者都是相差k2Π</li>
+<li>不同的分支指的是 把一个起点和重点组合 然后平移2kΠ</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141126686.png" alt="image-20220514112641774"></p>
+<ul>
+<li>封闭曲线的切向量绕曲线转一周 然后和出发点的切向量可能是重合的 所以θ(b)-θ(a)是2Π的整数倍 可以是+ - 0 即得到旋转指标</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141151140.png" alt="image-20220514115106996"></p>
+<ul>
+<li><p>分段光滑的曲线也满足旋转指标的性质 </p>
+</li>
+<li><p>如果有角点 则需要挖角点然后单独算角点的旋转指标（经过前的切向量方向和经过角点后的切向量方向）</p>
+</li>
+</ul>
+
+        <h3 id="封闭简单曲线的旋转指标"   >
+          <a href="#封闭简单曲线的旋转指标" class="heading-link"><i class="fas fa-link"></i></a><a href="#封闭简单曲线的旋转指标" class="headerlink" title="封闭简单曲线的旋转指标"></a>封闭简单曲线的旋转指标</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153856.png" alt="image-20220514115320629"></p>
+<ul>
+<li>如果有分支（两个方向） 外面的圆和里面的圆都是正方向 所以旋转指标是2</li>
+<li>封闭圆环有几个<ul>
+<li>顺时针 则-1</li>
+<li>逆时针 则+1</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153710.png" alt="image-20220514115350846"></p>
+
+        <h4 id="homework"   >
+          <a href="#homework" class="heading-link"><i class="fas fa-link"></i></a><a href="#homework" class="headerlink" title="homework"></a>homework</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141154422.png" alt="image-20220514115414478"></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/03/14/curve3/">http://gitee.com/ryenney/2022/03/14/curve3/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">微分几何-正则曲面</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/03/07/curve2/"><span class="paginator-prev__text">curve2</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#plane-curves"><span class="toc-number">1.</span> <span class="toc-text">
+          plane curves</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%97%E5%88%B0%E5%B9%B3%E9%9D%A2%E6%9B%B2%E7%BA%BF%E7%9A%84frenet%E6%A0%87%E6%9E%B6"><span class="toc-number">1.1.</span> <span class="toc-text">
+          得到平面曲线的frenet标架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E6%9B%B2%E7%8E%87-kr"><span class="toc-number">1.2.</span> <span class="toc-text">
+          相对曲率 kr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#frenet%E5%85%AC%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">
+          frenet公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fundamental-theorem-of-plane-curve"><span class="toc-number">1.4.</span> <span class="toc-text">
+          fundamental theorem of plane curve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%81%E6%98%8E"><span class="toc-number">1.4.1.</span> <span class="toc-text">
+          证明</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC%E6%8C%87%E6%A0%87rotation-index"><span class="toc-number">2.</span> <span class="toc-text">
+          旋转指标rotation index</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E9%97%AD%E7%AE%80%E5%8D%95%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%97%8B%E8%BD%AC%E6%8C%87%E6%A0%87"><span class="toc-number">2.1.</span> <span class="toc-text">
+          封闭简单曲线的旋转指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#homework"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          homework</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">49</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

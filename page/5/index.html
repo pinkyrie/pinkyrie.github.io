@@ -1,0 +1,875 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="过期的jk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="rye and pinkypie">
+<meta property="og:url" content="http://gitee.com/ryenney/page/5/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="过期的jk">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary"><title>rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/page/5/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%9E%8B/">微分几何-第一基本型</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-03</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/148001852#:~:text=%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F%E7%94%A8%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%20I%20%E8%A1%A8%E7%A4%BA%EF%BC%9A%20%E8%AE%BE%20X%20%28u%2C,v%29%20%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E6%9B%B2%E9%9D%A2%EF%BC%8C%E5%88%99%E4%B8%A4%E4%B8%AA%E5%88%87%E5%90%91%E9%87%8F%E7%9A%84%E5%86%85%E7%A7%AF%E4%B8%BA%20%E8%BF%99%E9%87%8C%20E%2C%20F%2C%E4%B8%8E%20G%20%E6%98%AF%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F%E7%9A%84%E7%B3%BB%E6%95%B0%E3%80%82" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h2>
+      <ul>
+<li><p>切平面 切空间引入 </p>
+</li>
+<li><p>第一基本形式可以表示为一个对称矩阵</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205011133179.png" alt="image-20220501113316758"></p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/04/28/post/">null pointer as reference</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-04-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-02</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="不要轻易传指针"   >
+          <a href="#不要轻易传指针" class="heading-link"><i class="fas fa-link"></i></a><a href="#不要轻易传指针" class="headerlink" title="不要轻易传指针"></a>不要轻易传指针</h1>
+      <p>0x00000010b0effba8 {root&#x3D;0x0000012b741f1c50 {element&#x3D;1 leftChild&#x3D;0x0000000000000000 <NULL> rightChild&#x3D;…} }</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th></th>
+<th>名称</th>
+<th>值</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>▶</td>
+<td>p_root</td>
+<td>0x0000012b741f1c50 {element&#x3D;1 leftChild&#x3D;0x0000000000000000 <NULL> rightChild&#x3D;0x0000012b741f1170 {element&#x3D;…} }</td>
+<td>BinarySearchTreeNode<int> *</td>
+</tr>
+</tbody></table></div>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th></th>
+<th>名称</th>
+<th>值</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>▶</td>
+<td>root</td>
+<td>0x0000012b741f1c50 {element&#x3D;1 leftChild&#x3D;0x0000000000000000 <NULL> rightChild&#x3D;0x0000012b741f1170 {element&#x3D;…} }</td>
+<td>BinarySearchTreeNode<int> *</td>
+</tr>
+</tbody></table></div>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th></th>
+<th>名称</th>
+<th>值</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>▶</td>
+<td>node</td>
+<td>0x0000023091581a40 {element&#x3D;5 leftChild&#x3D;0x0000000000000000 <NULL> rightChild&#x3D;0x0000023091581920 {element&#x3D;…} }</td>
+<td>BinarySearchTreeNode<int> *</td>
+</tr>
+</tbody></table></div>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th></th>
+<th>名称</th>
+<th>值</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>◢</td>
+<td>rightChild</td>
+<td>0x0000023091581a40 {element&#x3D;5 leftChild&#x3D;0x0000000000000000 <NULL> rightChild&#x3D;0x0000023091581920 {element&#x3D;…} }</td>
+<td>BinarySearchTreeNode<int> *</td>
+</tr>
+</tbody></table></div>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/04/28/Untitled/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-04-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-04-28</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/04/27/my-new-post/">physical math</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-04-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-02</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204281023090.png" alt="image-20220428102351636"></p>
+
+        <h3 id="无穷远处的极点"   >
+          <a href="#无穷远处的极点" class="heading-link"><i class="fas fa-link"></i></a><a href="#无穷远处的极点" class="headerlink" title="无穷远处的极点"></a>无穷远处的极点</h3>
+      <ul>
+<li>z还原成1&#x2F;t</li>
+</ul>
+
+        <h2 id="residues"   >
+          <a href="#residues" class="heading-link"><i class="fas fa-link"></i></a><a href="#residues" class="headerlink" title="residues"></a>residues</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204281038391.png" alt="image-20220428103841325"></p>
+<ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204281109481.png" alt="image-20220428110855547"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204281114154.png" alt="image-20220428111455392"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204281121219.png" alt="image-20220428112115482"></p>
+</li>
+</ul>
+
+        <h1 id="复变函数级数"   >
+          <a href="#复变函数级数" class="heading-link"><i class="fas fa-link"></i></a><a href="#复变函数级数" class="headerlink" title="复变函数级数"></a>复变函数级数</h1>
+      
+        <h2 id="Talor-seires"   >
+          <a href="#Talor-seires" class="heading-link"><i class="fas fa-link"></i></a><a href="#Talor-seires" class="headerlink" title="Talor seires"></a>Talor seires</h2>
+      <ul>
+<li>幂级数的合函数&#x3D;&#x3D;解析函数</li>
+<li>解析函数可以展开成幂级数</li>
+<li>f(z)在某点z0解析的充分必要条件&#x3D;&#x3D;f(z)在z0的某个邻域内右幂级数展开式，即talor展式<ul>
+<li>“<strong>局部</strong>展开成幂级数”的实函数&#x3D;&#x3D;解析函数：能够用幂级数表示的函数就是解析函数</li>
+<li>一点处的Talor展式不会再整个解析域内成立 不同解析点的Talor展式一般不同</li>
+</ul>
+</li>
+</ul>
+
+        <h4 id="收敛半径"   >
+          <a href="#收敛半径" class="heading-link"><i class="fas fa-link"></i></a><a href="#收敛半径" class="headerlink" title="收敛半径"></a>收敛半径</h4>
+      <ul>
+<li>从展开点到距离它最近的奇点之间的距离，m</li>
+</ul>
+
+        <h2 id="Laurent-series"   >
+          <a href="#Laurent-series" class="heading-link"><i class="fas fa-link"></i></a><a href="#Laurent-series" class="headerlink" title="Laurent series"></a>Laurent series</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204282026294.png" alt="image-20220428202620416"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204282028899.png" alt="image-20220428202845151"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204282031055.png" alt="image-20220428203120743"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204282033874.png" alt="image-20220428203314586"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202204282035837.png" alt="image-20220428203547421"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/04/20/hello-world/">Hello World</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-04-20</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-04-28</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Welcome to <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>! This is your very first post. Check <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> or you can ask me on <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>.</p>
+
+        <h2 id="Quick-Start"   >
+          <a href="#Quick-Start" class="heading-link"><i class="fas fa-link"></i></a><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+      
+        <h3 id="Create-a-new-post"   >
+          <a href="#Create-a-new-post" class="heading-link"><i class="fas fa-link"></i></a><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Run-server"   >
+          <a href="#Run-server" class="heading-link"><i class="fas fa-link"></i></a><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Generate-static-files"   >
+          <a href="#Generate-static-files" class="heading-link"><i class="fas fa-link"></i></a><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Deploy-to-remote-sites"   >
+          <a href="#Deploy-to-remote-sites" class="heading-link"><i class="fas fa-link"></i></a><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/">微分几何-正则曲面</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="regular-parameterized-surface"   >
+          <a href="#regular-parameterized-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-parameterized-surface" class="headerlink" title="regular parameterized surface"></a>regular parameterized surface</h2>
+      <ul>
+<li>u做x轴，v做y轴（类比平面上的坐标）<ul>
+<li>固定一个u或v 可以得到一个参数曲线</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="正则点"   >
+          <a href="#正则点" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则点" class="headerlink" title="正则点"></a>正则点</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141200431.png" alt="image-20220514120003513"></p>
+<ul>
+<li>判定ru和rv线性无关 即 外积不等于0</li>
+</ul>
+
+        <h3 id="正则参数曲面"   >
+          <a href="#正则参数曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则参数曲面" class="headerlink" title="正则参数曲面"></a>正则参数曲面</h3>
+      <ul>
+<li>每一个点都是正则点</li>
+<li></li>
+</ul>
+
+        <h3 id="正则曲面"   >
+          <a href="#正则曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则曲面" class="headerlink" title="正则曲面"></a>正则曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141220997.png" alt="image-20220514122019003"></p>
+<ul>
+<li>M是三维空间的子集 定义x映射 从参数域（u,v) D 到 M</li>
+<li>把平面上的e1 和 e2 映射到曲面上的切向量δx&#x2F;δu 和 δx&#x2F;δv</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141222050.png" alt="image-20220514122213935"></p>
+<ul>
+<li>X is smooth &#x3D;&#x3D; 每个分量函数都是可微即可</li>
+<li>X的微分是满秩的 &#x3D;&#x3D; X关于u和v的求导是线性无关的 <ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141218507.png" alt="image-20220514121837328"></li>
+<li>判断满秩1 可以用ru和rv外积</li>
+<li>判断满秩2 这三个矩阵的行列式不同时为0</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141223761.png"></p>
+<ul>
+<li>同胚 &#x3D;&#x3D; 双射 &#x3D;&#x3D; 单射+满射 （一 一对应）x和x的逆都是连续的<strong>（是正则曲面和正则参数曲面的本质区别）</strong></li>
+</ul>
+
+        <h3 id="映射-X-是一个参数化-把参数域映射到空间曲面"   >
+          <a href="#映射-X-是一个参数化-把参数域映射到空间曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#映射-X-是一个参数化-把参数域映射到空间曲面" class="headerlink" title="映射 X 是一个参数化 把参数域映射到空间曲面"></a>映射 X 是一个参数化 把参数域映射到空间曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141226460.png" alt="image-20220514122652480"></p>
+<ul>
+<li>X是映射</li>
+<li>V是坐标卡 邻域（曲面一块区域 满足有一个映射把参数域映射到这个曲面区域）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141228884.png" alt="image-20220514122802907"></p>
+<ul>
+<li>局部坐标&#x3D;参数坐标&#x3D;纹理坐标（u,v）曲面上点的参数表达</li>
+<li>正则曲面可以由一族坐标卡覆盖曲面 坐标卡之间允许交集（坐标卡的个数是不规定的）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141234922.png" alt="image-20220514123456667"></p>
+<ul>
+<li>将平面进行伸缩变形 映射到空间曲面</li>
+</ul>
+
+        <h2 id="coordinate-curves"   >
+          <a href="#coordinate-curves" class="heading-link"><i class="fas fa-link"></i></a><a href="#coordinate-curves" class="headerlink" title="coordinate curves"></a>coordinate curves</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141238966.png" alt="image-20220514123837608"></p>
+<ul>
+<li><strong>坐标曲线</strong></li>
+<li>固定u是u0，变化v &#x3D;&#x3D;是s上经过p点的v曲线</li>
+<li>固定v是v0，变化u &#x3D;&#x3D;是s上经过p点的u曲线</li>
+<li>类比成参数域上平行x轴和y轴的曲线 曲面s上任意一个点上都有坐标曲线 </li>
+<li>u曲线和v曲线形成<strong>参数曲线网</strong></li>
+</ul>
+
+        <h4 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141250748.png" alt="image-20220514125014270"></p>
+
+        <h2 id="graph"   >
+          <a href="#graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#graph" class="headerlink" title="graph"></a>graph</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141616011.png" alt="image-20220514161620863"></p>
+<ul>
+<li>曲面M由x,y和f(x,y)的显函数形成的（在z方向进行拉伸）</li>
+<li>曲面M只有一个坐标卡（即只有一个映射）</li>
+<li>这个映射是M的坐标卡 且M只需要这一个坐标卡就可以覆盖</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141618027.png" alt="image-20220514161838498"></p>
+<ul>
+<li>由graph形成的曲面就是正则曲面</li>
+<li>正则曲面在局部可以是graph 可以找到正则曲面每个点处小的局部可形成graph</li>
+<li>是z&#x3D;f(x,y)形成的曲面&#x3D;&#x3D;正则曲面</li>
+</ul>
+
+        <h3 id="example-1"   >
+          <a href="#example-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-1" class="headerlink" title="example"></a>example</h3>
+      
+        <h4 id="球的坐标卡覆盖方式1"   >
+          <a href="#球的坐标卡覆盖方式1" class="heading-link"><i class="fas fa-link"></i></a><a href="#球的坐标卡覆盖方式1" class="headerlink" title="球的坐标卡覆盖方式1"></a>球的坐标卡覆盖方式1</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141625807.png" alt="image-20220514162518654"></p>
+<ul>
+<li>把球用z&#x3D;f(x,y)表示 会有两部分 上半球和下半球</li>
+<li>平面区域是一个开集（不含赤道也即是不含 u^2+v^2&#x3D;1的点）</li>
+</ul>
+
+        <h4 id="覆盖方式2"   >
+          <a href="#覆盖方式2" class="heading-link"><i class="fas fa-link"></i></a><a href="#覆盖方式2" class="headerlink" title="覆盖方式2"></a>覆盖方式2</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141631503.png" alt="image-20220514163109586"></p>
+<ul>
+<li>球坐标只需要两个坐标卡就可以完全覆盖</li>
+</ul>
+
+        <h4 id="覆盖方式3"   >
+          <a href="#覆盖方式3" class="heading-link"><i class="fas fa-link"></i></a><a href="#覆盖方式3" class="headerlink" title="覆盖方式3"></a>覆盖方式3</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141632486.png" alt="image-20220514163248543"></p>
+<ul>
+<li>球面投影（除了北极点 其他都可以一一对应 越靠近北极点 投影越远</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://max.book118.com/html/2018/0314/157269918.shtm" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/141422390" >regular curve vs surface</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="regular-value-of-function"   >
+          <a href="#regular-value-of-function" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-value-of-function" class="headerlink" title="regular value of function"></a>regular value of function</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141636128.png" alt="image-20220514163626934"></p>
+<ul>
+<li>判断一个函数在某点处是不是正则值 ：f(x,y,z)&#x3D;a是一个等值面，需要确定f的梯度不为0</li>
+<li>判断正则曲面方式（判断a是否为正则值即可）</li>
+</ul>
+
+        <h3 id="example-2"   >
+          <a href="#example-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-2" class="headerlink" title="example"></a>example</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141639899.png" alt="image-20220514163918087"></p>
+<ul>
+<li>判断1是否为方程的正则值</li>
+<li>只有（0，0，0）使得方程梯度等于0 但是这个点不是f&#x3D;1 所以1是正则值</li>
+</ul>
+
+        <h3 id="旋转曲面"   >
+          <a href="#旋转曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141741233.png" alt="image-20220514174127137"></p>
+<ul>
+<li>u曲线是纬线 v曲线是经线</li>
+<li>绕某个轴旋转的旋转曲面方程 绕z轴则z坐标不变（绕哪个轴 那个轴的坐标就不会变）</li>
+<li>旋转曲面不一定是正则曲面</li>
+</ul>
+
+        <h3 id="torus轮胎面"   >
+          <a href="#torus轮胎面" class="heading-link"><i class="fas fa-link"></i></a><a href="#torus轮胎面" class="headerlink" title="torus轮胎面"></a>torus轮胎面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141747509.png" alt="image-20220514174748383"></p>
+<ul>
+<li><p>判断torus是不是正则曲面 需要看他的梯度 如果要使得梯度&#x3D;0 则需要xyz都为0或者根号(x^2+y^2)-a^2&#x3D;0</p>
+</li>
+<li><p>将圆环绕z轴旋转一周形成的</p>
+</li>
+</ul>
+
+        <h3 id="正螺面"   >
+          <a href="#正螺面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正螺面" class="headerlink" title="正螺面"></a>正螺面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141752487.png" alt="image-20220514175225273"></p>
+<ul>
+<li>取L1是x轴 L2是z轴 正螺面是一个正则曲面</li>
+</ul>
+
+        <h3 id="直纹面-ruled-surface"   >
+          <a href="#直纹面-ruled-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#直纹面-ruled-surface" class="headerlink" title="直纹面(ruled surface)"></a>直纹面(ruled surface)</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754267.png" alt="image-20220514175406828"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754218.png" alt="image-20220514175444169"></p>
+<ul>
+<li>直纹面也是正则曲面</li>
+<li>L(u)&#x3D;起点+距离*方向向量 给定一个u可以得到一个L(u)直线</li>
+</ul>
+
+        <h4 id="直纹面的钟类"   >
+          <a href="#直纹面的钟类" class="heading-link"><i class="fas fa-link"></i></a><a href="#直纹面的钟类" class="headerlink" title="直纹面的钟类"></a>直纹面的钟类</h4>
+      <ul>
+<li>柱面</li>
+<li>锥面</li>
+<li>切线曲面</li>
+</ul>
+
+        <h2 id="判断正则曲面"   >
+          <a href="#判断正则曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断正则曲面" class="headerlink" title="判断正则曲面"></a>判断正则曲面</h2>
+      <ul>
+<li>正则值和这个方程形成曲面：正则曲面（z&#x3D;f(x,y)一定正则</li>
+<li>图（坐标卡）形成的</li>
+</ul>
+
+        <h2 id="tangent-vector-切向量"   >
+          <a href="#tangent-vector-切向量" class="heading-link"><i class="fas fa-link"></i></a><a href="#tangent-vector-切向量" class="headerlink" title="tangent vector 切向量"></a>tangent vector 切向量</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141815941.png" alt="image-20220514181505786"></p>
+<ul>
+<li>曲面的切向量 &#x3D;&#x3D; 曲线的切向量</li>
+<li>曲面上经过同一个点的切向量有无穷多个</li>
+</ul>
+
+        <h3 id="切空间-tangent-space"   >
+          <a href="#切空间-tangent-space" class="heading-link"><i class="fas fa-link"></i></a><a href="#切空间-tangent-space" class="headerlink" title="切空间 tangent space"></a>切空间 tangent space</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141816483.png" alt="image-20220514181647227"></p>
+<ul>
+<li>切空间是由两个切向量张成的 二维的（x1 x2是关于两个坐标的偏导数）</li>
+<li>切空间其他向量都可以由两个切向量组合得到</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141819461.png" alt="image-20220514181907603"></p>
+<ul>
+<li>切空间是well-defined</li>
+<li>微分同胚（连续且可微即光滑）同胚只要求连续</li>
+</ul>
+
+        <h3 id="lemma引理"   >
+          <a href="#lemma引理" class="heading-link"><i class="fas fa-link"></i></a><a href="#lemma引理" class="headerlink" title="lemma引理"></a>lemma引理</h3>
+      
+        <h3 id="example-3"   >
+          <a href="#example-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-3" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li><p>二次曲面(不是所有二次曲面都是正则曲面)</p>
+</li>
+<li><p>旋转面</p>
+<ul>
+<li>曲线C:x&#x3D;f(v) z&#x3D;g(v) 沿着哪个轴转，那个轴的方程就是不变的 另外两个轴上的方程需要满足 x^2+y^2&#x3D;z^2 (<strong>会写旋转面方程</strong>)</li>
+<li>r(u,v)&#x3D;(f(v)cos(u),f(v)sin(v),g(v)) u-curve 是<strong>latitude line</strong> v-curve是<strong>longitude line</strong></li>
+<li>判断旋转曲面是否正则曲面：曲线为正则曲线+f(v)&gt;0</li>
+</ul>
+</li>
+<li><p>torus</p>
+<ul>
+<li>方程：</li>
+</ul>
+</li>
+<li><p>helicoid</p>
+<ul>
+<li>方程：</li>
+<li>判断：r(u) x r(v)</li>
+</ul>
+</li>
+<li><p>直纹面 ruled surface</p>
+<ul>
+<li>r(u,v)&#x3D;a(u)+vl(u)</li>
+<li>a(u):准线 directrix l(u):直母线 generating line</li>
+<li>柱面</li>
+<li>锥面</li>
+<li>切线曲面</li>
+</ul>
+</li>
+</ul>
+
+        <h1 id="example-4"   >
+          <a href="#example-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-4" class="headerlink" title="example"></a>example</h1>
+      
+        <h2 id="coordinate-curves-of-parametric-surface"   >
+          <a href="#coordinate-curves-of-parametric-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#coordinate-curves-of-parametric-surface" class="headerlink" title="coordinate curves of parametric surface"></a>coordinate curves of parametric surface</h2>
+      <ul>
+<li>u曲线：u任意变化 v为常数</li>
+<li>v曲线：v任意变化 u为常数</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/03/14/curve3/">curve3</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="plane-curves"   >
+          <a href="#plane-curves" class="heading-link"><i class="fas fa-link"></i></a><a href="#plane-curves" class="headerlink" title="plane curves"></a>plane curves</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141038285.png" alt="image-20220514103811739"></p>
+<ul>
+<li>角度允许相差2Π倍 规定逆时针为正向 顺时针是反向</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141039376.png" alt="image-20220514103949962"></p>
+<ul>
+<li>旋转之后 垂直T向量</li>
+</ul>
+
+        <h3 id="得到平面曲线的frenet标架"   >
+          <a href="#得到平面曲线的frenet标架" class="heading-link"><i class="fas fa-link"></i></a><a href="#得到平面曲线的frenet标架" class="headerlink" title="得到平面曲线的frenet标架"></a>得到平面曲线的frenet标架</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141040864.png" alt="image-20220514104025904"></p>
+<ul>
+<li>注意<strong>法向量的朝向方向</strong> 曲线是顺时针方向 法向是朝外</li>
+<li>为什么呢 目前看起来是 粒子在这点的切向量即瞬时速度是顺时针方向 我们规定了法向量是逆时针旋转切向量90° 因此法向量逆时针旋转后是朝向外面的</li>
+</ul>
+
+        <h3 id="相对曲率-kr"   >
+          <a href="#相对曲率-kr" class="heading-link"><i class="fas fa-link"></i></a><a href="#相对曲率-kr" class="headerlink" title="相对曲率 kr"></a>相对曲率 kr</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141050943.png" alt="image-20220514105059173"></p>
+<ul>
+<li><p>一个向量长度是常数的话 它和它的一阶导数正交</p>
+</li>
+<li><p>平面曲线一定能得到：两个向量同时垂直另一个向量 则这两个向量是平行的 所以T’平行N(空间曲线是不一定的)</p>
+</li>
+<li><p>曲线在一点的曲率&#x3D;相对曲率的绝对值</p>
+</li>
+</ul>
+
+        <h3 id="frenet公式"   >
+          <a href="#frenet公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#frenet公式" class="headerlink" title="frenet公式"></a>frenet公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054670.png" alt="image-20220514105424470"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141054820.png" alt="image-20220514105454874"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141056168.png" alt="image-20220514105628915"></p>
+<ul>
+<li><p>矩阵表达式</p>
+</li>
+<li><p>曲率中心是每个点的坐标沿着法向量方向 平移相对曲率倒数距离的点</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141100043.png" alt="image-20220514110009090"></p>
+<ul>
+<li>kr描述的是方向角关于弧长的变化率</li>
+<li>平面直线的相对曲率&#x3D;0 切向量是常向量 θ不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141102863.png" alt="image-20220514110231509"></p>
+<ul>
+<li>+表示弯曲方向与法向量一致 -表示弯曲方向与它相反</li>
+<li>这里曲线是朝下弯曲而法向量是向外的 所以kr&#x3D;-k(s)</li>
+</ul>
+
+        <h3 id="fundamental-theorem-of-plane-curve"   >
+          <a href="#fundamental-theorem-of-plane-curve" class="heading-link"><i class="fas fa-link"></i></a><a href="#fundamental-theorem-of-plane-curve" class="headerlink" title="fundamental theorem of plane curve"></a>fundamental theorem of plane curve</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106209.png" alt="image-20220514110603138"></p>
+<ul>
+<li>类比三维曲线的基本定理（曲率和挠率唯一确定一个曲线 补考v其位置的话）</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141106235.png" alt="image-20220514110650071"></li>
+</ul>
+
+        <h4 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141108198.png" alt="image-20220514110834427"></p>
+<ul>
+<li>关于θ求积分可以得到x和y的值 </li>
+<li>给一个kr就可以哦通过构造得到r曲线</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141110904.png" alt="image-20220514111053701"></p>
+<ul>
+<li>旋转可以使得在这点处</li>
+</ul>
+
+        <h2 id="旋转指标rotation-index"   >
+          <a href="#旋转指标rotation-index" class="heading-link"><i class="fas fa-link"></i></a><a href="#旋转指标rotation-index" class="headerlink" title="旋转指标rotation index"></a>旋转指标rotation index</h2>
+      <ul>
+<li>θ描述i轴和T(s)的方向角 i 和 T(s)实际的角度无法确定 始终相差2Π的k倍</li>
+<li>对于一个曲线 终点和起点的方向角差值一定是常数 b点和a点相差k倍2Π 是同一个k</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141121352.png" alt="image-20220514112129531"></p>
+<ul>
+<li>θ‘和θ都是度量同一个相差的角度 两者都是相差k2Π</li>
+<li>不同的分支指的是 把一个起点和重点组合 然后平移2kΠ</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141126686.png" alt="image-20220514112641774"></p>
+<ul>
+<li>封闭曲线的切向量绕曲线转一周 然后和出发点的切向量可能是重合的 所以θ(b)-θ(a)是2Π的整数倍 可以是+ - 0 即得到旋转指标</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141151140.png" alt="image-20220514115106996"></p>
+<ul>
+<li><p>分段光滑的曲线也满足旋转指标的性质 </p>
+</li>
+<li><p>如果有角点 则需要挖角点然后单独算角点的旋转指标（经过前的切向量方向和经过角点后的切向量方向）</p>
+</li>
+</ul>
+
+        <h3 id="封闭简单曲线的旋转指标"   >
+          <a href="#封闭简单曲线的旋转指标" class="heading-link"><i class="fas fa-link"></i></a><a href="#封闭简单曲线的旋转指标" class="headerlink" title="封闭简单曲线的旋转指标"></a>封闭简单曲线的旋转指标</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153856.png" alt="image-20220514115320629"></p>
+<ul>
+<li>如果有分支（两个方向） 外面的圆和里面的圆都是正方向 所以旋转指标是2</li>
+<li>封闭圆环有几个<ul>
+<li>顺时针 则-1</li>
+<li>逆时针 则+1</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141153710.png" alt="image-20220514115350846"></p>
+
+        <h4 id="homework"   >
+          <a href="#homework" class="heading-link"><i class="fas fa-link"></i></a><a href="#homework" class="headerlink" title="homework"></a>homework</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141154422.png" alt="image-20220514115414478"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/03/07/curve2/">curve2</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="parametric-curve"   >
+          <a href="#parametric-curve" class="heading-link"><i class="fas fa-link"></i></a><a href="#parametric-curve" class="headerlink" title="parametric curve"></a>parametric curve</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130940905.png" alt="image-20220513094048970"></p>
+<ul>
+<li><p>参数化可微曲线 是可微的映射</p>
+</li>
+<li><p><strong>分析曲线的可微性 &#x3D;&#x3D; 分析三个坐标分量的可微性</strong></p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130942672.png" alt="image-20220513094254678"></p>
+<ul>
+<li>基本初等函数 一定是可微的</li>
+<li>螺旋线 可微</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130943188.png" alt="image-20220513094342123"></p>
+<ul>
+<li>可微</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130944245.png" alt="image-20220513094450434"></p>
+<ul>
+<li>有自交 取两个不同的t但是都过同一个点 但是有自交也可微</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130946500.png" alt="image-20220513094649572"></p>
+
+        <h3 id="不同参数化的本质区别"   >
+          <a href="#不同参数化的本质区别" class="heading-link"><i class="fas fa-link"></i></a><a href="#不同参数化的本质区别" class="headerlink" title="不同参数化的本质区别"></a>不同参数化的本质区别</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130948776.png" alt="image-20220513094759905"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130948075.png" alt="image-20220513094824212"></p>
+<ul>
+<li>描述同一个曲线 不同的参数选取 切向量的大小是不一样的</li>
+</ul>
+
+        <h3 id="不同参数化的不变量-内蕴量-刚体运动下不变的"   >
+          <a href="#不同参数化的不变量-内蕴量-刚体运动下不变的" class="heading-link"><i class="fas fa-link"></i></a><a href="#不同参数化的不变量-内蕴量-刚体运动下不变的" class="headerlink" title="不同参数化的不变量 内蕴量 刚体运动下不变的"></a>不同参数化的不变量 内蕴量 刚体运动下不变的</h3>
+      <ul>
+<li>弧长</li>
+<li>曲率</li>
+<li>挠率</li>
+</ul>
+
+        <h2 id="弧长参数曲线"   >
+          <a href="#弧长参数曲线" class="heading-link"><i class="fas fa-link"></i></a><a href="#弧长参数曲线" class="headerlink" title="弧长参数曲线"></a>弧长参数曲线</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130952106.png" alt="image-20220513095241605"></p>
+<ul>
+<li><p><strong>smooth &#x3D; differentiable 光滑等价于可微</strong></p>
+</li>
+<li><p>光滑曲线&#x3D;光滑映射</p>
+</li>
+<li><p><strong>正则曲线 &#x3D; 一阶导数不等于0</strong></p>
+</li>
+<li><p>f作用（复合映射）重新参数化 类似于换元</p>
+</li>
+</ul>
+
+        <h3 id="弧长公式"   >
+          <a href="#弧长公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#弧长公式" class="headerlink" title="弧长公式"></a>弧长公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130954274.png" alt="image-20220513095424316"></p>
+<ul>
+<li>变上限积分 一定有一阶导数</li>
+<li>st可以关于t求导 且导函数一定大于0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130955119.png" alt="image-20220513095510899"></p>
+<ul>
+<li><strong>关于曲线的第一个参数化不变量 （内蕴量）—弧长</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205131407185.png" alt="image-20220513140659519"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132046504.png" alt="image-20220513204600181"></p>
+<ul>
+<li>t和弧长s之间构成了映射 所以把s重新参数化 以弧长为参数</li>
+<li>t&lt;t0时 积分可以是负的（即当t0不取a时都是负的）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132047688.png" alt="image-20220513204749763"></p>
+<ul>
+<li>弧长为参数 曲线的导数&#x3D;单位向量</li>
+</ul>
+
+        <h2 id="曲率"   >
+          <a href="#曲率" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132049089.png" alt="image-20220513204945066"></p>
+<ul>
+<li>k&#x3D;曲线二阶导的绝对值</li>
+<li>切向量的变化率（切向量再求导）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132050611.png" alt="image-20220513205018229"></p>
+<ul>
+<li><strong>曲率是曲线局部的变化 不同参数化下曲率是不变的</strong></li>
+</ul>
+
+        <h3 id="法向量"   >
+          <a href="#法向量" class="heading-link"><i class="fas fa-link"></i></a><a href="#法向量" class="headerlink" title="法向量"></a>法向量</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132053383.png" alt="image-20220513205344583"></p>
+<ul>
+<li>法向量是切向量的一阶导数</li>
+<li>切向量垂直法向量</li>
+<li>曲线的二阶导数&#x3D;曲率（切向量一阶导数的大小）*法向量（单位向量表示方向）</li>
+</ul>
+<blockquote>
+<p>曲线切向量(单位向量)的变化率是用曲率来衡量大小 用单位法向量来确定方向</p>
+</blockquote>
+
+        <h3 id="密切平面"   >
+          <a href="#密切平面" class="heading-link"><i class="fas fa-link"></i></a><a href="#密切平面" class="headerlink" title="密切平面"></a>密切平面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132056444.png" alt="image-20220513205613484"></p>
+<ul>
+<li>切向量和法向量定义的</li>
+</ul>
+
+        <h3 id="次法向量"   >
+          <a href="#次法向量" class="heading-link"><i class="fas fa-link"></i></a><a href="#次法向量" class="headerlink" title="次法向量"></a>次法向量</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132057346.png" alt="image-20220513205755793"></p>
+<ul>
+<li>这三个单位向量构成一个右手系</li>
+<li>次法向量确定密切平面 因为次法向量垂直切向量和法向量</li>
+</ul>
+
+        <h2 id="frenet-frame"   >
+          <a href="#frenet-frame" class="heading-link"><i class="fas fa-link"></i></a><a href="#frenet-frame" class="headerlink" title="frenet frame"></a>frenet frame</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132059966.png" alt="image-20220513205925538"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132059752.png" alt="image-20220513205936970"></p>
+<ul>
+<li>frenet frame</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132111599.png" alt="image-20220513211158573"></p>
+<ul>
+<li>外积求导数&#x3D;第一个的导数外积第二个+第一个外积第二个的导数</li>
+<li>T’和N是共线的 所以T’ x N&#x3D;0 得到<strong>B’垂直T</strong>(切向量)</li>
+<li>因为T是单位向量 T和T’是垂直的 <strong>B’垂直B</strong></li>
+<li>而N垂直T N垂直B</li>
+<li>次法向量的一阶导数&#x3D;挠率*法向量</li>
+<li>T B 的导数</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132114136.png" alt="image-20220513211422766"></p>
+<ul>
+<li>N的导数</li>
+</ul>
+
+        <h3 id="挠率"   >
+          <a href="#挠率" class="heading-link"><i class="fas fa-link"></i></a><a href="#挠率" class="headerlink" title="挠率"></a>挠率</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132129610.png" alt="image-20220513212951638"></p>
+<ul>
+<li>如果一个曲线是平面曲线 切向量和法向量会在同一个平面上（密切平面）即曲线就在密切平面上</li>
+<li>挠率描述的曲线和密切平面偏离的程度 平面曲线挠率&#x3D;0</li>
+<li>B’&#x3D;挠率·N 如果挠率&#x3D;0 B&#x3D;b0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132132956.png" alt="image-20220513213203810"></p>
+<ul>
+<li><p>曲率：曲线偏离直线的程度</p>
+</li>
+<li><p>挠率：曲线偏离平面的程度 也不依赖于参数化</p>
+</li>
+<li><p>曲率和挠率在刚体运动下不变（刚体运动不会改变曲线的形状）因此曲率和挠率会唯一确定一个曲线形状（曲线位置虽然确定不了）</p>
+</li>
+</ul>
+
+        <h3 id="三个平面"   >
+          <a href="#三个平面" class="heading-link"><i class="fas fa-link"></i></a><a href="#三个平面" class="headerlink" title="三个平面"></a>三个平面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132135845.png" alt="image-20220513213520856"></p>
+<ul>
+<li>密切平面：切向量和法向量</li>
+<li>法平面：法向量和次法向量（都含有法）</li>
+<li>重切平面：切向量和次法向量（含切的平面都有切向量）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132135701.png" alt="image-20220513213506547"></p>
+<ul>
+<li>密切圆和曲线在相切的地方<strong>二阶切触</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205132136843.png" alt="image-20220513213617843"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141000667.png" alt="image-20220514100019204"></p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141215036.png" alt="image-20220514121546950"></li>
+<li>T关于t求导 dT&#x2F;dt&#x3D;dT&#x2F;ds * ds&#x2F;dt 而 dT&#x2F;ds是单位切向量 ds&#x2F;dt</li>
+</ul>
+
+        <h3 id="判断是圆周"   >
+          <a href="#判断是圆周" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断是圆周" class="headerlink" title="判断是圆周"></a>判断是圆周</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141023998.png" alt="image-20220514102305334"></p>
+<ul>
+<li>由挠率等于0 用N’&#x3D;</li>
+<li>如果曲率是大于0的constant且挠率&#x3D;0 &#x3D;&#x3D; 是个圆周</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141031079.png" alt="image-20220514102809562"></p>
+
+        <h3 id="判断曲线是球面上的曲线"   >
+          <a href="#判断曲线是球面上的曲线" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断曲线是球面上的曲线" class="headerlink" title="判断曲线是球面上的曲线"></a>判断曲线是球面上的曲线</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141033166.png" alt="image-20220514103307243"></p>
+
+        <h3 id="计算frenet标架"   >
+          <a href="#计算frenet标架" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算frenet标架" class="headerlink" title="计算frenet标架"></a>计算frenet标架</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://fdjpkc.fudan.edu.cn/_upload/article/files/b8/14/0e0a63a140d09cdb49100136ab41/0effc01c-4e14-475e-abf8-24e095933682.pdf" >弧长为参数和一般参数</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205151116356.png" alt="image-20220515111645824"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205151114940.png" alt="image-20220515111451069"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/03/02/curve1/">curve1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="内积"   >
+          <a href="#内积" class="heading-link"><i class="fas fa-link"></i></a><a href="#内积" class="headerlink" title="内积"></a>内积</h2>
+      
+        <h2 id="外积"   >
+          <a href="#外积" class="heading-link"><i class="fas fa-link"></i></a><a href="#外积" class="headerlink" title="外积"></a>外积</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130848871.png" alt="image-20220513084854830"></p>
+<ul>
+<li>两个向量外积方向 右手螺旋</li>
+</ul>
+
+        <h2 id="混合积"   >
+          <a href="#混合积" class="heading-link"><i class="fas fa-link"></i></a><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130850964.png" alt="image-20220513085014094"></p>
+<ul>
+<li>判断三个向量共面：三个向量混合积&#x3D;0</li>
+<li>混合积表示体积 算出来是一个数</li>
+<li>注意混合积的运算公式（交换加负号）</li>
+</ul>
+
+        <h2 id="标架"   >
+          <a href="#标架" class="heading-link"><i class="fas fa-link"></i></a><a href="#标架" class="headerlink" title="标架"></a>标架</h2>
+      <ul>
+<li>四个元素<ul>
+<li>原点</li>
+<li>不共面的三个向量</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="右手单位正交标架（直角坐标系）"   >
+          <a href="#右手单位正交标架（直角坐标系）" class="heading-link"><i class="fas fa-link"></i></a><a href="#右手单位正交标架（直角坐标系）" class="headerlink" title="右手单位正交标架（直角坐标系）"></a>右手单位正交标架（直角坐标系）</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130852748.png" alt="image-20220513085241814"></p>
+
+        <h3 id="坐标转化（静止的点转化）"   >
+          <a href="#坐标转化（静止的点转化）" class="heading-link"><i class="fas fa-link"></i></a><a href="#坐标转化（静止的点转化）" class="headerlink" title="坐标转化（静止的点转化）"></a>坐标转化（静止的点转化）</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130856581.png" alt="image-20220513085628524"></p>
+<ul>
+<li>A矩阵表示将原标架进行旋转+平移得到新的标架</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130904690.png" alt="image-20220513090452815"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130908198.png" alt="image-20220513090822486"></p>
+<ul>
+<li>p点坐标已知</li>
+</ul>
+<blockquote>
+<p>这个是两个坐标系下的坐标是不同的 q在另一个坐标系下有了新的坐标 最后的目的都是统一基向量是ijk的形式</p>
+</blockquote>
+
+        <h3 id="坐标转化（点在刚体运动）"   >
+          <a href="#坐标转化（点在刚体运动）" class="heading-link"><i class="fas fa-link"></i></a><a href="#坐标转化（点在刚体运动）" class="headerlink" title="坐标转化（点在刚体运动）"></a>坐标转化（点在刚体运动）</h3>
+      <ul>
+<li><p>q相对于O标架的坐标和q相对于P标架的坐标是一样的 q对于坐标的相对位置是不变的</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130914631.png" alt="image-20220513091401590"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130915155.png" alt="image-20220513091513802"></p>
+</li>
+</ul>
+<blockquote>
+<p>q在另一个坐标系下仍然是原来的坐标 只是 新坐标系的基向量需要用原坐标系的基向量表示 </p>
+</blockquote>
+
+        <h3 id="定理："   >
+          <a href="#定理：" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理：" class="headerlink" title="定理："></a>定理：</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130917047.png" alt="image-20220513091659098"></p>
+<ul>
+<li>刚体运动保持正交标架仍然为正交标架</li>
+<li>如果两条线段变化时他们对应两点的距离不变 等距变换</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130920625.png" alt="image-20220513092031358"></p>
+<ul>
+<li>关于x对称 y加-号</li>
+<li>关于y对称 x加-号</li>
+<li>原点对称则xy都加-号</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130921569.png" alt="image-20220513092149629"></p>
+<ul>
+<li>错切：x’&#x3D;ax+b</li>
+</ul>
+
+        <h3 id="仿射坐标下求向量长度"   >
+          <a href="#仿射坐标下求向量长度" class="heading-link"><i class="fas fa-link"></i></a><a href="#仿射坐标下求向量长度" class="headerlink" title="仿射坐标下求向量长度"></a>仿射坐标下求向量长度</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130923410.png" alt="image-20220513092321414"></p>
+<ul>
+<li>度量系数</li>
+<li>仿射标架的度量矩阵（gij）理解成下标表示二维数组的下标<ul>
+<li>（第一行第一列，第一行第二列，第一行第三列）</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="homework"   >
+          <a href="#homework" class="heading-link"><i class="fas fa-link"></i></a><a href="#homework" class="headerlink" title="homework"></a>homework</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130926520.png" alt="image-20220513092636090"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141217472.png" alt="image-20220514121706529"></p>
+
+        <h2 id="向量值函数"   >
+          <a href="#向量值函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#向量值函数" class="headerlink" title="向量值函数"></a>向量值函数</h2>
+      <ul>
+<li>连续可微的向量函数 &#x3D;&#x3D; 对应分量的标量值函数连续可微<ul>
+<li>等价考虑三个分量</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130929132.png" alt="image-20220513092921106"></p>
+
+        <h3 id="Leibniz-rule"   >
+          <a href="#Leibniz-rule" class="heading-link"><i class="fas fa-link"></i></a><a href="#Leibniz-rule" class="headerlink" title="Leibniz rule"></a>Leibniz rule</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130931602.png" alt="image-20220513093107581"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935202.png" alt="image-20220513093540668"></p>
+<ul>
+<li><p>a的长度是常量</p>
+</li>
+<li><p>a的方向不变</p>
+<ul>
+<li>b是单位向量 f是标量</li>
+<li>a和a’共线 则外积&#x3D;0</li>
+</ul>
+</li>
+<li><p>a和另一个向量垂直 b是常向量</p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935820.png" alt="image-20220513093508983"></li>
+<li>假设a和b垂直</li>
+</ul>
+</li>
+</ul>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/ryenney/page/4/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/ryenney/">1</a><span class="space">&hellip;</span><a class="page-number" href="/ryenney/page/4/">4</a><span class="page-number current">5</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">49</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

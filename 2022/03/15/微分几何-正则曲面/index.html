@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="regular parameterized surface        u做x轴，v做y轴（类比平面上的坐标） 固定一个u或v 可以得到一个参数曲线                        正则点         判定ru和rv线性无关 即 外积不等于0                      正则参数曲面        每一个点都是正则点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微分几何-正则曲面">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="regular parameterized surface        u做x轴，v做y轴（类比平面上的坐标） 固定一个u或v 可以得到一个参数曲线                        正则点         判定ru和rv线性无关 即 外积不等于0                      正则参数曲面        每一个点都是正则点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141200431.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141220997.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141222050.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141218507.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141223761.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141226460.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141228884.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141234922.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141238966.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141250748.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141616011.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141618027.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141625807.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141631503.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141632486.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141636128.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141639899.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141741233.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141747509.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141752487.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754267.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754218.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141815941.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141816483.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141819461.png">
+<meta property="article:published_time" content="2022-03-15T01:57:06.000Z">
+<meta property="article:modified_time" content="2022-05-15T01:42:32.381Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141200431.png"><title>微分几何-正则曲面 | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">微分几何-正则曲面</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body">
+        <h2 id="regular-parameterized-surface"   >
+          <a href="#regular-parameterized-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-parameterized-surface" class="headerlink" title="regular parameterized surface"></a>regular parameterized surface</h2>
+      <ul>
+<li>u做x轴，v做y轴（类比平面上的坐标）<ul>
+<li>固定一个u或v 可以得到一个参数曲线</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="正则点"   >
+          <a href="#正则点" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则点" class="headerlink" title="正则点"></a>正则点</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141200431.png" alt="image-20220514120003513"></p>
+<ul>
+<li>判定ru和rv线性无关 即 外积不等于0</li>
+</ul>
+
+        <h3 id="正则参数曲面"   >
+          <a href="#正则参数曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则参数曲面" class="headerlink" title="正则参数曲面"></a>正则参数曲面</h3>
+      <ul>
+<li>每一个点都是正则点</li>
+<li></li>
+</ul>
+
+        <h3 id="正则曲面"   >
+          <a href="#正则曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则曲面" class="headerlink" title="正则曲面"></a>正则曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141220997.png" alt="image-20220514122019003"></p>
+<ul>
+<li>M是三维空间的子集 定义x映射 从参数域（u,v) D 到 M</li>
+<li>把平面上的e1 和 e2 映射到曲面上的切向量δx&#x2F;δu 和 δx&#x2F;δv</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141222050.png" alt="image-20220514122213935"></p>
+<ul>
+<li>X is smooth &#x3D;&#x3D; 每个分量函数都是可微即可</li>
+<li>X的微分是满秩的 &#x3D;&#x3D; X关于u和v的求导是线性无关的 <ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141218507.png" alt="image-20220514121837328"></li>
+<li>判断满秩1 可以用ru和rv外积</li>
+<li>判断满秩2 这三个矩阵的行列式不同时为0</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141223761.png"></p>
+<ul>
+<li>同胚 &#x3D;&#x3D; 双射 &#x3D;&#x3D; 单射+满射 （一 一对应）x和x的逆都是连续的<strong>（是正则曲面和正则参数曲面的本质区别）</strong></li>
+</ul>
+
+        <h3 id="映射-X-是一个参数化-把参数域映射到空间曲面"   >
+          <a href="#映射-X-是一个参数化-把参数域映射到空间曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#映射-X-是一个参数化-把参数域映射到空间曲面" class="headerlink" title="映射 X 是一个参数化 把参数域映射到空间曲面"></a>映射 X 是一个参数化 把参数域映射到空间曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141226460.png" alt="image-20220514122652480"></p>
+<ul>
+<li>X是映射</li>
+<li>V是坐标卡 邻域（曲面一块区域 满足有一个映射把参数域映射到这个曲面区域）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141228884.png" alt="image-20220514122802907"></p>
+<ul>
+<li>局部坐标&#x3D;参数坐标&#x3D;纹理坐标（u,v）曲面上点的参数表达</li>
+<li>正则曲面可以由一族坐标卡覆盖曲面 坐标卡之间允许交集（坐标卡的个数是不规定的）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141234922.png" alt="image-20220514123456667"></p>
+<ul>
+<li>将平面进行伸缩变形 映射到空间曲面</li>
+</ul>
+
+        <h2 id="coordinate-curves"   >
+          <a href="#coordinate-curves" class="heading-link"><i class="fas fa-link"></i></a><a href="#coordinate-curves" class="headerlink" title="coordinate curves"></a>coordinate curves</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141238966.png" alt="image-20220514123837608"></p>
+<ul>
+<li><strong>坐标曲线</strong></li>
+<li>固定u是u0，变化v &#x3D;&#x3D;是s上经过p点的v曲线</li>
+<li>固定v是v0，变化u &#x3D;&#x3D;是s上经过p点的u曲线</li>
+<li>类比成参数域上平行x轴和y轴的曲线 曲面s上任意一个点上都有坐标曲线 </li>
+<li>u曲线和v曲线形成<strong>参数曲线网</strong></li>
+</ul>
+
+        <h4 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141250748.png" alt="image-20220514125014270"></p>
+
+        <h2 id="graph"   >
+          <a href="#graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#graph" class="headerlink" title="graph"></a>graph</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141616011.png" alt="image-20220514161620863"></p>
+<ul>
+<li>曲面M由x,y和f(x,y)的显函数形成的（在z方向进行拉伸）</li>
+<li>曲面M只有一个坐标卡（即只有一个映射）</li>
+<li>这个映射是M的坐标卡 且M只需要这一个坐标卡就可以覆盖</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141618027.png" alt="image-20220514161838498"></p>
+<ul>
+<li>由graph形成的曲面就是正则曲面</li>
+<li>正则曲面在局部可以是graph 可以找到正则曲面每个点处小的局部可形成graph</li>
+<li>是z&#x3D;f(x,y)形成的曲面&#x3D;&#x3D;正则曲面</li>
+</ul>
+
+        <h3 id="example-1"   >
+          <a href="#example-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-1" class="headerlink" title="example"></a>example</h3>
+      
+        <h4 id="球的坐标卡覆盖方式1"   >
+          <a href="#球的坐标卡覆盖方式1" class="heading-link"><i class="fas fa-link"></i></a><a href="#球的坐标卡覆盖方式1" class="headerlink" title="球的坐标卡覆盖方式1"></a>球的坐标卡覆盖方式1</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141625807.png" alt="image-20220514162518654"></p>
+<ul>
+<li>把球用z&#x3D;f(x,y)表示 会有两部分 上半球和下半球</li>
+<li>平面区域是一个开集（不含赤道也即是不含 u^2+v^2&#x3D;1的点）</li>
+</ul>
+
+        <h4 id="覆盖方式2"   >
+          <a href="#覆盖方式2" class="heading-link"><i class="fas fa-link"></i></a><a href="#覆盖方式2" class="headerlink" title="覆盖方式2"></a>覆盖方式2</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141631503.png" alt="image-20220514163109586"></p>
+<ul>
+<li>球坐标只需要两个坐标卡就可以完全覆盖</li>
+</ul>
+
+        <h4 id="覆盖方式3"   >
+          <a href="#覆盖方式3" class="heading-link"><i class="fas fa-link"></i></a><a href="#覆盖方式3" class="headerlink" title="覆盖方式3"></a>覆盖方式3</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141632486.png" alt="image-20220514163248543"></p>
+<ul>
+<li>球面投影（除了北极点 其他都可以一一对应 越靠近北极点 投影越远</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://max.book118.com/html/2018/0314/157269918.shtm" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/141422390" >regular curve vs surface</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="regular-value-of-function"   >
+          <a href="#regular-value-of-function" class="heading-link"><i class="fas fa-link"></i></a><a href="#regular-value-of-function" class="headerlink" title="regular value of function"></a>regular value of function</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141636128.png" alt="image-20220514163626934"></p>
+<ul>
+<li>判断一个函数在某点处是不是正则值 ：f(x,y,z)&#x3D;a是一个等值面，需要确定f的梯度不为0</li>
+<li>判断正则曲面方式（判断a是否为正则值即可）</li>
+</ul>
+
+        <h3 id="example-2"   >
+          <a href="#example-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-2" class="headerlink" title="example"></a>example</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141639899.png" alt="image-20220514163918087"></p>
+<ul>
+<li>判断1是否为方程的正则值</li>
+<li>只有（0，0，0）使得方程梯度等于0 但是这个点不是f&#x3D;1 所以1是正则值</li>
+</ul>
+
+        <h3 id="旋转曲面"   >
+          <a href="#旋转曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141741233.png" alt="image-20220514174127137"></p>
+<ul>
+<li>u曲线是纬线 v曲线是经线</li>
+<li>绕某个轴旋转的旋转曲面方程 绕z轴则z坐标不变（绕哪个轴 那个轴的坐标就不会变）</li>
+<li>旋转曲面不一定是正则曲面</li>
+</ul>
+
+        <h3 id="torus轮胎面"   >
+          <a href="#torus轮胎面" class="heading-link"><i class="fas fa-link"></i></a><a href="#torus轮胎面" class="headerlink" title="torus轮胎面"></a>torus轮胎面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141747509.png" alt="image-20220514174748383"></p>
+<ul>
+<li><p>判断torus是不是正则曲面 需要看他的梯度 如果要使得梯度&#x3D;0 则需要xyz都为0或者根号(x^2+y^2)-a^2&#x3D;0</p>
+</li>
+<li><p>将圆环绕z轴旋转一周形成的</p>
+</li>
+</ul>
+
+        <h3 id="正螺面"   >
+          <a href="#正螺面" class="heading-link"><i class="fas fa-link"></i></a><a href="#正螺面" class="headerlink" title="正螺面"></a>正螺面</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141752487.png" alt="image-20220514175225273"></p>
+<ul>
+<li>取L1是x轴 L2是z轴 正螺面是一个正则曲面</li>
+</ul>
+
+        <h3 id="直纹面-ruled-surface"   >
+          <a href="#直纹面-ruled-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#直纹面-ruled-surface" class="headerlink" title="直纹面(ruled surface)"></a>直纹面(ruled surface)</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754267.png" alt="image-20220514175406828"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141754218.png" alt="image-20220514175444169"></p>
+<ul>
+<li>直纹面也是正则曲面</li>
+<li>L(u)&#x3D;起点+距离*方向向量 给定一个u可以得到一个L(u)直线</li>
+</ul>
+
+        <h4 id="直纹面的钟类"   >
+          <a href="#直纹面的钟类" class="heading-link"><i class="fas fa-link"></i></a><a href="#直纹面的钟类" class="headerlink" title="直纹面的钟类"></a>直纹面的钟类</h4>
+      <ul>
+<li>柱面</li>
+<li>锥面</li>
+<li>切线曲面</li>
+</ul>
+
+        <h2 id="判断正则曲面"   >
+          <a href="#判断正则曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断正则曲面" class="headerlink" title="判断正则曲面"></a>判断正则曲面</h2>
+      <ul>
+<li>正则值和这个方程形成曲面：正则曲面（z&#x3D;f(x,y)一定正则</li>
+<li>图（坐标卡）形成的</li>
+</ul>
+
+        <h2 id="tangent-vector-切向量"   >
+          <a href="#tangent-vector-切向量" class="heading-link"><i class="fas fa-link"></i></a><a href="#tangent-vector-切向量" class="headerlink" title="tangent vector 切向量"></a>tangent vector 切向量</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141815941.png" alt="image-20220514181505786"></p>
+<ul>
+<li>曲面的切向量 &#x3D;&#x3D; 曲线的切向量</li>
+<li>曲面上经过同一个点的切向量有无穷多个</li>
+</ul>
+
+        <h3 id="切空间-tangent-space"   >
+          <a href="#切空间-tangent-space" class="heading-link"><i class="fas fa-link"></i></a><a href="#切空间-tangent-space" class="headerlink" title="切空间 tangent space"></a>切空间 tangent space</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141816483.png" alt="image-20220514181647227"></p>
+<ul>
+<li>切空间是由两个切向量张成的 二维的（x1 x2是关于两个坐标的偏导数）</li>
+<li>切空间其他向量都可以由两个切向量组合得到</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141819461.png" alt="image-20220514181907603"></p>
+<ul>
+<li>切空间是well-defined</li>
+<li>微分同胚（连续且可微即光滑）同胚只要求连续</li>
+</ul>
+
+        <h3 id="lemma引理"   >
+          <a href="#lemma引理" class="heading-link"><i class="fas fa-link"></i></a><a href="#lemma引理" class="headerlink" title="lemma引理"></a>lemma引理</h3>
+      
+        <h3 id="example-3"   >
+          <a href="#example-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-3" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li><p>二次曲面(不是所有二次曲面都是正则曲面)</p>
+</li>
+<li><p>旋转面</p>
+<ul>
+<li>曲线C:x&#x3D;f(v) z&#x3D;g(v) 沿着哪个轴转，那个轴的方程就是不变的 另外两个轴上的方程需要满足 x^2+y^2&#x3D;z^2 (<strong>会写旋转面方程</strong>)</li>
+<li>r(u,v)&#x3D;(f(v)cos(u),f(v)sin(v),g(v)) u-curve 是<strong>latitude line</strong> v-curve是<strong>longitude line</strong></li>
+<li>判断旋转曲面是否正则曲面：曲线为正则曲线+f(v)&gt;0</li>
+</ul>
+</li>
+<li><p>torus</p>
+<ul>
+<li>方程：</li>
+</ul>
+</li>
+<li><p>helicoid</p>
+<ul>
+<li>方程：</li>
+<li>判断：r(u) x r(v)</li>
+</ul>
+</li>
+<li><p>直纹面 ruled surface</p>
+<ul>
+<li>r(u,v)&#x3D;a(u)+vl(u)</li>
+<li>a(u):准线 directrix l(u):直母线 generating line</li>
+<li>柱面</li>
+<li>锥面</li>
+<li>切线曲面</li>
+</ul>
+</li>
+</ul>
+
+        <h1 id="example-4"   >
+          <a href="#example-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#example-4" class="headerlink" title="example"></a>example</h1>
+      
+        <h2 id="coordinate-curves-of-parametric-surface"   >
+          <a href="#coordinate-curves-of-parametric-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#coordinate-curves-of-parametric-surface" class="headerlink" title="coordinate curves of parametric surface"></a>coordinate curves of parametric surface</h2>
+      <ul>
+<li>u曲线：u任意变化 v为常数</li>
+<li>v曲线：v任意变化 u为常数</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/">http://gitee.com/ryenney/2022/03/15/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/04/20/hello-world/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Hello World</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/03/14/curve3/"><span class="paginator-prev__text">curve3</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#regular-parameterized-surface"><span class="toc-number">1.</span> <span class="toc-text">
+          regular parameterized surface</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">
+          正则点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8F%82%E6%95%B0%E6%9B%B2%E9%9D%A2"><span class="toc-number">1.2.</span> <span class="toc-text">
+          正则参数曲面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2"><span class="toc-number">1.3.</span> <span class="toc-text">
+          正则曲面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84-X-%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E5%8C%96-%E6%8A%8A%E5%8F%82%E6%95%B0%E5%9F%9F%E6%98%A0%E5%B0%84%E5%88%B0%E7%A9%BA%E9%97%B4%E6%9B%B2%E9%9D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">
+          映射 X 是一个参数化 把参数域映射到空间曲面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#coordinate-curves"><span class="toc-number">2.</span> <span class="toc-text">
+          coordinate curves</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#example"><span class="toc-number">2.0.1.</span> <span class="toc-text">
+          example</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#graph"><span class="toc-number">3.</span> <span class="toc-text">
+          graph</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#example-1"><span class="toc-number">3.1.</span> <span class="toc-text">
+          example</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%83%E7%9A%84%E5%9D%90%E6%A0%87%E5%8D%A1%E8%A6%86%E7%9B%96%E6%96%B9%E5%BC%8F1"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          球的坐标卡覆盖方式1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E6%96%B9%E5%BC%8F2"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          覆盖方式2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E6%96%B9%E5%BC%8F3"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          覆盖方式3</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#regular-value-of-function"><span class="toc-number">4.</span> <span class="toc-text">
+          regular value of function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#example-2"><span class="toc-number">4.1.</span> <span class="toc-text">
+          example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC%E6%9B%B2%E9%9D%A2"><span class="toc-number">4.2.</span> <span class="toc-text">
+          旋转曲面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#torus%E8%BD%AE%E8%83%8E%E9%9D%A2"><span class="toc-number">4.3.</span> <span class="toc-text">
+          torus轮胎面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%9E%BA%E9%9D%A2"><span class="toc-number">4.4.</span> <span class="toc-text">
+          正螺面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E7%BA%B9%E9%9D%A2-ruled-surface"><span class="toc-number">4.5.</span> <span class="toc-text">
+          直纹面(ruled surface)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E7%BA%B9%E9%9D%A2%E7%9A%84%E9%92%9F%E7%B1%BB"><span class="toc-number">4.5.1.</span> <span class="toc-text">
+          直纹面的钟类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%AD%A3%E5%88%99%E6%9B%B2%E9%9D%A2"><span class="toc-number">5.</span> <span class="toc-text">
+          判断正则曲面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tangent-vector-%E5%88%87%E5%90%91%E9%87%8F"><span class="toc-number">6.</span> <span class="toc-text">
+          tangent vector 切向量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E7%A9%BA%E9%97%B4-tangent-space"><span class="toc-number">6.1.</span> <span class="toc-text">
+          切空间 tangent space</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lemma%E5%BC%95%E7%90%86"><span class="toc-number">6.2.</span> <span class="toc-text">
+          lemma引理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#example-3"><span class="toc-number">6.3.</span> <span class="toc-text">
+          example</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#example-4"><span class="toc-number"></span> <span class="toc-text">
+          example</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#coordinate-curves-of-parametric-surface"><span class="toc-number">1.</span> <span class="toc-text">
+          coordinate curves of parametric surface</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">49</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

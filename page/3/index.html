@@ -30,333 +30,496 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/04/developable-suface/">developable suface</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-08</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="ruled-surface"   >
-          <a href="#ruled-surface" class="heading-link"><i class="fas fa-link"></i></a><a href="#ruled-surface" class="headerlink" title="ruled surface"></a>ruled surface</h2>
-      <ul>
-<li><em>三个直纹面的方程</em></li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041435705.png" alt="image-20220504143528513"></li>
-<li><strong>结构: 准线+母线的方向</strong><ul>
-<li><strong>柱面</strong> 的母线方向是l </li>
-<li>**锥面 **a为常向量 过一个点</li>
-<li><strong>切线面</strong> 母线是准线的一阶导</li>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0414-physicalmath-1/">0414_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-06</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0412-physicalmath/">0412_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-06</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0407-physicalmath/">0407_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
+<li>闭曲线c可以经过a点</li>
 </ul>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/04/maps/">maps</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-04</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="harmonic-maps-调和映射"   >
-          <a href="#harmonic-maps-调和映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#harmonic-maps-调和映射" class="headerlink" title="harmonic maps(调和映射)"></a>harmonic maps(调和映射)</h2>
-      
-        <h4 id="define"   >
-          <a href="#define" class="heading-link"><i class="fas fa-link"></i></a><a href="#define" class="headerlink" title="define"></a>define</h4>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041406217.png" alt="image-20220504140611580"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121634542.png" alt="image-20220512163451686"></p>
 <ul>
-<li>对保角对应的弱化</li>
-<li>Δ为laplace算子 即f求二阶导数</li>
+<li>纠正上次的公式录入错误：</li>
 </ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121642709.png" alt="image-20220512164214827"></p>
 
-        <h4 id="参数化方法"   >
-          <a href="#参数化方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#参数化方法" class="headerlink" title="参数化方法"></a>参数化方法</h4>
+        <h2 id="解析函数导数"   >
+          <a href="#解析函数导数" class="heading-link"><i class="fas fa-link"></i></a><a href="#解析函数导数" class="headerlink" title="解析函数导数"></a>解析函数导数</h2>
       <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408795.png" alt="image-20220504140836986"></p>
-<p>不会出现自交</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041408709.png" alt="image-20220504140855597">权重有可能是负的</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041410775.png" alt="image-20220504141011876"></p>
-<p>局部质量不佳 非负</p>
-</li>
+<li>解析函数有任意阶导数</li>
 </ul>
 
-        <h4 id="计算参数化的扭曲"   >
-          <a href="#计算参数化的扭曲" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算参数化的扭曲" class="headerlink" title="计算参数化的扭曲"></a>计算参数化的扭曲</h4>
+        <h3 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
       <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041413723.png" alt="image-20220504141343764"></p>
-</li>
-<li><p><img src="/ryenney/maps.assets/image-20220504141405489.png" alt="image-20220504141405489"> 3*2雅可比矩阵 -&gt;得到两个正交矩阵（旋转)和中间的矩阵（缩放)</p>
-</li>
-<li><p>由缩放 即奇异值看出形变的大小（σ）</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041417625.png" alt="image-20220504141749629"></p>
-</li>
-<li><p>也可以通过奇异值去构造参数化</p>
-</li>
+<li>证明：需要找到上界</li>
 </ul>
 
-        <h4 id="计算jacobi矩阵的奇异值"   >
-          <a href="#计算jacobi矩阵的奇异值" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算jacobi矩阵的奇异值" class="headerlink" title="计算jacobi矩阵的奇异值"></a>计算jacobi矩阵的奇异值</h4>
-      <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041419341.png" alt="image-20220504141926213"></p>
-</li>
-<li><p>通过第一基本型计算eigenvalues 然后计算奇异值</p>
-</li>
-<li><p>然后求能量函数</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041420227.png" alt="image-20220504142029407"></p>
-</li>
-<li><p>在1,1取最小值 是isometric</p>
-<p>在x,x取最小值 是conformal</p>
-</li>
-<li><p>奇异值是基于每个点计算的 因此作积分算出整个曲面的整体能量</p>
-</li>
-</ul>
-
-        <h4 id="基于形变参数化的流程"   >
-          <a href="#基于形变参数化的流程" class="heading-link"><i class="fas fa-link"></i></a><a href="#基于形变参数化的流程" class="headerlink" title="基于形变参数化的流程"></a>基于形变参数化的流程</h4>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041423624.png" alt="image-20220504142342710"></p>
+        <h3 id="记忆一阶导数公式"   >
+          <a href="#记忆一阶导数公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#记忆一阶导数公式" class="headerlink" title="记忆一阶导数公式"></a>记忆一阶导数公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121719091.png" alt="image-20220512171933981"></p>
 <ul>
-<li>1.构造能量函数<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041426633.png" alt="image-20220504142610532"></li>
-<li>sigma1&#x3D;sigma2 取min</li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041427360.png" alt="image-20220504142709245"></li>
-<li>sigma1&#x3D;sigma2   sigma1*sigma2&#x3D;1</li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041429320.png" alt="image-20220504142905858"></li>
-<li>sigma1&#x3D;1 sigma2&#x3D;1（等距）</li>
-</ul>
-</li>
-<li>2.函数是关于u,v的</li>
-<li>3.找到最小值优化</li>
-<li>harmonic maps 线性的方法<ul>
-<li>线性方法 mean values is better</li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041430163.png" alt="image-20220504143031129"></li>
-</ul>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/04/mapping/">mapping</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-04</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="isometric-correspondence"   >
-          <a href="#isometric-correspondence" class="heading-link"><i class="fas fa-link"></i></a><a href="#isometric-correspondence" class="headerlink" title="isometric correspondence()"></a>isometric correspondence()</h2>
-      
-        <h2 id="conformal-correspondence-保角对应"   >
-          <a href="#conformal-correspondence-保角对应" class="heading-link"><i class="fas fa-link"></i></a><a href="#conformal-correspondence-保角对应" class="headerlink" title="conformal correspondence (保角对应)"></a>conformal correspondence (保角对应)</h2>
-      
-        <h4 id="前提and定义："   >
-          <a href="#前提and定义：" class="heading-link"><i class="fas fa-link"></i></a><a href="#前提and定义：" class="headerlink" title="前提and定义："></a>前提and定义：</h4>
-      <ul>
-<li>三次以上连续可微的一一映射 从s1-&gt;s2</li>
-<li>任一点p上作切映射后 点p的切空间映射后角度不变</li>
-</ul>
-<p>即保证切映射角度不变</p>
-
-        <h4 id="判断是否保角对应"   >
-          <a href="#判断是否保角对应" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断是否保角对应" class="headerlink" title="判断是否保角对应"></a>判断是否保角对应</h4>
-      <ul>
-<li><p>欧氏空间具有内积（特点）每个空间都具有自己的度量</p>
-</li>
-<li><p>线性同构(双射+内积可以保持) linear isomorphism</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041117696.png" alt="image-20220504111738277"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041118780.png" alt="image-20220504111802299"></p>
-</li>
-<li><p>保角 &#x3D;&#x3D; 满足内积的等式关系</p>
-</li>
+<li>对f(a)左右侧同时求导</li>
 </ul>
 
-        <h4 id="命题"   >
-          <a href="#命题" class="heading-link"><i class="fas fa-link"></i></a><a href="#命题" class="headerlink" title="命题"></a>命题</h4>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041120140.png" alt="image-20220504112042903"></p>
+        <h3 id="高阶导数"   >
+          <a href="#高阶导数" class="heading-link"><i class="fas fa-link"></i></a><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121742913.png" alt="image-20220512174256936"></p>
 <ul>
-<li><p>如果是保角对应则必须满足存在一个<strong>正的连续函数λ</strong> 使得切映射后的内积满足该等式</p>
+<li><p>区别只是把分母的次幂换成了n+1</p>
 </li>
-<li><p>对比等距映射 保内积(切映射之前的两个向量内积&#x3D;切映射之后两个向量的内积) 即λ恒等于1时 为等距对应(isometric correspondence)</p>
+<li><p>是反过来 通过求高阶导数来求闭曲线的积分</p>
 </li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041124548.png" alt="image-20220504112457013"></p>
+</ul>
+<p>corona<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://jp.quora.com/%E3%82%B3%E3%83%AD%E3%83%8A%E7%A6%8D%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E8%89%AF%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E4%BA%8B%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B" >作文</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://jp.quora.com/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%81%AE%E3%83%91%E3%83%B3%E3%83%87%E3%83%9F%E3%83%83%E3%82%AF%E7%B5%82%E6%81%AF%E5%BE%8C-%E4%BB%8A%E3%81%BE%E3%81%A7%E3%81%82%E3%81%A3%E3%81%9F%E6%97%A5%E5%B8%B8" >作文1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://jp.quora.com/%E3%82%B3%E3%83%AD%E3%83%8A%E7%A6%8D%E3%81%AE%E5%A4%A7%E5%AD%A6%E7%94%9F-%E5%AD%A6%E3%81%B3%E3%81%AE%E6%A9%9F%E4%BC%9A%E3%82%92%E5%A5%AA%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%AF%E3%81%84%E3%81%BE%E3%81%9B%E3%82%93" >大学生</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://jp.quora.com/%E6%AD%A3%E7%9B%B4-%E3%82%B3%E3%83%AD%E3%83%8A%E7%A6%8D%E3%81%AB%E6%85%A3%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E6%84%9F%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B" >https://jp.quora.com/%E6%AD%A3%E7%9B%B4-%E3%82%B3%E3%83%AD%E3%83%8A%E7%A6%8D%E3%81%AB%E6%85%A3%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E6%84%9F%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nta.go.jp/taxes/kids/sakubun/chugaku/r03/pdf/chokan_30.pdf" >https://www.nta.go.jp/taxes/kids/sakubun/chugaku/r03/pdf/chokan_30.pdf</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www3.nhk.or.jp/news/html/20220216/k10013485741000.html" >https://www3.nhk.or.jp/news/html/20220216/k10013485741000.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/jjpsy/advpub/0/advpub_92.20076/_pdf/-char/ja" >https://www.jstage.jst.go.jp/article/jjpsy/advpub/0/advpub_92.20076/_pdf/-char/ja</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.pen-kanagawa.ed.jp/yamatominami-h/taraju/tarajyu2021/koronaka.html" >https://www.pen-kanagawa.ed.jp/yamatominami-h/taraju/tarajyu2021/koronaka.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://benesse.jp/kyouiku/202202/20220223-1.html" >https://benesse.jp/kyouiku/202202/20220223-1.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>コロナ禍に揺れたこの１年、逆境にも負けず道を決めた高校生たちを紹介</p>
+<p>新型コロナウイルスの流行をきっかけに、私たちの行動は規制され、それに対応する形で社会や生活様式は大きな変化を遂げた</p>
+<p>それは、新型コロナウイルスの流行により様々なことが制限された一方で唯一大きな進歩を遂げたのが「オンライン」であることに起因する。</p>
+<p>誰もがずっと変わらないと思っていた<strong>学校生活</strong>。</p>
+<p>　しかし２０２０年、新型コロナウイルスによってガラリと変わりました。</p>
+<p>「１、２か月で収まると思っていた」「高３が終わった…と思った」</p>
+<p>学校は休校。 　</p>
+<p>　休校が明けても、新型コロナの影響で文化祭や修学旅行が中止に。</p>
+<p>年間でも忙しい時期で、学年末考査（問題作成、考査実施、採点、返却）、年間の成績処理、成績に関わる教科会・学年での会議を経て成績会議、成績不審者の指導、その保護者との面談、そして</p>
+<p>また、部活動では、卒業する3年生が、3年間の集大成として卒業公演などの催しをおこなったり、吹奏楽部などは定期演奏会を開催したりする。それぞれの部は、三送会を開き、3年生は3年間を振り返り、在校生は別れを惜しみ、活動を継承する決意を固める。在校生は卒業生を、卒業生は在校生を思いやり、感動を演出しサプライズを考えるなど創意工夫をこらす主体的な活動である。在校生は使命感・責任感を高め、卒業生は高校生活への充実感や満足感をかみしめ、ともに成長意欲を高め、人格の形成に大きな影響を及ぼす機会となる。その機会が、今年、突然、失われてしまった。送り出される3年生にしてみれば一生に一度の機会であり、毎年行っている会なので、前々から楽しみに待ち望んでいる。それが、突然、中止になり、心の整理もできぬまま外出自粛となった。その気持ちを紛らわすような機会も持てず、教師は精神的なケアを十分に行えない状況となった。</p>
+<p>コロナ禍が起こった。予定どおりに、事が運ばないことを骨の髄まで痛感させられた子どもたち。学校の予定も、入学試験も、感染の終息もどうなるのか全く見通しもつかないばかりか、急変する家庭の経済状況に直面する生徒もいる。学校生活を彩る学校行事を中止する学校も多い。生徒の「学校」「教育」に対するイメージ、期待は、変わってしまったのではないだろうか。コロナ禍の中、生徒はこれまでと同じ進路選択行動にはならないと予想するが、どのように変わるのかは、不明な点が多い。</p>
+<p>新型コロナウイルス感染拡大による政府の緊急事態宣言などを受け、今年３月から６月にかけて、全国の小・中学校、高校などが臨時休校となった。授業映像の配信やオンライン授業などの活用が広がった一方で、コミュニケーションの難しさも指摘されている。前代未聞の経験によって浮上した、新たな学びのスタイルとは－。これからの学びの可能性に注目が集まっている。</p>
+<p>休校期間中の学習の様子を聞くと、５３.４％が［集中できなくて、あまり勉強できていない］と答えた。教員や同級生との交流がスムーズにいかないことによるモチベーション低下や自主的な学習継続の難しさ、理解度への不安といった課題が浮き彫りになっている。</p>
+<p>また、２０２１年から始まる大学入学共通テストへの不安も膨らんでいると思います。電話で塾生と話してみると、学習の遅れや生活リズムの乱れまで、悩みはさまざま。学校の課題も映像授業の視聴も思うように進まないという生徒も多い印象でした。ずっと家で勉強するというのは、周囲の状況が見えなくて、つらかったのではないでしょうか」と最上校舎長は指摘する。</p>
+<p>休校中の過ごし方を振り返る塾生たちの声は十人十色。本来ならば部活動にあてていた時間・熱量を勉強に使った生徒、大学受験や将来のことまで中・長期的に熟考したという生徒。時間を決めてＳＮＳを存分に楽しんだ上で、メリハリをつけて勉強することで集中できるようになったという生徒もいたという。また、休校中の学習進度に焦り、自力で勉強しないと出遅れてしまうという危機感から、高校の休校中も必死に勉強を進めている生徒もいたとのこと。</p>
+<p>しかし一方で、「勉強中についスマートフォンを見てしまう」「モチベーションが上がらない」「周りはどれくらい進んでいるのか、自分は理解できているのか心配」という声も多かった。浮かび上がったのは、漠然とした不安や学習継続の難しさだった。</p>
+<p>「高校１・２年生は、このような状況下だからと言って焦る必要はありません。まずは仲間と切磋琢磨して、学ぶ喜びを味わってください。高校３年生はこれから各々の目標へ挑戦する時期です。不安だ…と行動に移せなくなっている人もいるかもしれませんが、立ち止まらず、前に進みましょう。自分がどういう状況にあるのかを考え、目標に向かってやるべきことをコツコツ積み重ねていくことが大切です</p>
+<p>新型コロナウイルスが流行し始めたときは、ちょっと新しいインフルエンザが出たぐらいの感覚で、それほど深刻に受け止めていませんでした。級友たちもそうです。「学校が休みになってラッキー」ぐらいに考えていた。２月の下旬に休校が決まった時には、３月下旬の修学旅行には行けると思ってましたから。</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.yomiuri.co.jp/national/20210205-OYT1T50240/" >https://www.yomiuri.co.jp/national/20210205-OYT1T50240/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0331-physicalmath/">0331_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-12</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="原函数"   >
+          <a href="#原函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#原函数" class="headerlink" title="原函数"></a>原函数</h2>
+      <ul>
+<li><p>不告诉积分路径时考虑与积分路径无关</p>
 </li>
-<li><p>φ(*)表示把I2(s2上的基本型)拉回到s1上</p>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101530231.png" alt="image-20220510153019906"></p>
 </li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041238532.png" alt="image-20220504123849222"></p>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101546900.png" alt="image-20220510154626412"></p>
 </li>
-<li><p>满足保角对应需要第一基本型满足上式</p>
+<li><p>一个函数时可解析的则拥有原函数 且该函数的积分之间相差常数</p>
 </li>
+<li><p>一个解析函数求导后仍然解析</p>
+</li>
+</ul>
+
+        <h3 id="积分基本定理"   >
+          <a href="#积分基本定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#积分基本定理" class="headerlink" title="积分基本定理"></a>积分基本定理</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101550277.png" alt="image-20220510155017327"></p>
+<ul>
+<li>求积分若判定与路径无关 只需要找到原函数然后代入起点终点就ok</li>
+</ul>
+
+        <h2 id="柯西基本公式"   >
+          <a href="#柯西基本公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西基本公式" class="headerlink" title="柯西基本公式"></a>柯西基本公式</h2>
+      <ul>
+<li>若f(z)在D内解析—&gt;积分f(z)&#x3D;0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101601849.png" alt="image-20220510160111855"></p>
+<ul>
+<li>函数在c内部a一点的值可以由边界表示</li>
+</ul>
+
+        <h3 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101609557.png" alt="image-20220510160901386"></p>
+
+        <h3 id="均值定理"   >
+          <a href="#均值定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#均值定理" class="headerlink" title="均值定理"></a>均值定理</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101616560.png" alt="image-20220510161621479"></p>
+<ul>
+<li>将柯西定理的z进行换元即可证</li>
+<li>表达圆上的值求平均可以得到f(a)</li>
+</ul>
+
+        <h3 id="拓展到多联通区域"   >
+          <a href="#拓展到多联通区域" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展到多联通区域" class="headerlink" title="拓展到多联通区域"></a>拓展到多联通区域</h3>
+      <ul>
+<li>从外侧的曲线进入内部曲线 需要保证解析的点都落在左手侧</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101632869.png" alt="image-20220510163236955"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101634330.png" alt="image-20220510163424462"></p>
+
+        <h3 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li>若单连通区域时 点a在区域外部 则区域内全部解析 所以积分&#x3D;0</li>
+<li></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121629351.png" alt="image-20220512162928309"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121629415.png" alt="image-20220512162947612"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/test/">随手抄抄</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-06</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="the-economist"   >
+          <a href="#the-economist" class="heading-link"><i class="fas fa-link"></i></a><a href="#the-economist" class="headerlink" title="the economist"></a>the economist</h2>
+      <ul>
+<li><p>It will grow by a robust 7% or more for the next several years, helped by free-spending consumers.</p>
+</li>
+<li><p>She was almost 90, but still very robust.</p>
+</li>
+<li><p>Teeming and vital, the city reminded me of the rain forest, the only other habitat that could support such extreme and robust variation among life-forms.</p>
+</li>
+<li><p>The rain was teeming down.</p>
+</li>
+<li><p>The island was teeming with tourists.</p>
+</li>
+<li><p>the teeming streets of the city</p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0414-physicalmath/">0414-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-05</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0329-physicalmath/">0329-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="柯西-古萨定理"   >
+          <a href="#柯西-古萨定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西-古萨定理" class="headerlink" title="柯西-古萨定理"></a>柯西-古萨定理</h1>
+      
+        <h2 id="格林定理"   >
+          <a href="#格林定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#格林定理" class="headerlink" title="格林定理"></a>格林定理</h2>
+      <ul>
+<li><p>条件：x,y连续可导</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060900337.png" alt="image-20220506090028466"></p>
+<p>区域内部的积分-&gt;边界的积分 </p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060910444.png" alt="image-20220506091046228"></p>
+</li>
+</ul>
+
+        <h2 id="积分与路径无关等价于："   >
+          <a href="#积分与路径无关等价于：" class="heading-link"><i class="fas fa-link"></i></a><a href="#积分与路径无关等价于：" class="headerlink" title="积分与路径无关等价于："></a>积分与路径无关等价于：</h2>
+      <ul>
+<li><p>D内任意光滑闭曲线C 有</p>
+</li>
+<li><p>任意一个分段光滑的曲线与路径无关</p>
+</li>
+<li><p>可表示为某一个函数U(x,y)的全微分</p>
+</li>
+<li><p>柯西黎曼方程</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060914501.png" alt="image-20220506091429086"></p>
+</li>
+</ul>
+
+        <h2 id="Cauchy’s-theorem"   >
+          <a href="#Cauchy’s-theorem" class="heading-link"><i class="fas fa-link"></i></a><a href="#Cauchy’s-theorem" class="headerlink" title="Cauchy’s theorem"></a>Cauchy’s theorem</h2>
+      
+        <h3 id="定义"   >
+          <a href="#定义" class="heading-link"><i class="fas fa-link"></i></a><a href="#定义" class="headerlink" title="定义"></a>定义</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060916167.png" alt="image-20220506091627968"></p>
+<p>不光是沿曲线一周积分&#x3D;0 如果是单连通区域 它的内部的闭曲线积分也等于0</p>
+
+        <h3 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060919501.png" alt="image-20220506091932391"></p>
+<p>要求解析和导函数和连续 比如f(z)&#x3D;幂次的多项式组合</p>
+</li>
+</ul>
+
+        <h3 id="曲线某点的指数"   >
+          <a href="#曲线某点的指数" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲线某点的指数" class="headerlink" title="曲线某点的指数"></a>曲线某点的指数</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060927214.png" alt="image-20220506092735470"></p>
+<p>n表示曲线转的周数</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060928115.png" alt="image-20220506092851968"></p>
+<p>index&#x3D;winding number</p>
+<ul>
+<li>注意方向 逆时针+ 顺时针-</li>
+<li>绕圈不一定规则的圆</li>
+<li>若单闭曲线且a在曲线的外侧 n&#x3D;0</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="柯西定理拓展"   >
+          <a href="#柯西定理拓展" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西定理拓展" class="headerlink" title="柯西定理拓展"></a>柯西定理拓展</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060932831.png" alt="image-20220506093225504"></p>
+<ul>
+<li>simple closed contour 单连通闭曲线</li>
+<li>证明不做要求</li>
+</ul>
+
+        <h3 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060939340.png" alt="image-20220506093953601"></p>
+<p>奇点不在积分范围内 所以区域内处处解析</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060941244.png" alt="image-20220506094136700"></p>
+<p>若奇点在区域内部 需要用第二种方法剪开 然后计算小圆</p>
+<p>结果不等于0</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060953013.png" alt="image-20220506095340098"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060955939.png" alt="image-20220506095512794"></p>
+<p>积分等于0不能推出f(z)解析</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101518301.png" alt="image-20220510151805602"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101518362.png" alt="image-20220510151822282"></p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0324-physicalmath/">0324-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-05</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="review"   >
+          <a href="#review" class="heading-link"><i class="fas fa-link"></i></a><a href="#review" class="headerlink" title="review:"></a>review:</h2>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051626623.png" alt="image-20220505162627854"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051628008.png" alt="image-20220505162801015"></p>
+</li>
+<li><p>将复变函数参数化后变化为关于参数t的定积分</p>
+</li>
+</ul>
+
+        <h2 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example:"></a>example:</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051655383.png" alt="image-20220505165526891"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051656559.png" alt="image-20220505165604768"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051656727.png" alt="image-20220505165628724"></p>
+<ul>
+<li>注意2的例子说明积分路径不同 虽然起点和终点相同但是结果不同</li>
+</ul>
+
+        <h2 id="积分的上界"   >
+          <a href="#积分的上界" class="heading-link"><i class="fas fa-link"></i></a><a href="#积分的上界" class="headerlink" title="积分的上界"></a>积分的上界</h2>
+      
+        <h3 id="估算积分"   >
+          <a href="#估算积分" class="heading-link"><i class="fas fa-link"></i></a><a href="#估算积分" class="headerlink" title="估算积分"></a>估算积分</h3>
+      <ul>
+<li><p>从定义入手 </p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051701368.png" alt="image-20220505170123636"></p>
+<p>zk-zk-1是两点的直线距离 一定会小于等于曲线长度</p>
+</li>
+</ul>
+
+        <h2 id="判定积分是否与路径有关"   >
+          <a href="#判定积分是否与路径有关" class="heading-link"><i class="fas fa-link"></i></a><a href="#判定积分是否与路径有关" class="headerlink" title="判定积分是否与路径有关"></a>判定积分是否与路径有关</h2>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051708162.png" alt="image-20220505170836938"></p>
+<p>与路径无关等价于闭曲线的积分&#x3D;0</p>
+</li>
+</ul>
+
+        <h3 id="判定条件"   >
+          <a href="#判定条件" class="heading-link"><i class="fas fa-link"></i></a><a href="#判定条件" class="headerlink" title="判定条件"></a>判定条件</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051710119.png" alt="image-20220505171024327"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205052159405.png" alt="image-20220505215920150"></p>
+<p>条件和柯西黎曼方程是等价的</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205052201327.png" alt="image-20220505220122898"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205052201401.png" alt="image-20220505220149662"></p>
+<p>条件等价于f是某个函数的求导</p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0322-physicalmath/">0322-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-05</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="complex-intergration"   >
+          <a href="#complex-intergration" class="heading-link"><i class="fas fa-link"></i></a><a href="#complex-intergration" class="headerlink" title="complex intergration"></a>complex intergration</h1>
+      
+        <h2 id="实变量积分引入"   >
+          <a href="#实变量积分引入" class="heading-link"><i class="fas fa-link"></i></a><a href="#实变量积分引入" class="headerlink" title="实变量积分引入"></a>实变量积分引入</h2>
+      <ul>
+<li>积分分为不定积分 and 定积分</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051406305.png" alt="image-20220505140612113"></li>
+</ul>
+
+        <h2 id="复变量函数的积分"   >
+          <a href="#复变量函数的积分" class="heading-link"><i class="fas fa-link"></i></a><a href="#复变量函数的积分" class="headerlink" title="复变量函数的积分"></a>复变量函数的积分</h2>
+      <ul>
+<li><p>从线段的分割到曲线的分割</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051408796.png" alt="image-20220505140759865"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051408691.png" alt="image-20220505140846586"></p>
+</li>
+<li><p>注意积分的方向 有向曲线</p>
+<p>通常逆时针为正 顺时针为负</p>
+</li>
+</ul>
+
+        <h3 id="连续"   >
+          <a href="#连续" class="heading-link"><i class="fas fa-link"></i></a><a href="#连续" class="headerlink" title="连续"></a>连续</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051415565.png" alt="image-20220505141546374"></p>
+</li>
+<li><p>点z在曲线上 关于t的参数方程 若x(t) y(t)都是关于t连续的 则曲线是连续曲线</p>
+</li>
+</ul>
+
+        <h3 id="光滑"   >
+          <a href="#光滑" class="heading-link"><i class="fas fa-link"></i></a><a href="#光滑" class="headerlink" title="光滑"></a>光滑</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051418548.png" alt="image-20220505141834335"></p>
+</li>
+<li><p>连续而且可导 导函数也连续</p>
+</li>
+<li><p>条件很强 一般运用时曲线是分段光滑</p>
+</li>
+</ul>
+
+        <h3 id="简单曲线-约当曲线"   >
+          <a href="#简单曲线-约当曲线" class="heading-link"><i class="fas fa-link"></i></a><a href="#简单曲线-约当曲线" class="headerlink" title="简单曲线 (约当曲线)"></a>简单曲线 (约当曲线)</h3>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051420228.png" alt="image-20220505141956798"></p>
+<p>即曲线没有打结</p>
+</li>
+</ul>
+
+        <h3 id="闭曲线"   >
+          <a href="#闭曲线" class="heading-link"><i class="fas fa-link"></i></a><a href="#闭曲线" class="headerlink" title="闭曲线"></a>闭曲线</h3>
+      <ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051421639.png" alt="image-20220505142115794"></li>
+</ul>
+
+        <h3 id="分割"   >
+          <a href="#分割" class="heading-link"><i class="fas fa-link"></i></a><a href="#分割" class="headerlink" title="分割"></a>分割</h3>
+      <ul>
+<li>因为是参数方程所以对曲线分割转化为对t在区间内分割</li>
 <li></li>
 </ul>
 
-        <h4 id="定理"   >
-          <a href="#定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理" class="headerlink" title="定理"></a>定理</h4>
+        <h3 id="类比推知结论"   >
+          <a href="#类比推知结论" class="heading-link"><i class="fas fa-link"></i></a><a href="#类比推知结论" class="headerlink" title="类比推知结论"></a>类比推知结论</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051530016.png" alt="image-20220505153021270"></p>
+
+        <h3 id="复变函数性质"   >
+          <a href="#复变函数性质" class="heading-link"><i class="fas fa-link"></i></a><a href="#复变函数性质" class="headerlink" title="复变函数性质"></a>复变函数性质</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051531949.png" alt="image-20220505153133287"></p>
+
+        <h3 id="常见例子"   >
+          <a href="#常见例子" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见例子" class="headerlink" title="常见例子"></a>常见例子</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051617815.png" alt="image-20220505161724467"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051617216.png" alt="image-20220505161753132"></p>
+
+        <h3 id="重要结论"   >
+          <a href="#重要结论" class="heading-link"><i class="fas fa-link"></i></a><a href="#重要结论" class="headerlink" title="重要结论"></a>重要结论</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051619324.png" alt="image-20220505161938841"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051622693.png" alt="image-20220505162229914"></p>
+<p>换元成t后 交换起点和终点计算</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0503-physicalmath/">0503_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-05</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="residues-留数"   >
+          <a href="#residues-留数" class="heading-link"><i class="fas fa-link"></i></a><a href="#residues-留数" class="headerlink" title="residues 留数"></a>residues 留数</h1>
+      
+        <h2 id="无穷远处的留数"   >
+          <a href="#无穷远处的留数" class="heading-link"><i class="fas fa-link"></i></a><a href="#无穷远处的留数" class="headerlink" title="无穷远处的留数"></a>无穷远处的留数</h2>
+      
+        <h4 id="定义"   >
+          <a href="#定义" class="heading-link"><i class="fas fa-link"></i></a><a href="#定义" class="headerlink" title="定义"></a>定义</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050842626.png" alt="image-20220505084258199"></p>
+<ul>
+<li>定义中取的是顺时针为正方向 如果取逆时针需要加负号</li>
+</ul>
+
+        <h4 id="计算"   >
+          <a href="#计算" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算" class="headerlink" title="计算"></a>计算</h4>
+      
+        <h4 id="柯西留数定理"   >
+          <a href="#柯西留数定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西留数定理" class="headerlink" title="柯西留数定理"></a>柯西留数定理</h4>
       <ul>
-<li><p>任何正则参数曲面一定可以局部和平面构成保角对应</p>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050845689.png" alt="image-20220505084503429"></p>
 </li>
-<li><p>作保角参数化（应用）</p>
+<li><p>计算闭曲线的积分&#x3D;闭曲线内有限个多联通区域的留数值之和(不考虑无穷远点)</p>
 </li>
-<li><p>通过一个平面 可以使得两个正则参数曲面之间建立保角对应</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041315032.png" alt="image-20220504131521344"></p>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050853027.png" alt="image-20220505085332929"></p>
+</li>
+<li><p>所有的奇点（包括无穷远处）留数的和&#x3D;0</p>
+</li>
+<li><p>如果c内部的奇点很多但是c外部只有几个奇点加上一个无穷远处奇点</p>
+<ul>
+<li>利用定理2可算出里面的奇点的留数和&#x3D;外面的留数和的相反数</li>
+</ul>
+</li>
+<li><p>证明：</p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050902518.png" alt="image-20220505090202068"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050904006.png" alt="image-20220505090419905"></li>
+</ul>
 </li>
 </ul>
 
         <h4 id="example"   >
-          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h4>
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example:"></a>example:</h4>
       <ul>
-<li>因为球和柱面的F&#x3D;0（交叉项&#x3D;0）所以一定能形成正交的参数曲线网– 判断有无正交参数曲线网用第一基本型</li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041323514.png" alt="image-20220504132127771"></li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050910887.png" alt="image-20220505091039212"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050916872.png" alt="image-20220505091657666"></p>
+</li>
 </ul>
 
-        <h4 id="application"   >
-          <a href="#application" class="heading-link"><i class="fas fa-link"></i></a><a href="#application" class="headerlink" title="application"></a>application</h4>
-      <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041322225.png" alt="image-20220504132238416"></p>
-</li>
-<li><p>从三维到曲面的映射</p>
-</li>
-<li><p>曲面参数化分为平面参数化和球面参数化</p>
-</li>
-<li><p>0亏格（类似球面） 可以参数化到球面上</p>
-</li>
-<li><p>轮胎面 亏格&#x3D;1 两个孔 亏格&#x3D;2</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041326340.png" alt="image-20220504132559812"></p>
-</li>
-<li><p>需要剪开开孔然后映射到平面（轮胎面-&gt;矩形）</p>
-<ul>
-<li>纹理映射(texture mapping)</li>
-<li>remeshing重新网格化  曲面-&gt;平面-&gt;曲面 逆映射回到曲面</li>
-<li>shape interpolation 形状插值 计算人和恐龙的形状插值（或者恐龙到人的形状转变） 分别将输入输出映射到平面 再逆映射回去</li>
-</ul>
-</li>
-<li><p>参数化的性质</p>
-<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041330618.png" alt="image-20220504133026992"></li>
-</ul>
-</li>
-<li><p>三种基本的参数化</p>
-<ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041332591.png" alt="image-20220504133204568"></p>
-<ul>
-<li>保长</li>
-<li>保角（共形）<ul>
-<li>相似变换 只允许旋转+均匀缩放</li>
-<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041334327.png" alt="image-20220504133448147"></li>
-</ul>
-</li>
-<li>保面积</li>
-</ul>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041336383.png" alt="image-20220504133638711"></p>
-</li>
-<li><p>评估参数化</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041338876.png" alt="image-20220504133843935"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041339171.png" alt="image-20220504133941153"></p>
-</li>
-<li><p>第一基本型<img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041340233.png" alt="image-20220504134030596"></p>
-</li>
-<li><p>构造两个曲面之间的映射</p>
-<ul>
-<li><p><strong>isometric map</strong></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041341584.png" alt="image-20220504134142466"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041359835.png" alt="image-20220504134157979"></p>
-<p>等距曲面上对应点有相同的高斯曲率</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041342571.png" alt="image-20220504134250931"></p>
-</li>
-<li><p>conformal map and isometric map都是局部双射</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041355382.png" alt="image-20220504135545480"></p>
-</li>
-<li><p>面积元&#x3D;行列式值</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205041356255.png" alt="image-20220504135624707"></p>
-</li>
-<li><p>如果一个映射时等距&#x3D;&#x3D;共形+保面积</p>
-<p>三个边长 &#x3D;&#x3D; 唯一一个三角形 &#x3D;&#x3D;角度+面积</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/03/%E4%B9%A0%E6%A6%82%E5%A4%8D%E4%B9%A0/">习概复习</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205031552185.png" alt="image-20220503155254421"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205031557346.png" alt="image-20220503155729838"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205031558202.png" alt="image-20220503155807622"></p>
-
-        <h1 id="chap11"   >
-          <a href="#chap11" class="heading-link"><i class="fas fa-link"></i></a><a href="#chap11" class="headerlink" title="chap11"></a>chap11</h1>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101523406.png" alt="image-20220510152325410"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101531195.png" alt="image-20220510153138751"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101558403.png" alt="image-20220510155849006"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/03/AVL-tree/">AVL_tree</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h2>
+        <h2 id="计算实变量积分-运用留数定理"   >
+          <a href="#计算实变量积分-运用留数定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算实变量积分-运用留数定理" class="headerlink" title="计算实变量积分 运用留数定理"></a>计算实变量积分 运用留数定理</h2>
       
-        <h4 id="平衡因子"   >
-          <a href="#平衡因子" class="heading-link"><i class="fas fa-link"></i></a><a href="#平衡因子" class="headerlink" title="平衡因子"></a>平衡因子</h4>
-      <ul>
-<li>此节点往下 右子树深度- 左子树深度&#x3D;平衡因子(教材这么说)</li>
-<li>也有左子树深度-右子树深度的算法</li>
-<li>叶子结点都是为 0</li>
-</ul>
-
-        <h4 id="深度vs高度"   >
-          <a href="#深度vs高度" class="heading-link"><i class="fas fa-link"></i></a><a href="#深度vs高度" class="headerlink" title="深度vs高度"></a>深度vs高度</h4>
-      <ul>
-<li><strong>树的深度</strong>：从根节点开始（其深度为0）<strong>自顶向下</strong>逐层累加的。</li>
-<li><strong>树的高度</strong>： 树的深度+1</li>
-</ul>
-
-        <h4 id="平衡二叉树"   >
-          <a href="#平衡二叉树" class="heading-link"><i class="fas fa-link"></i></a><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h4>
-      <ul>
-<li>def：一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1。</li>
-</ul>
-
-        <h2 id="eg"   >
-          <a href="#eg" class="heading-link"><i class="fas fa-link"></i></a><a href="#eg" class="headerlink" title="eg"></a>eg</h2>
-      <ul>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/491274854#:~:text=%E9%A6%96%E5%85%88%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%89,%E5%BA%A6%E5%B7%AE%E4%B8%BA1%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82" >计算平衡二叉树最大深度-math证明</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38233103/article/details/117811963" >记忆斐波那契数列：</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>有12个结点的平衡二叉树的最大深度是 () A. 3 B. 6 C. 5 <strong>D</strong>. 4In the AVL tree, inserting a new node into the tree of a node whose balance factor is not zero will cause a balance rotation</p>
-</li>
-<li><p>由元素序列27，16，75，38，51构造平衡二叉树，则首次出现的最小不平衡子树的根（即离插入节点最近且平衡因子的绝对值为2的节点）为（） <strong>A</strong>. 51 B. 38 C. 27 D. 75</p>
-</li>
-<li><p>在平衡二叉树中插入一个结点后造成了不平衡，设最低的不平衡结点在A，并已知A 的左孩子的平衡因子为-1，右孩子的平衡因子为0，则应进行( )型调整以使其平衡 A. RR <strong>B</strong>. LL C. LR D. RL</p>
-<ul>
-<li>旋转的几种情况：<br>1.插入点位于x的左孩子的左子树中。	左左LL  右旋。<br>2.插入点位于x的左孩子的右子树中。	左右LR	较低的先左旋，转换为LL问题，再右旋。<br>3.插入点位于x的右孩子的左子树中。	右左RL	较低的先右旋，转化为RR问题。再左旋。<br>4.插入点位于x的右孩子的右子树中。	右右RR	左旋。</li>
-</ul>
-</li>
-<li><p>一棵高度为k的平衡二叉树，其每个非叶子结点的平衡因子均为0，则该树的结点数是 ( )。 A. 2 k-1 B. 2 k-1 C. 2 k-1-1 D. 2 k-1+1 </p>
-</li>
-<li><p>一个高度为4的平衡二叉树，最小结点数是 <strong>A</strong>. 7 B. 15 C. 8 D. 14</p>
-</li>
-<li><p>在AVL树中，由于在Ａ结点的右孩子的右子树上插入结点，使Ａ结点的平衡因子由-1 变为-2，使其失去平衡，应采用（）型平衡旋转 A. RL <strong>B</strong>. RR C. LR D. LL</p>
-</li>
-<li><p>In the AVL tree, inserting a new node into the tree of a node whose balance factor is not zero will cause a balance rotation (x) </p>
-<p>why:</p>
-</li>
-</ul>
-
-        <h3 id="可视化工具"   >
-          <a href="#可视化工具" class="heading-link"><i class="fas fa-link"></i></a><a href="#可视化工具" class="headerlink" title="可视化工具"></a>可视化工具</h3>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://visualgo.net/zh/bst?mode=AVL" >click it</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li>对某个结点左旋或右旋：把这个结点作为左孩子或右孩子</li>
-<li>每一次插入需要找到叶子结点 不能插在中间的非叶子结点上</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://infinityglow.github.io/study/algorithm/transform-and-conquer/AVL-tree/#:~:text=AVL,%E6%A0%91%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C%E4%B9%9F%E8%B7%9F%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%80%E6%A0%B7%EF%BC%8C%E5%85%88%E6%89%BE%E5%88%B0%E6%8F%92%E5%85%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%EF%BC%8C%E5%8D%B3%E9%80%9A%E8%BF%87%E6%90%9C%E7%B4%A2%E6%93%8D%E4%BD%9C%E6%89%BE%E5%88%B0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%82%B9%EF%BC%8C%E7%84%B6%E5%90%8E%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E8%8A%82%E7%82%B9%EF%BC%8C%E6%9C%80%E5%90%8E%E7%88%B6%E8%8A%82%E7%82%B9%E6%8C%87%E5%90%91%E8%AF%A5%E6%96%B0%E8%8A%82%E7%82%B9%E3%80%82" >别人的blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/02/Internet-1/">Internet-1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="OSI-模型"   >
-          <a href="#OSI-模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#OSI-模型" class="headerlink" title="OSI 模型"></a>OSI 模型</h2>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/niudai/How-to-be-a-good-programmer" >https://github.com/niudai/How-to-be-a-good-programmer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/02/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86-%E7%BA%A7%E6%95%B0/">数学物理-级数</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-03</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h1 id="Talor-series"   >
-          <a href="#Talor-series" class="heading-link"><i class="fas fa-link"></i></a><a href="#Talor-series" class="headerlink" title="Talor series"></a>Talor series</h1>
+        <h3 id="定理："   >
+          <a href="#定理：" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理：" class="headerlink" title="定理："></a>定理：</h3>
       
-        <h2 id="ex"   >
-          <a href="#ex" class="heading-link"><i class="fas fa-link"></i></a><a href="#ex" class="headerlink" title="ex:"></a>ex:</h2>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205021153954.jpg" alt="preview"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%98%A0%E5%B0%84/">微分几何-映射</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-03</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/314928832" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/01/Untitled%201/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-02</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/01/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%9E%8B/">微分几何-第一基本型</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-03</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/148001852#:~:text=%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F%E7%94%A8%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%20I%20%E8%A1%A8%E7%A4%BA%EF%BC%9A%20%E8%AE%BE%20X%20%28u%2C,v%29%20%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E6%9B%B2%E9%9D%A2%EF%BC%8C%E5%88%99%E4%B8%A4%E4%B8%AA%E5%88%87%E5%90%91%E9%87%8F%E7%9A%84%E5%86%85%E7%A7%AF%E4%B8%BA%20%E8%BF%99%E9%87%8C%20E%2C%20F%2C%E4%B8%8E%20G%20%E6%98%AF%E7%AC%AC%E4%B8%80%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F%E7%9A%84%E7%B3%BB%E6%95%B0%E3%80%82" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h4 id="圆周半径趋于0"   >
+          <a href="#圆周半径趋于0" class="heading-link"><i class="fas fa-link"></i></a><a href="#圆周半径趋于0" class="headerlink" title="圆周半径趋于0"></a>圆周半径趋于0</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050924438.png" alt="image-20220505092447275"></p>
+<ul>
+<li>特殊：取0&lt;&#x3D;θ&lt;&#x3D;2Π A&#x3D;1</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050928321.png" alt="image-20220505092801162"></li>
+</ul>
 
-        <h2 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h2>
-      <ul>
-<li><p>切平面 切空间引入 </p>
+        <h4 id="圆周半径趋于无穷"   >
+          <a href="#圆周半径趋于无穷" class="heading-link"><i class="fas fa-link"></i></a><a href="#圆周半径趋于无穷" class="headerlink" title="圆周半径趋于无穷"></a>圆周半径趋于无穷</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050929831.png" alt="image-20220505092908219"></p>
+
+        <h3 id="定积分"   >
+          <a href="#定积分" class="heading-link"><i class="fas fa-link"></i></a><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050933577.png" alt="image-20220505093329265"></p>
+<ul>
+<li><p>只需要周期是2Π -Π到Π也可以</p>
 </li>
-<li><p>第一基本形式可以表示为一个对称矩阵</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205011133179.png" alt="image-20220501113316758"></p>
+<li><p>若为偶函数 则&#x3D;2积分0到Π</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205050940954.png" alt="image-20220505094044332"></p>
+</li>
+<li><p>c是正向的单位圆周</p>
 </li>
 </ul>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/ryenney/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/ryenney/">1</a><a class="page-number" href="/ryenney/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/ryenney/page/4/">4</a><a class="extend next" rel="next" href="/ryenney/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">35</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
+
+        <h3 id="反常积分"   >
+          <a href="#反常积分" class="heading-link"><i class="fas fa-link"></i></a><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051147744.png" alt="image-20220505114714430"></p>
+<ul>
+<li><p>-∞到+∞只有两个都收敛的时候整个积分是收敛的 （注意这两个积分的R必须各自取并且收敛）</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051152600.png" alt="image-20220505115236850"></p>
+</li>
+<li><p>10是9的特殊情形 二者并不等价 10中R是同一个R 9中R1可以不等于R2</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051157387.png" alt="image-20220505115746408">右边收敛不能推出左边收敛</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051200251.png" alt="image-20220505120056886"></p>
+<p>从L.H.S可以推出R.H.S R.H.S是柯西主值</p>
+</li>
+<li><p>讨论的范围都是principal value（R.H.S）和（L.H.S）都收敛的积分</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051209532.png" alt="image-20220505120919467"></p>
+<p>按广义积分算是发散的 但是柯西主值可以计算</p>
+</li>
+<li><p>注意：给定条件下 广义积分计算出来和柯西主值计算出的结果可以相等</p>
+</li>
+<li><p>柯西主值有不代表广义积分值收敛</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051227765.png" alt="image-20220505122706976"></p>
+<p>从-∞,+∞的积分 到 复变函数积分需要确立闭曲线 所以画一个R的半圆周 闭曲线&#x3D;上半圆周+(-R,+R)</p>
+<p><strong>如果上半圆周积分&#x3D;0</strong>，(-R,+R)积分&#x3D;留数的值</p>
+<ul>
+<li>何时上半圆周积分&#x3D;0？</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205051230329.png" alt="image-20220505123023055"><ol>
+<li>奇点均在闭曲线内部 [-R,R]上没有奇点</li>
+<li>由有用定理2 可以推知上半圆周积分&#x3D;0</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/ryenney/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/ryenney/">1</a><a class="page-number" href="/ryenney/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/ryenney/page/4/">4</a><a class="page-number" href="/ryenney/page/5/">5</a><a class="extend next" rel="next" href="/ryenney/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">49</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

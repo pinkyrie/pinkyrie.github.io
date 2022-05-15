@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="内积                           外积         两个向量外积方向 右手螺旋                      混合积         判断三个向量共面：三个向量混合积&#x3D;0 混合积表示体积 算出来是一个数 注意混合积的运算公式（交换加负号）                      标架        四个元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curve1">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/03/02/curve1/index.html">
+<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:description" content="内积                           外积         两个向量外积方向 右手螺旋                      混合积         判断三个向量共面：三个向量混合积&#x3D;0 混合积表示体积 算出来是一个数 注意混合积的运算公式（交换加负号）                      标架        四个元素">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130848871.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130850964.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130852748.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130856581.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130904690.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130908198.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130914631.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130915155.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130917047.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130920625.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130921569.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130923410.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130926520.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141217472.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130929132.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130931602.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935202.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935820.png">
+<meta property="article:published_time" content="2022-03-02T00:45:51.000Z">
+<meta property="article:modified_time" content="2022-05-15T02:42:14.430Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130848871.png"><title>curve1 | rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/2022/03/02/curve1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">curve1</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-15</span></span></div></header><div class="post-body">
+        <h2 id="内积"   >
+          <a href="#内积" class="heading-link"><i class="fas fa-link"></i></a><a href="#内积" class="headerlink" title="内积"></a>内积</h2>
+      
+        <h2 id="外积"   >
+          <a href="#外积" class="heading-link"><i class="fas fa-link"></i></a><a href="#外积" class="headerlink" title="外积"></a>外积</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130848871.png" alt="image-20220513084854830"></p>
+<ul>
+<li>两个向量外积方向 右手螺旋</li>
+</ul>
+
+        <h2 id="混合积"   >
+          <a href="#混合积" class="heading-link"><i class="fas fa-link"></i></a><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130850964.png" alt="image-20220513085014094"></p>
+<ul>
+<li>判断三个向量共面：三个向量混合积&#x3D;0</li>
+<li>混合积表示体积 算出来是一个数</li>
+<li>注意混合积的运算公式（交换加负号）</li>
+</ul>
+
+        <h2 id="标架"   >
+          <a href="#标架" class="heading-link"><i class="fas fa-link"></i></a><a href="#标架" class="headerlink" title="标架"></a>标架</h2>
+      <ul>
+<li>四个元素<ul>
+<li>原点</li>
+<li>不共面的三个向量</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="右手单位正交标架（直角坐标系）"   >
+          <a href="#右手单位正交标架（直角坐标系）" class="heading-link"><i class="fas fa-link"></i></a><a href="#右手单位正交标架（直角坐标系）" class="headerlink" title="右手单位正交标架（直角坐标系）"></a>右手单位正交标架（直角坐标系）</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130852748.png" alt="image-20220513085241814"></p>
+
+        <h3 id="坐标转化（静止的点转化）"   >
+          <a href="#坐标转化（静止的点转化）" class="heading-link"><i class="fas fa-link"></i></a><a href="#坐标转化（静止的点转化）" class="headerlink" title="坐标转化（静止的点转化）"></a>坐标转化（静止的点转化）</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130856581.png" alt="image-20220513085628524"></p>
+<ul>
+<li>A矩阵表示将原标架进行旋转+平移得到新的标架</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130904690.png" alt="image-20220513090452815"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130908198.png" alt="image-20220513090822486"></p>
+<ul>
+<li>p点坐标已知</li>
+</ul>
+<blockquote>
+<p>这个是两个坐标系下的坐标是不同的 q在另一个坐标系下有了新的坐标 最后的目的都是统一基向量是ijk的形式</p>
+</blockquote>
+
+        <h3 id="坐标转化（点在刚体运动）"   >
+          <a href="#坐标转化（点在刚体运动）" class="heading-link"><i class="fas fa-link"></i></a><a href="#坐标转化（点在刚体运动）" class="headerlink" title="坐标转化（点在刚体运动）"></a>坐标转化（点在刚体运动）</h3>
+      <ul>
+<li><p>q相对于O标架的坐标和q相对于P标架的坐标是一样的 q对于坐标的相对位置是不变的</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130914631.png" alt="image-20220513091401590"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130915155.png" alt="image-20220513091513802"></p>
+</li>
+</ul>
+<blockquote>
+<p>q在另一个坐标系下仍然是原来的坐标 只是 新坐标系的基向量需要用原坐标系的基向量表示 </p>
+</blockquote>
+
+        <h3 id="定理："   >
+          <a href="#定理：" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理：" class="headerlink" title="定理："></a>定理：</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130917047.png" alt="image-20220513091659098"></p>
+<ul>
+<li>刚体运动保持正交标架仍然为正交标架</li>
+<li>如果两条线段变化时他们对应两点的距离不变 等距变换</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130920625.png" alt="image-20220513092031358"></p>
+<ul>
+<li>关于x对称 y加-号</li>
+<li>关于y对称 x加-号</li>
+<li>原点对称则xy都加-号</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130921569.png" alt="image-20220513092149629"></p>
+<ul>
+<li>错切：x’&#x3D;ax+b</li>
+</ul>
+
+        <h3 id="仿射坐标下求向量长度"   >
+          <a href="#仿射坐标下求向量长度" class="heading-link"><i class="fas fa-link"></i></a><a href="#仿射坐标下求向量长度" class="headerlink" title="仿射坐标下求向量长度"></a>仿射坐标下求向量长度</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130923410.png" alt="image-20220513092321414"></p>
+<ul>
+<li>度量系数</li>
+<li>仿射标架的度量矩阵（gij）理解成下标表示二维数组的下标<ul>
+<li>（第一行第一列，第一行第二列，第一行第三列）</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="homework"   >
+          <a href="#homework" class="heading-link"><i class="fas fa-link"></i></a><a href="#homework" class="headerlink" title="homework"></a>homework</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130926520.png" alt="image-20220513092636090"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205141217472.png" alt="image-20220514121706529"></p>
+
+        <h2 id="向量值函数"   >
+          <a href="#向量值函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#向量值函数" class="headerlink" title="向量值函数"></a>向量值函数</h2>
+      <ul>
+<li>连续可微的向量函数 &#x3D;&#x3D; 对应分量的标量值函数连续可微<ul>
+<li>等价考虑三个分量</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130929132.png" alt="image-20220513092921106"></p>
+
+        <h3 id="Leibniz-rule"   >
+          <a href="#Leibniz-rule" class="heading-link"><i class="fas fa-link"></i></a><a href="#Leibniz-rule" class="headerlink" title="Leibniz rule"></a>Leibniz rule</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130931602.png" alt="image-20220513093107581"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935202.png" alt="image-20220513093540668"></p>
+<ul>
+<li><p>a的长度是常量</p>
+</li>
+<li><p>a的方向不变</p>
+<ul>
+<li>b是单位向量 f是标量</li>
+<li>a和a’共线 则外积&#x3D;0</li>
+</ul>
+</li>
+<li><p>a和另一个向量垂直 b是常向量</p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205130935820.png" alt="image-20220513093508983"></li>
+<li>假设a和b垂直</li>
+</ul>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/03/02/curve1/">http://gitee.com/ryenney/2022/03/02/curve1/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/03/07/curve2/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">curve2</span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%A7%AF"><span class="toc-number">1.</span> <span class="toc-text">
+          内积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E7%A7%AF"><span class="toc-number">2.</span> <span class="toc-text">
+          外积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E7%A7%AF"><span class="toc-number">3.</span> <span class="toc-text">
+          混合积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E6%9E%B6"><span class="toc-number">4.</span> <span class="toc-text">
+          标架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E6%89%8B%E5%8D%95%E4%BD%8D%E6%AD%A3%E4%BA%A4%E6%A0%87%E6%9E%B6%EF%BC%88%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%89"><span class="toc-number">4.1.</span> <span class="toc-text">
+          右手单位正交标架（直角坐标系）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%AC%E5%8C%96%EF%BC%88%E9%9D%99%E6%AD%A2%E7%9A%84%E7%82%B9%E8%BD%AC%E5%8C%96%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">
+          坐标转化（静止的点转化）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%AC%E5%8C%96%EF%BC%88%E7%82%B9%E5%9C%A8%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8%EF%BC%89"><span class="toc-number">4.3.</span> <span class="toc-text">
+          坐标转化（点在刚体运动）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E7%90%86%EF%BC%9A"><span class="toc-number">4.4.</span> <span class="toc-text">
+          定理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BF%E5%B0%84%E5%9D%90%E6%A0%87%E4%B8%8B%E6%B1%82%E5%90%91%E9%87%8F%E9%95%BF%E5%BA%A6"><span class="toc-number">4.5.</span> <span class="toc-text">
+          仿射坐标下求向量长度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#homework"><span class="toc-number">5.</span> <span class="toc-text">
+          homework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">
+          向量值函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leibniz-rule"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Leibniz rule</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">49</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
