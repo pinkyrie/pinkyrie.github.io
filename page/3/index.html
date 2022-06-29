@@ -1,12 +1,12 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="过期的jk">
 <meta property="og:type" content="website">
-<meta property="og:title" content="rye and pinkypie">
+<meta property="og:title" content="rye is coding">
 <meta property="og:url" content="http://gitee.com/ryenney/page/3/index.html">
-<meta property="og:site_name" content="rye and pinkypie">
+<meta property="og:site_name" content="rye is coding">
 <meta property="og:description" content="过期的jk">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="rye">
-<meta name="twitter:card" content="summary"><title>rye and pinkypie</title><link ref="canonical" href="http://gitee.com/ryenney/page/3/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+<meta name="twitter:card" content="summary"><title>rye is coding</title><link ref="canonical" href="http://gitee.com/ryenney/page/3/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/ryenney/',
   algolia: undefined,
@@ -30,377 +30,929 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye and pinkypie</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/DS-3.2/">heap</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="define"   >
-          <a href="#define" class="heading-link"><i class="fas fa-link"></i></a><a href="#define" class="headerlink" title="define"></a>define</h2>
-      <ul>
-<li>堆这种数据结构本质是一个完全二叉树（完全二叉树（Complete Binary Tree）：在满足满二叉树的性质后，最后一层的叶子节点均需在最左边）</li>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/13/internet-4/">internet-4</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-06-28</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
+<li>ADSL<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://baike.1688.com/doc/view-d3587250.html" >信号和电话信号分离的东西</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
 </ul>
 
-        <h2 id="mooc"   >
-          <a href="#mooc" class="heading-link"><i class="fas fa-link"></i></a><a href="#mooc" class="headerlink" title="mooc"></a>mooc</h2>
+        <h2 id="计网黑书"   >
+          <a href="#计网黑书" class="heading-link"><i class="fas fa-link"></i></a><a href="#计网黑书" class="headerlink" title="计网黑书"></a>计网黑书</h2>
+      
+        <h3 id="进程之间的通信"   >
+          <a href="#进程之间的通信" class="heading-link"><i class="fas fa-link"></i></a><a href="#进程之间的通信" class="headerlink" title="进程之间的通信"></a>进程之间的通信</h3>
       <ul>
-<li><p>建堆时，最坏情况下需要挪动元素次数是等于树中各结点的高度和。问：对于元素个数为12的堆，其各结点的高度之和是多少？</p>
+<li>不是程序而是进程之前进行通信</li>
+<li>客户和服务器不是固定的 一个进程可以同时是客户和服务器（例如P2P）会话场景中发起通信是客户 会话开始时等待联系的是服务器</li>
+<li>套接字（socket）是同一台主机内应用层与传输层之间的接口 开发者可以控制socket的应用层端 但是对运输层几乎不能控制</li>
+</ul>
+
+        <h3 id="应用服务传输数据过程的标准"   >
+          <a href="#应用服务传输数据过程的标准" class="heading-link"><i class="fas fa-link"></i></a><a href="#应用服务传输数据过程的标准" class="headerlink" title="应用服务传输数据过程的标准"></a>应用服务传输数据过程的标准</h3>
+      <ul>
+<li>可靠</li>
+<li>吞吐量（发送进程-&gt;接收进程的交付比特速率 带宽 贷款敏感应用：例如因特网电话 弹性应用：根据当前可用带宽调整吞吐量</li>
+<li>定时</li>
+<li>安全性</li>
+</ul>
+
+        <h3 id="vpn"   >
+          <a href="#vpn" class="heading-link"><i class="fas fa-link"></i></a><a href="#vpn" class="headerlink" title="vpn"></a>vpn</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://grpc.io/" >https://grpc.io/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>vpn手册<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.v2ray.com/chapter_00/faq.html" >https://www.v2ray.com/chapter_00/faq.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/13/internet-3/">internet-3</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-13</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/13/internet-2/">internet-2</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-28</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="3"   >
+          <a href="#3" class="heading-link"><i class="fas fa-link"></i></a><a href="#3" class="headerlink" title="3"></a>3</h1>
+      <ul>
+<li><p>使用双绞线连接LAN适配器和中继器集线器</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271633844.png" alt="image-20220527163353705"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271634519.png" alt="image-20220527163429901"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271636884.png" alt="image-20220527163615573"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271636999.png" alt="image-20220527163650312"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271637186.png" alt="image-20220527163717955"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205271637901.png" alt="image-20220527163753813"></p>
+</li>
+</ul>
+
+        <h2 id="NAT"   >
+          <a href="#NAT" class="heading-link"><i class="fas fa-link"></i></a><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h2>
+      <ul>
+<li><p>Thus, NAT allows an organization with non-globally routable addresses to connect to the Internet by translating those addresses with globally  routable address space.</p>
+</li>
+<li><p>When a device such as a router is plugged in, it receives a public IP address from an <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.lifewire.com/internet-service-provider-isp-2625924" >ISP</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>. It’s the devices that connect to the router that are given private IP addresses.</p>
+<p>Private IP addresses can’t communicate directly with a public IP  address. This means if a device that has a private IP address is  connected directly to the internet, and therefore becomes non-routable,  the device will have no network connection until the address is  translated into a working address through a NAT, or until the requests  it sends are sent through a device that does have a valid public IP  address. <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.lifewire.com/what-is-a-private-ip-address-2625970" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h1 id="4"   >
+          <a href="#4" class="heading-link"><i class="fas fa-link"></i></a><a href="#4" class="headerlink" title="4"></a>4</h1>
+      
+        <h2 id="ADSL"   >
+          <a href="#ADSL" class="heading-link"><i class="fas fa-link"></i></a><a href="#ADSL" class="headerlink" title="ADSL"></a>ADSL</h2>
+      <ul>
+<li><p>asymmetric digital subscriber line不对称数字用户线 利用电线杆上的金属电话线来进行高速通信的技术 上行方向（用户到互联网）和下行方向（互联网到用户）的通信速率是不对称的</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272040588.png" alt="image-20220527204039585"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272052259.png" alt="image-20220527205159195"></p>
+</li>
+<li><p>调制有很多方式，ADSL 采用的调 制方式是振幅调制(ASK)和相位调制(PSK)相结合的正交振幅调制 (QAM)14 方式</p>
+</li>
+<li><p>ADSL Modem 将信元转换为电信号之后，信号会进入一个叫作分离器的 设备，然后 ADSL 信号会和电话的语音信号混合起来一起从电话线传输出 去。在信号从用户端发送出去时，电话和 ADSL 信号只是同时流到一条线路 上而已，分离器实际上并没有做什么事。<br>分离器的作用其实在相反的方向，也就是信号从电话线传入的时候。这时，分离器需要负责将电话和 ADSL 的信号进行分离</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272052698.png" alt="image-20220527205242031"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272052592.png" alt="image-20220527205257559"></p>
+
+        <h2 id="fiber光纤"   >
+          <a href="#fiber光纤" class="heading-link"><i class="fas fa-link"></i></a><a href="#fiber光纤" class="headerlink" title="fiber光纤"></a>fiber光纤</h2>
+      <ul>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272104773.png" alt="image-20220527210409761"></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272111239.png" alt="image-20220527211156994"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272112222.png" alt="image-20220527211218840"></p>
 <ul>
-<li><pre><code>建堆的话，主要考虑下沉的次数，以此定义高度。
-这样的话，8,9,10,11,12都是已经沉底的，要注意的是7也是在最底了。这些节点高度都是0。
-4,5,6都是最多可以沉1次的，高度为1.
-2,3最多能沉2次，高度为2.
-1可以沉3次，高度为3.
-1*3+2*2+3*1=3+4+3=10
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272114149.png" alt="image-20220527211425990"></li>
+</ul>
+
+        <h2 id="BAS"   >
+          <a href="#BAS" class="heading-link"><i class="fas fa-link"></i></a><a href="#BAS" class="headerlink" title="BAS"></a>BAS</h2>
+      <ul>
+<li><p>首先是用户认证和配置下发功能。ADSL 和 FTTH 接入网中，都需要先输 入用户名和密码，登录之后才能访问互联网，<strong>而 BAS 就是登录操作的窗口</strong>。BAS 使用 PPPoE34 方式来实现这个功能。PPPoE 是由传统电话拨号上网上使用的 PPP 协议发展而来的，所以我们先来看一看 PPP 拨号上网的工作 方式。</p>
+</li>
+<li><p>BAS 除了作为用户认证的窗口之外，还可以使用<strong>隧道方式来传输网络包。</strong>所谓隧道，就类似于套接字之间建立的 TCP 连接。在 TCP 连接中，我们 从一侧的出口(套接字)放入数据，数据就会原封不动地从另一个出口出 来，隧道也是如此。也就是说，我们将包含头部在内的整个包从隧道的一头 扔进去，这个包就会原封不动地从隧道的另一头出来，就好像在网络中挖了 一条地道，网络包从这个地道里穿过去一样。<br>像这样，如果在 BAS 和运营商路由器之间的 ADSL&#x2F;FTTH 接入服务商的 网络中建立一条隧道，将用户到 BAS 的接入网连接起来，就形成了一条从用 户一直到运营商路由器的通道，网络包通过这条通道，就可以进入互联网内 部了，这样的机制就类似于将接入网一直延伸到运营商路由器。</p>
+</li>
+<li><p>PPPoE:Point-to-Point Protocol over Ethernet，以太网的点对点协议。</p>
+</li>
+<li><p>PPPoE 是将 PPP 消息装入以太网包进行传输的方式</p>
+</li>
+<li><p>在接入 互联网时，必须为计算机分配一个公有地址，但这个地址并不是事先确定 的。因为在拨号连接时，可以根据电话号码来改变接入点，而不同的接入点具有不同的 IP 地址，因此无法事先在计算机上设置这个地址。所以，在连接 时运营商会向计算机下发 TCP&#x2F;IP 配置信息，其中就包括为计算机分配的公有 地址。</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272129610.png" alt="image-20220527212946816"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272129808.png" alt="image-20220527212957606"></p>
+
+        <h2 id="provider"   >
+          <a href="#provider" class="heading-link"><i class="fas fa-link"></i></a><a href="#provider" class="headerlink" title="provider"></a>provider</h2>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272136558.png" alt="image-20220527213625202"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272137684.png" alt="image-20220527213659362"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272137034.png" alt="image-20220527213716753"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272139372.png" alt="image-20220527213859082"></p>
+</li>
+</ul>
+
+        <h1 id="5"   >
+          <a href="#5" class="heading-link"><i class="fas fa-link"></i></a><a href="#5" class="headerlink" title="5"></a>5</h1>
+      
+        <h2 id="firewall"   >
+          <a href="#firewall" class="heading-link"><i class="fas fa-link"></i></a><a href="#firewall" class="headerlink" title="firewall"></a>firewall</h2>
+      <ul>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272143436.png" alt="image-20220527214356250"></p>
+</li>
+<li><p>都是将Web服务器部署在公司里，但Web服务 器不仅可以部署在公司里，也可以像图 5.1(c)这样把服务器放在网络运营 商等管理的数据中心里，或者直接租用运营商提供的服务器。<br>数据中心是与运营商核心部分 NOC 直接连接的，或者是与运营商之间的 枢纽 IX 直接连接的。换句话说，数据中心通过高速线路直接连接到互联网的 核心部分，因此将服务器部署在这里可以获得很高的访问速度 5 ，当服务器 访问量很大时这是非常有效的</p>
+</li>
+</ul>
+
+        <h2 id="负载均衡"   >
+          <a href="#负载均衡" class="heading-link"><i class="fas fa-link"></i></a><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2>
+      
+        <h3 id="round-robin"   >
+          <a href="#round-robin" class="heading-link"><i class="fas fa-link"></i></a><a href="#round-robin" class="headerlink" title="round robin"></a>round robin</h3>
+      <p>-<br>  最简单的一种方法 就是采用多台Web服务器，减少每台服务器的访问量。假设现在我们有3台 服务器，那么每台服务器的访问量会减少到三分之一，负载也就减轻了。要 采用这样的方法，必须有一个机制将客户端发送的请求分配到每台服务器 上。具体的做法有很多种，最简单的一种是通过 DNS 服务器来分配。当访问 服务器时，客户端需要先向 DNS 服务器查询服务器的 IP 地址，如果在 DNS 服务器中填写多个名称相同的记录，则每次查询时 DNS 服务器都会按顺序返 回不同的 IP 地址。</p>
+<ul>
+<li><p>这种方式是有缺点的。假如多台Web服务器中有一台出现了故障，这 时我们希望在返回IP地址时能够跳过故障的Web服务器，然而普通的DNS服务器并不能确认Web服务器是否正常工作，因此即便Web服务器宕机了， 它依然可能会返回这台服务器的 IP 地址  。</p>
+</li>
+<li><p>如果浏览器在访问 DNS 服务器返回的第一个 IP 地址失败时，能够继续尝试第二个 IP 地址， 就可以回避这个问题了，最近的浏览器有很多都已经具备了这样的功能。</p>
+</li>
+<li><p>此外，轮询分配还可能会引发一些问题。在通过 CGI 等方式动态生成网 页的情况下，有些操作是要跨多个页面的，如果这期间访问的服务器发生了 变化，这个操作就可能无法继续。例如在购物网站中，可能会在第一个页面 中输入地址和姓名，在第二个页面中输入信用卡号，这就属于刚才说的那种情况。</p>
+</li>
+</ul>
+
+        <h2 id="cache-and-proxy"   >
+          <a href="#cache-and-proxy" class="heading-link"><i class="fas fa-link"></i></a><a href="#cache-and-proxy" class="headerlink" title="cache and proxy"></a>cache and proxy</h2>
+      <ul>
+<li>缓存服务器：按照功能分担负载 通过代理机制对数据进行缓存的服务器</li>
+<li>代理介于 Web服务器和客户端之间，具有对Web服务器访问进行中转的功能。当进行 中转时，它可以将Web服务器返回的数据保存在磁盘中，并可以代替Web服 务器将磁盘中的数据返回给客户端。这种保存的数据称为缓存，缓存服务器 指的也就是这样的功能。</li>
+<li>缓存服务器和负载均衡器一 样，需要代替 Web 服务器被注册到 DNS 服务器中。然后客户端会向缓存服务 器发送 HTTP 请求消息。这时，缓存服务器 会接收请求消息，这个接收操作和Web服务器相同。简单来说就是创建用来等待连接的套接字，当客户端进行连接时执行连接操作，然后接收客户端发送的请求消 息。从客户端来看，缓存服务器就相当于Web服务器。从服务器来看 缓存服务器就相当于客户</li>
+<li>正向代理：缓存服务器使用的代理机制最早就是放在客户端一侧的，这才是代理的原型<ul>
+<li>使用正向代理需要在浏览器中进行设置，这可以说是<br>识别正向代理的一个特征。但是，设置浏览器非常麻烦，如果设置错误还可<br>能导致浏览器无法正常工作</li>
+</ul>
+</li>
+<li>反向代理： 于是，我们可以对这种方法进行改良，使得不需要在浏览器中设置代理 也可以使用。也就是说，我们可以通过将请求消息中的 URI 中的目录名与 Web服务器进行关联，使得代理能够转发一般的不包含完整网址的请求消 息。</li>
+<li>透明代理: 缓存服务器判断转发目标的方法还有一种，那就是查看请求消息的包头 部。因为包的 IP 头部中包含接收方 IP 地址，只要知道了这个地址，就知道用 户要访问哪台服务器了。这种方法称为透明代理(transparent proxy)。</li>
+</ul>
+
+        <h3 id="内容分发"   >
+          <a href="#内容分发" class="heading-link"><i class="fas fa-link"></i></a><a href="#内容分发" class="headerlink" title="内容分发"></a>内容分发</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205272234391.png" alt="image-20220527223454350"></p>
+<ul>
+<li>接下来这个问题更现实，那就是即便减少了数量，作为一个Web服务器 运营者，如果自己和这些运营商签约并部署缓存服务器，无论是费用还是精 力都是吃不消的。为了解决这个问题，一些专门从事相关服务的厂商出现 了，他<strong>们来部署缓存服务器，并租借给Web服务器运营者。这种服务称为内容分发服务</strong>  。下面我们来具体了解一下这种服务。<br>内容分发服务也叫 CDS(Content Delivery Service)。(现在更常用的名称叫 CDN(Content Delivery Network 或 Content Distribution Network)。</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/12/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B01/">软件工程01</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-12</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-12</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="关于软件开发的问题"   >
+          <a href="#关于软件开发的问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#关于软件开发的问题" class="headerlink" title="关于软件开发的问题"></a>关于软件开发的问题</h1>
+      
+        <h3 id="software"   >
+          <a href="#software" class="heading-link"><i class="fas fa-link"></i></a><a href="#software" class="headerlink" title="software"></a>software</h3>
+      <ul>
+<li><p>情报处理system的program… 关联文书</p>
+<ul>
+<li>包含要求定义书、外部设计书、内部设计书、database定义书、coding规约、</li>
+</ul>
+</li>
+<li><p>computer装置</p>
+<ul>
+<li>application software(mailer,browzer,word-processor)</li>
+<li>middleware(database manager)</li>
+<li>basic software(operating system)</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="software-vs-hardware"   >
+          <a href="#software-vs-hardware" class="heading-link"><i class="fas fa-link"></i></a><a href="#software-vs-hardware" class="headerlink" title="software vs hardware"></a>software vs hardware</h3>
+      <ul>
+<li><p>software–&gt;机能拓张 性能改善</p>
+<ul>
+<li>经年变化无</li>
+<li>导入后修正可能</li>
+<li>量产&#x2F;分发&#x2F;销售cost低</li>
+</ul>
+</li>
+<li><p>hardware–&gt;维持机能和性能</p>
+<ul>
+<li>经年变化有</li>
+<li>导入后修正基本不可能</li>
+<li>量产和分发cost高</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="software-开发"   >
+          <a href="#software-开发" class="heading-link"><i class="fas fa-link"></i></a><a href="#software-开发" class="headerlink" title="software 开发"></a>software 开发</h3>
+      <ul>
+<li>software形式 实现顾客的要求</li>
+<li>balance 品质 and cost</li>
+</ul>
+
+        <h4 id="history"   >
+          <a href="#history" class="heading-link"><i class="fas fa-link"></i></a><a href="#history" class="headerlink" title="history"></a>history</h4>
+      <ul>
+<li>情报system化</li>
+<li>开发计划 life cycle</li>
+<li>开发效率（生产性）重视</li>
+<li>社会依赖度++ 易用性要求++</li>
+<li>复杂度++</li>
+</ul>
+
+        <h2 id="software-engineering"   >
+          <a href="#software-engineering" class="heading-link"><i class="fas fa-link"></i></a><a href="#software-engineering" class="headerlink" title="software engineering"></a>software engineering</h2>
+      <ul>
+<li>构筑 运用 保守</li>
+<li>生产性 品质</li>
+</ul>
+
+        <h3 id="目的"   >
+          <a href="#目的" class="heading-link"><i class="fas fa-link"></i></a><a href="#目的" class="headerlink" title="目的"></a>目的</h3>
+      <ul>
+<li>品质特性++</li>
+</ul>
+
+        <h3 id="software-crisis"   >
+          <a href="#software-crisis" class="heading-link"><i class="fas fa-link"></i></a><a href="#software-crisis" class="headerlink" title="software crisis"></a>software crisis</h3>
+      <ul>
+<li>computer性能++ computer需求++</li>
+<li>main problem:<ul>
+<li>由于软件生产物增大（computer性能向上和普及导致software大规模化和数量增加）</li>
+<li>-&gt;software相关人员++（skateholder多样化）</li>
+<li>-&gt;期间长期化（开发时间和利用时间++ 动作环境和社会要求变动）</li>
+<li>-&gt;对社会影响变化（computer领域的扩大，对社会的的重要性++ 信赖性要求++ software大众化导致易用性++）</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="大规模-高信赖开发导向"   >
+          <a href="#大规模-高信赖开发导向" class="heading-link"><i class="fas fa-link"></i></a><a href="#大规模-高信赖开发导向" class="headerlink" title="大规模 高信赖开发导向"></a>大规模 高信赖开发导向</h3>
+      <ul>
+<li>大规模 复数的人开发 很多stakeholder 实际的利用运用（效率性保守性信赖性）</li>
+<li>实践：不光是制作还有运用保守的考虑</li>
+</ul>
+
+        <h1 id="software品质特性"   >
+          <a href="#software品质特性" class="heading-link"><i class="fas fa-link"></i></a><a href="#software品质特性" class="headerlink" title="software品质特性"></a>software品质特性</h1>
+      <ul>
+<li>functional suitability（机能适合性）<ul>
+<li><code>Functional suitability</code> is measured value of comparison between things that software can actually do and things that software should do.（有没有实现必要的功能）</li>
+<li>副特性：机能完全性 机能正确性 机能适切性</li>
+</ul>
+</li>
+<li>performance efficiency（机能效率性）<ul>
+<li>使用资源的量来衡量</li>
+<li>副特性：时间效率性 资源效率性 容量满足性</li>
+</ul>
+</li>
+<li>compatibility（互换性）<ul>
+<li>兼容性 与其他环境共存容易</li>
+<li>举例：同一个系统的不同版本（比如windows会有同一个功能多个冗余函数以兼容不同版本的系统）</li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Greenhandcc/article/details/104738187" >区分和移植性</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>副特性：共存性 相互运用性</li>
+</ul>
+</li>
+<li>usability（使用性）<ul>
+<li>对使用者使用容易</li>
+<li>副特性：适当度识别性、可习得性、操作可操作性、用户防错性、用户界面快美性、可访问性</li>
+</ul>
+</li>
+<li>reliability（信赖性）<ul>
+<li>继续正常运行</li>
+<li>副特性：成熟性 可用性 障害许容性 回复性</li>
+</ul>
+</li>
+<li>security<ul>
+<li>安全</li>
+<li>副特性：机密性 integrity 否认防止性 责任追踪性 真正性</li>
+</ul>
+</li>
+<li>maintainability（保守性）<ul>
+<li>修订作业必要的劳力少</li>
+<li>副特性：module性 再利用性 解析性 修正性 试验性</li>
+</ul>
+</li>
+<li>portability（移植性）<ul>
+<li>其他环境移植容易</li>
+<li>副特性：适应性 设置性 置换性</li>
+</ul>
+</li>
+</ul>
+
+        <h1 id="解决问题方法"   >
+          <a href="#解决问题方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#解决问题方法" class="headerlink" title="解决问题方法"></a>解决问题方法</h1>
+      
+        <h3 id="分割统治和构造化（divide-and-conquer）"   >
+          <a href="#分割统治和构造化（divide-and-conquer）" class="heading-link"><i class="fas fa-link"></i></a><a href="#分割统治和构造化（divide-and-conquer）" class="headerlink" title="分割统治和构造化（divide and conquer）"></a>分割统治和构造化（divide and conquer）</h3>
+      <ul>
+<li>大问题 -&gt; 独立性高的小问题</li>
+<li>例子：分割软件成为部品 构造化分析&#x2F;构造化programming</li>
+</ul>
+
+        <h3 id="抽象化（abstraction）和modeling"   >
+          <a href="#抽象化（abstraction）和modeling" class="heading-link"><i class="fas fa-link"></i></a><a href="#抽象化（abstraction）和modeling" class="headerlink" title="抽象化（abstraction）和modeling"></a>抽象化（abstraction）和modeling</h3>
+      <ul>
+<li><p>除去非本质部分</p>
+</li>
+<li><p>抽取出需要讨论项目相关的重要部分进行记述（记述的东西称作model）</p>
+</li>
+<li><p>modelling 为了使本质浮出</p>
+</li>
+<li><p>庞大复杂的系统可以不拘泥细节 抓住本质</p>
+</li>
+<li><p>存在复数的model：每个项目都有不同的model 相同项目由不同的观点可以制作不同模型</p>
+</li>
+</ul>
+
+        <h3 id="要求分析"   >
+          <a href="#要求分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#要求分析" class="headerlink" title="要求分析"></a>要求分析</h3>
+      <ul>
+<li>要求（requirements）：软件在什么条件下提供什么服务 需要明快、详细作为文书的严密定义</li>
+<li>要求分析：system的service和制约检查得出、分析、文书化过程（执行不充分会导致软件开发的失败）</li>
+<li>要求工学（requirements engineering :RE）总结要求、软件应该制作什么</li>
+</ul>
+
+        <h3 id="追踪可能性（traceability）"   >
+          <a href="#追踪可能性（traceability）" class="heading-link"><i class="fas fa-link"></i></a><a href="#追踪可能性（traceability）" class="headerlink" title="追踪可能性（traceability）"></a>追踪可能性（traceability）</h3>
+      <ul>
+<li><p>软件开发有许多的判断（fork分支）需要记录判断了什么、使用了什么方法方式选择的</p>
+</li>
+<li><p>举例：要求仕样和设计仕样 成果物artifact文书化记录（交付件）开发过程有很多artifact</p>
+</li>
+<li><p>traceability：从某一成果物中寻找其他成果物的对应位置和大元判断的性质</p>
+</li>
+<li><p>经验积蓄和再利用</p>
+</li>
+<li><p>系统的评价和管理</p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/10/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95review/">数学物理方法review</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="例题"   >
+          <a href="#例题" class="heading-link"><i class="fas fa-link"></i></a><a href="#例题" class="headerlink" title="例题"></a>例题</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://max.book118.com/html/2018/1120/5304020343001331.shtm" >积分题</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.docin.com/p-2231322234.html" >总结公式和结论</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/chap1-internet/">Weingarten map</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="Gauss-map"   >
+          <a href="#Gauss-map" class="heading-link"><i class="fas fa-link"></i></a><a href="#Gauss-map" class="headerlink" title="Gauss map"></a>Gauss map</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png" alt="image-20220509163219231"></p>
+<ul>
+<li>将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上</li>
+<li>将曲面的法向量 –&gt;单位球面上</li>
+<li>曲面弯曲很大 则法向量变化也会很大</li>
+<li>通过法向量的变化课衡量弯曲程度</li>
+</ul>
+
+        <h2 id="切映射"   >
+          <a href="#切映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#切映射" class="headerlink" title="切映射"></a>切映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091635334.png" alt="image-20220509163533988"></p>
+<ul>
+<li>从s曲面切空间到球面的切空间</li>
+<li>切映射是将一个切向量 映射成另一个切向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091638436.png" alt="image-20220509163812058"></p>
+<ul>
+<li>切映射是线性的映射 只作用在切向量上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091736082.png" alt="image-20220509173611422"></p>
+<ul>
+<li>由于切平面的映射没有作旋转 只是平移 所以法向量是平行的 单位球面的法向量是n n也是曲面s的单位法向量 所以p点处的切平面和球面的切平面是平行的 所以球面和曲面s上的切空间是一样的 球面和曲面的切向量是一样的（nu&#x3D;ru nv&#x3D;rv 向量不看位置只看方向 起点不同但方向一样）</li>
+<li>所以g*是自己对自己的映射</li>
+</ul>
+
+        <h2 id="第二基本型和w映射"   >
+          <a href="#第二基本型和w映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#第二基本型和w映射" class="headerlink" title="第二基本型和w映射"></a>第二基本型和w映射</h2>
+      <ul>
+<li>映射dr后再和dr内积得到第二基本型</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091743421.png" alt="image-20220509174353021"></p>
+
+        <h2 id="w映射是自共轭映射"   >
+          <a href="#w映射是自共轭映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射是自共轭映射" class="headerlink" title="w映射是自共轭映射"></a>w映射是自共轭映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091745271.png" alt="image-20220509174553131"></p>
+<ul>
+<li>自共轭即满足W(dr)δr&#x3D;drW(δr) 交换位置后值不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091747138.png" alt="image-20220509174735688"></p>
+<ul>
+<li>w是一个矩阵 求w的特征值和特征向量 则λ是特征值 dr是特征向量</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/codeblog/">Weingarten map</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="Gauss-map"   >
+          <a href="#Gauss-map" class="heading-link"><i class="fas fa-link"></i></a><a href="#Gauss-map" class="headerlink" title="Gauss map"></a>Gauss map</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png" alt="image-20220509163219231"></p>
+<ul>
+<li>将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上</li>
+<li>将曲面的法向量 –&gt;单位球面上</li>
+<li>曲面弯曲很大 则法向量变化也会很大</li>
+<li>通过法向量的变化课衡量弯曲程度</li>
+</ul>
+
+        <h2 id="切映射"   >
+          <a href="#切映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#切映射" class="headerlink" title="切映射"></a>切映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091635334.png" alt="image-20220509163533988"></p>
+<ul>
+<li>从s曲面切空间到球面的切空间</li>
+<li>切映射是将一个切向量 映射成另一个切向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091638436.png" alt="image-20220509163812058"></p>
+<ul>
+<li>切映射是线性的映射 只作用在切向量上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091736082.png" alt="image-20220509173611422"></p>
+<ul>
+<li>由于切平面的映射没有作旋转 只是平移 所以法向量是平行的 单位球面的法向量是n n也是曲面s的单位法向量 所以p点处的切平面和球面的切平面是平行的 所以球面和曲面s上的切空间是一样的 球面和曲面的切向量是一样的（nu&#x3D;ru nv&#x3D;rv 向量不看位置只看方向 起点不同但方向一样）</li>
+<li>所以g*是自己对自己的映射</li>
+</ul>
+
+        <h2 id="第二基本型和w映射"   >
+          <a href="#第二基本型和w映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#第二基本型和w映射" class="headerlink" title="第二基本型和w映射"></a>第二基本型和w映射</h2>
+      <ul>
+<li>映射dr后再和dr内积得到第二基本型</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091743421.png" alt="image-20220509174353021"></p>
+
+        <h2 id="w映射是自共轭映射"   >
+          <a href="#w映射是自共轭映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射是自共轭映射" class="headerlink" title="w映射是自共轭映射"></a>w映射是自共轭映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091745271.png" alt="image-20220509174553131"></p>
+<ul>
+<li>自共轭即满足W(dr)δr&#x3D;drW(δr) 交换位置后值不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091747138.png" alt="image-20220509174735688"></p>
+<ul>
+<li>w是一个矩阵 求w的特征值和特征向量 则λ是特征值 dr是特征向量</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/effectiveC++/">effective-c++ chap1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-06-26</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="C11-C14-C98-C03"   >
+          <a href="#C11-C14-C98-C03" class="heading-link"><i class="fas fa-link"></i></a><a href="#C11-C14-C98-C03" class="headerlink" title="C11 C14 C98 C03"></a>C11 C14 C98 C03</h2>
+      
+        <h2 id="rvalue-reference-不代表就是rvalue"   >
+          <a href="#rvalue-reference-不代表就是rvalue" class="heading-link"><i class="fas fa-link"></i></a><a href="#rvalue-reference-不代表就是rvalue" class="headerlink" title="rvalue reference 不代表就是rvalue"></a>rvalue reference 不代表就是rvalue</h2>
+      <ul>
+<li><p>to determine whether an expression is an lvalue is to ask if you can take its address.</p>
+</li>
+<li><p><img src="C:\Users\rye\AppData\Roaming\Typora\typora-user-images\image-20220328090241796.png" alt="image-20220328090241796">  </p>
+</li>
+<li><p>be perfectly valid  to take  rhs’s  address  inside  Widget’s  move  constructor, so rhs is an lvalue, even though its type is an rvalue reference. (By similar reasoning, <strong>all parameters are lvalues</strong>.)</p>
+</li>
+<li><p>Regrettably,  there’s  no  terminology  in  C++  that  distinguishes  between an object that’s a copy-constructed copy and one that’s a move-constructed copy:</p>
+</li>
+<li><p>Copies of rvalues are generally move constructed, while copies of lvalues are usually<br>copy constructed.</p>
+</li>
+</ul>
+
+        <h2 id="区分argument和parameter"   >
+          <a href="#区分argument和parameter" class="heading-link"><i class="fas fa-link"></i></a><a href="#区分argument和parameter" class="headerlink" title="区分argument和parameter"></a>区分argument和parameter</h2>
+      <ul>
+<li>the expressions passed at the call site are the function’s <strong>arguments</strong>.<br>The  arguments  are  used  to  initialize  the  function’s  parameters.</li>
+<li>copy的代价高的定义在于：only that an <strong>object</strong> is a copy of another object, it’s not possible to say how expensive it was to construct the copy.</li>
+<li>The  distinction  between  arguments  and  parameters  is  important,  because  <strong>parameters  are  lvalues</strong>,  but  the  arguments  with  which  <strong>they  are  initialized</strong>  may  be  <strong>rvalues  or  lvalues.</strong>  </li>
+<li>例子：This  is  especially relevant  during  the  process  of  <em>perfect  forwarding</em>,  whereby  an  argument  passed  to  a function  is  passed  to  a  second  function  such  that  the  original  argument’s  rvalueness or lvalueness is preserved.</li>
+</ul>
+
+        <h2 id="好的函数是什么"   >
+          <a href="#好的函数是什么" class="heading-link"><i class="fas fa-link"></i></a><a href="#好的函数是什么" class="headerlink" title="好的函数是什么"></a>好的函数是什么</h2>
+      <ul>
+<li>需要保证在call这个函数之后 即使有exception throw了 也没有data structure的corrupt或者data的leak</li>
+<li>Functions  offering  the  strong exception  safety  guarantee  (i.e.,  the  strong  guarantee)  assure  callers  that  if  an  exception arises, the state of the program remains as it was prior to the call.</li>
+</ul>
+
+        <h2 id="function-object"   >
+          <a href="#function-object" class="heading-link"><i class="fas fa-link"></i></a><a href="#function-object" class="headerlink" title="function object"></a>function object</h2>
+      <ul>
+<li><p>function  object,  I  usually  mean  an  object  of  a  type  supporting  an operator()  member  function. </p>
+</li>
+<li><p>an object that acts like a function</p>
+</li>
+<li><p>This broader definition covers not just objects supporting <code>operator()</code>,  but  also  functions  and  C-like  function  pointers.</p>
+</li>
+<li><p>Function  objects  created  through  <strong>lambda  expressions</strong>  are  known  as  <strong>closures</strong>.</p>
+</li>
+<li><p>a function’s <strong>signature</strong> to be the part of its declaration that specifies parameter and return types.  (official  definition  sometimes  omits  return types.)</p>
+</li>
+</ul>
+
+        <h2 id="feature"   >
+          <a href="#feature" class="heading-link"><i class="fas fa-link"></i></a><a href="#feature" class="headerlink" title="feature"></a>feature</h2>
+      <ul>
+<li><p>用官方推荐的feature</p>
+<p><code>std::auto_ptr</code>  is deprecated in C++11, because <code>std::unique_ptr</code> does the same job, only better.</p>
+</li>
+</ul>
+
+        <h2 id="常见ub-undefined-behavior"   >
+          <a href="#常见ub-undefined-behavior" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见ub-undefined-behavior" class="headerlink" title="常见ub undefined behavior"></a>常见ub undefined behavior</h2>
+      <ul>
+<li>That means  that  runtime  behavior  is  unpredictable,  and  it  should  go  without  saying  that<br>you  want  to  steer  clear  of  such  uncertainty.  Examples  of  actions  with  undefined behavior  include  using  square  brackets  (“[]”)  to index  beyond  the  bounds  of  astd::vector, dereferencing an uninitialized iterator, or engaging in a data race (i.e.,having  two  or  more  threads,  at  least  one  of  which  is  a  writer,  simultaneously  access the same memory location).</li>
+</ul>
+
+        <h1 id="chap-1"   >
+          <a href="#chap-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#chap-1" class="headerlink" title="chap 1"></a>chap 1</h1>
+      
+        <h2 id="deduce-type"   >
+          <a href="#deduce-type" class="heading-link"><i class="fas fa-link"></i></a><a href="#deduce-type" class="headerlink" title="deduce type"></a>deduce type</h2>
+      <ul>
+<li><p>type  deduction  takes  place:  in  calls  to  function  templates,  in  most  situations  where<br>auto  appears,  in  decltype  expressions,  and,  as  of  C++14,  where  the  decltype(auto) construct is employed.</p>
+</li>
+<li><pre><code class="c++">template&lt;typename T&gt;
+void f(ParamType param);
+//A call can look like this:
+f(expr);                    // call f with some expression
+//During  compilation,  compilers  use  expr  to  deduce  two  types:  one  for  T  and  one  for
+//ParamType.  These  types  are  frequently  different,  because  ParamType  often  contains
+//adornments,  e.g.,  const  or  reference  qualifiers.
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 3 cases of deduction</span><br><span class="line"></span><br><span class="line">- **ParamType** is a pointer or reference type, but not a universal reference. (Universal references are described in Item 24. At this point, all you need to know is that they exist and that they’re **not the same as lvalue references or rvalue references.**)</span><br><span class="line"></span><br><span class="line">- **ParamType** is a universal reference.</span><br><span class="line"></span><br><span class="line">- **ParamType** is neither a pointer nor a reference.</span><br><span class="line"></span><br><span class="line">- case 1</span><br><span class="line"></span><br><span class="line">  ``` c++</span><br><span class="line">  template&lt;typename T&gt;</span><br><span class="line">  void f(T&amp; param);       // param is a reference</span><br><span class="line">  //and we have these variable declarations,</span><br><span class="line">  int x = 27;             // x is an int</span><br><span class="line">  const int cx = x;       // cx is a const int</span><br><span class="line">  const int&amp; rx = x;      // rx is a reference to x as a const int</span><br><span class="line">  //the deduced types for param and T in various calls are as follows:</span><br><span class="line">  f(x);                   // T is int, param&#x27;s type is int&amp;</span><br><span class="line">  f(cx);                  // T is const int,</span><br><span class="line">                          // param&#x27;s type is const int&amp;</span><br><span class="line">  f(rx);                  // T is const int,</span><br><span class="line">                          // param&#x27;s type is const int&amp;</span><br><span class="line">  </span><br></pre></td></tr></table></div></figure>
 </code></pre>
 </li>
-</ul>
+<li><p>only  rvalue  arguments may be passed to rvalue reference parameters, but that restriction has nothing<br>to do with type deduction.</p>
 </li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u011240877/article/details/47706923" >判断一个序列是否是堆</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p><img src="/ryenney/heap.assets/image-20220509142051599.png" alt="image-20220509142051599"></p>
-</li>
-<li><p><img src="/ryenney/heap.assets/image-20220509142112582.png" alt="image-20220509142112582"></p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.toolsou.com/en/article/220262987" >顺序存储和线性存储</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>linear data <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/overview-of-data-structures-set-1-linear-data-structures/" >structure</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>优先队列：</p>
-<p>一种先进先出的数据结构，元素在队列尾追加，而从队列头删除 通常采用<strong>堆数据结构</strong></p>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/heap/">heap</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="define"   >
-          <a href="#define" class="heading-link"><i class="fas fa-link"></i></a><a href="#define" class="headerlink" title="define"></a>define</h2>
-      <ul>
-<li>堆这种数据结构本质是一个完全二叉树（完全二叉树（Complete Binary Tree）：在满足满二叉树的性质后，最后一层的叶子节点均需在最左边）</li>
-</ul>
-
-        <h2 id="mooc"   >
-          <a href="#mooc" class="heading-link"><i class="fas fa-link"></i></a><a href="#mooc" class="headerlink" title="mooc"></a>mooc</h2>
-      <ul>
-<li><p>建堆时，最坏情况下需要挪动元素次数是等于树中各结点的高度和。问：对于元素个数为12的堆，其各结点的高度之和是多少？</p>
+<li><p>case 2</p>
 <ul>
-<li><pre><code>建堆的话，主要考虑下沉的次数，以此定义高度。
-这样的话，8,9,10,11,12都是已经沉底的，要注意的是7也是在最底了。这些节点高度都是0。
-4,5,6都是最多可以沉1次的，高度为1.
-2,3最多能沉2次，高度为2.
-1可以沉3次，高度为3.
-1*3+2*2+3*1=3+4+3=10
-</code></pre>
-</li>
+<li>parameters  are  declared  like  rvalue  references  (i.e.,  in  a  function  template  taking  a type parameter T, a universal reference’s declared type is T&amp;&amp;), but they behave differently when lvalue arguments are passed in.</li>
+<li>函数定义是右值引用 然而传入了左值时（如果传入右值对应右值引用 符合case1）</li>
 </ul>
 </li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u011240877/article/details/47706923" >判断一个序列是否是堆</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p><img src="/ryenney/heap.assets/image-20220509142051599.png" alt="image-20220509142051599"></p>
-</li>
-<li><p><img src="/ryenney/heap.assets/image-20220509142112582.png" alt="image-20220509142112582"></p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.toolsou.com/en/article/220262987" >顺序存储和线性存储</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>linear data <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/overview-of-data-structures-set-1-linear-data-structures/" >structure</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>优先队列：</p>
-<p>一种先进先出的数据结构，元素在队列尾追加，而从队列头删除 通常采用<strong>堆数据结构</strong></p>
-</li>
 </ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/huawei_cloud/">huaweicloud</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="DS-1"   >
-          <a href="#DS-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#DS-1" class="headerlink" title="DS-1"></a>DS-1</h2>
-      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Node* <span class="title">Reverse</span><span class="params">(Node* first)</span></span>&#123;</span><br><span class="line">	Node *p1=<span class="literal">nullptr</span>;</span><br><span class="line">	Node *p2=<span class="literal">nullptr</span>;</span><br><span class="line">	<span class="keyword">while</span>(first)&#123;</span><br><span class="line">        p2=first-&gt;next;</span><br><span class="line">        first-&gt;next=p1;</span><br><span class="line">        p1=first;</span><br><span class="line">        first=p2;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> p1;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
-<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Node* Merge（Node* a, Node* b)&#123;</span><br><span class="line">	<span class="keyword">if</span>(!a) <span class="keyword">return</span> b;</span><br><span class="line">	<span class="keyword">if</span>(!b) <span class="keyword">return</span> a;</span><br><span class="line">	Node *A,*B,*head;</span><br><span class="line">	<span class="keyword">if</span>(a-&gt;value&lt;b-&gt;value)</span><br><span class="line">		A=a,B=b;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		A=b,B=a;</span><br><span class="line">	head=A;</span><br><span class="line">	<span class="keyword">while</span>(A-&gt;next &amp;&amp; B)&#123;</span><br><span class="line">		<span class="keyword">if</span>(B-&gt;value&lt;=A-&gt;value)&#123;</span><br><span class="line">			Node* Anext=A-&gt;next;</span><br><span class="line">			Node* Bnext=B-&gt;next;</span><br><span class="line">			A-&gt;next=B;</span><br><span class="line">			B-&gt;bext=Anext;</span><br><span class="line">			A=A-&gt;next;</span><br><span class="line">			B=Bnext;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			A=A-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(A-&gt;next==<span class="literal">NULL</span> &amp;&amp; B)</span><br><span class="line">		A-&gt;next=B;</span><br><span class="line">	<span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
-
-<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">EnQueue</span><span class="params">(<span class="type">const</span> T item)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">IsFull</span>())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        queue[rear] = item;</span><br><span class="line">        rear = (rear + <span class="number">1</span>) % maxSize;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> <span class="function"><span class="type">bool</span> <span class="title">DeQueue</span><span class="params">(T&amp; item)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">IsEmpty</span>())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        item = queue[front];</span><br><span class="line">        front = (front + <span class="number">1</span>) % maxSize;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">GetFront</span><span class="params">(T&amp; item)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">IsEmpty</span>())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        item = queue[front];</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">IsEmpty</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (front == rear) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;队列为空&quot;</span> &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">IsFull</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((rear + <span class="number">1</span>) % maxSize == front) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;队列已满，溢出&quot;</span> &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
-
-
-
-
-        <h2 id="DS-2"   >
-          <a href="#DS-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#DS-2" class="headerlink" title="DS-2"></a>DS-2</h2>
+        <h1 id="item-3"   >
+          <a href="#item-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-3" class="headerlink" title="item 3"></a>item 3</h1>
       <ul>
-<li>&#96;&#96;&#96;c++<br>bool Push(const T item);<br>bool Pop(T&amp; item);<br>bool Top(T&amp; item);<br>bool Push(const T item){<br>if(IsFull()){<br>    return false;<br>}<br>else{<br>    st[++top]&#x3D;item;<br>    return true;<br>}<br>}<br>bool Pop(T&amp; item){<br>if(IsEmpty()){<br>    return false;<br>}<br>else{<br>    item&#x3D;st[top–];<br>    return true;<br>}<br>}<br>bool Top(T&amp;item){<br>if(IsEmpty()){<br>    return false;<br>}<br>else{<br>    item&#x3D;st[top];<br>    return true;<br>}<br>}<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  string Bracketmatch(const char* c) //括号匹配</span><br><span class="line">  &#123;</span><br><span class="line">      string res = &quot;111&quot;;</span><br><span class="line">      int size = sizeof(c);</span><br><span class="line">      stack st[3] = &#123; size,size,size &#125;;//每一种括号分配一个栈</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">      for (int i = 0; c[i] != &#x27;\0&#x27;; i++) &#123;</span><br><span class="line">          if (c[i] == &#x27;(&#x27;) &#123;</span><br><span class="line">              st[0].push(c[i]);</span><br><span class="line">          &#125;//左括号入栈</span><br><span class="line">          else if (c[i] == &#x27;)&#x27;) &#123;</span><br><span class="line">              //右括号需要判断栈</span><br><span class="line">              if (!st[0].empty()) &#123;</span><br><span class="line">                  st[0].pop();//栈不为空则pop</span><br><span class="line">              &#125;</span><br><span class="line">              else//栈为空则不匹配</span><br><span class="line">                  res[0] = 0;</span><br><span class="line">          &#125;</span><br><span class="line">          else if (c[i] == &#x27;[&#x27;) &#123;</span><br><span class="line">              st[1].push(c[i]);</span><br><span class="line">          &#125;</span><br><span class="line">          else if (c[i] == &#x27;]&#x27;) &#123;</span><br><span class="line">              if (!st[1].empty()) &#123;</span><br><span class="line">                  st[1].pop();</span><br><span class="line">              &#125;</span><br><span class="line">              else</span><br><span class="line">                  res[1] = 0;</span><br><span class="line">          &#125;</span><br><span class="line">          else if (c[i] == &#x27;&#123;&#x27;) &#123;</span><br><span class="line">              st[2].push(c[i]);</span><br><span class="line">          &#125;</span><br><span class="line">          else if (c[i] == &#x27;&#125;&#x27;) &#123;</span><br><span class="line">              if (!st[2].empty()) &#123;</span><br><span class="line">                  st[2].pop();</span><br><span class="line">              &#125;</span><br><span class="line">              else</span><br><span class="line">                  res[2] = 0;</span><br><span class="line">          &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">      &#125;</span><br><span class="line">      for (int i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">          if (!st[i].empty())</span><br><span class="line">              res[i] = 0;//string的下标操作</span><br><span class="line">      &#125;//不要忘了最后需要对所有栈检查有没有剩余 有剩余则不匹配</span><br><span class="line">      return res;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure></li>
+<li><code>decltype</code> tells the name or the expression 的 type</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container, <span class="keyword">typename</span> Index&gt;    <span class="comment">// works, but</span></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">authAndAccess</span><span class="params">(Container&amp; c, Index i)</span>       <span class="comment">// requires</span></span></span><br><span class="line"><span class="function">  -&gt; <span class="title">decltype</span><span class="params">(c[i])</span>                             <span class="comment">// refinement</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">authenticateUser</span>();</span><br><span class="line">  <span class="keyword">return</span> c[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/wanghongyang/p/14876038.html" >https://www.cnblogs.com/wanghongyang/p/14876038.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>the first <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cplusplus.com/sub_match" >sub_match</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> element corresponds to the entire match, and, if the <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cplusplus.com/regex" >regex</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> expression contained sub-expressions to be matched (i.e.,  parentheses-delimited groups), their corresponding sub-matches are  stored as successive <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cplusplus.com/sub_match" >sub_match</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> elements in the <code>match_results</code> object.</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/%E6%9B%B2%E9%9D%A29-%E7%AC%AC%E4%B8%89%E5%9F%BA%E6%9C%AC%E5%9E%8B/">Weingarten map</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><img src="/ryenney/%E6%9B%B2%E9%9D%A29-%E7%AC%AC%E4%B8%89%E5%9F%BA%E6%9C%AC%E5%9E%8B.assets/image-20220518194558136.png" alt="image-20220518194558136"></p>
+<ul>
+<li>第三基本型是dn和dn的内积</li>
 </ul>
 
-        <h2 id="DS-3"   >
-          <a href="#DS-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#DS-3" class="headerlink" title="DS-3"></a>DS-3</h2>
+        <h2 id="第一基本型第二基本型关系"   >
+          <a href="#第一基本型第二基本型关系" class="heading-link"><i class="fas fa-link"></i></a><a href="#第一基本型第二基本型关系" class="headerlink" title="第一基本型第二基本型关系"></a>第一基本型第二基本型关系</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212309753.png" alt="image-20220521230957711"></p>
+<ul>
+<li><p>类比求主曲率的公式</p>
+</li>
+<li><p>u方向和v方向（两个参数方向）是正交的主方向充分必要条件：F&#x3D;M&#x3D;0</p>
+<p>此时k1&#x3D;L&#x2F;E k2&#x3D;N&#x2F;G</p>
+</li>
+<li><p>法向作偏导数得到系数 求第三基本型</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212315870.png" alt="image-20220521231528098"></p>
+
+        <h2 id="dupin标形"   >
+          <a href="#dupin标形" class="heading-link"><i class="fas fa-link"></i></a><a href="#dupin标形" class="headerlink" title="dupin标形"></a>dupin标形</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212320730.png" alt="image-20220521232057956"></p>
+<ul>
+<li>法曲率的欧拉公式</li>
+<li>把e1和e2作为一个局部标架的基向量</li>
+<li>找到一点q 使得pq的值等于（）则可以写出q的坐标</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212325600.png" alt="image-20220521232533969"></p>
+<ul>
+<li>满足该点处高斯曲率大于零 两个主曲率符号一样 法曲率的负号也是一样的 则得到椭圆</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212327657.png" alt="image-20220521232700127"></p>
+<ul>
+<li>满足该点高斯曲率小于零 得到共轭双曲线</li>
+<li>使得法曲率等于零的方向是渐进方向 共轭双曲线的渐近线对应的方向就是法曲率等于零的方向 也即渐进方向</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212329971.png" alt="image-20220521232902599"></p>
+<ul>
+<li>法曲率&#x3D;0 是两条直线</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212329374.png" alt="image-20220521232922009"></p>
+
+        <h3 id="dupin标形定义"   >
+          <a href="#dupin标形定义" class="heading-link"><i class="fas fa-link"></i></a><a href="#dupin标形定义" class="headerlink" title="dupin标形定义"></a>dupin标形定义</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212330283.png" alt="image-20220521233054614"></p>
+<ul>
+<li><strong>一个方程 由主曲率和法曲率组成的</strong></li>
+<li>通过gauss曲率</li>
+<li>椭圆点没有渐进方向</li>
+<li>k不是同时为0 e1轴方向是渐进方向</li>
+<li>k同时是0 没有对应的近似曲面</li>
+</ul>
+
+        <h2 id="曲面的标准展开"   >
+          <a href="#曲面的标准展开" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲面的标准展开" class="headerlink" title="曲面的标准展开"></a>曲面的标准展开</h2>
+      
+        <h3 id="近似曲面的形式"   >
+          <a href="#近似曲面的形式" class="heading-link"><i class="fas fa-link"></i></a><a href="#近似曲面的形式" class="headerlink" title="近似曲面的形式"></a>近似曲面的形式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212336210.png" alt="image-20220521233646148"></p>
+<ul>
+<li>相同主曲率 主方向 任意方向下相同的法曲率</li>
+<li>主曲率一样则高斯曲率法曲率都一样</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212341019.png" alt="image-20220521234132488"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212341757.png" alt="image-20220521234150203"></p>
+<ul>
+<li>讨论cosu的取值</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212344387.png" alt="image-20220521234413591"></p>
+<ul>
+<li>通过高斯曲率判断点的类型 cosu决定高斯曲率的符号</li>
+</ul>
+
+        <h2 id="特殊曲面"   >
+          <a href="#特殊曲面" class="heading-link"><i class="fas fa-link"></i></a><a href="#特殊曲面" class="headerlink" title="特殊曲面"></a>特殊曲面</h2>
+      
+        <h3 id="高斯曲率为常数"   >
+          <a href="#高斯曲率为常数" class="heading-link"><i class="fas fa-link"></i></a><a href="#高斯曲率为常数" class="headerlink" title="高斯曲率为常数"></a>高斯曲率为常数</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212347008.png" alt="image-20220521234711168"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212348415.png" alt="image-20220521234826986"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212348121.png" alt="image-20220521234857530"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212349064.png" alt="image-20220521234948461"></p>
+<ul>
+<li><p>旋转曲面 平面 锥面 圆柱面</p>
+</li>
+<li><p>伪球面 高斯曲率恒小于0</p>
+</li>
+</ul>
+
+        <h3 id="平均曲率-x3D-0"   >
+          <a href="#平均曲率-x3D-0" class="heading-link"><i class="fas fa-link"></i></a><a href="#平均曲率-x3D-0" class="headerlink" title="平均曲率&#x3D;0"></a>平均曲率&#x3D;0</h3>
       <ul>
-<li>&#96;&#96;&#96;c++<br>   bool EnQueue(const T item)<br>{<br>    if ((rear+1)%maxSize &#x3D;&#x3D; front) {<br>        cout &lt;&lt; “队列已满，溢出” &lt;&lt; endl;<br>        return false;<br>    }<br>    else {<br>        queue[rear] &#x3D; item;<br>        rear&#x3D;(rear+1)%maxSize;<br>        return true;<br>    }<br>}<br>bool DeQueue(T&amp; item)<br>{<br>    if (front &#x3D;&#x3D; rear) {<br>        cout &lt;&lt; “队列为空” &lt;&lt; endl;<br>        return false;<br>    }<br>    item &#x3D; queue[front];<br>    front &#x3D; (front + 1) % maxSize;<br>    return true;<br>}<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  void LinkQueue&lt;ElemType&gt;::Clear()</span><br><span class="line">  // 操作结果：清空队列</span><br><span class="line">  &#123;</span><br><span class="line">      if (!Empty()) &#123;</span><br><span class="line">          while (front != nullptr) &#123;</span><br><span class="line">              rear = front;</span><br><span class="line">              front = front-&gt;next;</span><br><span class="line">              delete rear;</span><br><span class="line">          &#125;</span><br><span class="line">          rear = nullptr;</span><br><span class="line">          count = 0;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  bool LinkQueue&lt;ElemType&gt;::OutQueue(ElemType&amp; e)</span><br><span class="line">  // 操作结果：如果队列非空，那么删除队头元素，并用e返回其值，返回true,</span><br><span class="line">  //	否则返回false，</span><br><span class="line">  &#123;</span><br><span class="line">      Node&lt;ElemType&gt;* temp;</span><br><span class="line">  </span><br><span class="line">      if (!Empty()) &#123;</span><br><span class="line">          e = front-&gt;data;</span><br><span class="line">          temp = front;</span><br><span class="line">          front = front-&gt;next;</span><br><span class="line">          delete temp;</span><br><span class="line">          count--;</span><br><span class="line">          return true;</span><br><span class="line">      &#125;</span><br><span class="line">      else</span><br><span class="line">          return false;</span><br><span class="line">  &#125;</span><br><span class="line">  bool LinkQueue&lt;ElemType&gt;::InQueue(const ElemType&amp; e)</span><br><span class="line">  // 操作结果：插入元素e为新的队尾，返回true</span><br><span class="line">  &#123;//判断rear为null</span><br><span class="line">      if (rear == nullptr) &#123;</span><br><span class="line">          front = rear = new Node&lt;ElemType&gt;(e, nullptr);</span><br><span class="line">      &#125;</span><br><span class="line">      else &#123;</span><br><span class="line">      rear-&gt;next = new Node&lt;ElemType&gt;(e, nullptr);</span><br><span class="line">      rear = rear-&gt;next;</span><br><span class="line">      </span><br><span class="line">      &#125;</span><br><span class="line">      count++;</span><br><span class="line">      return true;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure></li>
-</ul>
-
-        <h2 id="DS-4"   >
-          <a href="#DS-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#DS-4" class="headerlink" title="DS-4"></a>DS-4</h2>
-      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span>* <span class="title">next</span><span class="params">(string P)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> m = P.<span class="built_in">size</span>();</span><br><span class="line">	<span class="built_in">assert</span>(m &gt; <span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span>* N = <span class="keyword">new</span> <span class="type">int</span>[m];</span><br><span class="line">	N[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> j;</span><br><span class="line">	<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; m; j++) &#123;</span><br><span class="line">		<span class="keyword">while</span> (i != <span class="number">0</span> &amp;&amp; P[i] != P[j]) &#123;<span class="comment">//&amp;&amp; not ||</span></span><br><span class="line">			i = N[i - <span class="number">1</span>];<span class="comment">//如果之前有成功匹配就需要进入while循环 回退状态到0或者匹配 j永远不回退</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (P[i] == P[j]) &#123;</span><br><span class="line">			N[j] = i + <span class="number">1</span>;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			N[j] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> N;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">KMPStrMatching</span><span class="params">(string T, string P, <span class="type">int</span>* N, <span class="type">int</span> startIndex)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> lastIndex = T.<span class="built_in">size</span>() - P.<span class="built_in">size</span>();</span><br><span class="line">	<span class="keyword">if</span> (lastIndex - startIndex &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="type">int</span> j = <span class="number">0</span>;<span class="comment">//i T j P</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; T.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">		<span class="keyword">while</span> (T[i] != P[j] &amp;&amp; j &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			j = N[j - <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (P[j] == T[i]) &#123;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">if</span> (j == P.<span class="built_in">size</span>())</span><br><span class="line">            <span class="keyword">return</span> i - j + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
-
-
-
-
-
-        <h2 id="DS-9"   >
-          <a href="#DS-9" class="heading-link"><i class="fas fa-link"></i></a><a href="#DS-9" class="headerlink" title="DS-9"></a>DS-9</h2>
-      <ul>
-<li><pre><code class="c++">void MaxHeap&lt;T&gt;::BuildHeap()&#123;
-    for(int i=CurrentSize/2-1;i&gt;=0;i--)&#123;
-        SiftDown(i);
-    &#125;
-&#125;
-void MaxHeap&lt;T&gt;::SiftDown(int left)&#123;
-    int i=left;
-    int j=2*i+1;
-    T temp=HeapArray[i];
-    while(j&lt;CurrentSize)&#123;
-        j++;
-        if(temp&lt;heapArray[i])&#123;
-            heapArray[i]=heapArray[j];
-            i=j;
-            j=2*j+1;
-        &#125;
-        else break;
-    &#125;
-    heapArray[i]=temp;    
-&#125;
-void MaxHeap&lt;T&gt;::SiftUp(int pos)&#123;
-    int p=parent(pos);
-    while(p&gt;-1&amp;&amp;heapArray[p]&lt;heapArray[pos])&#123;
-        temp=heapArray[p];
-        heapArray[p]=heapArray[pos];
-        heapArray[pos]=temp;
-        p=parent(p);
-    &#125;
-&#125;
-</code></pre>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0414-physicalmath-1/">0414_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-06</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0412-physicalmath/">0412_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-20</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="Morera定理"   >
-          <a href="#Morera定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#Morera定理" class="headerlink" title="Morera定理"></a>Morera定理</h2>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205190916748.png" alt="image-20220519091607121"></p>
-<ul>
-<li>cauchy积分定理 如果闭曲线内可导积分&#x3D;0</li>
-<li>Morera：如果积分等于0推导出解析</li>
-</ul>
-
-        <h2 id="Cauchy不等式"   >
-          <a href="#Cauchy不等式" class="heading-link"><i class="fas fa-link"></i></a><a href="#Cauchy不等式" class="headerlink" title="Cauchy不等式"></a>Cauchy不等式</h2>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205190918890.png" alt="image-20220519091805569"></p>
-<ul>
-<li>对积分的估算 -&gt;对函数的估算</li>
-<li>f是一个解析函数 如果f有界小于等于M则f的高阶导数也是有界的</li>
-</ul>
-
-        <h2 id="刘维尔定理"   >
-          <a href="#刘维尔定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#刘维尔定理" class="headerlink" title="刘维尔定理"></a>刘维尔定理</h2>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205190925668.png" alt="image-20220519092505540"></p>
-<ul>
-<li><p>整函数：在整个复平面上解析 若f是整函数而且有界 必然是一个常数</p>
-</li>
-<li><p>如果一个n次多项式 有n个根（一定只有n个 考虑重根 两根一样记为两次）</p>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0407-physicalmath/">0407_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-19</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
-<li>闭曲线c可以经过a点</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121634542.png" alt="image-20220512163451686"></p>
-<ul>
-<li>纠正上次的公式录入错误：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121642709.png" alt="image-20220512164214827"></p>
-
-        <h2 id="解析函数导数"   >
-          <a href="#解析函数导数" class="heading-link"><i class="fas fa-link"></i></a><a href="#解析函数导数" class="headerlink" title="解析函数导数"></a>解析函数导数</h2>
-      <ul>
-<li>解析函数有任意阶导数</li>
-</ul>
-
-        <h3 id="证明"   >
-          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
-      <ul>
-<li>证明：需要找到上界</li>
-</ul>
-
-        <h3 id="记忆一阶导数公式"   >
-          <a href="#记忆一阶导数公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#记忆一阶导数公式" class="headerlink" title="记忆一阶导数公式"></a>记忆一阶导数公式</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121719091.png" alt="image-20220512171933981"></p>
-<ul>
-<li>对f(a)左右侧同时求导</li>
-</ul>
-
-        <h3 id="高阶导数"   >
-          <a href="#高阶导数" class="heading-link"><i class="fas fa-link"></i></a><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121742913.png" alt="image-20220512174256936"></p>
-<ul>
-<li><p>区别只是把分母的次幂换成了n+1</p>
-</li>
-<li><p>是反过来 通过求高阶导数来求闭曲线的积分</p>
-</li>
-</ul>
-
-        <h3 id="例题"   >
-          <a href="#例题" class="heading-link"><i class="fas fa-link"></i></a><a href="#例题" class="headerlink" title="例题"></a>例题</h3>
-      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/0331-physicalmath/">0331_physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-12</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="原函数"   >
-          <a href="#原函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#原函数" class="headerlink" title="原函数"></a>原函数</h2>
-      <ul>
-<li><p>不告诉积分路径时考虑与积分路径无关</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101530231.png" alt="image-20220510153019906"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101546900.png" alt="image-20220510154626412"></p>
-</li>
-<li><p>一个函数时可解析的则拥有原函数 且该函数的积分之间相差常数</p>
-</li>
-<li><p>一个解析函数求导后仍然解析</p>
-</li>
-</ul>
-
-        <h3 id="积分基本定理"   >
-          <a href="#积分基本定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#积分基本定理" class="headerlink" title="积分基本定理"></a>积分基本定理</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101550277.png" alt="image-20220510155017327"></p>
-<ul>
-<li>求积分若判定与路径无关 只需要找到原函数然后代入起点终点就ok</li>
-</ul>
-
-        <h2 id="柯西基本公式"   >
-          <a href="#柯西基本公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西基本公式" class="headerlink" title="柯西基本公式"></a>柯西基本公式</h2>
-      <ul>
-<li>若f(z)在D内解析—&gt;积分f(z)&#x3D;0</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101601849.png" alt="image-20220510160111855"></p>
-<ul>
-<li>函数在c内部a一点的值可以由边界表示</li>
-</ul>
-
-        <h3 id="证明"   >
-          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101609557.png" alt="image-20220510160901386"></p>
-
-        <h3 id="均值定理"   >
-          <a href="#均值定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#均值定理" class="headerlink" title="均值定理"></a>均值定理</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101616560.png" alt="image-20220510161621479"></p>
-<ul>
-<li>将柯西定理的z进行换元即可证</li>
-<li>表达圆上的值求平均可以得到f(a)</li>
-</ul>
-
-        <h3 id="拓展到多联通区域"   >
-          <a href="#拓展到多联通区域" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展到多联通区域" class="headerlink" title="拓展到多联通区域"></a>拓展到多联通区域</h3>
-      <ul>
-<li>从外侧的曲线进入内部曲线 需要保证解析的点都落在左手侧</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101632869.png" alt="image-20220510163236955"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101634330.png" alt="image-20220510163424462"></p>
-
-        <h3 id="example"   >
-          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
-      <ul>
-<li>若单连通区域时 点a在区域外部 则区域内全部解析 所以积分&#x3D;0</li>
+<li>极小曲面</li>
+<li>注意平均曲率怎么算？ 通过第一基本型和第二基本型</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205212355465.png" alt="image-20220521235506586"></li>
+<li>悬链面是极小曲面 每个点处平均曲率等于0</li>
 <li></li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121629351.png" alt="image-20220512162928309"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205121629415.png" alt="image-20220512162947612"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/06/test/">随手抄抄</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-06</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="the-economist"   >
-          <a href="#the-economist" class="heading-link"><i class="fas fa-link"></i></a><a href="#the-economist" class="headerlink" title="the economist"></a>the economist</h2>
-      <ul>
-<li><p>It will grow by a robust 7% or more for the next several years, helped by free-spending consumers.</p>
-</li>
-<li><p>She was almost 90, but still very robust.</p>
-</li>
-<li><p>Teeming and vital, the city reminded me of the rain forest, the only other habitat that could support such extreme and robust variation among life-forms.</p>
-</li>
-<li><p>The rain was teeming down.</p>
-</li>
-<li><p>The island was teeming with tourists.</p>
-</li>
-<li><p>the teeming streets of the city</p>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0414-physicalmath/">0414-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-05</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/05/0329-physicalmath/">0329-physicalmath</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h1 id="柯西-古萨定理"   >
-          <a href="#柯西-古萨定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西-古萨定理" class="headerlink" title="柯西-古萨定理"></a>柯西-古萨定理</h1>
-      
-        <h2 id="格林定理"   >
-          <a href="#格林定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#格林定理" class="headerlink" title="格林定理"></a>格林定理</h2>
-      <ul>
-<li><p>条件：x,y连续可导</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060900337.png" alt="image-20220506090028466"></p>
-<p>区域内部的积分-&gt;边界的积分 </p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060910444.png" alt="image-20220506091046228"></p>
-</li>
-</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/ryenney/2022/05/09/%E6%9B%B2%E9%9D%A28-Weingarten%20map/">Weingarten map</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-05-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-05-22</span></span></div></header><div class="post-body"><div class="post-excerpt"><span id="more"></span>
 
-        <h2 id="积分与路径无关等价于："   >
-          <a href="#积分与路径无关等价于：" class="heading-link"><i class="fas fa-link"></i></a><a href="#积分与路径无关等价于：" class="headerlink" title="积分与路径无关等价于："></a>积分与路径无关等价于：</h2>
-      <ul>
-<li><p>D内任意光滑闭曲线C 有</p>
-</li>
-<li><p>任意一个分段光滑的曲线与路径无关</p>
-</li>
-<li><p>可表示为某一个函数U(x,y)的全微分</p>
-</li>
-<li><p>柯西黎曼方程</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060914501.png" alt="image-20220506091429086"></p>
-</li>
-</ul>
 
-        <h2 id="Cauchy’s-theorem"   >
-          <a href="#Cauchy’s-theorem" class="heading-link"><i class="fas fa-link"></i></a><a href="#Cauchy’s-theorem" class="headerlink" title="Cauchy’s theorem"></a>Cauchy’s theorem</h2>
-      
-        <h3 id="定义"   >
-          <a href="#定义" class="heading-link"><i class="fas fa-link"></i></a><a href="#定义" class="headerlink" title="定义"></a>定义</h3>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060916167.png" alt="image-20220506091627968"></p>
-<p>不光是沿曲线一周积分&#x3D;0 如果是单连通区域 它的内部的闭曲线积分也等于0</p>
-
-        <h3 id="证明"   >
-          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明" class="headerlink" title="证明"></a>证明</h3>
-      <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060919501.png" alt="image-20220506091932391"></p>
-<p>要求解析和导函数和连续 比如f(z)&#x3D;幂次的多项式组合</p>
-</li>
-</ul>
-
-        <h3 id="曲线某点的指数"   >
-          <a href="#曲线某点的指数" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲线某点的指数" class="headerlink" title="曲线某点的指数"></a>曲线某点的指数</h3>
-      <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060927214.png" alt="image-20220506092735470"></p>
-<p>n表示曲线转的周数</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060928115.png" alt="image-20220506092851968"></p>
-<p>index&#x3D;winding number</p>
+        <h2 id="Gauss-map"   >
+          <a href="#Gauss-map" class="heading-link"><i class="fas fa-link"></i></a><a href="#Gauss-map" class="headerlink" title="Gauss map"></a>Gauss map</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091632211.png" alt="image-20220509163219231"></p>
 <ul>
-<li>注意方向 逆时针+ 顺时针-</li>
-<li>绕圈不一定规则的圆</li>
-<li>若单闭曲线且a在曲线的外侧 n&#x3D;0</li>
+<li>将曲面s上的单位法向量起点移动到原点 向量的终点都落在单位球上</li>
+<li>将曲面的法向量 –&gt;单位球面上</li>
+<li>曲面弯曲很大 则法向量变化也会很大</li>
+<li>通过法向量的变化课衡量弯曲程度</li>
+</ul>
+
+        <h2 id="切映射"   >
+          <a href="#切映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#切映射" class="headerlink" title="切映射"></a>切映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091635334.png" alt="image-20220509163533988"></p>
+<ul>
+<li>从s曲面切空间到球面的切空间</li>
+<li>切映射是将一个切向量 映射成另一个切向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091638436.png" alt="image-20220509163812058"></p>
+<ul>
+<li>切映射是线性的映射 只作用在切向量上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091736082.png" alt="image-20220509173611422"></p>
+<ul>
+<li>由于切平面的映射没有作旋转 只是平移 所以法向量是平行的 单位球面的法向量是n n也是曲面s的单位法向量 所以p点处的切平面和球面的切平面是平行的 所以球面和曲面s上的切空间是一样的 球面和曲面的切向量是一样的（nu&#x3D;ru nv&#x3D;rv 向量不看位置只看方向 起点不同但方向一样）</li>
+<li>所以g*是自己对自己的映射</li>
+</ul>
+
+        <h2 id="第二基本型和w映射"   >
+          <a href="#第二基本型和w映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#第二基本型和w映射" class="headerlink" title="第二基本型和w映射"></a>第二基本型和w映射</h2>
+      <ul>
+<li>映射dr后再和dr内积得到第二基本型</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091743421.png" alt="image-20220509174353021"></p>
+
+        <h2 id="w映射是自共轭映射"   >
+          <a href="#w映射是自共轭映射" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射是自共轭映射" class="headerlink" title="w映射是自共轭映射"></a>w映射是自共轭映射</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091745271.png" alt="image-20220509174553131"></p>
+<ul>
+<li>自共轭即满足W(dr)δr&#x3D;drW(δr) 交换位置后值不变</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205091747138.png" alt="image-20220509174735688"></p>
+<ul>
+<li>w是一个矩阵 求w的特征值和特征向量 则λ是特征值 dr是特征向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205110951306.png" alt="image-20220511095152035"></p>
+<ul>
+<li>λ是特征值法曲率 dr是切向量 </li>
+<li>w映射对应两个特征值 λ1和λ2如果相等（A&#x3D;0） 则特征向量无法确定 即这一点处任意一个切向量都是特征向量 如果λ1和λ2不相等 则可以确定两个线性无关且正交的特征向量</li>
+</ul>
+
+        <h3 id="证明特征值λ1-2对应法曲率"   >
+          <a href="#证明特征值λ1-2对应法曲率" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明特征值λ1-2对应法曲率" class="headerlink" title="证明特征值λ1,2对应法曲率"></a>证明特征值λ1,2对应法曲率</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111007482.png" alt="image-20220511100732973"></p>
+<ul>
+<li>去一组正交基底 并且使其成为该点的特征向量</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111008066.png" alt="image-20220511100854589"></p>
+<ul>
+<li>利用w映射的线性 可以把e表示成cos+sin形式 然后法曲率公式(e.e&#x3D;1 单位向量) e1和e2正交没有交叉项</li>
+<li>任一点法曲率等于两个主曲率的组合 所以λ1和λ2对应的是主曲率（即法曲率的最大和最小值）</li>
+</ul>
+
+        <h3 id="Euler-formula-2-第二个欧拉公式"   >
+          <a href="#Euler-formula-2-第二个欧拉公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#Euler-formula-2-第二个欧拉公式" class="headerlink" title="Euler formula 2 第二个欧拉公式"></a>Euler formula 2 第二个欧拉公式</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111114680.png" alt="image-20220511111411872"></p>
+<ul>
+<li>θ的意义不一样 <ul>
+<li>θ表示切向量与e1的夹角</li>
+<li>θ-θ0 切向量与u曲线的夹角-主方向与u曲线的夹角</li>
+</ul>
+</li>
+<li>脐点：法曲率与切方向无关（主曲率相等的点；第二基本型与第一基本型成比例的点） 任意du dv下恒成立得出L&#x2F;E&#x3D;M&#x2F;F&#x3D;N&#x2F;G&#x3D;Kn<ul>
+<li>分为两类：平点 第二基本型&#x3D;0即平面 局部是平面</li>
+<li>圆点：局部是球面</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111120155.png" alt="image-20220511112017808"></li>
+</ul>
+
+        <h3 id="关于脐点的定理"   >
+          <a href="#关于脐点的定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#关于脐点的定理" class="headerlink" title="关于脐点的定理"></a>关于脐点的定理</h3>
+      <ul>
+<li>判定平面：全是平点</li>
+<li>判定球面：全是圆点</li>
+</ul>
+
+        <h2 id="曲率线"   >
+          <a href="#曲率线" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线" class="headerlink" title="曲率线"></a>曲率线</h2>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111123520.png" alt="image-20220511112307269"></p>
+<ul>
+<li>每个点处的切方向&#x3D;主方向</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111127626.png" alt="image-20220511112715283"></p>
+<ul>
+<li>主方向满足w映射的方程</li>
+<li>w映射的定义 是-g*(曲面上的切向量到单位球面的映射)</li>
+</ul>
+
+        <h3 id="曲率线第一个判定标准："   >
+          <a href="#曲率线第一个判定标准：" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线第一个判定标准：" class="headerlink" title="曲率线第一个判定标准："></a>曲率线第一个判定标准：</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111129731.png" alt="image-20220511112903563"></p>
+<ul>
+<li>曲线法向量的导数和曲线切向量的关系</li>
+</ul>
+
+        <h3 id="曲率线第二个判定标准"   >
+          <a href="#曲率线第二个判定标准" class="heading-link"><i class="fas fa-link"></i></a><a href="#曲率线第二个判定标准" class="headerlink" title="曲率线第二个判定标准"></a>曲率线第二个判定标准</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141380.png" alt="image-20220511114140471"></p>
+<ul>
+<li><p><strong>当且仅当曲面沿着c的法线所构成的曲面是一个可展曲面</strong></p>
+</li>
+<li><p>由法线形成的一定是一个直纹面（法线当作母线 曲线c当作准线 法线沿着母线扫过一定形成一个直纹面）c的方程是r(s)</p>
+<ul>
+<li>得到直纹面的方程r&#x3D;r(s)+tn(s)</li>
 </ul>
 </li>
 </ul>
-
-        <h2 id="柯西定理拓展"   >
-          <a href="#柯西定理拓展" class="heading-link"><i class="fas fa-link"></i></a><a href="#柯西定理拓展" class="headerlink" title="柯西定理拓展"></a>柯西定理拓展</h2>
-      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060932831.png" alt="image-20220506093225504"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111141378.png" alt="image-20220511114107048"></p>
 <ul>
-<li>simple closed contour 单连通闭曲线</li>
-<li>证明不做要求</li>
+<li>注意判断直纹面方程是否可展平面的条件：</li>
+<li>r’是曲线切向量 垂直 n</li>
+<li>n 垂直n‘ n是单位法向量场（对于一个常数向量函数）n同时垂直r’和n’所以n垂直r’和n’形成的平面（它们的外积）</li>
+<li>混合积交换依次顺序加一个负号</li>
+<li>λ&#x3D;0 即两个向量的外积&#x3D;0 r‘平行n’ 根据第一个判定定理 r’如果平行n’ 则是曲率线</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111146358.png" alt="image-20220511114643867"></p>
+<ul>
+<li>必要性证明：<ul>
+<li>通过r’平行n’可以得到三个向量的外积&#x3D;0 满足直纹面是可展曲面的条件</li>
+</ul>
+</li>
 </ul>
 
         <h3 id="example"   >
           <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h3>
-      <ul>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060939340.png" alt="image-20220506093953601"></p>
-<p>奇点不在积分范围内 所以区域内处处解析</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060941244.png" alt="image-20220506094136700"></p>
-<p>若奇点在区域内部 需要用第二种方法剪开 然后计算小圆</p>
-<p>结果不等于0</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060953013.png" alt="image-20220506095340098"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205060955939.png" alt="image-20220506095512794"></p>
-<p>积分等于0不能推出f(z)解析</p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101518301.png" alt="image-20220510151805602"></p>
-</li>
-<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205101518362.png" alt="image-20220510151822282"></p>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111214963.png" alt="image-20220511121343551"></p>
+<ul>
+<li>纬线：曲面上初始的点绕z周旋转一周得到</li>
+<li>经线：经过旋转轴的平面与曲面求交线得到的 经线上的法向量都在平面上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111216309.png" alt="image-20220511121638337"></p>
+<ul>
+<li>可展曲面一定是直纹面 直母线是一组曲率线<ul>
+<li>沿着直母线的法向量是不变的 所以导数&#x3D;0 而零向量和dr&#x2F;dt（任何向量）都平行</li>
+<li>可展曲面的另一组曲率线是：和直母线正交的的直线</li>
+</ul>
 </li>
 </ul>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/ryenney/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/ryenney/">1</a><a class="page-number" href="/ryenney/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/ryenney/page/4/">4</a><a class="page-number" href="/ryenney/page/5/">5</a><a class="extend next" rel="next" href="/ryenney/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">50</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
+
+        <h2 id="主曲率主方向的具体计算公式"   >
+          <a href="#主曲率主方向的具体计算公式" class="heading-link"><i class="fas fa-link"></i></a><a href="#主曲率主方向的具体计算公式" class="headerlink" title="主曲率主方向的具体计算公式"></a>主曲率主方向的具体计算公式</h2>
+      
+        <h3 id="Mean-curvature-and-Gauss-curvature"   >
+          <a href="#Mean-curvature-and-Gauss-curvature" class="heading-link"><i class="fas fa-link"></i></a><a href="#Mean-curvature-and-Gauss-curvature" class="headerlink" title="Mean curvature and Gauss curvature"></a>Mean curvature and Gauss curvature</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111225217.png" alt="image-20220511122519634"></p>
+<ul>
+<li>δr是曲面s的一个主方向 主方向满足w映射等式</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111229885.png" alt="image-20220511122939594"></p>
+<ul>
+<li>上面的方程组有非零解的话 当且仅当<strong>行列式&#x3D;0</strong>（由线性代数）</li>
+<li>正则曲面的w映射一定有两个特征值 所以行列式&#x3D;0的方程一定有两个根（不同讨论b^2-4ac&lt;0 的情况）<ul>
+<li>λ1+λ2&#x3D;2H</li>
+<li>λ1*λ2&#x3D;K</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111232369.png" alt="image-20220511123227995"></p>
+<ul>
+<li>H 是平均曲率 K是高斯曲率 由主曲率构成</li>
+<li>可以由平均曲率（描述细节）和高斯曲率（有一个等于0则等于0 平面的主曲率都是0 高斯曲率都是0）求主曲率 </li>
+<li>用高斯曲率判断光滑平坦<ul>
+<li>高斯曲率还有离散化求法</li>
+</ul>
+</li>
+<li><strong>高斯曲率和平均曲率也是参数变换的不变量</strong></li>
+</ul>
+
+        <h3 id="主曲率性质"   >
+          <a href="#主曲率性质" class="heading-link"><i class="fas fa-link"></i></a><a href="#主曲率性质" class="headerlink" title="主曲率性质"></a>主曲率性质</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111653327.png" alt="image-20220511165348807"></p>
+<ul>
+<li>主曲率是连续函数 不会突变 在非脐点邻域内连续可微</li>
+</ul>
+
+        <h3 id="计算步骤："   >
+          <a href="#计算步骤：" class="heading-link"><i class="fas fa-link"></i></a><a href="#计算步骤：" class="headerlink" title="计算步骤："></a>计算步骤：</h3>
+      
+        <h4 id="从主曲率求主方向"   >
+          <a href="#从主曲率求主方向" class="heading-link"><i class="fas fa-link"></i></a><a href="#从主曲率求主方向" class="headerlink" title="从主曲率求主方向"></a>从主曲率求主方向</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111656751.png" alt="image-20220511165655563"></p>
+<ul>
+<li>（如果是两个主曲率不相等&#x3D;&#x3D;非脐点）求第一基本型和第二基本型 利用高斯曲率和平均曲率公式解关于主曲率的二次方程 求的的解代入δu和δv的等式 可以得到δu和δv</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111657549.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111658718.png" alt="image-20220511165843527"></p>
+<ul>
+<li>（相等&#x3D;&#x3D;脐点）</li>
+</ul>
+
+        <h4 id="从主方向求主曲率"   >
+          <a href="#从主方向求主曲率" class="heading-link"><i class="fas fa-link"></i></a><a href="#从主方向求主曲率" class="headerlink" title="从主方向求主曲率"></a>从主方向求主曲率</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111659723.png" alt="image-20220511165957617"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111702736.png" alt="image-20220511170258680"></p>
+<ul>
+<li>如果把u,v看成变量 点在移动 则上面式子也是曲率线的方程</li>
+<li>重点※ 怎么求主曲率主方向和高斯曲率</li>
+</ul>
+
+        <h3 id="定理"   >
+          <a href="#定理" class="heading-link"><i class="fas fa-link"></i></a><a href="#定理" class="headerlink" title="定理"></a>定理</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111708172.png" alt="image-20220511170807074"></p>
+<ul>
+<li>参数曲线方向（u曲线和v曲线）正好是主曲率方向的条件</li>
+<li>u曲线和v曲线不一定是曲面的主方向</li>
+</ul>
+
+        <h4 id="证明："   >
+          <a href="#证明：" class="heading-link"><i class="fas fa-link"></i></a><a href="#证明：" class="headerlink" title="证明："></a>证明：</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111715039.png" alt="image-20220511171519427"></p>
+<ul>
+<li>参数曲线网正交&#x3D;&#x3D;F&#x3D;0</li>
+<li>假设u曲线的单位向量（方向）是(1,0)</li>
+<li>ru不是零向量 所以E!&#x3D;0</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205111717407.png" alt="image-20220511171726996"></p>
+<ul>
+<li>当F和M&#x3D;0时可以得到上式是成立的</li>
+</ul>
+
+        <h4 id="推论"   >
+          <a href="#推论" class="heading-link"><i class="fas fa-link"></i></a><a href="#推论" class="headerlink" title="推论"></a>推论</h4>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120907782.png" alt="image-20220512090740574"></p>
+<ul>
+<li><p>参数曲线网正好是正交的曲率线的条件是 F&#x3D;M&#x3D;0 </p>
+<p>此时 第一基本型可以写成：</p>
+<p>第二基本型写成：k1E+k2G (只需代入k1&#x3D;L&#x2F;E，k2&#x3D;N&#x2F;G)</p>
+</li>
+</ul>
+
+        <h3 id="脐点处找正交曲率线网"   >
+          <a href="#脐点处找正交曲率线网" class="heading-link"><i class="fas fa-link"></i></a><a href="#脐点处找正交曲率线网" class="headerlink" title="脐点处找正交曲率线网"></a>脐点处找正交曲率线网</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120911040.png" alt="image-20220512091150945"></p>
+<ul>
+<li>正则曲面s上一定存在<strong>非脐点</strong>处的邻域内 有一个参数系u,v 这个参数系可形成一个正交的曲率线网<ul>
+<li>uv曲线可通过参数变换形成正交的曲率现网</li>
+</ul>
+</li>
+<li>如果不是孤立的<strong>脐点</strong> 则这个脐点的邻域可以形成平面或者球面 平面和球面都可以找到正交曲率线网</li>
+<li>如果是孤立<strong>脐点</strong> 邻域内没有脐点 找不到曲率线（不能保证一定存在正交的曲率线网）</li>
+</ul>
+
+        <h3 id="w映射的矩阵"   >
+          <a href="#w映射的矩阵" class="heading-link"><i class="fas fa-link"></i></a><a href="#w映射的矩阵" class="headerlink" title="w映射的矩阵"></a>w映射的矩阵</h3>
+      <p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120931558.png" alt="image-20220512093129083"></p>
+<ul>
+<li>nu和nv可以由ru和rv线性表达 求{E,F,F,G}的逆矩阵</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120932480.png" alt="image-20220512093224130"></p>
+<ul>
+<li>迹和行列式在线性变化中保持不变</li>
+<li>w映射变换矩阵的trace(迹)&#x3D;对角元素的和&#x3D;2倍平均曲率</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120938882.png" alt="image-20220512093841725"></p>
+<ul>
+<li>行列式&#x3D;高斯曲率</li>
+<li>高斯曲率的几何意义：两个切向量的外积&#x3D;高斯曲率*两个切向量外积</li>
+<li>面积元&#x3D;du x dv 所以可以用高斯曲率表示面积元的映射</li>
+<li><strong>映射之后（单位球面积）&#x2F; 原始的面积 &#x3D; 高斯曲率</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202205120939661.png" alt="image-20220512093925550"></p>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/ryenney/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/ryenney/">1</a><a class="page-number" href="/ryenney/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/ryenney/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/ryenney/page/6/">6</a><a class="extend next" rel="next" href="/ryenney/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">58</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">9</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

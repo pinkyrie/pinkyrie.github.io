@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="formula writing                           inline formjula        公式和文本是在镶嵌的 在同一个环境中   write formula： quote formula into two $ （注意此处是single dollar signs）  $e^&amp;#123;i\pi&amp;#125;$ 12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LATEX学习">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/06/27/Latex/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="formula writing                           inline formjula        公式和文本是在镶嵌的 在同一个环境中   write formula： quote formula into two $ （注意此处是single dollar signs）  $e^&amp;#123;i\pi&amp;#125;$ 12345">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271031272.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271101928.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271102239.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271104799.png">
+<meta property="article:published_time" content="2022-06-27T05:49:34.000Z">
+<meta property="article:modified_time" content="2022-06-27T06:08:33.540Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271031272.png"><title>LATEX学习 | rye is coding</title><link ref="canonical" href="http://gitee.com/ryenney/2022/06/27/Latex/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">LATEX学习</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-06-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-06-27</span></span></div></header><div class="post-body"><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+        <h3 id="formula-writing"   >
+          <a href="#formula-writing" class="heading-link"><i class="fas fa-link"></i></a><a href="#formula-writing" class="headerlink" title="formula writing"></a>formula writing</h3>
+      
+        <h4 id="inline-formjula"   >
+          <a href="#inline-formjula" class="heading-link"><i class="fas fa-link"></i></a><a href="#inline-formjula" class="headerlink" title="inline formjula"></a>inline formjula</h4>
+      <blockquote>
+<p>公式和文本是在镶嵌的 在同一个环境中</p>
+</blockquote>
+<ul>
+<li><p>write formula： quote formula into two <code>$</code> （注意此处是single dollar signs）</p>
+</li>
+<li><pre><code class="latex">$e^&#123;i\pi&#125;$
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- &#123;&#125;：means lumping things together （如上图的例子就是把i和Π打包成一个整体作为e的指数部分）</span><br><span class="line">- backslash\: means giving a command after the backslash (比如加上alpha beta 等等)</span><br><span class="line"></span><br><span class="line">#### 不是inline</span><br><span class="line"></span><br><span class="line">- quote the formula into double `$`</span><br><span class="line"></span><br><span class="line">- 自动缩进（auto scale) </span><br><span class="line"></span><br><span class="line">- ```latex</span><br><span class="line">  $$e=\lim_&#123;n\to\infty&#125;\left(1+\frac&#123;1&#125;&#123;n&#125;\right)^n=\lim_&#123;n\to\infty&#125;\frac&#123;n&#125;&#123;\sqrt[n]&#123;n!&#125;&#125;$$</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><p>括号加上<code>left</code>或者<code>right</code>可以调整括号的大小</p>
+</li>
+<li><p><code>sqrt[n]</code> 表示开n次方</p>
+</li>
+</ul>
+
+        <h4 id="每一行前面的小点或数字"   >
+          <a href="#每一行前面的小点或数字" class="heading-link"><i class="fas fa-link"></i></a><a href="#每一行前面的小点或数字" class="headerlink" title="每一行前面的小点或数字"></a>每一行前面的小点或数字</h4>
+      <ul>
+<li><pre><code class="latex">\begin&#123;itemize&#125; or \begin&#123;enumerate&#125;
+\item it is a formula 
+
+\end&#123;itemize&#125; or \end&#123;enumerate&#125;
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">#### 输入矩阵</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- 每一行结束之后要加入`\\`</span><br><span class="line"></span><br><span class="line">####  commenting</span><br><span class="line"></span><br><span class="line">- 在行开头加入`%` 可以注释掉这一行</span><br><span class="line"></span><br><span class="line">#### 加入图片</span><br><span class="line"></span><br><span class="line">- ![image-20220627101730765](https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271017402.png)</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 加粗文字</span><br><span class="line"></span><br><span class="line">- `\textbf&#123;balabala&#125;`</span><br><span class="line"></span><br><span class="line">#### 公式的前面\</span><br><span class="line"></span><br><span class="line">- ![image-20220627102626284](Latex.assets/image-20220627102626284.png)</span><br><span class="line"></span><br><span class="line">- ```latex</span><br><span class="line">  \[e=\lim_&#123;n\to\infty&#125;\left(1+\frac&#123;1&#125;&#123;n&#125;\right)^n=\lim_&#123;n\to\infty&#125;\frac&#123;n&#125;&#123;\sqrt[n]&#123;n!&#125;&#125;.\]</span><br><span class="line">  </span><br><span class="line">  \item we can do another</span><br><span class="line">  </span><br><span class="line">  \begin&#123;equation&#125;e=\sum_&#123;n=0&#125;^&#123;\infty&#125;\frac&#123;1&#125;&#123;n!&#125;\end&#123;equation&#125; %会对公式进行123的编号 方便之后的引用</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271031272.png" alt="image-20220627103118471"></p>
+</li>
+</ul>
+
+        <h4 id="用align对齐多个等式"   >
+          <a href="#用align对齐多个等式" class="heading-link"><i class="fas fa-link"></i></a><a href="#用align对齐多个等式" class="headerlink" title="用align对齐多个等式"></a>用align对齐多个等式</h4>
+      <ul>
+<li><p>使latex识别代码的whitespace</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271101928.png" alt="image-20220627110131993"></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271102239.png" alt="image-20220627110213856"></p>
+</li>
+<li><p>ampersand <code>&amp;</code> will tell latex where to begin the aligned lines (这里会让两个等号对齐)</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/pinkyrie/pic@master/202206271104799.png" alt="image-20220627110427103"></p>
+</li>
+<li><p>\text在中间可以插入文本 但是ampersand只会让等号之后开始对齐</p>
+</li>
+<li></li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/06/27/Latex/">http://gitee.com/ryenney/2022/06/27/Latex/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/06/28/0419-physicalmath/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/06/26/cpp_primer-1/"><span class="paginator-prev__text">cpp-primer</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#formula-writing"><span class="toc-number">2.</span> <span class="toc-text">
+          formula writing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#inline-formjula"><span class="toc-number">2.1.</span> <span class="toc-text">
+          inline formjula</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%8F%E4%B8%80%E8%A1%8C%E5%89%8D%E9%9D%A2%E7%9A%84%E5%B0%8F%E7%82%B9%E6%88%96%E6%95%B0%E5%AD%97"><span class="toc-number">2.2.</span> <span class="toc-text">
+          每一行前面的小点或数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8align%E5%AF%B9%E9%BD%90%E5%A4%9A%E4%B8%AA%E7%AD%89%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">
+          用align对齐多个等式</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">58</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">9</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
