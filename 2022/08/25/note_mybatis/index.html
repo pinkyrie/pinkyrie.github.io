@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="navicat                           破解                           建立数据库                           建表                           mybatis                           导入dependency       -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/08/25/note_mybatis/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="navicat                           破解                           建立数据库                           建表                           mybatis                           导入dependency       -">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-25T12:27:24.345Z">
+<meta property="article:modified_time" content="2022-08-25T16:04:54.018Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="http://gitee.com/ryenney/2022/08/25/note_mybatis/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-25</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-26</span></span></div></header><div class="post-body">
+        <h2 id="navicat"   >
+          <a href="#navicat" class="heading-link"><i class="fas fa-link"></i></a><a href="#navicat" class="headerlink" title="navicat"></a>navicat</h2>
+      
+        <h3 id="破解"   >
+          <a href="#破解" class="heading-link"><i class="fas fa-link"></i></a><a href="#破解" class="headerlink" title="破解"></a>破解</h3>
+      
+        <h3 id="建立数据库"   >
+          <a href="#建立数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h3>
+      
+        <h3 id="建表"   >
+          <a href="#建表" class="heading-link"><i class="fas fa-link"></i></a><a href="#建表" class="headerlink" title="建表"></a>建表</h3>
+      
+        <h2 id="mybatis"   >
+          <a href="#mybatis" class="heading-link"><i class="fas fa-link"></i></a><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h2>
+      
+        <h3 id="导入dependency"   >
+          <a href="#导入dependency" class="heading-link"><i class="fas fa-link"></i></a><a href="#导入dependency" class="headerlink" title="导入dependency"></a>导入dependency</h3>
+      <p>- </p>
+
+        <h4 id="mysql-connector版本问题"   >
+          <a href="#mysql-connector版本问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#mysql-connector版本问题" class="headerlink" title="mysql connector版本问题"></a>mysql connector版本问题</h4>
+      <ul>
+<li>注意idea中的mysql版本和mysql的本地查看的版本不是一个概念</li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/60238703/how-to-determine-mysql-mariadb-version-for-maven-dependency" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>The one specified in <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/maven" >maven</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> is the client version while one the you checked with <code>mysql -V</code> is the server version. The JDBC client version does not needed to be exactly matched with the server version.</li>
+</ul>
+
+        <h3 id="mybatis-configuration-xml"   >
+          <a href="#mybatis-configuration-xml" class="heading-link"><i class="fas fa-link"></i></a><a href="#mybatis-configuration-xml" class="headerlink" title="mybatis configuration xml"></a>mybatis configuration xml</h3>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/configuration.html" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>​          如果你正在使用 Spring + MyBatis，则没有必要配置事务管理器，因为          Spring 模块会使用自带的管理器来覆盖前面的配置。        </p>
+<p>​          这两种事务管理器类型都不需要设置任何属性。它们其实是类型别名，换句话说，你可以用          TransactionFactory 接口实现类的全限定名或类型别名代替它们。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+        <h4 id="sidenote"   >
+          <a href="#sidenote" class="heading-link"><i class="fas fa-link"></i></a><a href="#sidenote" class="headerlink" title="sidenote:"></a>sidenote:</h4>
+      <ul>
+<li><p>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration.</p>
+<p>The declaration is not an HTML tag. It is an “information” to the browser about what document type to expect.</p>
+</li>
+<li></li>
+</ul>
+
+        <h3 id="获取sqlsession实例-创建factory"   >
+          <a href="#获取sqlsession实例-创建factory" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取sqlsession实例-创建factory" class="headerlink" title="获取sqlsession实例-创建factory"></a>获取sqlsession实例-创建factory</h3>
+      <ul>
+<li>加载资源并辅助执行sql语句</li>
+<li>等价于jdbc的connection</li>
+</ul>
+
+        <h3 id="编写代码"   >
+          <a href="#编写代码" class="heading-link"><i class="fas fa-link"></i></a><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3>
+      
+        <h4 id="实体类"   >
+          <a href="#实体类" class="heading-link"><i class="fas fa-link"></i></a><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h4>
+      
+        <h4 id="dao接口"   >
+          <a href="#dao接口" class="heading-link"><i class="fas fa-link"></i></a><a href="#dao接口" class="headerlink" title="dao接口"></a>dao接口</h4>
+      
+        <h4 id="接口"   >
+          <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a><a href="#接口" class="headerlink" title="接口"></a>接口</h4>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/08/25/note_mybatis/">http://gitee.com/ryenney/2022/08/25/note_mybatis/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/08/25/note_springboot/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/08/25/log/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#navicat"><span class="toc-number">1.</span> <span class="toc-text">
+          navicat</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%B4%E8%A7%A3"><span class="toc-number">1.1.</span> <span class="toc-text">
+          破解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.</span> <span class="toc-text">
+          建立数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">
+          建表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mybatis"><span class="toc-number">2.</span> <span class="toc-text">
+          mybatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5dependency"><span class="toc-number">2.1.</span> <span class="toc-text">
+          导入dependency</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mysql-connector%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          mysql connector版本问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mybatis-configuration-xml"><span class="toc-number">2.2.</span> <span class="toc-text">
+          mybatis configuration xml</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sidenote"><span class="toc-number">2.2.1.</span> <span class="toc-text">
+          sidenote:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96sqlsession%E5%AE%9E%E4%BE%8B-%E5%88%9B%E5%BB%BAfactory"><span class="toc-number">2.3.</span> <span class="toc-text">
+          获取sqlsession实例-创建factory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-number">2.4.</span> <span class="toc-text">
+          编写代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E7%B1%BB"><span class="toc-number">2.4.1.</span> <span class="toc-text">
+          实体类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dao%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.4.2.</span> <span class="toc-text">
+          dao接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.4.3.</span> <span class="toc-text">
+          接口</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">14</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
