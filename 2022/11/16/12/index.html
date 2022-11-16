@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="sequential search                           binary search                           binary search tree（区分我们要学的判定树）        [树的高度](Self-balancing binary search tree - Wikipedia)    B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/11/16/12/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="sequential search                           binary search                           binary search tree（区分我们要学的判定树）        [树的高度](Self-balancing binary search tree - Wikipedia)    B">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png">
+<meta property="article:published_time" content="2022-11-16T15:28:47.063Z">
+<meta property="article:modified_time" content="2022-11-16T15:27:28.123Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="http://gitee.com/ryenney/2022/11/16/12/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-16</span></span></div></header><div class="post-body">
+        <h2 id="sequential-search"   >
+          <a href="#sequential-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#sequential-search" class="headerlink" title="sequential search"></a>sequential search</h2>
+      
+        <h2 id="binary-search"   >
+          <a href="#binary-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search" class="headerlink" title="binary search"></a>binary search</h2>
+      
+        <h3 id="binary-search-tree（区分我们要学的判定树）"   >
+          <a href="#binary-search-tree（区分我们要学的判定树）" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search-tree（区分我们要学的判定树）" class="headerlink" title="binary search tree（区分我们要学的判定树）"></a>binary search tree（区分我们要学的判定树）</h3>
+      <ul>
+<li><p>[树的高度](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" >Self-balancing binary search tree - Wikipedia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>)</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png" alt="image-20221114205329151"></p>
+</li>
+<li><p>Binary Search Tree is a node-based binary tree data structure which has the following properties:</p>
+<p>The left subtree of a node contains only nodes with keys lesser than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>The left and right subtree each must also be a binary search tree.</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BST.html" >构建过程的动画</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="折半查找判定树"   >
+          <a href="#折半查找判定树" class="heading-link"><i class="fas fa-link"></i></a><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zipeilu/p/14626027.html" >计算ASL</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="B-tree-x2F-多分树"   >
+          <a href="#B-tree-x2F-多分树" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree-x2F-多分树" class="headerlink" title="B-tree&#x2F;多分树"></a>B-tree&#x2F;多分树</h2>
+      
+        <h3 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
+      <ul>
+<li><p>balanced search tree</p>
+</li>
+<li><p>用途：disks or other direct access secondary storage devices (和红黑树相似 但是better at minimizing disk I&#x2F;O operations)</p>
+<p>many database systems use B-trees or B树的变种 store information</p>
+</li>
+<li><p>如果一个node x有 n 个keys 那么 node x有n+1个children</p>
+</li>
+<li><p>the keys in node x serve as dividing points separating the range of keys handled by x into x.n+1 subranges, each handled by one child of x</p>
+</li>
+<li><p>树的高度是随着结点个数logarithmatically grow</p>
+</li>
+</ul>
+
+        <h3 id="特征"   >
+          <a href="#特征" class="heading-link"><i class="fas fa-link"></i></a><a href="#特征" class="headerlink" title="特征"></a>特征</h3>
+      <ul>
+<li>所有叶子结点出现在同一层</li>
+<li>m阶的B树每个结点至多有m棵子树（All non-leaf nodes (except the root) have at most m and at least m&#x2F;2 children.）</li>
+<li>key的个数比该结点的孩子个数少1（隔板比分割区域少1）</li>
+<li>根结点至少有两棵子树</li>
+</ul>
+
+        <h3 id="基本信息"   >
+          <a href="#基本信息" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3>
+      
+        <h4 id="order-vs-degree"   >
+          <a href="#order-vs-degree" class="heading-link"><i class="fas fa-link"></i></a><a href="#order-vs-degree" class="headerlink" title="order vs degree"></a>order vs degree</h4>
+      <p>Degree represents the lower bound on the number of children. i.e the minimum number possible. Whereas the Order represents the upper bound on the number of children.</p>
+<ul>
+<li><p>minimum degree: </p>
+<ul>
+<li><p>Nodes have lower and upper bounds on the number of keys they can contain. We express these bounds in terms of a fixed integer t &gt;&#x3D;2 called the <strong>minimum degree</strong> of the B-tree:</p>
+<p>a. Every node other than the root must have at least t -1 keys. Every internal node other than the root thus has at least t children. If the tree is nonempty, the root must have at least one key.</p>
+<p>b. Every node may contain at most 2t-1 keys. Therefore, an internal node may have at most 2t children. We say that a node is <strong>full</strong> if it contains exactly 2t -1 keys.</p>
+</li>
+</ul>
+</li>
+<li><p>t度的B树就是2t阶的B树 (这也是B树的分裂机制决定的)</p>
+<p>因为t度的B树节点最多有2t个孩子，2t-1个关键字；m阶的B树最多有m个孩子，其实通过度定义的B树和通过阶数定义的B树，区别就是一个是用的这个B树节点的最小度数一个是用的这个树节点的最大度数。</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.quora.com/Why-is-the-maximum-number-of-keys-in-a-B-tree-equal-to-2-t-1-where-t-is-the-minimum-degree" >reference: 为什么是2t-1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>[pointer,key,pointer,key,pointer]: pointer的个数就是degree 所以至少有t-1个key 如果最多的话 就是 2t-1（全都是key）</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png" alt="image-20221115203019698"></p>
+<ul>
+<li>为什么b-tree优于红黑树？</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png" alt="image-20221115203845142"></p>
+<ul>
+<li><p>注意h是base t的log函数 我们通过调整t可以使得h的增长变得很慢 从而提高了访问效率</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png" alt="image-20221115203945028"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png" alt="image-20221022120147376" style="zoom:50%;" /></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png" alt="image-20221022120405193"></li>
+</ul>
+</li>
+<li><p>order</p>
+</li>
+</ul>
+<p>一棵m阶的B树满足下列条件：</p>
+<p>1.树中每个结点至多有m个孩子。</p>
+<p>2.除根结点和叶子结点外，其它每个结点至少有m&#x2F;2个孩子。</p>
+<p>3.根结点至少有2个孩子（如果B树只有一个结点除外）,这条性质是由B树的插入分裂策略决定的。</p>
+<p>4.所有叶结点在同一层，B树的叶结点可以看成一种外部节点，不包含任何信息。</p>
+<p>4.有k个关键字(关键字按递增次序排列)的非叶结点恰好有k+1个孩子。</p>
+<p>5.一个节点如果由n个关键字，则节点内数据结构为P0，K1，P1，K2，P2………Pn-1 Kn Pn 其中 p为指向其子节点的指针，因为父子的大小 关系和节点内大小关系，满足Kj 大于Pj指针所指向的子树上的所有关键字小雨Pj+1指针所指向子树上的所有关键字</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png" alt="image-20221021112043966"></li>
+</ul>
+
+        <h3 id="opeartion-search-x2F-insert"   >
+          <a href="#opeartion-search-x2F-insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#opeartion-search-x2F-insert" class="headerlink" title="opeartion search&#x2F;insert"></a>opeartion search&#x2F;insert</h3>
+      <ul>
+<li>The procedures we present are all “one-pass” algorithms that proceed downward from the root of the tree, without having to back up.</li>
+</ul>
+
+        <h4 id="insert"   >
+          <a href="#insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#insert" class="headerlink" title="insert"></a>insert</h4>
+      <ul>
+<li><p>non-split insert</p>
+</li>
+<li><p>split insert</p>
+<ul>
+<li>普通split</li>
+<li>root也满了需要h+1的split</li>
+</ul>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png" alt="image-20221115205201747"></p>
+</li>
+</ul>
+
+        <h4 id="delete"   >
+          <a href="#delete" class="heading-link"><i class="fas fa-link"></i></a><a href="#delete" class="headerlink" title="delete"></a>delete</h4>
+      <ul>
+<li>Delete one record from a leaf node with two records.</li>
+<li>Delete one record from a leaf node with one record. <ul>
+<li>Borrow a record from a brother，modify the record of parent node. </li>
+<li>Brother node does not have enough record，merge two nodes by deleting empty leaf and moving 21 down.</li>
+<li>Brother node does not have enough record，merge two nodes by deleting the empty leaf and moving 12 down. Modify the parent nodes based on the similar process.</li>
+<li>Brother node does not have enough record，merge two nodes，modify parent node. This may reduce the height of the tree.</li>
+</ul>
+</li>
+<li>Delete a record from internal node. The least key Y of right subtree replace the deleted key. Y must be in a leaf node. Then delete it.</li>
+</ul>
+
+        <h3 id="拓展：磁盘读取"   >
+          <a href="#拓展：磁盘读取" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展：磁盘读取" class="headerlink" title="拓展：磁盘读取"></a>拓展：磁盘读取</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tech.meituan.com/2017/05/19/about-desk-io.html" >re1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li>main memory vs secondary storage(disks)</li>
+<li>增加磁盘platter(硬盘盘片)只是增加disk drive’s capacity not its performance</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://medium.com/@andrewjmarkham1/disk-storage-data-indexing-and-a-use-case-for-b-trees-608ff56bffdd" >re2</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>数据库应用b-tree metadata 即寻找data 的index是利用b tree储存索引查找</p>
+</li>
+<li><p>the running time of a B-tree algorithm depends primarily on the number of DISK-READ and DISK-WRITE operations it performs, we typically want each of these operations to read or write as much information aspossible. Thus, a B-tree node is usually <strong>as large as a whole disk page</strong>, and this size limits the number of children a B-tree node can have.</p>
+</li>
+<li><p>branching factor指的是这个结点下有多少个孩子 则factor<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%94%AF%E5%9B%A0%E5%AD%90" >就是几</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="exercise"   >
+          <a href="#exercise" class="heading-link"><i class="fas fa-link"></i></a><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png" alt="image-20221115204159554"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png" alt="image-20221115204217841"></li>
+</ul>
+
+        <h2 id="2-3树"   >
+          <a href="#2-3树" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h2>
+      <ul>
+<li>平衡树：任意节点的子树的高度差都小于等于1 2-3树的叶子结点都在同一层因此是平衡树</li>
+<li>Comparison times are not larger than the height of 2-3 tree.</li>
+</ul>
+
+        <h2 id="B-tree"   >
+          <a href="#B-tree" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree" class="headerlink" title="B+ tree"></a>B+ tree</h2>
+      <ul>
+<li><strong>B+ -tree</strong>, stores all the satellite information in the leaves and stores only keys and child pointers in the internal nodes, thus maximizing the branching factor of the internal nodes.</li>
+<li>Special cases: <ul>
+<li>If the root is not a leaf, it has at least 2 children.</li>
+<li>If the root is a leaf (that is, there are no other nodes in the tree), it can have between 0 and (n–1) values.</li>
+</ul>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/11/16/12/">http://gitee.com/ryenney/2022/11/16/12/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/ryenney/2022/11/16/13/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/11/15/15/"><span class="paginator-prev__text">排序算法总结</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sequential-search"><span class="toc-number">1.</span> <span class="toc-text">
+          sequential search</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#binary-search"><span class="toc-number">2.</span> <span class="toc-text">
+          binary search</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#binary-search-tree%EF%BC%88%E5%8C%BA%E5%88%86%E6%88%91%E4%BB%AC%E8%A6%81%E5%AD%A6%E7%9A%84%E5%88%A4%E5%AE%9A%E6%A0%91%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">
+          binary search tree（区分我们要学的判定树）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E5%88%A4%E5%AE%9A%E6%A0%91"><span class="toc-number">2.2.</span> <span class="toc-text">
+          折半查找判定树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-tree-x2F-%E5%A4%9A%E5%88%86%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">
+          B-tree&#x2F;多分树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basics"><span class="toc-number">3.1.</span> <span class="toc-text">
+          basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-number">3.2.</span> <span class="toc-text">
+          特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">3.3.</span> <span class="toc-text">
+          基本信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#order-vs-degree"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          order vs degree</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opeartion-search-x2F-insert"><span class="toc-number">3.4.</span> <span class="toc-text">
+          opeartion search&#x2F;insert</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#insert"><span class="toc-number">3.4.1.</span> <span class="toc-text">
+          insert</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#delete"><span class="toc-number">3.4.2.</span> <span class="toc-text">
+          delete</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%EF%BC%9A%E7%A3%81%E7%9B%98%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.</span> <span class="toc-text">
+          拓展：磁盘读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise"><span class="toc-number">3.6.</span> <span class="toc-text">
+          exercise</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E6%A0%91"><span class="toc-number">4.</span> <span class="toc-text">
+          2-3树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-tree"><span class="toc-number">5.</span> <span class="toc-text">
+          B+ tree</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/ryenney/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/ryenney/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="hash        A hash function maps key values to positions.                      basics        Load factor lambda λ&#x3D; (number of keys &#x2F; Table Size)                       构造方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="http://gitee.com/ryenney/2022/11/16/13/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="hash        A hash function maps key values to positions.                      basics        Load factor lambda λ&#x3D; (number of keys &#x2F; Table Size)                       构造方">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323021.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323599.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323273.png">
+<meta property="article:published_time" content="2022-11-16T15:28:47.064Z">
+<meta property="article:modified_time" content="2022-11-16T15:23:58.671Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323021.png"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="http://gitee.com/ryenney/2022/11/16/13/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/ryenney/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/ryenney/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-16</span></span></div></header><div class="post-body">
+        <h2 id="hash"   >
+          <a href="#hash" class="heading-link"><i class="fas fa-link"></i></a><a href="#hash" class="headerlink" title="hash"></a>hash</h2>
+      <ul>
+<li>A hash function maps key values to positions.</li>
+</ul>
+
+        <h3 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
+      <ul>
+<li>Load factor lambda λ&#x3D; (number of keys &#x2F; Table Size)</li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323021.png" alt="image-20221113220132476"></li>
+</ul>
+
+        <h3 id="构造方法"   >
+          <a href="#构造方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3>
+      
+        <h4 id="folding"   >
+          <a href="#folding" class="heading-link"><i class="fas fa-link"></i></a><a href="#folding" class="headerlink" title="folding"></a>folding</h4>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323599.png" alt="image-20221113223514997"></li>
+</ul>
+
+        <h2 id="开放定址法（不使用链表-也叫闭散列法）"   >
+          <a href="#开放定址法（不使用链表-也叫闭散列法）" class="heading-link"><i class="fas fa-link"></i></a><a href="#开放定址法（不使用链表-也叫闭散列法）" class="headerlink" title="开放定址法（不使用链表 也叫闭散列法）"></a>开放定址法（不使用链表 也叫闭散列法）</h2>
+      <ul>
+<li>包括</li>
+<li>线性探查法</li>
+<li>二次探查法</li>
+<li>伪随机探查法</li>
+<li>二次散列法</li>
+</ul>
+
+        <h2 id="linear-probing"   >
+          <a href="#linear-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#linear-probing" class="headerlink" title="linear probing"></a>linear probing</h2>
+      
+        <h3 id="unsuccessful-ASL"   >
+          <a href="#unsuccessful-ASL" class="heading-link"><i class="fas fa-link"></i></a><a href="#unsuccessful-ASL" class="headerlink" title="unsuccessful ASL"></a>unsuccessful ASL</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323273.png" alt="image-20221027112336074"></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/calculate23/article/details/100577469" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h3 id="primary-clustering"   >
+          <a href="#primary-clustering" class="heading-link"><i class="fas fa-link"></i></a><a href="#primary-clustering" class="headerlink" title="primary clustering"></a>primary clustering</h3>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>In computer programming, primary clustering is one of two major failure modes of open addressing based hash tables, especially those using linear probing. It occurs after a hash collision causes two of the records in the hash table to hash to the same position, and causes one of the records to be moved to the next location in its probe sequence. Once this happens, the cluster formed by this pair of records is more likely to grow by the addition of even more colliding records, regardless of whether the new records hash to the same location as the first two. This phenomenon causes searches for keys within the cluster to be longer.[1]</p>
+<p>For instance, in linear probing, a record involved in a collision is always moved to the next available hash table cell subsequent to the position given by its hash function, creating a contiguous cluster of occupied hash table cells. Whenever another record is hashed to anywhere within the cluster, it grows in size by one cell. Because of this phenomenon, it is likely that a linear-probing hash table with a constant load factor (that is, with the size of the table proportional to the </p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Primary_clustering" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h2 id="quadratic-probing"   >
+          <a href="#quadratic-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#quadratic-probing" class="headerlink" title="quadratic probing"></a>quadratic probing</h2>
+      <ul>
+<li>插入新元素：查找一次插入不成功 则i++ 而且要从最初的插入点开始+i^2 而不是上一次的插入点</li>
+<li>解决了一次聚集</li>
+<li>产生二次聚集</li>
+</ul>
+<p>奇怪的理论：</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">If the table size is prime and load factor is not larger than 0.5, all probes will be to different locations and an item can always be inserted.</span><br><span class="line">==</span><br><span class="line">If quadratic probing is used, and the table size is prime, then a new element can always be inserted if the table is at least half empty.</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="伪随机探查法"   >
+          <a href="#伪随机探查法" class="heading-link"><i class="fas fa-link"></i></a><a href="#伪随机探查法" class="headerlink" title="伪随机探查法"></a>伪随机探查法</h2>
+      <ul>
+<li>解决二次聚集</li>
+<li>但是</li>
+</ul>
+
+        <h2 id="double-hashing"   >
+          <a href="#double-hashing" class="heading-link"><i class="fas fa-link"></i></a><a href="#double-hashing" class="headerlink" title="double hashing"></a>double hashing</h2>
+      <ul>
+<li>Techniques that eliminate secondary clustering are available. The most popular is <strong>double hashing.</strong></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/double-hashing/" >Double Hashing - GeeksforGeeks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h2 id="链接法-x2F-开散列法-x2F-拉链法"   >
+          <a href="#链接法-x2F-开散列法-x2F-拉链法" class="heading-link"><i class="fas fa-link"></i></a><a href="#链接法-x2F-开散列法-x2F-拉链法" class="headerlink" title="链接法&#x2F;开散列法&#x2F;拉链法"></a>链接法&#x2F;开散列法&#x2F;拉链法</h2>
+      <ul>
+<li>不会出现冲突的聚集情况</li>
+<li>如果散列表储存在内存中 链接法容易实现</li>
+<li>如果散列表再磁盘中 一个同义词的链表可能存储在不同的磁盘块 导致查询一个特定记录时多次访问磁盘 增加查找时间</li>
+<li></li>
+</ul>
+
+        <h2 id="桶定址法"   >
+          <a href="#桶定址法" class="heading-link"><i class="fas fa-link"></i></a><a href="#桶定址法" class="headerlink" title="桶定址法"></a>桶定址法</h2>
+      <ul>
+<li>每个槽位不一定放一个元素 可以放多个（类似于拉链）</li>
+<li>但是一个槽位满了就线性探查（或开放寻址）</li>
+<li>会有冲突聚集</li>
+</ul>
+<p>装填因子决定平均查找长度（不是存储的记录个数或散列长度）</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://gitee.com/ryenney">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://gitee.com/ryenney/2022/11/16/13/">http://gitee.com/ryenney/2022/11/16/13/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/ryenney/2022/11/16/12/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hash"><span class="toc-number">1.</span> <span class="toc-text">
+          hash</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basics"><span class="toc-number">1.1.</span> <span class="toc-text">
+          basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">
+          构造方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#folding"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          folding</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80%E6%B3%95%EF%BC%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E9%93%BE%E8%A1%A8-%E4%B9%9F%E5%8F%AB%E9%97%AD%E6%95%A3%E5%88%97%E6%B3%95%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">
+          开放定址法（不使用链表 也叫闭散列法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linear-probing"><span class="toc-number">3.</span> <span class="toc-text">
+          linear probing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#unsuccessful-ASL"><span class="toc-number">3.1.</span> <span class="toc-text">
+          unsuccessful ASL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#primary-clustering"><span class="toc-number">3.2.</span> <span class="toc-text">
+          primary clustering</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#quadratic-probing"><span class="toc-number">4.</span> <span class="toc-text">
+          quadratic probing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%8E%A2%E6%9F%A5%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">
+          伪随机探查法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#double-hashing"><span class="toc-number">6.</span> <span class="toc-text">
+          double hashing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E6%B3%95-x2F-%E5%BC%80%E6%95%A3%E5%88%97%E6%B3%95-x2F-%E6%8B%89%E9%93%BE%E6%B3%95"><span class="toc-number">7.</span> <span class="toc-text">
+          链接法&#x2F;开散列法&#x2F;拉链法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%B6%E5%AE%9A%E5%9D%80%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">
+          桶定址法</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/ryenney/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/ryenney/js/utils.js?v=2.6.2"></script><script src="/ryenney/js/stun-boot.js?v=2.6.2"></script><script src="/ryenney/js/scroll.js?v=2.6.2"></script><script src="/ryenney/js/header.js?v=2.6.2"></script><script src="/ryenney/js/sidebar.js?v=2.6.2"></script></body></html>
