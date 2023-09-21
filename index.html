@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/pinkyrie/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/pinkyrie/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="过期的jk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="https://pinkyrie.github.io/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="过期的jk">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary"><title>rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/pinkyrie/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/pinkyrie/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/05/31/SGM/">SGM</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="前提"   >
+          <a href="#前提" class="heading-link"><i class="fas fa-link"></i></a><a href="#前提" class="headerlink" title="前提"></a>前提</h2>
+      <blockquote>
+<p>经典的双目深度预测算法被归纳为四个步骤，即：初始匹配代价计算、代价聚合、视差计算、视差精化步骤</p>
+</blockquote>
+
+        <h3 id="立体校正"   >
+          <a href="#立体校正" class="heading-link"><i class="fas fa-link"></i></a><a href="#立体校正" class="headerlink" title="立体校正"></a>立体校正</h3>
+      <ul>
+<li><strong>核线约束</strong></li>
+</ul>
+
+        <h3 id="左图右图并不是对等"   >
+          <a href="#左图右图并不是对等" class="heading-link"><i class="fas fa-link"></i></a><a href="#左图右图并不是对等" class="headerlink" title="左图右图并不是对等"></a>左图右图并不是对等</h3>
+      <ul>
+<li>base image（左图）match image（右图）</li>
+</ul>
+
+        <h2 id="实现"   >
+          <a href="#实现" class="heading-link"><i class="fas fa-link"></i></a><a href="#实现" class="headerlink" title="实现"></a>实现</h2>
+      
+        <h3 id="代价计算"   >
+          <a href="#代价计算" class="heading-link"><i class="fas fa-link"></i></a><a href="#代价计算" class="headerlink" title="代价计算"></a>代价计算</h3>
+      <p><strong>Census transform</strong></p>
+<ul>
+<li>输入：两幅图像的灰度值二维数组</li>
+<li>边缘像素无法转化为比特串：两个方法（padding &#x2F; 0填充）</li>
+</ul>
+
+        <h3 id="Hamming-distance"   >
+          <a href="#Hamming-distance" class="heading-link"><i class="fas fa-link"></i></a><a href="#Hamming-distance" class="headerlink" title="Hamming distance"></a>Hamming distance</h3>
+      <p>- </p>
+
+        <h3 id="代价聚合"   >
+          <a href="#代价聚合" class="heading-link"><i class="fas fa-link"></i></a><a href="#代价聚合" class="headerlink" title="代价聚合"></a>代价聚合</h3>
+      <p><strong>必要性</strong></p>
+<ul>
+<li>初步的代价计算是根据局部窗口进行计算 容易受到噪声的影响</li>
+<li>只会考虑局部信息，通过两个像素邻域内一定大小的窗口内的像素信息来计算代价值</li>
+<li>代价聚合则是建立邻接像素之间的联系，以一定的准则，如相邻像素应该具有连续的视差值，来对代价矩阵进行优化，这种优化往往是全局的，每个像素在某个视差下的新代价值都会根据其相邻像素在同一视差值或者附近视差值下的代价值来重新计算，得到新的DSI，用矩阵S来表示。</li>
+<li>类似于一种视差传播步骤，信噪比高的区域匹配效果好，初始代价能够很好的反映相关性，可以更准确的得到最优视差值，通过代价聚合传播至信噪比低、匹配效果不好的区域，最终使所有影像的代价值都能够准确反映真实相关性。</li>
+<li>单方向一维聚合类似动态规划完成了二维上的最优问题</li>
+</ul>
+
+        <h3 id="视差选择"   >
+          <a href="#视差选择" class="heading-link"><i class="fas fa-link"></i></a><a href="#视差选择" class="headerlink" title="视差选择"></a>视差选择</h3>
+      <ul>
+<li>之前的<code>cost_aggr</code>是<code>WHD</code>三维的数组，此时我们需要确立出视差范围（第三维）中像素<code>(i,j)</code>对应的最小代价的点<code>(i,j+d)</code></li>
+<li>Trick：index的视差<code>d</code>和value的代价<code>cost_aggr[h*w+w*d+d]</code>到底什么关系？<ul>
+<li>并不是说index视差是<code>j+d</code> 对应的聚合代价<code>cost_aggr[h*w+w*d+d]</code>必须是这么多或者靠近这个值<ul>
+<li>这个聚合代价值是我们通过census transform等一系列算法，结合了周围像素灰度值和全局信息得到</li>
+<li>而index视差<code>d</code>是我们位置上去锁定右图该像素的坐标 这个视差并非实际真实两点之间的视差代价</li>
+<li>单独在某个图片谈视差<code>d</code>等价我们的<strong>代价</strong>视差是非法的；index的<code>d</code> 是在核线约束下的产物，仅仅在两图中同一条epipolar line上寻像素位置是可以讨论<code>d</code> ，这可不是真实的视差呀</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="视差优化"   >
+          <a href="#视差优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#视差优化" class="headerlink" title="视差优化"></a>视差优化</h3>
+      
+        <h4 id="左右一致性检查-LRC"   >
+          <a href="#左右一致性检查-LRC" class="heading-link"><i class="fas fa-link"></i></a><a href="#左右一致性检查-LRC" class="headerlink" title="左右一致性检查 LRC"></a>左右一致性检查 LRC</h4>
+      <ul>
+<li>Left-Right Check：检查左右图的同名像素点是否具有相同的视差或者相差并不是很大的误差</li>
+</ul>
+<p>右图的代价数组如何生成呢？</p>
+<ul>
+<li>法一：直接通过右图原图灰度值模仿左图走一遍流程。我认为这就是所说的“交换”左右图。但是由于左右图直接互换，会导致for循环开始的位置改变（两个图的重叠位置变了）</li>
+<li>法二：通过左图的代价去寻找右图的代价。利用了左图<code>(i,j)</code>对应右图的<code>(i,j-d)</code>的极线约束。注意：次步骤利用的左图的三维数组<code>cost_aggr</code> 而并非筛选过最小值后的<code>left_disparity</code>数组，需要在右图也首先生成三维的聚合代价，再在视差范围的维度进行最小值筛选，压缩成二维的像素-代价数组</li>
+</ul>
+<p>左右图的对应像素点匹配时，我们在从左图寻右图对应点，终于用到了左图的<code>left_disparity</code>的代价值作为视差<code>d</code>去找右图的对应坐标<code>j-d</code></p>
+<ul>
+<li>如果左右图的代价作差小于阈值 -&gt; 合法的视差</li>
+<li>否则则会把非法视差继续分类为<strong>遮挡</strong>和<strong>误匹配</strong></li>
+</ul>
+
+        <h4 id="遮挡和误匹配"   >
+          <a href="#遮挡和误匹配" class="heading-link"><i class="fas fa-link"></i></a><a href="#遮挡和误匹配" class="headerlink" title="遮挡和误匹配"></a>遮挡和误匹配</h4>
+      <p><strong>遮挡</strong>：定义上是左图能看到，但是右图不能看到的像素。所以会匹配到右图的<strong>前景</strong>像素。epipolar line和匹配函数没有相交点</p>
+<ul>
+<li>判断遮挡需要从右图像反找左图像</li>
+<li>书接上文，得到左右图的<strong>二维</strong>像素-代价数组，此时已经通过左图的数组value值作为视差<code>d</code>找到了对应的右图同名像素点<code>j-d</code> </li>
+<li>此时我们把右图的数组<code>j-d</code>对应的value作为<code>d&#39;</code> 反过去找左图的对应点应该为<code>j+d&#39;</code> </li>
+<li>根据前提：右图是<strong>前景</strong>像素，则匹配回左图也应该是在前景，满足了我们是左图能看见。在左图中，该像素应该是可见的，前面无物体遮住；在右图中，该像素是不可见的，被前景物体遮挡，意思是和前景物体是重合的位置。因此从右图返回左图寻找这个像素点，会落到前景上而非背景上，即右推左的深度 &lt; 左本身深度 即右推左的视差 &gt; 左本身的视差</li>
+</ul>
+<p><strong>误匹配</strong>：epipolar line和匹配函数有交点，但是左图和右图并非同一条epipolar line</p>
+
+        <h4 id="插值"   >
+          <a href="#插值" class="heading-link"><i class="fas fa-link"></i></a><a href="#插值" class="headerlink" title="插值"></a>插值</h4>
+      <p>遮挡和误匹配均采用八个方向限定长度发散寻找有效误差的方式，在这个有效视察备选数组中：</p>
+<ul>
+<li>遮挡选择第二小的视差作为填充：前景和背景需要区分，这里选择把误匹配作为背景填充，也就是选择深度大-&gt;视差小的点（呼应了我们的假设：左图可见为背景像素）[背景不等于不可见ya]</li>
+<li>误匹配选择中值的视差作为填充：误匹配点需要和周围像素较为平滑</li>
+</ul>
+
+        <h2 id="参考"   >
+          <a href="#参考" class="heading-link"><i class="fas fa-link"></i></a><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://aitechtogether.com/article/7933.html" >refer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://candyguo.github.io/blog-post-2/" >refer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.guyuehome.com/35841" >refer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://johnwlambert.github.io/stereo/" >极线约束等前提的数学推导</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/317277165" >初步了解立体匹配</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://bbs.huaweicloud.com/blogs/345781" >代价聚合理解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://pvphan.com/gatech-cs6476-stereo" >论文理解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://vincentqin.tech/posts/stereo-vision-overview/" >立体视觉综述</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35200351/article/details/122388213" >论文汇总</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://ethanli.blog.csdn.net/article/details/105065660" >C++SGM参考</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://aijishu.com/a/1060000000139727" >相机坐标系等前置数学知识</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/05/31/post-1/">VS重新安装</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
+<li>
+        <h2 id="彻底卸载的软件："   >
+          <a href="#彻底卸载的软件：" class="heading-link"><i class="fas fa-link"></i></a><a href="#彻底卸载的软件：" class="headerlink" title="彻底卸载的软件："></a>彻底卸载的软件：</h2>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/visualstudio/install/uninstall-visual-studio?view=vs-2022" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+</li>
+<li>如果遇到bug：<strong>PackageId:Win11SDK_10.0.22000</strong><ul>
+<li>修改注册表即可（多半是因为把位置定义为了不存在的磁盘）</li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://developercommunity.visualstudio.com/t/packageidwin11sdk-10022000packageactioninstallretu-44/1690522" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+</li>
+<li>testtest</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/05/28/post/">c++两个类公用一个变量</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-07-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="intro"   >
+          <a href="#intro" class="heading-link"><i class="fas fa-link"></i></a><a href="#intro" class="headerlink" title="intro"></a>intro</h2>
+      <blockquote>
+<p>如果有两个类(窗口),需要共同使用一个变量path来记录上一次打开的目录</p>
+<p>要求在空间中只存一份变量</p>
+</blockquote>
+
+        <h2 id="solution"   >
+          <a href="#solution" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution" class="headerlink" title="solution"></a>solution</h2>
+      
+        <h3 id="static-变量"   >
+          <a href="#static-变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#static-变量" class="headerlink" title="static 变量"></a>static 变量</h3>
+      <ul>
+<li><p>定义一个utils类 存放两个类的公用变量为类的成员 并且定义为<code>static</code>类型</p>
+</li>
+<li><p>When we declare a member of a class as static it means no matter how many objects of the class are created, there is only one copy of the static member.</p>
+</li>
+<li><pre><code class="c++">class Box &#123;
+   public:
+      static int objectCount;
+&#125;;
+
+// Initialize static member of class Box
+int Box::objectCount = 0;
+</code></pre>
+</li>
+<li><p>声明在类内 初始化在类外</p>
+</li>
+<li><p><img src="/pinkyrie/assets/image-20230528230648709.png" alt="image-20230528230648709"></p>
+</li>
+</ul>
+
+        <h4 id="问题"   >
+          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#问题" class="headerlink" title="问题"></a>问题</h4>
+      <blockquote>
+<p>实际上这个静态成员只有在main函数启动的时候才能被初始化(也就是<code>qApplication-&gt;dirpath</code>需要先启动app才可以访问这个当前项目目录)</p>
+</blockquote>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/03/01/post/">post</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-03-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-03-01</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/26/sys-3/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-26</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
+<li>host -&gt; hub -&gt; router</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/24/sys-2/">sys-2</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-24</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="chap5"   >
+          <a href="#chap5" class="heading-link"><i class="fas fa-link"></i></a><a href="#chap5" class="headerlink" title="chap5"></a>chap5</h1>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">twiddlel</span><span class="params">(<span class="type">long</span> *xp, <span class="type">long</span> *yp)</span> </span><br><span class="line">&#123; </span><br><span class="line">*xp += *yp; </span><br><span class="line">*xp += *yp; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">twiddle2</span><span class="params">(<span class="type">long</span> *xp, <span class="type">long</span> *yp)</span> </span><br><span class="line">&#123; </span><br><span class="line">*xp += <span class="number">2</span>* *yp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>内存读写的效率分析：第二个函数读写次数更少</li>
+<li>如果xp &#x3D;&#x3D; yp 则第一个会变成4 xp 第二个是3 xp、</li>
+</ul>
+
+        <h2 id="内存混叠-memory-aliasing"   >
+          <a href="#内存混叠-memory-aliasing" class="heading-link"><i class="fas fa-link"></i></a><a href="#内存混叠-memory-aliasing" class="headerlink" title="内存混叠 memory aliasing"></a>内存混叠 memory aliasing</h2>
+      <ul>
+<li>two pointers may designate the same memory location is known as <em>memory aliasing</em></li>
+</ul>
+<figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1000</span>; y = <span class="number">3000</span>; </span><br><span class="line">*q = y; <span class="comment">/* 3000 */</span> </span><br><span class="line">*p = x; <span class="comment">/* 1000 */</span> </span><br><span class="line">t1 = *q; <span class="comment">/* 1000 or 3000 */</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>需要假设代码中的pointer可能相等的情况</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/23/sys-1/">sys-1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-24</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="chap3"   >
+          <a href="#chap3" class="heading-link"><i class="fas fa-link"></i></a><a href="#chap3" class="headerlink" title="chap3"></a>chap3</h1>
+      
+        <h2 id="数组"   >
+          <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
+      <ul>
+<li><p>申请数组时注意数组的元素type 每一个元素所占内存大小由type决定</p>
+</li>
+<li><img src="assets/image-20230223215804804.png" alt="image-20230223215804804" style="zoom:50%;" />
+</li>
+<li><p><img src="/pinkyrie/assets/image-20230223220019851.png" alt="image-20230223220019851"></p>
+</li>
+<li><p><img src="/pinkyrie/assets/image-20230223220045434.png" alt="image-20230223220045434"></p>
+</li>
+<li><p>a pointer of any kind is 8 bytes long</p>
+</li>
+</ul>
+
+        <h2 id="指针"   >
+          <a href="#指针" class="heading-link"><i class="fas fa-link"></i></a><a href="#指针" class="headerlink" title="指针"></a>指针</h2>
+      <ul>
+<li>一元运算符<code>&amp;</code>和<code>*</code>允许生成和解引用指针。</li>
+<li>That is, for an expression <em><code>Expr</code></em> denoting some object, <code>&amp;Expr</code> is a pointer giving the address of the object. For an expression <em><code>AExpr</code></em> denoting an address, <em><code>*AExpr</code></em> gives the value at that address. </li>
+<li>The array reference <code>A[i]</code> is identical to the expression <code>*(A+i)</code> .因为A表示的数组最开头的地址 A+i就是第i个的地址 因此对地址进行解引用就是拿到这个地址上的object</li>
+<li><img src="assets/image-20230223222643822.png" alt="image-20230223222643822" style="zoom:80%;" /></li>
+</ul>
+
+        <h3 id="nested-array"   >
+          <a href="#nested-array" class="heading-link"><i class="fas fa-link"></i></a><a href="#nested-array" class="headerlink" title="nested array"></a>nested array</h3>
+      <ul>
+<li><p>Suppose <em>array <code>A</code></em> (5*3 int array) , <code>i</code> , and <code>j</code> are in registers <code>%rdi</code>, <code>%rsi</code> , and <code>%rdx</code> , respectively. Then array element <code>A[i][j]</code> can be copied to register <code>%eax</code> by the following code: </p>
+</li>
+<li><p>一行3个int 一共有5行</p>
+<ul>
+<li><pre><code class="assembly">A in %rdi, i in %rsi, and j in %rdx 
+leaq (%rsi,%rsi,3), %rax Compute 3i 
+leaq (%rdi,%rax,4), %rax Compute x + 12i 
+movl (%rax,%rdx,4), %eax Read from M[x + 12i + 4]
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 例子</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    long P[M][N]; </span><br><span class="line">    long Q[N][M]; </span><br><span class="line">    long sum_element(long i, long j) </span><br><span class="line">    &#123; return P[i][j] + Q[j][i]; &#125;</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><pre><code class="assembly">long sum_element(long i, long j) 
+i in %rdi, j in %rsi 
+sum_element: 
+leaq 0(,%rdi,8), %rdx # 8*i
+subq %rdi, %rdx # 7*i
+addq %rsi, %rdx # j+7*i
+leaq (%rsi,%rsi,4), %rax # 5*j
+addq %rax, %rdi # i+5*j
+movq Q(,%rdi,8), %rax # Retrieve M[x + 8 (5j + i)] i-&gt;M=5
+addq P(,%rdx,8), %rax # Add M[x + 8 (7i + j)] j-&gt;N=7
+ret
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>leaw #2个字节<br>leal #4个字节<br>leaq #8个字节</p>
+</li>
+<li><p>leaq a(b, c, d), %rax 先计算地址a + b + c * d，然后把最终地址载到寄存器rax中</p>
+</li>
+</ul>
+
+        <h3 id="对矩阵乘法的优化"   >
+          <a href="#对矩阵乘法的优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#对矩阵乘法的优化" class="headerlink" title="对矩阵乘法的优化"></a>对矩阵乘法的优化</h3>
+      <p>- </p>
+
+        <h2 id="data-alignment"   >
+          <a href="#data-alignment" class="heading-link"><i class="fas fa-link"></i></a><a href="#data-alignment" class="headerlink" title="data alignment"></a>data alignment</h2>
+      <ul>
+<li>对原始数据类型的可分配地址进行了限制Many computer systems place restrictions on the allowable addresses for the primitive data types, requiring that the address for some objects must be a multiple of some value <em>K</em> (typically 2, 4, or 8).</li>
+<li>目的是：读取内存时不会一个数据需要读两次或以上</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/22/c-4/">c-4</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-22</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-24</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-18"   >
+          <a href="#item-18" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-18" class="headerlink" title="item 18"></a>item 18</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Date</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="built_in">Date</span>(<span class="type">int</span> month, <span class="type">int</span> day, <span class="type">int</span> year);</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">30</span>, <span class="number">3</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// Oops! Should be “3, 30” , not “30, 3”</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">3</span>, <span class="number">40</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// Oops! Should be “3, 30” , not “3, 40”</span></span><br></pre></td></tr></table></div></figure>
+
+
+
+<ul>
+<li>为了防止输入不合法 可以引入新的类型进行封装</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Day</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Day</span><span class="params">(<span class="type">int</span> d)</span>:val(d)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Month</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Month</span><span class="params">(<span class="type">int</span> m)</span>:val(m)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Year</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Year</span><span class="params">(<span class="type">int</span> y)</span>:val(y)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Date</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Date</span>(<span class="type">const</span> Month&amp;m,<span class="type">const</span> Day&amp;d,<span class="type">const</span> Year&amp;y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">30</span>, <span class="number">3</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// error! wrong types</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Day(<span class="number">30</span>), Month(<span class="number">3</span>), Year(<span class="number">1995</span>))</span></span>; <span class="comment">// error! wrong types</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Month(<span class="number">3</span>), Day(<span class="number">30</span>), Year(<span class="number">1995</span>))</span></span>; <span class="comment">// okay, types are correct</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>如果需要对输入的数据进行更多限制（月份只有1-12）</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Month</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Jan</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">1</span>); &#125; <span class="comment">// functions returning all valid</span></span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Feb</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">2</span>); &#125; <span class="comment">// Month values; see below for ... // why these are functions, not</span></span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Dec</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">12</span>); &#125; <span class="comment">// objects</span></span><br><span class="line">... <span class="comment">// other member functions </span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">Month</span><span class="params">(<span class="type">int</span> m)</span></span>; <span class="comment">// prevent creation of new</span></span><br><span class="line"><span class="comment">// Month values</span></span><br><span class="line">... <span class="comment">// month-specific data</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Month::Mar(), Day(<span class="number">30</span>), Year(<span class="number">1995</span>))</span></span>;  </span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="cross-DLL-problem"   >
+          <a href="#cross-DLL-problem" class="heading-link"><i class="fas fa-link"></i></a><a href="#cross-DLL-problem" class="headerlink" title="cross DLL problem"></a>cross DLL problem</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1958643/is-it-ok-to-use-boostshared-ptr-in-dll-interface#:~:text=According%20to%20Scott%20Meyers%20in%20Effective%20C%2B%2B%20%283rd,the%20destructor%20from%20the%20dll%20that%20created%20it." >ref:dll和exe都停止时保证删除资源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li></li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/09/c-02/">c++-02</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-22</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-1"   >
+          <a href="#item-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-1-1"   >
+          <a href="#item-1-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1-1" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题-1"   >
+          <a href="#场景-amp-问题-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-1" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-1-2"   >
+          <a href="#item-1-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1-2" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题-2"   >
+          <a href="#场景-amp-问题-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-2" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-4"   >
+          <a href="#item-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-4" class="headerlink" title="item 4"></a>item 4</h1>
+      
+        <h2 id="场景-amp-问题-3"   >
+          <a href="#场景-amp-问题-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-3" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2023/02/09/C-01/">C++-01</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-10</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-8"   >
+          <a href="#item-8" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-8" class="headerlink" title="item  8"></a>item  8</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <ul>
+<li>c++并不喜欢在destructor中emit exception<ul>
+<li>因为如果在容器或数组中，多个widget销毁都在emit exception 同一时刻有两个异常对C++很难处理，所以会terminate或者undefined behavior</li>
+<li>就算是普通的destructor发出异常也容易导致提前terminate或者undefined behavior</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="solution"   >
+          <a href="#solution" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution" class="headerlink" title="solution"></a>solution</h2>
+      
+        <h3 id="code-example"   >
+          <a href="#code-example" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example" class="headerlink" title="code example"></a>code example</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DBConnection</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line"><span class="function"><span class="type">static</span> DBConnection <span class="title">create</span><span class="params">()</span></span>;  <span class="comment">// function to return</span></span><br><span class="line">							<span class="comment">// DBConnection objects; params</span></span><br><span class="line">							<span class="comment">// omitted for simplicity</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">close</span><span class="params">()</span></span>; 				 <span class="comment">// close connection; throw an</span></span><br><span class="line">&#125;; 						    <span class="comment">// exception if closing fails</span></span><br><span class="line">---------------------------------------------------------------</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DBConn</span> &#123; 				<span class="comment">// class to manage DBConnection</span></span><br><span class="line"><span class="keyword">public</span>: 				   <span class="comment">// objects ...</span></span><br><span class="line">~<span class="built_in">DBConn</span>() 				   <span class="comment">// make sure database connections</span></span><br><span class="line">&#123; 						  <span class="comment">// are always closed</span></span><br><span class="line">db.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">DBConnection db;</span><br><span class="line">&#125;;</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">&#123; <span class="comment">// open a block</span></span><br><span class="line"><span class="function">DBConn <span class="title">dbc</span><span class="params">(DBConnection::create())</span></span>; <span class="comment">// create DBConnection object</span></span><br><span class="line"><span class="comment">// and turn it over to a DBConn</span></span><br><span class="line"><span class="comment">// object to manage</span></span><br><span class="line">... <span class="comment">// use the DBConnection object</span></span><br><span class="line"><span class="comment">// via the DBConn interface</span></span><br><span class="line">&#125; <span class="comment">// at end of block, the DBConn</span></span><br><span class="line"><span class="comment">// object is destroyed, thus</span></span><br><span class="line"><span class="comment">// automatically calling close on </span></span><br><span class="line"><span class="comment">// the DBConnection object</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>create a resource-managing class 来帮助该类进行关闭和退出</li>
+<li>如果destructor执行没有异常这样是可以的 如果有异常抛出 DBConn’s destructor will propagate that exception, i.e. allow it to leave the destructor.</li>
+</ul>
+
+        <h3 id="方案1-terminate-the-program"   >
+          <a href="#方案1-terminate-the-program" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案1-terminate-the-program" class="headerlink" title="方案1 terminate the program"></a>方案1 terminate the program</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DBConn::~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">try</span> &#123; db.<span class="built_in">close</span>(); &#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123;</span><br><span class="line">	make log entry that the call to close failed;</span><br><span class="line">	std::<span class="built_in">abort</span>();</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>if allowing the exception to propagate from the destructor would lead to undefined behavior, this prevents that from happening. That is, calling abort may forestall undefined behavior.</li>
+<li></li>
+</ul>
+
+        <h3 id="方案2-Swallow-the-exception"   >
+          <a href="#方案2-Swallow-the-exception" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案2-Swallow-the-exception" class="headerlink" title="方案2 Swallow the exception"></a>方案2 Swallow the exception</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DBConn::~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">try</span> &#123; db.<span class="built_in">close</span>(); &#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123;</span><br><span class="line">	make log entry that the call to close failed;</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>通常来说swallow exception并不好因为 it suppresses important information压缩了重要信息</li>
+<li>但是有时候比起过早终止程序和ub 需要这种方法来让程序无论如何也要执行完毕</li>
+</ul>
+<blockquote>
+<p>评价方案1 2 ：都无法让程序对最初的导致抛出异常的条件进行反应</p>
+</blockquote>
+
+        <h3 id="方案3-包装一个函数来检测异常-并用destructor调用该函数"   >
+          <a href="#方案3-包装一个函数来检测异常-并用destructor调用该函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案3-包装一个函数来检测异常-并用destructor调用该函数" class="headerlink" title="方案3 包装一个函数来检测异常 并用destructor调用该函数"></a>方案3 包装一个函数来检测异常 并用destructor调用该函数</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DBConn</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">close</span><span class="params">()</span> <span class="comment">// new function for</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="comment">// client use</span></span><br><span class="line">db.<span class="built_in">close</span>();</span><br><span class="line">closed = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (!closed) &#123;</span><br><span class="line"><span class="keyword">try</span> &#123; <span class="comment">// close the connection</span></span><br><span class="line">db.<span class="built_in">close</span>(); <span class="comment">// if the client didn’t</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123; <span class="comment">// if closing fails,</span></span><br><span class="line">make log entry that call to close failed; <span class="comment">// note that and ... // terminate or swallow</span></span><br><span class="line">&#125; &#125; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">DBConnection db;</span><br><span class="line"><span class="type">bool</span> closed;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>如果一个操作涉及抛出异常和处理异常 则该异常必须来自非析构函数</li>
+<li></li>
+</ul>
+
+        <h1 id="item-9"   >
+          <a href="#item-9" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-9" class="headerlink" title="item 9"></a>item 9</h1>
+      
+        <h2 id="场景-amp-问题-1"   >
+          <a href="#场景-amp-问题-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-1" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h3 id="code-example-1"   >
+          <a href="#code-example-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example-1" class="headerlink" title="code example"></a>code example</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transaction</span> &#123; <span class="comment">// base class for all</span></span><br><span class="line"><span class="keyword">public</span>: <span class="comment">// transactions</span></span><br><span class="line"><span class="built_in">Transaction</span>();</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span> </span>= <span class="number">0</span>; <span class="comment">// make type-dependent</span></span><br><span class="line"><span class="comment">// log entry ...</span></span><br><span class="line">&#125;;</span><br><span class="line">Transaction::<span class="built_in">Transaction</span>() <span class="comment">// implementation of</span></span><br><span class="line">&#123; <span class="comment">// base class ctor</span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">logTransaction</span>(); <span class="comment">// as final action, log this</span></span><br><span class="line">&#125; <span class="comment">// transaction</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BuyTransaction</span>: <span class="keyword">public</span> Transaction &#123; <span class="comment">// derived class</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// how to log trans-</span></span><br><span class="line"><span class="comment">// actions of this type ...</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SellTransaction</span>: <span class="keyword">public</span> Transaction &#123; <span class="comment">// derived class</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// how to log trans-</span></span><br><span class="line"><span class="comment">// actions of this type ...</span></span><br><span class="line">&#125;;</span><br><span class="line">BuyTransaction b;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p>这里基类的Transaction的constructor会调用一个virtual函数 但是这个函数virtual函数并非子类的版本而是积累的版本 因为此时子类尚未构建 子类的所有成员都是未初始化的 会导致ub</p>
+</li>
+<li><p>During base class construction, virtual functions never go down into derived classes. Instead, the object behaves as if it were of the base type.</p>
+</li>
+<li><p>During base class construction of a derived class object, the type of the object <em>is</em> that of the base class.</p>
+</li>
+<li><p>当在执行基类的初始化部分时 这个object就会被视为是基类类型 所有virtual函数会被解析成基类，所有运行和类型信息都是基类</p>
+</li>
+<li><p>因为派生类的成员都还没有初始化 所以此时需要假设他们都不存在 即此时这个object当作基类类型</p>
+</li>
+<li><p>An object doesn’t become a derived class object until execution of a derived class constructor begins. 一旦派生类析构函数运行，对象的派生类数据成员就会假定未定义的值，因此C++将它们视为它们不再存在。在进入基类析构函数时，对象就成为一个基类对象</p>
+</li>
+</ul>
+
+        <h2 id="solution-1"   >
+          <a href="#solution-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution-1" class="headerlink" title="solution"></a>solution</h2>
+      <ul>
+<li>Turn logTransaction into a non-virtual function in Transaction, then require that derived class constructors pass the necessary log information to the Transaction constructor. That function can then safely call the non virtual logTransaction.</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transaction</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">Transaction</span><span class="params">(<span class="type">const</span> std::string&amp; logInfo)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">logTransaction</span><span class="params">(<span class="type">const</span> std::string&amp; logInfo)</span> <span class="type">const</span></span>; <span class="comment">// now a non-virtual func ...</span></span><br><span class="line">&#125;;</span><br><span class="line">Transaction::<span class="built_in">Transaction</span>(<span class="type">const</span> std::string&amp; logInfo) &#123;</span><br><span class="line">...</span><br><span class="line"><span class="built_in">logTransaction</span>(logInfo); <span class="comment">// now a non-</span></span><br><span class="line">&#125; <span class="comment">// virtual call</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BuyTransaction</span>: <span class="keyword">public</span> Transaction &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="built_in">BuyTransaction</span>( parameters )</span><br><span class="line">: <span class="built_in">Transaction</span>(<span class="built_in">createLogString</span>( parameters )) <span class="comment">// pass log info</span></span><br><span class="line">&#123; ... &#125; <span class="comment">// to base class ... // constructor</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="type">static</span> std::string <span class="title">createLogString</span><span class="params">( parameters )</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/7405740/how-can-i-initialize-base-class-member-variables-in-derived-class-constructor" >在派生类中对基类的成员进行初始化</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="item-10"   >
+          <a href="#item-10" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-10" class="headerlink" title="item 10"></a>item 10</h1>
+      
+        <h2 id="场景-amp-问题-2"   >
+          <a href="#场景-amp-问题-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-2" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <ul>
+<li>c++允许连续等号赋值 而且 that assignment is right-associative, so the above assignment chain is parsed like</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x, y, z;</span><br><span class="line">x = y = z = <span class="number">15</span>; <span class="comment">// chain of assignments</span></span><br><span class="line">x = (y = (z = <span class="number">15</span>));</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>原理：assignment returns a reference to its left-hand argument</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Widget&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Widget&amp; rhs) <span class="comment">// return type is a reference to</span></span><br><span class="line">&#123; <span class="comment">// the current class</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>; <span class="comment">// return the left-hand object</span></span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Widget</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line">Widget&amp; <span class="keyword">operator</span>+=(<span class="type">const</span> Widget&amp; rhs) <span class="comment">// the convention applies to</span></span><br><span class="line">&#123; <span class="comment">// +=, -=, *=, etc.</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">Widget&amp; <span class="keyword">operator</span>=(<span class="type">int</span> rhs) <span class="comment">// it applies even if the</span></span><br><span class="line">&#123; <span class="comment">// operator’s parameter type</span></span><br><span class="line">... <span class="comment">// is unconventional</span></span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="solution-2"   >
+          <a href="#solution-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution-2" class="headerlink" title="solution"></a>solution</h2>
+      <ul>
+<li>记住约定：Have assignment operators return a reference to <code>*this</code></li>
+</ul>
+
+        <h1 id="item-11"   >
+          <a href="#item-11" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-11" class="headerlink" title="item 11"></a>item 11</h1>
+      
+        <h2 id="场景-amp-问题-3"   >
+          <a href="#场景-amp-问题-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-3" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h3 id="code-example-2"   >
+          <a href="#code-example-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example-2" class="headerlink" title="code example"></a>code example</h3>
+      <ul>
+<li>assignment to self</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Widget</span> &#123; ... &#125;;</span><br><span class="line">Widget w;</span><br><span class="line">...</span><br><span class="line">w = w; <span class="comment">// assignment to self</span></span><br></pre></td></tr></table></div></figure>
+
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/pinkyrie/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/pinkyrie/page/5/">5</a><a class="extend next" rel="next" href="/pinkyrie/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/pinkyrie/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/pinkyrie/js/utils.js?v=2.6.2"></script><script src="/pinkyrie/js/stun-boot.js?v=2.6.2"></script><script src="/pinkyrie/js/scroll.js?v=2.6.2"></script><script src="/pinkyrie/js/header.js?v=2.6.2"></script><script src="/pinkyrie/js/sidebar.js?v=2.6.2"></script></body></html>

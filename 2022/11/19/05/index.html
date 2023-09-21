@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/pinkyrie/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/pinkyrie/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="Minimum-cost spanning trees        connected undirected weighted graph                       基本概念                           最小生成树的性质        A minimum spanning tree is a subgraph of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="https://pinkyrie.github.io/2022/11/19/05/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="Minimum-cost spanning trees        connected undirected weighted graph                       基本概念                           最小生成树的性质        A minimum spanning tree is a subgraph of">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609200.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609807.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609619.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609618.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609955.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609129.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609307.png">
+<meta property="article:published_time" content="2022-11-19T08:11:07.324Z">
+<meta property="article:modified_time" content="2022-11-19T08:09:31.939Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609200.png"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/2022/11/19/05/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/pinkyrie/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/pinkyrie/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body">
+        <h1 id="Minimum-cost-spanning-trees"   >
+          <a href="#Minimum-cost-spanning-trees" class="heading-link"><i class="fas fa-link"></i></a><a href="#Minimum-cost-spanning-trees" class="headerlink" title="Minimum-cost spanning trees"></a>Minimum-cost spanning trees</h1>
+      <ul>
+<li>connected undirected weighted graph</li>
+<li></li>
+</ul>
+
+        <h2 id="基本概念"   >
+          <a href="#基本概念" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2>
+      
+        <h3 id="最小生成树的性质"   >
+          <a href="#最小生成树的性质" class="heading-link"><i class="fas fa-link"></i></a><a href="#最小生成树的性质" class="headerlink" title="最小生成树的性质"></a>最小生成树的性质</h3>
+      <ul>
+<li>A minimum spanning tree is a subgraph of an undirected weighted graph G, such that<ul>
+<li>It is a tree (i.e. it is acyclic)</li>
+<li>It covers all the vertices and contains |V| - 1 edges</li>
+</ul>
+</li>
+<li>Not necessarily unique A graph may have many spanning trees.</li>
+</ul>
+<blockquote>
+<p>prim and kruskal 算法用于generate最小生成树</p>
+</blockquote>
+
+        <h2 id="prim"   >
+          <a href="#prim" class="heading-link"><i class="fas fa-link"></i></a><a href="#prim" class="headerlink" title="prim"></a>prim</h2>
+      <ul>
+<li><p>Prim: (build tree incrementally)</p>
+<p>Pick lower cost edge connected to known (incomplete) spanning tree that does not create a cycle and expand to include it in the tree</p>
+</li>
+</ul>
+
+        <h3 id="steps"   >
+          <a href="#steps" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps" class="headerlink" title="steps"></a>steps</h3>
+      <ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609200.png" alt="image-20221117221621810"></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609807.png" alt="image-20221117221005358"></p>
+</li>
+</ul>
+
+        <h3 id="code"   >
+          <a href="#code" class="heading-link"><i class="fas fa-link"></i></a><a href="#code" class="headerlink" title="code"></a>code</h3>
+      <ul>
+<li><pre><code class="c++">
+// A C++ program for Prim&#39;s Minimum
+// Spanning Tree (MST) algorithm. The program is
+// for adjacency matrix representation of the graph
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+ 
+// Number of vertices in the graph
+#define V 5
+ 
+// A utility function to find the vertex with
+// minimum key value, from the set of vertices
+// not yet included in MST
+int minKey(int key[], bool mstSet[])
+&#123;
+    // Initialize min value
+    int min = INT_MAX, min_index;
+ 
+    for (int v = 0; v &lt; V; v++)
+        if (mstSet[v] == false &amp;&amp; key[v] &lt; min)
+            min = key[v], min_index = v;
+ 
+    return min_index;
+&#125;
+ 
+// A utility function to print the
+// constructed MST stored in parent[]
+void printMST(int parent[], int graph[V][V])
+&#123;
+    cout &lt;&lt; &quot;Edge \tWeight\n&quot;;
+    for (int i = 1; i &lt; V; i++)
+        cout &lt;&lt; parent[i] &lt;&lt; &quot; - &quot; &lt;&lt; i &lt;&lt; &quot; \t&quot;
+             &lt;&lt; graph[i][parent[i]] &lt;&lt; &quot; \n&quot;;
+&#125;
+ 
+// Function to construct and print MST for
+// a graph represented using adjacency
+// matrix representation
+void primMST(int graph[V][V])
+&#123;
+    // Array to store constructed MST
+    int parent[V];
+ 
+    // Key values used to pick minimum weight edge in cut
+    int key[V];
+ 
+    // To represent set of vertices included in MST
+    bool mstSet[V];
+ 
+    // Initialize all keys as INFINITE
+    for (int i = 0; i &lt; V; i++)
+        key[i] = INT_MAX, mstSet[i] = false;
+ 
+    // Always include first 1st vertex in MST.
+    // Make key 0 so that this vertex is picked as first
+    // vertex.
+    key[0] = 0;
+    parent[0] = -1; // First node is always root of MST
+ 
+    // The MST will have V vertices
+    for (int count = 0; count &lt; V - 1; count++) &#123;
+        // Pick the minimum key vertex from the
+        // set of vertices not yet included in MST
+        int u = minKey(key, mstSet);
+ 
+        // Add the picked vertex to the MST Set
+        mstSet[u] = true;
+ 
+        // Update key value and parent index of
+        // the adjacent vertices of the picked vertex.
+        // Consider only those vertices which are not
+        // yet included in MST
+        for (int v = 0; v &lt; V; v++)
+ 
+            // graph[u][v] is non zero only for adjacent
+            // vertices of m mstSet[v] is false for vertices
+            // not yet included in MST Update the key only
+            // if graph[u][v] is smaller than key[v]
+            if (graph[u][v] &amp;&amp; mstSet[v] == false
+                &amp;&amp; graph[u][v] &lt; key[v])
+                parent[v] = u, key[v] = graph[u][v];
+    &#125;
+ 
+    // print the constructed MST
+    printMST(parent, graph);
+&#125;
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  bool Graph&lt;T&gt;::Prim(int from,LinkList&lt;Edge&lt;T&gt;&gt; &amp;mst)&#123;</span><br><span class="line">  	T* nearest = new T[vertexNum];</span><br><span class="line">  	int* neighbor = new int[vertexNum];s</span><br><span class="line">  	for(int i=0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		neighbor[i]=from;</span><br><span class="line">  		nearest[i]=MAX_VALUE;</span><br><span class="line">  	&#125;</span><br><span class="line">  	for(Edge&lt;T&gt; e=FirstEdge(from);IsEdge(e);e=NextEdgge(e))&#123;</span><br><span class="line">  		nearest[e.end] = e.weight; //从start开始到start相连的边的权值初始化</span><br><span class="line">  	&#125;</span><br><span class="line">  	neighbor[from] = -1;</span><br><span class="line">  	for(int i =1;i&lt;vertexNum;i++)&#123; //最小生成树是n-1条边</span><br><span class="line">  		T min = MAX_VALUE;</span><br><span class="line">  		int v = -1;</span><br><span class="line">  		for(int j=0;j&lt;vertexNum;j++)&#123;</span><br><span class="line">  			if(nearest[j]&lt;min &amp;&amp; neighbor[j]&gt;-1)&#123;</span><br><span class="line">  				min = nearest[j];</span><br><span class="line">  				v=j;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  		if(v&gt;=0)&#123;</span><br><span class="line">  			Edge&lt;T&gt; tmp = (neighbor[v],v,min);</span><br><span class="line">  			mst.insertTail(tmp);</span><br><span class="line">  			neighbor[v] = -1;</span><br><span class="line">  		&#125;</span><br><span class="line">  		for(Edge&lt;T&gt; e=firstEdge(v);IsEdge(e);e=NextEdge(e))&#123;</span><br><span class="line">  			int u = e.end;</span><br><span class="line">  			//更新nearest和neighbor需要注意判断是否已加入mst 以及到目前该点的距离是不是需要更新成最短的</span><br><span class="line">  			if(neighbor[u]!=-1&amp;&amp;nearest[u]&gt;e.weight)&#123;</span><br><span class="line">  				neighbor[u] = v;</span><br><span class="line">  				nearest[u] = e.weight;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.prepbytes.com/blog/queues/prims-algorithm-using-priority_queue-in-stl/" >priority queue实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/" >priority queue实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609619.png" alt="image-20221119105020849"></p>
+</li>
+</ul>
+
+        <h3 id="复杂度分析"   >
+          <a href="#复杂度分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609618.png" alt="image-20221119104837149"></li>
+<li>使用priority queue可以提升到O(elogv)</li>
+</ul>
+
+        <h2 id="kruskal"   >
+          <a href="#kruskal" class="heading-link"><i class="fas fa-link"></i></a><a href="#kruskal" class="headerlink" title="kruskal"></a>kruskal</h2>
+      <ul>
+<li><p>Kruskal: (build forest that will finish as a tree)</p>
+<p>Pick lower cost edge not yet in a tree that does not create a cycle and expand to include it somewhere in the forest</p>
+</li>
+<li><p>Work with <strong>edges</strong>, rather than nodes</p>
+</li>
+<li><p>基于greedy思想</p>
+</li>
+</ul>
+
+        <h3 id="steps-1"   >
+          <a href="#steps-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps-1" class="headerlink" title="steps"></a>steps</h3>
+      <ul>
+<li><p>Sort edges by increasing edge weight</p>
+</li>
+<li><p>Select the first |V| – 1 edges that do not generate a cycle</p>
+</li>
+<li><p>Initialize a forest of trees, each tree being a single nodeBuild a priority queue of edges with priority being lowest costRepeat until |V| -1 edges have been accepted {	Delete min edge from priority queue	If it forms a cycle then discard it      else accept the edge – It will join 2 existing trees yielding a larger tree 	and reducing the forest by one tree}</p>
+</li>
+<li><p>The accepted edges form the minimum spanning tree</p>
+<p>Every step will have joined two trees in the forest together, so that at the end, there will only be one tree</p>
+</li>
+</ul>
+
+        <h3 id="code-1"   >
+          <a href="#code-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-1" class="headerlink" title="code"></a>code</h3>
+      
+        <h4 id="UNION-x2F-FIND-algorithm"   >
+          <a href="#UNION-x2F-FIND-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#UNION-x2F-FIND-algorithm" class="headerlink" title="UNION&#x2F;FIND algorithm"></a>UNION&#x2F;FIND algorithm</h4>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://book.huihoo.com/data-structures-and-algorithms-with-object-oriented-design-patterns-in-c++/html/page579.html" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609955.png" alt="image-20221118221116048"></p>
+</li>
+<li><pre><code class="c++">class UFsets&#123;
+private:
+    int n;
+    int* root;
+    int* next;
+    int* length;
+public:
+    UFsets(int size)&#123;
+        n = size;
+        root = new int[n];
+        next = new int[n];
+        length = new int[n];
+        for(int i = 0;i&lt;n;i++)&#123;
+            root[i] = i;
+            next[i] = i;
+            length[i] = 1;
+        &#125;
+    &#125;
+    int UFsets::Find(int v)&#123;
+        if(v&lt;n)
+            return root[v];
+        else
+            return -1;
+    &#125;
+    void UFsets::Union(int v, int u)&#123;
+        if(root[u] == root[v])
+            return;
+        else if(length[v]&gt;length[u])&#123;
+            int uRoot = root[u];
+            length[v] = length[v]+length[u];
+            root[u] = root[v];
+            for(int uNext = next[uRoot];next[u]!=uRoot;uNext=next[uNext])&#123;
+                root[uNext] = root[v];
+        &#125;
+            next[u] = root[v];
+            next[v] = uRoot;
+        &#125;
+        else if(length[u]&gt;length[v])&#123;
+            int vRoot = root[v];
+            length[u] = length[u] + length[v];
+            root[v] = root[u];
+            for(int vNext = next[vRoot];next[vNext]!=vRoot;vNext=next[vNext])&#123;
+                root[vNext] = root[u];
+            &#125;
+            next[v] = root[u];
+            next[u] = vRoot;		
+        &#125;
+    &#125;
+&#125;
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  bool Graph&lt;T&gt;::Kruskal(LinkList&lt;Edge&lt;T&gt;&gt; &amp;mst)&#123;</span><br><span class="line">  	int *vertexArray = new int[vertexNum];</span><br><span class="line">  	for(int i=0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		vertexArray[i] = i;</span><br><span class="line">  	&#125;</span><br><span class="line">  	UFsets set(vertexNum);s</span><br><span class="line">  	MinHeap&lt;Edge&lt;T&gt;&gt; heap(edgeCount());</span><br><span class="line">  	for(int i = 0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		for(Edge&lt;T&gt; edge=firstEdge(i);IsEdge(edge);edge = nextEdge(edge))&#123;</span><br><span class="line">  			if(edge.start&lt;edge.end)&#123;</span><br><span class="line">  				heap.Insert(edge);</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;		</span><br><span class="line">  	&#125;</span><br><span class="line">  	int mstEdgeNum = 0;</span><br><span class="line">  	while(!heap.IsEmpty())&#123;</span><br><span class="line">  		Edge&lt;T&gt; edge = heap.RemoveFirst();</span><br><span class="line">  		int start = edge.start;</span><br><span class="line">  		int end = edge.end;</span><br><span class="line">  		if(set.Find(start)!=set.Find(end))&#123;</span><br><span class="line">  			set.Union(start,end);</span><br><span class="line">  			mst.insertTail(edge);</span><br><span class="line">  			mstEdgeNum++;</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  	if(mst.Count() == edgeCount()-1)</span><br><span class="line">  		return true;</span><br><span class="line">  	else</span><br><span class="line">  		return false;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure>
+
+</code></pre>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609129.png" alt="image-20221119100816009"></p>
+</li>
+</ul>
+
+        <h3 id="复杂度分析-1"   >
+          <a href="#复杂度分析-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609307.png" alt="image-20221119104727507"></li>
+</ul>
+
+        <h2 id="总结对比"   >
+          <a href="#总结对比" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/difference-between-prims-and-kruskals-algorithm-for-mst/#:~:text=Prim's%20algorithm%20has%20a%20time,works%20only%20on%20connected%20graph." >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">Prim’s Algorithm</th>
+<th align="left">Kruskal’s Algorithm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">It starts to build the Minimum Spanning Tree from any vertex in the graph.</td>
+<td align="left">It starts to build the Minimum Spanning Tree from the vertex carrying minimum weight in the graph.</td>
+</tr>
+<tr>
+<td align="left">It traverses one node more than one time to get the minimum distance.</td>
+<td align="left">It traverses one node only once.</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm has a time complexity of O(V2), V being the number of vertices and can be improved up to O(E log V) using Fibonacci heaps.</td>
+<td align="left">Kruskal’s algorithm’s time complexity is O(E log V), V being the number of vertices.</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm gives connected component as well as it works only on connected graph.</td>
+<td align="left">Kruskal’s algorithm can generate forest(disconnected components) at any instant as well as it can work on disconnected components</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm runs faster in dense graphs.</td>
+<td align="left">Kruskal’s algorithm runs faster in sparse graphs.</td>
+</tr>
+<tr>
+<td align="left">It generates the minimum spanning tree starting from the root vertex.</td>
+<td align="left">It generates the minimum spanning tree starting from the least weighted edge.</td>
+</tr>
+<tr>
+<td align="left">Applications of prim’s algorithm are Travelling Salesman Problem, Network for roads and Rail tracks connecting all the cities etc.</td>
+<td align="left">Applications of Kruskal algorithm are LAN connection, TV Network etc.</td>
+</tr>
+</tbody></table></div>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://pinkyrie.github.io">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://pinkyrie.github.io/2022/11/19/05/">https://pinkyrie.github.io/2022/11/19/05/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/pinkyrie/2022/11/19/07/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/pinkyrie/2022/11/19/02/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Minimum-cost-spanning-trees"><span class="toc-number">1.</span> <span class="toc-text">
+          Minimum-cost spanning trees</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">
+          基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          最小生成树的性质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prim"><span class="toc-number">1.2.</span> <span class="toc-text">
+          prim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#steps"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code"><span class="toc-number">1.2.2.</span> <span class="toc-text">
+          code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-number">1.2.3.</span> <span class="toc-text">
+          复杂度分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kruskal"><span class="toc-number">1.3.</span> <span class="toc-text">
+          kruskal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#steps-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">
+          steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">
+          code</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#UNION-x2F-FIND-algorithm"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">
+          UNION&#x2F;FIND algorithm</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90-1"><span class="toc-number">1.3.3.</span> <span class="toc-text">
+          复杂度分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E5%AF%B9%E6%AF%94"><span class="toc-number">1.4.</span> <span class="toc-text">
+          总结对比</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/pinkyrie/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/pinkyrie/js/utils.js?v=2.6.2"></script><script src="/pinkyrie/js/stun-boot.js?v=2.6.2"></script><script src="/pinkyrie/js/scroll.js?v=2.6.2"></script><script src="/pinkyrie/js/header.js?v=2.6.2"></script><script src="/pinkyrie/js/sidebar.js?v=2.6.2"></script></body></html>

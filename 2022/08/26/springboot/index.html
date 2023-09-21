@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/pinkyrie/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/pinkyrie/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="配置环境                           init        新建spring initializer 选择java18  注意新建文件的目录需要再入口程序的同级目录 入口程序是xx application                        jar包生成        可以打包idea项目成单个直接在命令行运行的程序（微服">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="https://pinkyrie.github.io/2022/08/26/springboot/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="配置环境                           init        新建spring initializer 选择java18  注意新建文件的目录需要再入口程序的同级目录 入口程序是xx application                        jar包生成        可以打包idea项目成单个直接在命令行运行的程序（微服">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826100556038.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826112003830.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130145968.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130315657.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130914861.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826132011197.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826201709867.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826203301788.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826205926854.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826205940428.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220827101718157.png">
+<meta property="og:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220827131058505.png">
+<meta property="article:published_time" content="2022-08-26T01:02:13.344Z">
+<meta property="article:modified_time" content="2022-08-29T10:28:22.826Z">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826100556038.png"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/2022/08/26/springboot/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/pinkyrie/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/pinkyrie/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-29</span></span></div></header><div class="post-body">
+        <h2 id="配置环境"   >
+          <a href="#配置环境" class="heading-link"><i class="fas fa-link"></i></a><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2>
+      
+        <h3 id="init"   >
+          <a href="#init" class="heading-link"><i class="fas fa-link"></i></a><a href="#init" class="headerlink" title="init"></a>init</h3>
+      <ul>
+<li>新建spring initializer 选择java18 </li>
+<li>注意新建文件的目录需要再入口程序的同级目录<ul>
+<li>入口程序是xx application</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="jar包生成"   >
+          <a href="#jar包生成" class="heading-link"><i class="fas fa-link"></i></a><a href="#jar包生成" class="headerlink" title="jar包生成"></a>jar包生成</h3>
+      <ul>
+<li>可以打包idea项目成单个直接在命令行运行的程序（微服务 分离成小的板块）</li>
+<li></li>
+</ul>
+
+        <h3 id="controller"   >
+          <a href="#controller" class="heading-link"><i class="fas fa-link"></i></a><a href="#controller" class="headerlink" title="controller"></a>controller</h3>
+      <ul>
+<li>实现页面的请求 和 页面行为<ul>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826100556038.png" alt="image-20220826100556038"></li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="启动器"   >
+          <a href="#启动器" class="heading-link"><i class="fas fa-link"></i></a><a href="#启动器" class="headerlink" title="启动器"></a>启动器</h3>
+      <ul>
+<li>实现各种功能</li>
+<li></li>
+</ul>
+
+        <h2 id="javabean是什么"   >
+          <a href="#javabean是什么" class="heading-link"><i class="fas fa-link"></i></a><a href="#javabean是什么" class="headerlink" title="javabean是什么"></a>javabean是什么</h2>
+      <ul>
+<li>简单笼统的说就是一个类，一个可复用的类。<br>javaBean在MVC设计模型中是model，又称模型层，在一般的程序中，我们称它为数据层，就是用来设置数据的属性和一些行为，然后我会提供获取属性和设置属性的get&#x2F;set方法JavaBean是一种JAVA语言写成的可重用组件。为写成JavaBean，类必须是具体的和公共的，并且具有无参数的构造器。JavaBean<br>通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。众所周知，属性名称符合这种模式，其他Java<br>类可以通过自身机制发现和操作这些JavaBean 属性。　<br>用户可以使用JavaBean将功能、处理、值、数据库访问和其他任何可以用java代码创造的对象进行打包，并且其他的开发者可以通过内部的JSP页面、Servlet、其他JavaBean、applet程序或者应用来使用这些对象。用户可以认为JavaBean提供了一种随时随地的复制和粘贴的功能，而不用关心任何改变。<br>　　JavaBean可分为两种：一种是有用户界面（UI，User<br>Interface）的JavaBean；还有一种是没有用户界面，主要负责处理事务（如数据运算，操纵数据库）的JavaBean。JSP通常访问的是后一种JavaBean。</li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/410730923" >more details</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h2 id="spring注解"   >
+          <a href="#spring注解" class="heading-link"><i class="fas fa-link"></i></a><a href="#spring注解" class="headerlink" title="spring注解"></a>spring注解</h2>
+      <p>- </p>
+
+        <h2 id="spring配置文件"   >
+          <a href="#spring配置文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#spring配置文件" class="headerlink" title="spring配置文件"></a>spring配置文件</h2>
+      <ul>
+<li><p>yaml标记语言的形式</p>
+</li>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826112003830.png" alt="image-20220826112003830"></p>
+</li>
+<li><p>properties只保存键值对</p>
+</li>
+<li><p>对缩进是敏感的</p>
+</li>
+<li><p>yaml可以直接对实体类赋值</p>
+<ul>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130145968.png" alt="image-20220826130145968"></li>
+<li>yaml的类对应pojo的configuration的类</li>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130315657.png" alt="image-20220826130315657"></li>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826130914861.png" alt="image-20220826130914861"></li>
+<li>用占位符表达式去填值</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="JSR303数据校验"   >
+          <a href="#JSR303数据校验" class="heading-link"><i class="fas fa-link"></i></a><a href="#JSR303数据校验" class="headerlink" title="JSR303数据校验"></a>JSR303数据校验</h2>
+      <ul>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826132011197.png" alt="image-20220826132011197"></p>
+</li>
+<li><p>表示这个属性必须经过校验 如果不是合法格式就会报错</p>
+</li>
+</ul>
+
+        <h2 id="静态资源放置目录"   >
+          <a href="#静态资源放置目录" class="heading-link"><i class="fas fa-link"></i></a><a href="#静态资源放置目录" class="headerlink" title="静态资源放置目录"></a>静态资源放置目录</h2>
+      <ul>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826201709867.png" alt="image-20220826201709867"></p>
+</li>
+<li><p>通过controller跳到首页</p>
+</li>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826203301788.png" alt="image-20220826203301788"></p>
+</li>
+<li><p>templates目录下的所有界面只能通过controller来跳转 而且需要模板引擎</p>
+</li>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826205926854.png" alt="image-20220826205926854"></p>
+</li>
+<li><p><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220826205940428.png" alt="image-20220826205940428"></p>
+</li>
+<li><p>thymeleaf <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.thymeleaf.org/documentation.html" >doc</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h2 id="功能-登录实现-x2F-拦截器"   >
+          <a href="#功能-登录实现-x2F-拦截器" class="heading-link"><i class="fas fa-link"></i></a><a href="#功能-登录实现-x2F-拦截器" class="headerlink" title="功能-登录实现&#x2F;拦截器"></a>功能-登录实现&#x2F;拦截器</h2>
+      <p>- </p>
+
+        <h2 id="crud"   >
+          <a href="#crud" class="heading-link"><i class="fas fa-link"></i></a><a href="#crud" class="headerlink" title="crud"></a>crud</h2>
+      <ul>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220827101718157.png" alt="image-20220827101718157"></li>
+</ul>
+
+        <h2 id="连接数据库"   >
+          <a href="#连接数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2>
+      <ul>
+<li><img src="E:\codepractice\Pinkypie\source_posts\2022\08\assets\image-20220827131058505.png" alt="image-20220827131058505"></li>
+</ul>
+
+        <h2 id="ModelAndView共有三个作用"   >
+          <a href="#ModelAndView共有三个作用" class="heading-link"><i class="fas fa-link"></i></a><a href="#ModelAndView共有三个作用" class="headerlink" title="ModelAndView共有三个作用"></a><strong>ModelAndView共有三个作用</strong></h2>
+      <p>其一：ModelAndView 实现后台与前端页面数据交互；</p>
+<p>其二：可以用于重定向与转发到指定页面，</p>
+<p>其三：可以保存数据继而渲染到页面</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://localhost:8080/login" >http://localhost:8080/login</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://pinkyrie.github.io">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://pinkyrie.github.io/2022/08/26/springboot/">https://pinkyrie.github.io/2022/08/26/springboot/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/pinkyrie/2022/08/26/ssm/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/pinkyrie/2022/08/25/note_springboot/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">
+          配置环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#init"><span class="toc-number">1.1.</span> <span class="toc-text">
+          init</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jar%E5%8C%85%E7%94%9F%E6%88%90"><span class="toc-number">1.2.</span> <span class="toc-text">
+          jar包生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#controller"><span class="toc-number">1.3.</span> <span class="toc-text">
+          controller</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%99%A8"><span class="toc-number">1.4.</span> <span class="toc-text">
+          启动器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javabean%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">2.</span> <span class="toc-text">
+          javabean是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">
+          spring注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">
+          spring配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSR303%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C"><span class="toc-number">5.</span> <span class="toc-text">
+          JSR303数据校验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E7%BD%AE%E7%9B%AE%E5%BD%95"><span class="toc-number">6.</span> <span class="toc-text">
+          静态资源放置目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD-%E7%99%BB%E5%BD%95%E5%AE%9E%E7%8E%B0-x2F-%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">7.</span> <span class="toc-text">
+          功能-登录实现&#x2F;拦截器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#crud"><span class="toc-number">8.</span> <span class="toc-text">
+          crud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">9.</span> <span class="toc-text">
+          连接数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModelAndView%E5%85%B1%E6%9C%89%E4%B8%89%E4%B8%AA%E4%BD%9C%E7%94%A8"><span class="toc-number">10.</span> <span class="toc-text">
+          ModelAndView共有三个作用</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/pinkyrie/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/pinkyrie/js/utils.js?v=2.6.2"></script><script src="/pinkyrie/js/stun-boot.js?v=2.6.2"></script><script src="/pinkyrie/js/scroll.js?v=2.6.2"></script><script src="/pinkyrie/js/header.js?v=2.6.2"></script><script src="/pinkyrie/js/sidebar.js?v=2.6.2"></script></body></html>

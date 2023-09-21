@@ -1,0 +1,1414 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/pinkyrie/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/pinkyrie/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="过期的jk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="rye is coding">
+<meta property="og:url" content="https://pinkyrie.github.io/page/3/index.html">
+<meta property="og:site_name" content="rye is coding">
+<meta property="og:description" content="过期的jk">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="rye">
+<meta name="twitter:card" content="summary"><title>rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/page/3/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/pinkyrie/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/pinkyrie/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/19/05/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="Minimum-cost-spanning-trees"   >
+          <a href="#Minimum-cost-spanning-trees" class="heading-link"><i class="fas fa-link"></i></a><a href="#Minimum-cost-spanning-trees" class="headerlink" title="Minimum-cost spanning trees"></a>Minimum-cost spanning trees</h1>
+      <ul>
+<li>connected undirected weighted graph</li>
+<li></li>
+</ul>
+
+        <h2 id="基本概念"   >
+          <a href="#基本概念" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2>
+      
+        <h3 id="最小生成树的性质"   >
+          <a href="#最小生成树的性质" class="heading-link"><i class="fas fa-link"></i></a><a href="#最小生成树的性质" class="headerlink" title="最小生成树的性质"></a>最小生成树的性质</h3>
+      <ul>
+<li>A minimum spanning tree is a subgraph of an undirected weighted graph G, such that<ul>
+<li>It is a tree (i.e. it is acyclic)</li>
+<li>It covers all the vertices and contains |V| - 1 edges</li>
+</ul>
+</li>
+<li>Not necessarily unique A graph may have many spanning trees.</li>
+</ul>
+<blockquote>
+<p>prim and kruskal 算法用于generate最小生成树</p>
+</blockquote>
+
+        <h2 id="prim"   >
+          <a href="#prim" class="heading-link"><i class="fas fa-link"></i></a><a href="#prim" class="headerlink" title="prim"></a>prim</h2>
+      <ul>
+<li><p>Prim: (build tree incrementally)</p>
+<p>Pick lower cost edge connected to known (incomplete) spanning tree that does not create a cycle and expand to include it in the tree</p>
+</li>
+</ul>
+
+        <h3 id="steps"   >
+          <a href="#steps" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps" class="headerlink" title="steps"></a>steps</h3>
+      <ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609200.png" alt="image-20221117221621810"></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609807.png" alt="image-20221117221005358"></p>
+</li>
+</ul>
+
+        <h3 id="code"   >
+          <a href="#code" class="heading-link"><i class="fas fa-link"></i></a><a href="#code" class="headerlink" title="code"></a>code</h3>
+      <ul>
+<li><pre><code class="c++">
+// A C++ program for Prim&#39;s Minimum
+// Spanning Tree (MST) algorithm. The program is
+// for adjacency matrix representation of the graph
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+ 
+// Number of vertices in the graph
+#define V 5
+ 
+// A utility function to find the vertex with
+// minimum key value, from the set of vertices
+// not yet included in MST
+int minKey(int key[], bool mstSet[])
+&#123;
+    // Initialize min value
+    int min = INT_MAX, min_index;
+ 
+    for (int v = 0; v &lt; V; v++)
+        if (mstSet[v] == false &amp;&amp; key[v] &lt; min)
+            min = key[v], min_index = v;
+ 
+    return min_index;
+&#125;
+ 
+// A utility function to print the
+// constructed MST stored in parent[]
+void printMST(int parent[], int graph[V][V])
+&#123;
+    cout &lt;&lt; &quot;Edge \tWeight\n&quot;;
+    for (int i = 1; i &lt; V; i++)
+        cout &lt;&lt; parent[i] &lt;&lt; &quot; - &quot; &lt;&lt; i &lt;&lt; &quot; \t&quot;
+             &lt;&lt; graph[i][parent[i]] &lt;&lt; &quot; \n&quot;;
+&#125;
+ 
+// Function to construct and print MST for
+// a graph represented using adjacency
+// matrix representation
+void primMST(int graph[V][V])
+&#123;
+    // Array to store constructed MST
+    int parent[V];
+ 
+    // Key values used to pick minimum weight edge in cut
+    int key[V];
+ 
+    // To represent set of vertices included in MST
+    bool mstSet[V];
+ 
+    // Initialize all keys as INFINITE
+    for (int i = 0; i &lt; V; i++)
+        key[i] = INT_MAX, mstSet[i] = false;
+ 
+    // Always include first 1st vertex in MST.
+    // Make key 0 so that this vertex is picked as first
+    // vertex.
+    key[0] = 0;
+    parent[0] = -1; // First node is always root of MST
+ 
+    // The MST will have V vertices
+    for (int count = 0; count &lt; V - 1; count++) &#123;
+        // Pick the minimum key vertex from the
+        // set of vertices not yet included in MST
+        int u = minKey(key, mstSet);
+ 
+        // Add the picked vertex to the MST Set
+        mstSet[u] = true;
+ 
+        // Update key value and parent index of
+        // the adjacent vertices of the picked vertex.
+        // Consider only those vertices which are not
+        // yet included in MST
+        for (int v = 0; v &lt; V; v++)
+ 
+            // graph[u][v] is non zero only for adjacent
+            // vertices of m mstSet[v] is false for vertices
+            // not yet included in MST Update the key only
+            // if graph[u][v] is smaller than key[v]
+            if (graph[u][v] &amp;&amp; mstSet[v] == false
+                &amp;&amp; graph[u][v] &lt; key[v])
+                parent[v] = u, key[v] = graph[u][v];
+    &#125;
+ 
+    // print the constructed MST
+    printMST(parent, graph);
+&#125;
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  bool Graph&lt;T&gt;::Prim(int from,LinkList&lt;Edge&lt;T&gt;&gt; &amp;mst)&#123;</span><br><span class="line">  	T* nearest = new T[vertexNum];</span><br><span class="line">  	int* neighbor = new int[vertexNum];s</span><br><span class="line">  	for(int i=0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		neighbor[i]=from;</span><br><span class="line">  		nearest[i]=MAX_VALUE;</span><br><span class="line">  	&#125;</span><br><span class="line">  	for(Edge&lt;T&gt; e=FirstEdge(from);IsEdge(e);e=NextEdgge(e))&#123;</span><br><span class="line">  		nearest[e.end] = e.weight; //从start开始到start相连的边的权值初始化</span><br><span class="line">  	&#125;</span><br><span class="line">  	neighbor[from] = -1;</span><br><span class="line">  	for(int i =1;i&lt;vertexNum;i++)&#123; //最小生成树是n-1条边</span><br><span class="line">  		T min = MAX_VALUE;</span><br><span class="line">  		int v = -1;</span><br><span class="line">  		for(int j=0;j&lt;vertexNum;j++)&#123;</span><br><span class="line">  			if(nearest[j]&lt;min &amp;&amp; neighbor[j]&gt;-1)&#123;</span><br><span class="line">  				min = nearest[j];</span><br><span class="line">  				v=j;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  		if(v&gt;=0)&#123;</span><br><span class="line">  			Edge&lt;T&gt; tmp = (neighbor[v],v,min);</span><br><span class="line">  			mst.insertTail(tmp);</span><br><span class="line">  			neighbor[v] = -1;</span><br><span class="line">  		&#125;</span><br><span class="line">  		for(Edge&lt;T&gt; e=firstEdge(v);IsEdge(e);e=NextEdge(e))&#123;</span><br><span class="line">  			int u = e.end;</span><br><span class="line">  			//更新nearest和neighbor需要注意判断是否已加入mst 以及到目前该点的距离是不是需要更新成最短的</span><br><span class="line">  			if(neighbor[u]!=-1&amp;&amp;nearest[u]&gt;e.weight)&#123;</span><br><span class="line">  				neighbor[u] = v;</span><br><span class="line">  				nearest[u] = e.weight;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.prepbytes.com/blog/queues/prims-algorithm-using-priority_queue-in-stl/" >priority queue实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/" >priority queue实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609619.png" alt="image-20221119105020849"></p>
+</li>
+</ul>
+
+        <h3 id="复杂度分析"   >
+          <a href="#复杂度分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609618.png" alt="image-20221119104837149"></li>
+<li>使用priority queue可以提升到O(elogv)</li>
+</ul>
+
+        <h2 id="kruskal"   >
+          <a href="#kruskal" class="heading-link"><i class="fas fa-link"></i></a><a href="#kruskal" class="headerlink" title="kruskal"></a>kruskal</h2>
+      <ul>
+<li><p>Kruskal: (build forest that will finish as a tree)</p>
+<p>Pick lower cost edge not yet in a tree that does not create a cycle and expand to include it somewhere in the forest</p>
+</li>
+<li><p>Work with <strong>edges</strong>, rather than nodes</p>
+</li>
+<li><p>基于greedy思想</p>
+</li>
+</ul>
+
+        <h3 id="steps-1"   >
+          <a href="#steps-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps-1" class="headerlink" title="steps"></a>steps</h3>
+      <ul>
+<li><p>Sort edges by increasing edge weight</p>
+</li>
+<li><p>Select the first |V| – 1 edges that do not generate a cycle</p>
+</li>
+<li><p>Initialize a forest of trees, each tree being a single nodeBuild a priority queue of edges with priority being lowest costRepeat until |V| -1 edges have been accepted {	Delete min edge from priority queue	If it forms a cycle then discard it      else accept the edge – It will join 2 existing trees yielding a larger tree 	and reducing the forest by one tree}</p>
+</li>
+<li><p>The accepted edges form the minimum spanning tree</p>
+<p>Every step will have joined two trees in the forest together, so that at the end, there will only be one tree</p>
+</li>
+</ul>
+
+        <h3 id="code-1"   >
+          <a href="#code-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-1" class="headerlink" title="code"></a>code</h3>
+      
+        <h4 id="UNION-x2F-FIND-algorithm"   >
+          <a href="#UNION-x2F-FIND-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#UNION-x2F-FIND-algorithm" class="headerlink" title="UNION&#x2F;FIND algorithm"></a>UNION&#x2F;FIND algorithm</h4>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://book.huihoo.com/data-structures-and-algorithms-with-object-oriented-design-patterns-in-c++/html/page579.html" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609955.png" alt="image-20221118221116048"></p>
+</li>
+<li><pre><code class="c++">class UFsets&#123;
+private:
+    int n;
+    int* root;
+    int* next;
+    int* length;
+public:
+    UFsets(int size)&#123;
+        n = size;
+        root = new int[n];
+        next = new int[n];
+        length = new int[n];
+        for(int i = 0;i&lt;n;i++)&#123;
+            root[i] = i;
+            next[i] = i;
+            length[i] = 1;
+        &#125;
+    &#125;
+    int UFsets::Find(int v)&#123;
+        if(v&lt;n)
+            return root[v];
+        else
+            return -1;
+    &#125;
+    void UFsets::Union(int v, int u)&#123;
+        if(root[u] == root[v])
+            return;
+        else if(length[v]&gt;length[u])&#123;
+            int uRoot = root[u];
+            length[v] = length[v]+length[u];
+            root[u] = root[v];
+            for(int uNext = next[uRoot];next[u]!=uRoot;uNext=next[uNext])&#123;
+                root[uNext] = root[v];
+        &#125;
+            next[u] = root[v];
+            next[v] = uRoot;
+        &#125;
+        else if(length[u]&gt;length[v])&#123;
+            int vRoot = root[v];
+            length[u] = length[u] + length[v];
+            root[v] = root[u];
+            for(int vNext = next[vRoot];next[vNext]!=vRoot;vNext=next[vNext])&#123;
+                root[vNext] = root[u];
+            &#125;
+            next[v] = root[u];
+            next[u] = vRoot;		
+        &#125;
+    &#125;
+&#125;
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  bool Graph&lt;T&gt;::Kruskal(LinkList&lt;Edge&lt;T&gt;&gt; &amp;mst)&#123;</span><br><span class="line">  	int *vertexArray = new int[vertexNum];</span><br><span class="line">  	for(int i=0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		vertexArray[i] = i;</span><br><span class="line">  	&#125;</span><br><span class="line">  	UFsets set(vertexNum);s</span><br><span class="line">  	MinHeap&lt;Edge&lt;T&gt;&gt; heap(edgeCount());</span><br><span class="line">  	for(int i = 0;i&lt;vertexNum;i++)&#123;</span><br><span class="line">  		for(Edge&lt;T&gt; edge=firstEdge(i);IsEdge(edge);edge = nextEdge(edge))&#123;</span><br><span class="line">  			if(edge.start&lt;edge.end)&#123;</span><br><span class="line">  				heap.Insert(edge);</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;		</span><br><span class="line">  	&#125;</span><br><span class="line">  	int mstEdgeNum = 0;</span><br><span class="line">  	while(!heap.IsEmpty())&#123;</span><br><span class="line">  		Edge&lt;T&gt; edge = heap.RemoveFirst();</span><br><span class="line">  		int start = edge.start;</span><br><span class="line">  		int end = edge.end;</span><br><span class="line">  		if(set.Find(start)!=set.Find(end))&#123;</span><br><span class="line">  			set.Union(start,end);</span><br><span class="line">  			mst.insertTail(edge);</span><br><span class="line">  			mstEdgeNum++;</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  	if(mst.Count() == edgeCount()-1)</span><br><span class="line">  		return true;</span><br><span class="line">  	else</span><br><span class="line">  		return false;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure>
+
+</code></pre>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609129.png" alt="image-20221119100816009"></p>
+</li>
+</ul>
+
+        <h3 id="复杂度分析-1"   >
+          <a href="#复杂度分析-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609307.png" alt="image-20221119104727507"></li>
+</ul>
+
+        <h2 id="总结对比"   >
+          <a href="#总结对比" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/difference-between-prims-and-kruskals-algorithm-for-mst/#:~:text=Prim's%20algorithm%20has%20a%20time,works%20only%20on%20connected%20graph." >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">Prim’s Algorithm</th>
+<th align="left">Kruskal’s Algorithm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">It starts to build the Minimum Spanning Tree from any vertex in the graph.</td>
+<td align="left">It starts to build the Minimum Spanning Tree from the vertex carrying minimum weight in the graph.</td>
+</tr>
+<tr>
+<td align="left">It traverses one node more than one time to get the minimum distance.</td>
+<td align="left">It traverses one node only once.</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm has a time complexity of O(V2), V being the number of vertices and can be improved up to O(E log V) using Fibonacci heaps.</td>
+<td align="left">Kruskal’s algorithm’s time complexity is O(E log V), V being the number of vertices.</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm gives connected component as well as it works only on connected graph.</td>
+<td align="left">Kruskal’s algorithm can generate forest(disconnected components) at any instant as well as it can work on disconnected components</td>
+</tr>
+<tr>
+<td align="left">Prim’s algorithm runs faster in dense graphs.</td>
+<td align="left">Kruskal’s algorithm runs faster in sparse graphs.</td>
+</tr>
+<tr>
+<td align="left">It generates the minimum spanning tree starting from the root vertex.</td>
+<td align="left">It generates the minimum spanning tree starting from the least weighted edge.</td>
+</tr>
+<tr>
+<td align="left">Applications of prim’s algorithm are Travelling Salesman Problem, Network for roads and Rail tracks connecting all the cities etc.</td>
+<td align="left">Applications of Kruskal algorithm are LAN connection, TV Network etc.</td>
+</tr>
+</tbody></table></div>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/19/02/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="Graph-Traversals"   >
+          <a href="#Graph-Traversals" class="heading-link"><i class="fas fa-link"></i></a><a href="#Graph-Traversals" class="headerlink" title="Graph Traversals"></a>Graph Traversals</h1>
+      <p>A graph-traversal algorithm visits all vertices if and only if the graph is connected.</p>
+
+        <h2 id="图的存储"   >
+          <a href="#图的存储" class="heading-link"><i class="fas fa-link"></i></a><a href="#图的存储" class="headerlink" title="图的存储"></a>图的存储</h2>
+      
+        <h3 id="存储结构-邻接矩阵"   >
+          <a href="#存储结构-邻接矩阵" class="heading-link"><i class="fas fa-link"></i></a><a href="#存储结构-邻接矩阵" class="headerlink" title="存储结构-邻接矩阵"></a>存储结构-邻接矩阵</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Edge</span>  </span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> from;</span><br><span class="line">	<span class="type">int</span> to;</span><br><span class="line">	<span class="type">int</span> weight;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Edge</span>();</span><br><span class="line">	<span class="built_in">Edge</span>(<span class="type">int</span> from,<span class="type">int</span> to,<span class="type">int</span> weight);</span><br><span class="line">	<span class="keyword">virtual</span> ~<span class="built_in">Edge</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Edge::<span class="built_in">Edge</span>()</span><br><span class="line">&#123;</span><br><span class="line">	from=to=<span class="number">-1</span>;</span><br><span class="line">	weight=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">Edge::<span class="built_in">Edge</span>(<span class="type">int</span> from,<span class="type">int</span> to,<span class="type">int</span> weight)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">this</span>-&gt;from=from;</span><br><span class="line">	<span class="keyword">this</span>-&gt;to=to;</span><br><span class="line">	<span class="keyword">this</span>-&gt;weight=weight;</span><br><span class="line">&#125;</span><br><span class="line">Edge::~<span class="built_in">Edge</span>()</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> UNVISITED 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> VISITED 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;Edge.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">graph</span>  </span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> numvertex;</span><br><span class="line">	<span class="type">int</span> numEdge;</span><br><span class="line">	<span class="type">int</span> *mark;</span><br><span class="line">	<span class="type">int</span> *indegree;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">graph</span>(<span class="type">int</span> numvertex);</span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">isEdge</span><span class="params">(Edge oneEdge)</span></span>;</span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">tovertex</span><span class="params">(Edge oneEdge)</span></span>;</span><br><span class="line">	<span class="keyword">virtual</span> ~<span class="built_in">graph</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//返回边的起始点</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">graph::tovertex</span><span class="params">(Edge oneEdge)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> oneEdge.to;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">graphm</span> : <span class="keyword">public</span> graph  </span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> **martix;</span><br><span class="line">	<span class="built_in">graphm</span>(<span class="type">int</span> numvertex);</span><br><span class="line">	<span class="function">Edge <span class="title">firstEdge</span><span class="params">(<span class="type">int</span> onevertex)</span></span>;</span><br><span class="line">	<span class="function">Edge <span class="title">nextEdge</span><span class="params">(Edge oneEdge)</span></span>;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setEdge</span><span class="params">(<span class="type">int</span> from,<span class="type">int</span> to,<span class="type">int</span> weight)</span></span>;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">visit</span><span class="params">(graphm g,<span class="type">int</span> v)</span></span>;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(graphm&amp; g,<span class="type">int</span> v)</span></span>;</span><br><span class="line">	<span class="keyword">virtual</span> ~<span class="built_in">graphm</span>();</span><br><span class="line">&#125;;</span><br><span class="line">graphm::<span class="built_in">graphm</span>(<span class="type">int</span> numvertex):<span class="built_in">graph</span>(numvertex)</span><br><span class="line">&#123;</span><br><span class="line">	martix=(<span class="type">int</span> **) <span class="keyword">new</span> <span class="type">int</span>*[numvertex];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;numvertex;i++)</span><br><span class="line">		martix[i]=<span class="keyword">new</span> <span class="type">int</span>[numvertex];</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;numvertex;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;numvertex;j++)</span><br><span class="line">			martix[i][j]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回顶点onevertex的第一条边</span></span><br><span class="line"><span class="function">Edge <span class="title">graphm::firstEdge</span><span class="params">(<span class="type">int</span> onevertex)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Edge temp;</span><br><span class="line">	temp.from=onevertex;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;numvertex;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(martix[onevertex][i]!=<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			temp.to=i;</span><br><span class="line">			temp.weight=martix[onevertex][i];</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回与边oneEdge有相同起始点的下一条边</span></span><br><span class="line"><span class="function">Edge <span class="title">graphm::nextEdge</span><span class="params">(Edge oneEdge)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Edge temp;</span><br><span class="line">	temp.from=oneEdge.from;</span><br><span class="line">	<span class="keyword">if</span>(oneEdge.to&lt;numvertex)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=oneEdge.to+<span class="number">1</span>;i&lt;numvertex;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(martix[oneEdge.from][i]!=<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			temp.to=i;</span><br><span class="line">			temp.weight=martix[oneEdge.from ][i];</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="存储结构-邻接表"   >
+          <a href="#存储结构-邻接表" class="heading-link"><i class="fas fa-link"></i></a><a href="#存储结构-邻接表" class="headerlink" title="存储结构-邻接表"></a>存储结构-邻接表</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ListGraph</span>: <span class="keyword">public</span> Graph&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    LinkList&lt;Edge&gt; * vertexList;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://linuxhint.com/adjacency-list-cpp/#:~:text=The%20adjacency%20list%20is%20a,to%20other%20nodes%20or%20vertices.&text=In%20the%20undirected%20graph%2C%20we%20can%20move%20to%20any%20vertex." >我看得懂的实现方法</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609507.png" alt="image-20221118185055836"></p>
+<ul>
+<li>解释为什么邻接表的大小是n+2m</li>
+</ul>
+
+        <h3 id="pseudo-code"   >
+          <a href="#pseudo-code" class="heading-link"><i class="fas fa-link"></i></a><a href="#pseudo-code" class="headerlink" title="pseudo code"></a>pseudo code</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void graphTraverse(Graph* G)&#123;</span><br><span class="line">	int v;</span><br><span class="line">	for(v = 0; v&lt;G-&gt;n(); v++)</span><br><span class="line">		G-&gt;setMark(v,UNVISITED);</span><br><span class="line">	for(v = 0; v&lt;G-&gt;n(); v++)&#123;</span><br><span class="line">		if(G-&gt;getMark(v)==UNVISITED)</span><br><span class="line">		doTraverse(G,v);</span><br><span class="line">	&#125;</span><br><span class="line">	 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="DFS"   >
+          <a href="#DFS" class="heading-link"><i class="fas fa-link"></i></a><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2>
+      <ul>
+<li>proceeds along a path from v as deeply into the graph as possible before backing up. </li>
+<li>The depth-first traversal algorithm does not completely specify the order in which it should visit the vertices adjacent to v.We may visit the vertices adjacent to v in sorted order.</li>
+<li>类似二叉树的先序访问</li>
+</ul>
+
+        <h3 id="steps"   >
+          <a href="#steps" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps" class="headerlink" title="steps"></a>steps</h3>
+      <ul>
+<li>starting from vertex v.</li>
+<li>Visit a vertex, then visit a vertex adjacent to that vertex v as deeply into the graph as possible before backing up</li>
+<li>If there is no unvisited vertex adjacent to visited vertex, back up to the previous step.</li>
+</ul>
+
+        <h3 id="实现"   >
+          <a href="#实现" class="heading-link"><i class="fas fa-link"></i></a><a href="#实现" class="headerlink" title="实现"></a>实现</h3>
+      <ul>
+<li><img src="https://ucc.alicdn.com/pic/developer-ecology/90f80e5f92d149b8b81f8c2e2fb8fd34.gif" alt="1.gif"></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110160308" >ref:code</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h4 id="recursive"   >
+          <a href="#recursive" class="heading-link"><i class="fas fa-link"></i></a><a href="#recursive" class="headerlink" title="recursive"></a>recursive</h4>
+      <ul>
+<li><p>pseudo code</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">DFS(G, u)</span><br><span class="line">    u.visited = true</span><br><span class="line">    for each v ∈ G.Adj[u]</span><br><span class="line">        if v.visited == false</span><br><span class="line">            DFS(G,v)</span><br><span class="line">     </span><br><span class="line">init() &#123;</span><br><span class="line">    For each u ∈ G</span><br><span class="line">        u.visited = false</span><br><span class="line">     For each u ∈ G</span><br><span class="line">       DFS(G, u)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>&#96;&#96;&#96;c++<br>void graphm::DFS(graphm&amp; gt,int v)<br>{<br>g.mark[v]&#x3D;VISITED;<br>visit(g,v);&#x2F;&#x2F;执行输出<br>for(Edge e&#x3D;g.firstEdge(v);g.isEdge(e);e&#x3D;g.nextEdge(e)){<br>    if(g.mark[g.tovertex(e)]&#x3D;&#x3D;Unvisit)<br>        DFS(g,g.tovertex(e));<br>}		<br>}</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">#### Use a stack </span><br><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  void graphm::DFS(graphm&amp; gt,int v)</span><br><span class="line">  &#123;	</span><br><span class="line">  	stack&lt;int&gt; st;</span><br><span class="line">  	for(int i=0;i&lt;numvertex;i++)&#123;</span><br><span class="line">  		mark[i]=UNVISITED;</span><br><span class="line">  	&#125;</span><br><span class="line">  	for(int i=0;i&lt;numvertex;i++)&#123;</span><br><span class="line">  		if(mark[i]==UNVISITED)&#123;</span><br><span class="line">  			st.push(i);</span><br><span class="line">  			while(!st.empty())&#123;</span><br><span class="line">  				int v;</span><br><span class="line">                    v=st.top();</span><br><span class="line">  				st.pop(v);</span><br><span class="line">  				if(mark[v]==UNVISITED)</span><br><span class="line">  					visit(v);</span><br><span class="line">  				mark[v]=visited;</span><br><span class="line">  				for(Edge e = FirstEdge(v);g.isEdge(e);e=NextEdge(e))&#123;</span><br><span class="line">  					if(mark[e.to]==UNVISITED)</span><br><span class="line">  						st.push(e.to);</span><br><span class="line">  				&#125;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125; 		</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211172321119.png" alt="image-20221117205138496"></p>
+</li>
+</ul>
+
+        <h3 id="复杂度分析"   >
+          <a href="#复杂度分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      
+        <h4 id="时间复杂度"   >
+          <a href="#时间复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4>
+      <ul>
+<li><p>DFS算法是一一个递归算法，需要借助一个递归工作栈，故它的空间复杂度为O(N)。<br>遍历图的过程实质上是对每个顶点查找其邻接点的过程，其耗费的时间取决于所采用结构。</p>
+<p>邻接表表示时，查找所有顶点的邻接点所需时间为O(E)，访问顶点的邻接点所花时间为O(N),此时，总的时间复杂度为O(N+E)。</p>
+<p>邻接矩阵表示时，查找每个顶点的邻接点所需时间为O(N)，要查找整个矩阵，故总的时间度为O(N^2)。<br><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h4 id="空间复杂度"   >
+          <a href="#空间复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h4>
+      <ul>
+<li>DFS算法是一一个递归算法，需要借助一个递归工作栈，故它的空问复杂度为O(V）。</li>
+</ul>
+
+        <h2 id="BFS"   >
+          <a href="#BFS" class="heading-link"><i class="fas fa-link"></i></a><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2>
+      <ul>
+<li>After visiting a given vertex v, the breadth-first traversal algorithm visits every vertex adjacent to v before visiting any other vertex.</li>
+<li>The breath-first traversal algorithm does not completely specify the order in which it should visit the vertices adjacent to v.</li>
+<li>It is similar to level traversal.</li>
+</ul>
+
+        <h3 id="steps-1"   >
+          <a href="#steps-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps-1" class="headerlink" title="steps"></a>steps</h3>
+      
+        <h3 id="实现-1"   >
+          <a href="#实现-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2549541/performing-breadth-first-search-recursively" >trick-不能使用递归进行BFS queue与stack</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h4 id="use-queue"   >
+          <a href="#use-queue" class="heading-link"><i class="fas fa-link"></i></a><a href="#use-queue" class="headerlink" title="use queue"></a>use queue</h4>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">graphm::BFS</span><span class="params">(graphm&amp; gt,<span class="type">int</span> v)</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;numvertex;i++)&#123;</span><br><span class="line">		mark[i]=UNVISITED;</span><br><span class="line">	&#125;</span><br><span class="line">	q.<span class="built_in">push</span>(v);</span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		<span class="type">int</span> v;</span><br><span class="line">        <span class="comment">// dequeue front node and print it</span></span><br><span class="line">        v = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(mark[v]==UNVISITED)</span><br><span class="line">        	<span class="built_in">visite</span>(v);</span><br><span class="line">        mark[v]=VISITED;</span><br><span class="line">        <span class="keyword">for</span>(Edge e = <span class="built_in">FirstEdge</span>(v),<span class="built_in">IsEdge</span>(e);e=<span class="built_in">NextEdge</span>(e))&#123;</span><br><span class="line">        	<span class="keyword">if</span>(mark[e.to]==UNVISITED)</span><br><span class="line">        		q.<span class="built_in">push</span>(e.to);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h4 id="pseudo-code-1"   >
+          <a href="#pseudo-code-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#pseudo-code-1" class="headerlink" title="pseudo code"></a>pseudo code</h4>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">bft(in v:Vertex) &#123;</span><br><span class="line">// Traverses a graph beginning at vertex v </span><br><span class="line">// by using breath-first strategy: Iterative Version</span><br><span class="line">q.createQueue();</span><br><span class="line">// add v to the queue and mark it</span><br><span class="line">q.enqueue(v);</span><br><span class="line">Mark v as visited;</span><br><span class="line">while (!q.isEmpty()) &#123;</span><br><span class="line">	   q.dequeue(w);</span><br><span class="line">	   for (each unvisited vertex u adjacent to w) &#123;</span><br><span class="line">	      Mark u as visited;</span><br><span class="line">	      q.enqueue(u);</span><br><span class="line">	   &#125;	   </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h3 id="复杂度分析-1"   >
+          <a href="#复杂度分析-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      
+        <h4 id="时间复杂度-1"   >
+          <a href="#时间复杂度-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%82%BB%E6%8E%A5%E8%A1%A8&spm=1001.2101.3001.7020" >邻接表</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>形式存储时，每个顶点均需搜索一次，时间复杂度T1&#x3D;O（v），从一个顶点开始搜索时，开始搜索，访问未被访问过的节点。最坏的情况下，每个顶点至少访问一次，每条边至少访问1次，这是因为在搜索的过程中，若某结点向下搜索时，其子结点都访问过了，这时候就会回退，故时间复 杂度为O(E)，算法总的时间复 度为O(|V|+|E|)。</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5&spm=1001.2101.3001.7020" >邻接矩阵</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>存储方式时，查找每个顶点的邻接点所需时间为O(V)，即该节点所在的该行该列。又有n个顶点，故算总的时间复杂度为O(|V|^2)。</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211172322430.png" alt="image-20221117211701421"></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11468621/why-is-the-time-complexity-of-both-dfs-and-bfs-o-v-e" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h4 id="空间复杂度-1"   >
+          <a href="#空间复杂度-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#空间复杂度-1" class="headerlink" title="空间复杂度"></a>空间复杂度</h4>
+      <ul>
+<li>BFS是一种借用<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%98%9F%E5%88%97&spm=1001.2101.3001.7020" >队列</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>来存储的过程，分层查找，优先考虑距离出发点近的点。无论是在邻接表还是邻接矩阵中存储，都需要借助一个辅助队列，v个顶点均需入队，最坏的情况下，空间复杂度为O（v）。</li>
+</ul>
+
+        <h3 id="对比"   >
+          <a href="#对比" class="heading-link"><i class="fas fa-link"></i></a><a href="#对比" class="headerlink" title="对比"></a>对比</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">14.</th>
+<th align="left">Memory</th>
+<th align="left">BFS requires more memory.</th>
+<th align="left">DFS requires less memory.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table></div>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">17.</th>
+<th align="left">Speed</th>
+<th align="left">BFS is slow as compared to DFS.</th>
+<th align="left">DFS is fast as compared to BFS.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">18.</td>
+<td align="left">When to use?</td>
+<td align="left">When the target is close to the source, BFS performs better.</td>
+<td align="left">When the target is far from the source, DFS is preferable.</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>注意空间复杂度需要考虑原本图的类内成员存储结点和边（如果是邻接矩阵n^2 如果是邻接表n+2m)</li>
+</ul>
+
+        <h2 id="树的遍历使用BFS-DFS"   >
+          <a href="#树的遍历使用BFS-DFS" class="heading-link"><i class="fas fa-link"></i></a><a href="#树的遍历使用BFS-DFS" class="headerlink" title="树的遍历使用BFS DFS"></a>树的遍历使用BFS DFS</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/mengmengdajuanjuan/article/details/84313361" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>中序遍历：按照从小到大</p>
+<p>kruskal 算法</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/19/01/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="graph"   >
+          <a href="#graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#graph" class="headerlink" title="graph"></a>graph</h1>
+      
+        <h2 id="basics概念"   >
+          <a href="#basics概念" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics概念" class="headerlink" title="basics概念"></a>basics概念</h2>
+      <ul>
+<li><p>弧：指的是<strong>有向图</strong>里面的<strong>边，</strong>他是有明确方向的。如果是无向图的边，直接叫做“边”。比如有向图的 v1 结点到 v2 结点的弧可能是：&lt;v1, v2&gt;；</p>
+</li>
+<li><p>路径：指的是图（包括有向图和无向图）里面连接两个结点之间的边的集合，也就是一个顶点序列。比如：v1 到 v3 的路径可能这样表示：&lt;v1, v2&gt;、&lt;v2, v3&gt;；</p>
+</li>
+<li><p>如果是有向图，那么路径里面是用弧来组成。如果是无向图，路径是用边来组成。</p>
+</li>
+<li><p>edge&#x3D;arc</p>
+</li>
+<li><p>vertex(pl: vertices) &#x3D;node</p>
+</li>
+<li><p>degree: The degree of a vertex is the number of edges incident to it. </p>
+</li>
+<li><p>path: A path in a graph is a sequence of vertices connected by edges. </p>
+<p>​		 A sequence of vertices v1,v2,. . .vk  such that consecutive vertices vi and vi+1 are adjacent.</p>
+</li>
+<li><p>simple path:  no repeated vertices</p>
+</li>
+<li><p>cycle: simple path, except that the last vertex is the same as the first vertex</p>
+</li>
+<li><p>simple cycle</p>
+</li>
+</ul>
+
+        <h4 id="无向图-undirected-graph"   >
+          <a href="#无向图-undirected-graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#无向图-undirected-graph" class="headerlink" title="无向图 undirected graph"></a><strong>无向图 undirected graph</strong></h4>
+      <ul>
+<li>(v1,v2)</li>
+<li>边数推导 &lt;&#x3D; n*(n-1)&#x2F;2</li>
+<li>degree: The degree of vertex i is the number of edges incident on vertex i.</li>
+<li>Sum of degrees &#x3D; 2e where e is the number of edges</li>
+</ul>
+
+        <h4 id="有向图-directed-graph"   >
+          <a href="#有向图-directed-graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#有向图-directed-graph" class="headerlink" title="有向图 directed graph"></a><strong>有向图 directed graph</strong></h4>
+      <ul>
+<li>&lt;v1,v2&gt;</li>
+<li>边数推导 &lt;&#x3D; n*(n-1)</li>
+<li>in degree: In-degree of vertex i is the number of edges incident to i (i.e., the number of incoming edges).</li>
+<li>out degree: Out-degree of vertex i is the number of edges incident from i  (i.e., the number of outgoing edges).</li>
+<li>Sum of in-degrees &#x3D; sum of out-degrees &#x3D; e,where e is the number of edges in the digraph.</li>
+</ul>
+
+        <h4 id="connected-graph"   >
+          <a href="#connected-graph" class="heading-link"><i class="fas fa-link"></i></a><a href="#connected-graph" class="headerlink" title="connected graph"></a>connected graph</h4>
+      <ul>
+<li>A Connected graph has only one connected component.</li>
+<li>Connected graph: G is connected iff there is a path between every pair of vertices in G</li>
+<li>Subgraph: A subgraph S is formed from graph G by selecting a subset V of G’s vertices and a subset E of G’s edges such that for every edge e in E, both of e’s  vertices are in V. </li>
+<li>Connected component: the maximally connected subgraphs of an undirected graph.</li>
+</ul>
+
+        <h4 id="spanning-tree"   >
+          <a href="#spanning-tree" class="heading-link"><i class="fas fa-link"></i></a><a href="#spanning-tree" class="headerlink" title="spanning tree"></a>spanning tree</h4>
+      <ul>
+<li><p>acyclic graph: graph without circles</p>
+</li>
+<li><p>A tree is an acyclic connected graph.</p>
+</li>
+<li><p>A disjoint set of trees is called a forest. </p>
+</li>
+<li><p>A spanning tree of a connected graph is a subgraph that contains all of that graph’s vertices and is a single tree. </p>
+</li>
+<li><p>A spanning forest of a graph is the union of spanning trees of its connected components.</p>
+</li>
+<li><p>A graph is a tree if it is connected and there is a unique path between any two vertices</p>
+<p><strong>The number of edges is |E| &#x3D; |V| – 1</strong> </p>
+<p><strong>A spanning tree for a connected graph is not unique.</strong></p>
+<p>The graph is acyclic, that is, it does not contain any cycles</p>
+<p>Adding one more edge must create a cycle</p>
+<p>Removing any one edge creates two disjoint non-empty sub-graphs</p>
+</li>
+</ul>
+
+        <h3 id="表示图的方法"   >
+          <a href="#表示图的方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#表示图的方法" class="headerlink" title="表示图的方法"></a>表示图的方法</h3>
+      <ul>
+<li>Binary-relation list Adjacency matrix Adjacency list</li>
+<li>adjacency matrix<ul>
+<li>对于undirected graph只需要存储一个upper三角形或者lower三角形n*(n-1)&#x2F;2</li>
+</ul>
+</li>
+<li>adjacency list<ul>
+<li>most efficient</li>
+</ul>
+</li>
+<li>orthogonal list</li>
+</ul>
+
+        <h4 id="复杂度分析"   >
+          <a href="#复杂度分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h4>
+      <ul>
+<li>space</li>
+<li></li>
+</ul>
+
+        <h2 id="theorem"   >
+          <a href="#theorem" class="heading-link"><i class="fas fa-link"></i></a><a href="#theorem" class="headerlink" title="theorem"></a>theorem</h2>
+      <p>- </p>
+<ul>
+<li><p>无向图或有向图中所有结点的度数之和&#x3D;边数的两倍</p>
+<ul>
+<li>每条边贡献两个度</li>
+</ul>
+</li>
+<li><p>无向图或有向图中 度数为奇数的结点个数为偶数</p>
+<ul>
+<li><img   src="https://img-blog.csdnimg.cn/20191229113456512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlYW1fc3dhbl9nb29zZQ==,size_16,color_FFFFFF,t_70" style="width: image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,tepx;height: t_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlYW1fc3dhbl9nb29zZQpx;"  alt="img"></li>
+</ul>
+</li>
+<li><p><img   src="https://img-blog.csdnimg.cn/20191229150529228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlYW1fc3dhbl9nb29zZQ==,size_16,color_FFFFFF,t_70" style="width: image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,tepx;height: t_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlYW1fc3dhbl9nb29zZQpx;"  alt="img"></p>
+</li>
+<li><p><strong>完全图一定属于连通图, 而连通图不一定属于完全图</strong></p>
+<p>完全图要求任意一对顶点间均有边连接，而连通图只要求任意顶点间连通即有路径即可，并不一定有边连接这两顶点！</p>
+</li>
+</ul>
+
+        <h2 id="mooc"   >
+          <a href="#mooc" class="heading-link"><i class="fas fa-link"></i></a><a href="#mooc" class="headerlink" title="mooc"></a>mooc</h2>
+      <ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191610155.png" alt="image-20220908130814983"></p>
+</li>
+<li><p>无向的连通图就是或者有向的强连通图通过任意一个顶点都能够（直接或者通过其他顶点间接地）访问到其他所有顶点,自然一次深度优先遍历就可以访问到所有顶点<br>无向非连通图一次遍历只能访问到起点所在的连通分量,一个非连通无向图中有几个连通分量就需要从各个分量分别开始遍历才能访问到所有的顶点<br>有向的非强连通图则需要看起点如何,可能有些起点可以访问到其他顶点,可能有些不能</p>
+</li>
+<li><p>简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路</p>
+<p>回路：第一个顶点和最后一个顶点相同的路径</p>
+<p>简单路径：顶点不重复出现的路径</p>
+<p>路径：由顶点和相邻路径序列构成的边的序列</p>
+<p>简单路径限制了顶点不能重复出现，简单回路限制了除了第一个顶点和最后一个顶点外的其余顶点不能重复出现</p>
+</li>
+<li><p>首先，不是所有的有向图都是有拓扑序的，只有 有向无环图 才有拓扑序，所以 有向无环图又被称为拓扑图 。</p>
+</li>
+<li><p>在n个结点的无向图中，若该图是连通图,则其边数大于等于n-1，<br>在n个结点的无向图中，若边数大于(n-2)(n-1)&#x2F;2，则该图必是连通图</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191610329.png" alt="image-20220909183524489"></p>
+</li>
+<li><p>出和入2* 剩下n-1个点 2*(n-1)</p>
+</li>
+<li><p>对图中任意顶点u,v,都存在路径使u、v连通。由于是无向图故为n-1，若是有向图为n</p>
+</li>
+<li></li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/206530163.html" >有n个顶点的强连通图最多有多少条边,最少有多少条边_百度知道 (baidu.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/92e10613145b4ee0a25f2d6b8699a81c" >下列关于无向连通图特性的叙述中，正确的是 Ⅰ.所有顶点的度_阿里巴巴笔试题_牛客网 (nowcoder.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+<ol>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191610434.png" alt="image-20220909192641993" style="zoom:50%;" />
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Deam_swan_goose/article/details/103751863" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>n个顶点，最多的情况是每两个点有一条边，所以用Cn2，结果是n(n-1)&#x2F;2</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/853066cc75dd4e7a8ac3529e39db418f" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>()</p>
+</li>
+<li><p>无向的连通图就是或者有向的强连通图通过任意一个顶点都能够（直接或者通过其他顶点间接地）访问到其他所有顶点,自然一次深度优先遍历就可以访问到所有顶点<br>无向非连通图一次遍历只能访问到起点所在的连通分量,一个非连通无向图中有几个连通分量就需要从各个分量分别开始遍历才能访问到所有的顶点<br>有向的非强连通图则需要看起点如何,可能有些起点可以访问到其他顶点,可能有些不能</p>
+</li>
+<li><p>简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路</p>
+<p>回路：第一个顶点和最后一个顶点相同的路径</p>
+<p>简单路径：顶点不重复出现的路径</p>
+<p>路径：由顶点和相邻路径序列构成的边的序列</p>
+<p>简单路径限制了顶点不能重复出现，简单回路限制了除了第一个顶点和最后一个顶点外的其余顶点不能重复出现</p>
+<p>首先，不是所有的有向图都是有拓扑序的，只有 <strong>有向无环图 才有拓扑序</strong>，所以 有向无环图又被称为拓扑图 。</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/92e10613145b4ee0a25f2d6b8699a81c" >下列关于无向连通图特性的叙述中，正确的是 Ⅰ.所有顶点的度_阿里巴巴笔试题_牛客网 (nowcoder.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>  答案：A </p>
+<p>  1，每条边连接两个顶点，所有顶点的度之和等于边数的2倍，是偶数，正确 </p>
+<p>  2，如两个顶点一条边的图就不满足这个条件，错 </p>
+<p>  3，如三个顶点三条边连成一个三角形的图每个顶点度为2，错 </p>
+</li>
+<li><p>强连通有向图的任何顶点到其他所有顶点都有路径但未必有弧 无向图任意顶点入度&#x3D;出度 有向图不一定</p>
+<p>有向图边集的子集和顶点集的子集无法构成子图</p>
+<p>有向完全图一定是强连通有向图</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/1966baf847db4f66900f0bed40f5f905" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/af3696696d694fc288a5bf639e5342ae?source=relative" >无向图G有23条边，度为4的顶点有5个，度为3的顶点有4个，__牛客网 (nowcoder.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191610747.png" alt="image-20220909194949393"></p>
+<ol>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/questionTerminal/545dbf92b60c4e209fc8e8b4e441bb9a" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/f174c97e626b" >reference1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191610107.png" alt="image-20220909200405207"></p>
+<p>- </p>
+<p>邻接表：只存储实际存在的信息</p>
+<p>邻接矩阵：潜在的边也需要存 但是不用指针的开销</p>
+<p>图的边很多 dense图 密集图 需要选邻接矩阵</p>
+<p>系数图（sparse） 选择邻接表</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/19/06/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="Shortest-Path-Problem"   >
+          <a href="#Shortest-Path-Problem" class="heading-link"><i class="fas fa-link"></i></a><a href="#Shortest-Path-Problem" class="headerlink" title="Shortest Path Problem"></a>Shortest Path Problem</h1>
+      
+        <h2 id="Dijkstra’s-Algorithm"   >
+          <a href="#Dijkstra’s-Algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#Dijkstra’s-Algorithm" class="headerlink" title="Dijkstra’s Algorithm"></a>Dijkstra’s Algorithm</h2>
+      
+        <h3 id="适用范围"   >
+          <a href="#适用范围" class="heading-link"><i class="fas fa-link"></i></a><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h3>
+      <ul>
+<li><p>单源最短路径：求s到图中各顶带你的最短路径</p>
+</li>
+<li><p>relaxation：</p>
+<p>Dijkstra’s and <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.baeldung.com/cs/bellman-ford" >Bellmann Ford’s</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> algorithm use a technique called edge relaxation. This means that during traversing our graph and finding our shortest path, we update the paths we have for already known nodes as soon as we find a shorter path to reach it.</p>
+</li>
+</ul>
+
+        <h4 id="if-weights-of-all-edges-are-the-same"   >
+          <a href="#if-weights-of-all-edges-are-the-same" class="heading-link"><i class="fas fa-link"></i></a><a href="#if-weights-of-all-edges-are-the-same" class="headerlink" title="if weights of all edges are the same"></a>if weights of all edges are the same</h4>
+      <ul>
+<li>Breadth-first search can be used to solve the single-source shortest path problem. Indeed, the tree rooted at s in the BFS tree is the solution</li>
+</ul>
+
+        <h3 id="code"   >
+          <a href="#code" class="heading-link"><i class="fas fa-link"></i></a><a href="#code" class="headerlink" title="code"></a>code</h3>
+      <ul>
+<li><p>&#96;&#96;&#96;<br>int map[1005][1005];<br>int vis[1005],dis[1005];<br>int n,m;&#x2F;&#x2F;n个点，m条边<br>void Init ()<br>{<br>memset(map,Inf,sizeof(map));<br>for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>{<br>    map[i][i]&#x3D;0;<br>}<br>}<br>void Getmap()<br>{<br>int u,v,w;<br>for(int t&#x3D;1;t&lt;&#x3D;m;t++)<br>{<br>      scanf(“%d%d%d”,&amp;u,&amp;v,&amp;w);<br>      if(map[u][v]&gt;w)<br>      {<br>      map[u][v]&#x3D;w;<br>      map[v][u]&#x3D;w;<br>      }<br>}	<br>}<br>void Dijkstra(int u)<br>{<br>memset(vis,0,sizeof(vis));<br>for(int t&#x3D;1;t&lt;&#x3D;n;t++)<br>{<br>    dis[t]&#x3D;map[u][t];<br>}<br>vis[u]&#x3D;1;<br>for(int t&#x3D;1;t&lt;n;t++)<br>{<br>    int minn&#x3D;Inf,temp;<br>    for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>    {<br>        if(!vis[i]&amp;&amp;dis[i]&lt;minn)<br>        {<br>            minn&#x3D;dis[i];<br>            temp&#x3D;i;<br>        }<br>    }<br>    vis[temp]&#x3D;1;<br>    for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>    {<br>        if(map[temp][i]+dis[temp]&lt;dis[i])<br>        {<br>            dis[i]&#x3D;map[temp][i]+dis[temp];<br>        }<br>    }<br>}	<br>}</p>
+<p>int main()<br>{<br>scanf(“%d%d”,&amp;m,&amp;n);<br>Init();<br>Getmap();<br>Dijkstra(n);<br>printf(“%d\n”,dis[1]);	<br>return 0;<br>}</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  [ref](https://blog.csdn.net/lbperfect123/article/details/84281300)</span><br><span class="line"></span><br><span class="line">### 复杂度分析</span><br><span class="line"></span><br><span class="line">- use a brute-force algorithm and spend 𝑂(|𝑉|) to look at all edges 𝑒=(𝑢,𝑣) (𝑢∈𝑆 and 𝑣∈𝑆′) for finding the minimum one, which takes 𝑂(|𝑉|^2) (because each time you are looking at the same edge that are not in the shortest path).</span><br><span class="line">- use a min-heap and spend 𝑂(log|𝑉|)for finding that edge, and achieve 𝑂((|𝑉|+|𝐸|)⋅log|𝑉|) overall running time.</span><br><span class="line"></span><br><span class="line">## Floyd&#x27;s algorithm</span><br><span class="line"></span><br><span class="line">### 适用范围</span><br><span class="line"></span><br><span class="line">- 顶点对之间的最短路径问题：任意顶点对&lt;vi,vj&gt;之间最短路径</span><br><span class="line">- 动态规划 自底向上</span><br><span class="line"></span><br><span class="line">### steps</span><br><span class="line"></span><br><span class="line">- [速通推导](https://www.youtube.com/watch?v=oNI0rf2P9gE)</span><br><span class="line">  - ![image-20221119141335481](https://raw.githubusercontent.com/pinkyrie/pic/main/202211191608177.png)</span><br><span class="line"></span><br><span class="line">- ![image-20221119142345476](https://raw.githubusercontent.com/pinkyrie/pic/main/202211191608587.png)</span><br><span class="line">- Floyd 算法是一个基于「贪心」、「动态规划」求一个图中 **所有点到所有点** 最短路径的算法，时间复杂度 O(n3)</span><br><span class="line">- 从任意节点i到任意节点j的最短路径不外乎2种可能，1是直接从i到j，2是从i经过若干个节点k到j。所以，我们假设Dis(i,j)为节点u到节点v的最短路径的距离，对于每一个节点k，我们检查Dis(i,k) + Dis(k,j) &lt; Dis(i,j)是否成立，如果成立，证明从i到k再到j的路径比i直接到j的路径短，我们便设置Dis(i,j) = Dis(i,k) + Dis(k,j)，这样一来，当我们遍历完所有节点k，Dis(i,j)中记录的便是i到j的最短路径的距离。![image-20221119135257709](https://raw.githubusercontent.com/pinkyrie/pic/main/202211191608516.png)</span><br><span class="line"></span><br><span class="line">### code</span><br><span class="line"></span><br><span class="line">- ![image-20221119143235934](https://raw.githubusercontent.com/pinkyrie/pic/main/202211191608786.png)</span><br><span class="line"></span><br></pre></td></tr></table></div></figure></li>
+</ul>
+<p>for(int k&#x3D;0;k&lt;n;k++){<br>    for(int i&#x3D;0;i&lt;n;i++){<br>        for(int j&#x3D;0;j&lt;n;j++){<br>            A[i,j] &#x3D; min{A[i,j],A[i,k]+A[k,j]}; &#x2F;&#x2F;内层的两次for循环是对上一个k-1矩阵进行整个矩阵的更新 因此最外层共有k次据则矩阵的更新<br>        }<br>    }<br>}</p>
+<p>&#96;&#96;&#96;</p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609458.png" alt="image-20221119141125140"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609098.png" alt="image-20221119141229306"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191609529.png" alt="image-20221119142814197"></p>
+
+        <h3 id="复杂度分析"   >
+          <a href="#复杂度分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
+      <ul>
+<li>Time Complexity: O(V3) where V is the number of vertices</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/16/13/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="hash"   >
+          <a href="#hash" class="heading-link"><i class="fas fa-link"></i></a><a href="#hash" class="headerlink" title="hash"></a>hash</h2>
+      <ul>
+<li>A hash function maps key values to positions.</li>
+</ul>
+
+        <h3 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
+      <ul>
+<li>Load factor lambda λ&#x3D; (number of keys &#x2F; Table Size)</li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323021.png" alt="image-20221113220132476"></li>
+</ul>
+
+        <h3 id="构造方法"   >
+          <a href="#构造方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3>
+      
+        <h4 id="folding"   >
+          <a href="#folding" class="heading-link"><i class="fas fa-link"></i></a><a href="#folding" class="headerlink" title="folding"></a>folding</h4>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323599.png" alt="image-20221113223514997"></li>
+</ul>
+
+        <h2 id="开放定址法（不使用链表-也叫闭散列法）"   >
+          <a href="#开放定址法（不使用链表-也叫闭散列法）" class="heading-link"><i class="fas fa-link"></i></a><a href="#开放定址法（不使用链表-也叫闭散列法）" class="headerlink" title="开放定址法（不使用链表 也叫闭散列法）"></a>开放定址法（不使用链表 也叫闭散列法）</h2>
+      <ul>
+<li>包括</li>
+<li>线性探查法</li>
+<li>二次探查法</li>
+<li>伪随机探查法</li>
+<li>二次散列法</li>
+</ul>
+
+        <h2 id="linear-probing"   >
+          <a href="#linear-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#linear-probing" class="headerlink" title="linear probing"></a>linear probing</h2>
+      
+        <h3 id="unsuccessful-ASL"   >
+          <a href="#unsuccessful-ASL" class="heading-link"><i class="fas fa-link"></i></a><a href="#unsuccessful-ASL" class="headerlink" title="unsuccessful ASL"></a>unsuccessful ASL</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323273.png" alt="image-20221027112336074"></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/calculate23/article/details/100577469" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h3 id="primary-clustering"   >
+          <a href="#primary-clustering" class="heading-link"><i class="fas fa-link"></i></a><a href="#primary-clustering" class="headerlink" title="primary clustering"></a>primary clustering</h3>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>In computer programming, primary clustering is one of two major failure modes of open addressing based hash tables, especially those using linear probing. It occurs after a hash collision causes two of the records in the hash table to hash to the same position, and causes one of the records to be moved to the next location in its probe sequence. Once this happens, the cluster formed by this pair of records is more likely to grow by the addition of even more colliding records, regardless of whether the new records hash to the same location as the first two. This phenomenon causes searches for keys within the cluster to be longer.[1]</p>
+<p>For instance, in linear probing, a record involved in a collision is always moved to the next available hash table cell subsequent to the position given by its hash function, creating a contiguous cluster of occupied hash table cells. Whenever another record is hashed to anywhere within the cluster, it grows in size by one cell. Because of this phenomenon, it is likely that a linear-probing hash table with a constant load factor (that is, with the size of the table proportional to the </p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Primary_clustering" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h2 id="quadratic-probing"   >
+          <a href="#quadratic-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#quadratic-probing" class="headerlink" title="quadratic probing"></a>quadratic probing</h2>
+      <ul>
+<li>插入新元素：查找一次插入不成功 则i++ 而且要从最初的插入点开始+i^2 而不是上一次的插入点</li>
+<li>解决了一次聚集</li>
+<li>产生二次聚集</li>
+</ul>
+<p>奇怪的理论：</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">If the table size is prime and load factor is not larger than 0.5, all probes will be to different locations and an item can always be inserted.</span><br><span class="line">==</span><br><span class="line">If quadratic probing is used, and the table size is prime, then a new element can always be inserted if the table is at least half empty.</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="伪随机探查法"   >
+          <a href="#伪随机探查法" class="heading-link"><i class="fas fa-link"></i></a><a href="#伪随机探查法" class="headerlink" title="伪随机探查法"></a>伪随机探查法</h2>
+      <ul>
+<li>解决二次聚集</li>
+<li>但是</li>
+</ul>
+
+        <h2 id="double-hashing"   >
+          <a href="#double-hashing" class="heading-link"><i class="fas fa-link"></i></a><a href="#double-hashing" class="headerlink" title="double hashing"></a>double hashing</h2>
+      <ul>
+<li>Techniques that eliminate secondary clustering are available. The most popular is <strong>double hashing.</strong></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/double-hashing/" >Double Hashing - GeeksforGeeks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h2 id="链接法-x2F-开散列法-x2F-拉链法"   >
+          <a href="#链接法-x2F-开散列法-x2F-拉链法" class="heading-link"><i class="fas fa-link"></i></a><a href="#链接法-x2F-开散列法-x2F-拉链法" class="headerlink" title="链接法&#x2F;开散列法&#x2F;拉链法"></a>链接法&#x2F;开散列法&#x2F;拉链法</h2>
+      <ul>
+<li>不会出现冲突的聚集情况</li>
+<li>如果散列表储存在内存中 链接法容易实现</li>
+<li>如果散列表再磁盘中 一个同义词的链表可能存储在不同的磁盘块 导致查询一个特定记录时多次访问磁盘 增加查找时间</li>
+<li></li>
+</ul>
+
+        <h2 id="桶定址法"   >
+          <a href="#桶定址法" class="heading-link"><i class="fas fa-link"></i></a><a href="#桶定址法" class="headerlink" title="桶定址法"></a>桶定址法</h2>
+      <ul>
+<li>每个槽位不一定放一个元素 可以放多个（类似于拉链）</li>
+<li>但是一个槽位满了就线性探查（或开放寻址）</li>
+<li>会有冲突聚集</li>
+</ul>
+<p>装填因子决定平均查找长度（不是存储的记录个数或散列长度）</p>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">bool</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">search</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span> &amp;&amp; (*ht)[pos].key != k) &#123;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((*ht)[pos].used == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">void</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">remove</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">eq</span>((*ht)[pos].key, k)) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((*ht)[pos].used == <span class="number">1</span>) &#123;</span><br><span class="line">        (*ht)[pos] = <span class="built_in">Entry</span>();</span><br><span class="line">        entries--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;No element found in set&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">void</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">insert</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    Entry item&#123; k,<span class="number">1</span> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/*   if (entries != 0 &amp;&amp; entries &gt; prime_list[prime] * load_factor) &#123;</span></span><br><span class="line"><span class="comment">        resize();</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">load_factor</span>() &gt; <span class="number">0.75</span>) &#123;</span><br><span class="line">        <span class="built_in">resize</span>(); <span class="comment">// emmm</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span> &amp;&amp; !<span class="built_in">eq</span>((*ht)[pos].key,k)) &#123;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    (*ht)[pos] = item;</span><br><span class="line">    entries++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">int</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">resize</span>() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (prime == num_primes - <span class="number">1</span>) &#123;</span><br><span class="line">        cerr &lt;&lt; <span class="string">&quot;maximal table size reached, aborting ... &quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mm = prime_list[prime];</span><br><span class="line">    prime++;</span><br><span class="line">    <span class="type">int</span> m = prime_list[prime];</span><br><span class="line">    vector&lt;Entry&gt;* ptr = <span class="keyword">new</span> <span class="built_in">vector</span>&lt;Entry&gt;(m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mm; ++i) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ((*ht)[i].used == <span class="number">1</span>) &#123;</span><br><span class="line">            key_type kk = (*ht)[i].key;</span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> p = <span class="built_in">hf</span>(kk) % m; <span class="comment">//Ê¹ÓÃhash_func</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (p &lt; m &amp;&amp; (*ptr)[p].used == <span class="number">1</span>) &#123;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (p == m) &#123;</span><br><span class="line">                p = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> ((*ptr)[p].used == <span class="number">1</span>) &#123;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            (*ptr)[p].key = kk;</span><br><span class="line">            (*ptr)[p].used = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> ht;</span><br><span class="line">    ht = ptr;</span><br><span class="line">    <span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/16/12/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="sequential-search"   >
+          <a href="#sequential-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#sequential-search" class="headerlink" title="sequential search"></a>sequential search</h2>
+      <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png" alt="image-20221119221445097"></p>
+
+        <h2 id="binary-search"   >
+          <a href="#binary-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search" class="headerlink" title="binary search"></a>binary search</h2>
+      
+        <h3 id="binary-search-tree（区分我们要学的判定树）"   >
+          <a href="#binary-search-tree（区分我们要学的判定树）" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search-tree（区分我们要学的判定树）" class="headerlink" title="binary search tree（区分我们要学的判定树）"></a>binary search tree（区分我们要学的判定树）</h3>
+      <ul>
+<li><p>[树的高度](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" >Self-balancing binary search tree - Wikipedia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>)</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png" alt="image-20221114205329151"></p>
+</li>
+<li><p>Binary Search Tree is a node-based binary tree data structure which has the following properties:</p>
+<p>The left subtree of a node contains only nodes with keys lesser than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>The left and right subtree each must also be a binary search tree.</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BST.html" >构建过程的动画</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="折半查找判定树"   >
+          <a href="#折半查找判定树" class="heading-link"><i class="fas fa-link"></i></a><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h3>
+      <ul>
+<li><img src="/pinkyrie/assets/image-20221119222033400.png" alt="image-20221119222033400"></li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zipeilu/p/14626027.html" >计算ASL</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218737.png" alt="image-20221119221824327"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218415.png" alt="image-20221119221854558"></p>
+</li>
+</ul>
+
+        <h2 id="B-tree-x2F-多分树"   >
+          <a href="#B-tree-x2F-多分树" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree-x2F-多分树" class="headerlink" title="B-tree&#x2F;多分树"></a>B-tree&#x2F;多分树</h2>
+      
+        <h3 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
+      <ul>
+<li><p>balanced search tree</p>
+</li>
+<li><p>用途：disks or other direct access secondary storage devices (和红黑树相似 但是better at minimizing disk I&#x2F;O operations)</p>
+<p>many database systems use B-trees or B树的变种 store information</p>
+</li>
+<li><p>如果一个node x有 n 个keys 那么 node x有n+1个children</p>
+</li>
+<li><p>the keys in node x serve as dividing points separating the range of keys handled by x into x.n+1 subranges, each handled by one child of x</p>
+</li>
+<li><p>树的高度是随着结点个数logarithmatically grow</p>
+</li>
+</ul>
+
+        <h3 id="特征"   >
+          <a href="#特征" class="heading-link"><i class="fas fa-link"></i></a><a href="#特征" class="headerlink" title="特征"></a>特征</h3>
+      <ul>
+<li>所有叶子结点出现在同一层</li>
+<li>m阶的B树每个结点至多有m棵子树（All non-leaf nodes (except the root) have at most m and at least m&#x2F;2 children.）</li>
+<li>key的个数比该结点的孩子个数少1（隔板比分割区域少1）</li>
+<li>根结点至少有两棵子树</li>
+</ul>
+
+        <h3 id="基本信息"   >
+          <a href="#基本信息" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3>
+      
+        <h4 id="order-vs-degree"   >
+          <a href="#order-vs-degree" class="heading-link"><i class="fas fa-link"></i></a><a href="#order-vs-degree" class="headerlink" title="order vs degree"></a>order vs degree</h4>
+      <p>Degree represents the lower bound on the number of children. i.e the minimum number possible. Whereas the Order represents the upper bound on the number of children.</p>
+<ul>
+<li><p>minimum degree: </p>
+<ul>
+<li><p>Nodes have lower and upper bounds on the number of keys they can contain. We express these bounds in terms of a fixed integer t &gt;&#x3D;2 called the <strong>minimum degree</strong> of the B-tree:</p>
+<p>a. Every node other than the root must have at least t -1 keys. Every internal node other than the root thus has at least t children. If the tree is nonempty, the root must have at least one key.</p>
+<p>b. Every node may contain at most 2t-1 keys. Therefore, an internal node may have at most 2t children. We say that a node is <strong>full</strong> if it contains exactly 2t -1 keys.</p>
+</li>
+</ul>
+</li>
+<li><p>t度的B树就是2t阶的B树 (这也是B树的分裂机制决定的)</p>
+<p>因为t度的B树节点最多有2t个孩子，2t-1个关键字；m阶的B树最多有m个孩子，其实通过度定义的B树和通过阶数定义的B树，区别就是一个是用的这个B树节点的最小度数一个是用的这个树节点的最大度数。</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.quora.com/Why-is-the-maximum-number-of-keys-in-a-B-tree-equal-to-2-t-1-where-t-is-the-minimum-degree" >reference: 为什么是2t-1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>[pointer,key,pointer,key,pointer]: pointer的个数就是degree 所以至少有t-1个key 如果最多的话 就是 2t-1（全都是key）</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png" alt="image-20221115203019698"></p>
+<ul>
+<li>为什么b-tree优于红黑树？</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png" alt="image-20221115203845142"></p>
+<ul>
+<li><p>注意h是base t的log函数 我们通过调整t可以使得h的增长变得很慢 从而提高了访问效率</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png" alt="image-20221115203945028"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png" alt="image-20221022120147376" style="zoom:50%;" /></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png" alt="image-20221022120405193"></li>
+</ul>
+</li>
+<li><p>order</p>
+</li>
+</ul>
+<p>一棵m阶的B树满足下列条件：</p>
+<p>1.树中每个结点至多有m个孩子。</p>
+<p>2.除根结点和叶子结点外，其它每个结点至少有m&#x2F;2个孩子。</p>
+<p>3.根结点至少有2个孩子（如果B树只有一个结点除外）,这条性质是由B树的插入分裂策略决定的。</p>
+<p>4.所有叶结点在同一层，B树的叶结点可以看成一种外部节点，不包含任何信息。</p>
+<p>4.有k个关键字(关键字按递增次序排列)的非叶结点恰好有k+1个孩子。</p>
+<p>5.一个节点如果由n个关键字，则节点内数据结构为P0，K1，P1，K2，P2………Pn-1 Kn Pn 其中 p为指向其子节点的指针，因为父子的大小 关系和节点内大小关系，满足Kj 大于Pj指针所指向的子树上的所有关键字小雨Pj+1指针所指向子树上的所有关键字</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png" alt="image-20221021112043966"></li>
+</ul>
+
+        <h3 id="opeartion-search-x2F-insert"   >
+          <a href="#opeartion-search-x2F-insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#opeartion-search-x2F-insert" class="headerlink" title="opeartion search&#x2F;insert"></a>opeartion search&#x2F;insert</h3>
+      <ul>
+<li>The procedures we present are all “one-pass” algorithms that proceed downward from the root of the tree, without having to back up.</li>
+</ul>
+
+        <h4 id="insert"   >
+          <a href="#insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#insert" class="headerlink" title="insert"></a>insert</h4>
+      <ul>
+<li><p>non-split insert</p>
+</li>
+<li><p>split insert</p>
+<ul>
+<li>普通split</li>
+<li>root也满了需要h+1的split</li>
+</ul>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png" alt="image-20221115205201747"></p>
+</li>
+</ul>
+
+        <h4 id="delete"   >
+          <a href="#delete" class="heading-link"><i class="fas fa-link"></i></a><a href="#delete" class="headerlink" title="delete"></a>delete</h4>
+      <ul>
+<li>Delete one record from a leaf node with two records.</li>
+<li>Delete one record from a leaf node with one record. <ul>
+<li>Borrow a record from a brother，modify the record of parent node. </li>
+<li>Brother node does not have enough record，merge two nodes by deleting empty leaf and moving 21 down.</li>
+<li>Brother node does not have enough record，merge two nodes by deleting the empty leaf and moving 12 down. Modify the parent nodes based on the similar process.</li>
+<li>Brother node does not have enough record，merge two nodes，modify parent node. This may reduce the height of the tree.</li>
+</ul>
+</li>
+<li>Delete a record from internal node. The least key Y of right subtree replace the deleted key. Y must be in a leaf node. Then delete it.</li>
+</ul>
+
+        <h3 id="拓展：磁盘读取"   >
+          <a href="#拓展：磁盘读取" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展：磁盘读取" class="headerlink" title="拓展：磁盘读取"></a>拓展：磁盘读取</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tech.meituan.com/2017/05/19/about-desk-io.html" >re1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li>main memory vs secondary storage(disks)</li>
+<li>增加磁盘platter(硬盘盘片)只是增加disk drive’s capacity not its performance</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://medium.com/@andrewjmarkham1/disk-storage-data-indexing-and-a-use-case-for-b-trees-608ff56bffdd" >re2</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>数据库应用b-tree metadata 即寻找data 的index是利用b tree储存索引查找</p>
+</li>
+<li><p>the running time of a B-tree algorithm depends primarily on the number of DISK-READ and DISK-WRITE operations it performs, we typically want each of these operations to read or write as much information aspossible. Thus, a B-tree node is usually <strong>as large as a whole disk page</strong>, and this size limits the number of children a B-tree node can have.</p>
+</li>
+<li><p>branching factor指的是这个结点下有多少个孩子 则factor<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%94%AF%E5%9B%A0%E5%AD%90" >就是几</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="exercise"   >
+          <a href="#exercise" class="heading-link"><i class="fas fa-link"></i></a><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png" alt="image-20221115204159554"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png" alt="image-20221115204217841"></li>
+</ul>
+
+        <h2 id="2-3树"   >
+          <a href="#2-3树" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h2>
+      <ul>
+<li>平衡树：任意节点的子树的高度差都小于等于1 2-3树的叶子结点都在同一层因此是平衡树</li>
+<li>Comparison times are not larger than the height of 2-3 tree.</li>
+</ul>
+
+        <h2 id="B-tree"   >
+          <a href="#B-tree" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree" class="headerlink" title="B+ tree"></a>B+ tree</h2>
+      <ul>
+<li><strong>B+ -tree</strong>, stores all the satellite information in the leaves and stores only keys and child pointers in the internal nodes, thus maximizing the branching factor of the internal nodes.</li>
+<li>Special cases: <ul>
+<li>If the root is not a leaf, it has at least 2 children.</li>
+<li>If the root is a leaf (that is, there are no other nodes in the tree), it can have between 0 and (n–1) values.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pinkyrie/assets/image-20221119221136727.png" alt="image-20221119221136727"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/11/15/15/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="评价算法标准"   >
+          <a href="#评价算法标准" class="heading-link"><i class="fas fa-link"></i></a><a href="#评价算法标准" class="headerlink" title="评价算法标准"></a>评价算法标准</h2>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43721542/article/details/106001300" >stability</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>时间（最好 最坏 平均）</p>
+<ul>
+<li>关键字比较次数</li>
+<li>数据移动次数</li>
+</ul>
+</li>
+<li><p>空间（最好 最坏 平均）</p>
+</li>
+</ul>
+
+        <h3 id="排序分为comparison-sorting-和-counting-sorting"   >
+          <a href="#排序分为comparison-sorting-和-counting-sorting" class="heading-link"><i class="fas fa-link"></i></a><a href="#排序分为comparison-sorting-和-counting-sorting" class="headerlink" title="排序分为comparison sorting 和 counting sorting"></a>排序分为comparison sorting 和 counting sorting</h3>
+      <ul>
+<li>In <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Computer_science" >computer science</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>, <strong>counting sort</strong> is an <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Algorithm" >algorithm</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sorting_algorithm" >sorting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> a collection of objects according to keys that are small positive <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Integer" >integers</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>; that is, it is an <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Integer_sorting" >integer sorting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> algorithm. It operates by counting the number of objects that possess distinct key values, and applying prefix sum on those counts to determine the positions of each key value in the output sequence. Like other algorithms this sorting algorithm is not a comparison-based algorithm, it hashes the value in a temporary count array and uses them for sorting.</li>
+</ul>
+
+        <h3 id="排序分为internal-和-external"   >
+          <a href="#排序分为internal-和-external" class="heading-link"><i class="fas fa-link"></i></a><a href="#排序分为internal-和-external" class="headerlink" title="排序分为internal 和 external"></a>排序分为internal 和 external</h3>
+      
+        <h2 id="insertion-sorting"   >
+          <a href="#insertion-sorting" class="heading-link"><i class="fas fa-link"></i></a><a href="#insertion-sorting" class="headerlink" title="insertion sorting"></a>insertion sorting</h2>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309217.png" alt="image-20221113163100785"></li>
+</ul>
+
+        <h3 id="basics："   >
+          <a href="#basics：" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics：" class="headerlink" title="basics："></a>basics：</h3>
+      <ul>
+<li><p>for small inputs</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/insertion-sort.html" >图演示</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="pseudo-code"   >
+          <a href="#pseudo-code" class="heading-link"><i class="fas fa-link"></i></a><a href="#pseudo-code" class="headerlink" title="pseudo code"></a>pseudo code</h3>
+      <ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309187.png" alt="image-20221113163648161"></li>
+</ul>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mark the first element as sorted</span><br><span class="line">for each unsorted element x</span><br><span class="line">extract x </span><br><span class="line">for j = lastSortedIndex down to 0</span><br><span class="line">if current element j &gt; x</span><br><span class="line">move sorted element to the right by 1</span><br><span class="line">break the loop and insert x here</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="C-code"   >
+          <a href="#C-code" class="heading-link"><i class="fas fa-link"></i></a><a href="#C-code" class="headerlink" title="C++code"></a>C++code</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Insertion_Sort</span><span class="params">(ElementType A[], <span class="type">int</span> N)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="type">int</span> tmp = A[i]; <span class="comment">//+1</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i<span class="number">-1</span>;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">			<span class="keyword">if</span>(A[j]&gt;A[i])&#123;</span><br><span class="line">				A[i]=A[j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				A[j] = tmp; <span class="comment">//+1 解释了为什么是+2</span></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insertionSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="type">int</span> i, key, j;</span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">   &#123;</span><br><span class="line">       key = arr[i];</span><br><span class="line">       j = i<span class="number">-1</span>;</span><br><span class="line">       <span class="comment">/* Move elements of arr[0..i-1], that are</span></span><br><span class="line"><span class="comment">          greater than key, to one position ahead</span></span><br><span class="line"><span class="comment">          of their current position */</span></span><br><span class="line">       <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; key)</span><br><span class="line">       &#123;</span><br><span class="line">           arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">           j = j<span class="number">-1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       arr[j+<span class="number">1</span>] = key;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309028.png" alt="image-20221113170531829"></li>
+</ul>
+
+        <h3 id="复杂度"   >
+          <a href="#复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3>
+      
+        <h4 id="时间复杂度："   >
+          <a href="#时间复杂度：" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度：" class="headerlink" title="时间复杂度："></a>时间复杂度：</h4>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://cs.stackexchange.com/questions/21455/how-can-i-quantify-the-number-of-swaps-required-for-insertion-sort" >交换次数取决于逆序对的个数</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/time-complexity-insertion-sort-inversions/#:~:text=Therefore%20overall%20time%20complexity%20of,is%20sorted%20in%20reverse%20order." >详细解释时间复杂度与逆序对</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>If we take a closer look at the insertion sort code, we can notice that every iteration of while loop reduces one inversion. The while loop executes only if i &gt; j and arr[i] &lt; arr[j]. Therefore total number of while loop iterations (For all values of i) is same as number of inversions. Therefore overall time complexity of the insertion sort is O(n + f(n)) where f(n) is inversion count. If the inversion count is O(n), then the time complexity of insertion sort is O(n). In worst case, there can be n*(n-1)&#x2F;2 inversions. The worst case occurs when the array is sorted in reverse order. So the worst case time complexity of insertion sort is O(n2).</p>
+<ul>
+<li>第p趟插入<ul>
+<li>最好：比较1次 <strong>移动两次</strong>（腾位置+插入新数）也就是两处+1</li>
+<li>最坏：比较p次 移动<strong>p+2</strong>次 while loop里面会进行p次的移动 + 2</li>
+</ul>
+</li>
+</ul>
+<p>O(N^2)  最优情况下： O(N)  </p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191943514.png" alt="image-20221119194308341"></p>
+
+        <h4 id="空间复杂度："   >
+          <a href="#空间复杂度：" class="heading-link"><i class="fas fa-link"></i></a><a href="#空间复杂度：" class="headerlink" title="空间复杂度："></a>空间复杂度：</h4>
+      <p>O(1)原地排序（in place）</p>
+
+        <h2 id="shell-sort（改进直接插入排序-优化insertion-sort）"   >
+          <a href="#shell-sort（改进直接插入排序-优化insertion-sort）" class="heading-link"><i class="fas fa-link"></i></a><a href="#shell-sort（改进直接插入排序-优化insertion-sort）" class="headerlink" title="shell sort（改进直接插入排序 优化insertion sort）"></a>shell sort（改进直接插入排序 优化insertion sort）</h2>
+      <ul>
+<li><p>希尔排序，也称递减增量排序算法Shellsort is also known as diminishing increment sort.</p>
+</li>
+<li><p>增量：gap 该子数列相邻元素的下标差</p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Shellsort" >reference wiki</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309764.png" alt="image-20221113214131923"></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://algostructure.com/sorting/shellsort.php" >Shell Sort Algorithm Animation - algostructure.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309924.png" alt="image-20221113215111601"></p>
+</li>
+</ul>
+
+        <h3 id="特别：折半插入"   >
+          <a href="#特别：折半插入" class="heading-link"><i class="fas fa-link"></i></a><a href="#特别：折半插入" class="headerlink" title="特别：折半插入"></a>特别：折半插入</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34914588" >折半插入的增量</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><ul>
+<li>增量：</li>
+<li>增量取法 每次N&#x2F;2 &#x2F;2 &#x2F;2 &#x2F;2（折半）</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="c-code"   >
+          <a href="#c-code" class="heading-link"><i class="fas fa-link"></i></a><a href="#c-code" class="headerlink" title="c++code"></a>c++code</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Shell_Sort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="comment">// Start with a big gap, then reduce the gap</span></span><br><span class="line"> <span class="keyword">for</span> (<span class="type">int</span> gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) &#123;</span><br><span class="line">  <span class="comment">// Do a gapped insertion sort for this gap size.</span></span><br><span class="line">  <span class="comment">// The first gap elements arr[0..gap-1] are already in gapped order</span></span><br><span class="line">  <span class="comment">// keep adding one more element until the entire array is</span></span><br><span class="line">  <span class="comment">// gap sorted</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = gap; i &lt; n; i += <span class="number">1</span>) &#123;</span><br><span class="line">   <span class="comment">// add arr[i] to the elements that have been gap sorted</span></span><br><span class="line">   <span class="comment">// save arr[i] in temp and make a hole at position i</span></span><br><span class="line">   <span class="type">int</span> temp = arr[i];</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// shift earlier gap-sorted elements up until the correct</span></span><br><span class="line">   <span class="comment">// location for arr[i] is found</span></span><br><span class="line">   <span class="type">int</span> j;</span><br><span class="line">   <span class="keyword">for</span> (j = i; j &gt;= gap &amp;&amp; arr[j - gap] &gt; temp; j -= gap)</span><br><span class="line">    arr[j] = arr[j - gap];</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// put temp (the original arr[i]) in its correct location</span></span><br><span class="line">   arr[j] = temp;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="复杂度-1"   >
+          <a href="#复杂度-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h3>
+      
+        <h4 id="时间复杂度"   >
+          <a href="#时间复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4>
+      <ul>
+<li><p><strong>Best Case Complexity</strong><br>When the given array list is already sorted the total count of comparisons of each interval is equal to the size of the given array.<br><em>So best case complexity is Ω(n log(n))</em><br><strong>Average Case Complexity</strong></p>
+<p>The shell sort Average Case Complexity depends on the interval selected by the programmer.<br><em>θ(n log(n)2)</em>.</p>
+<p><em>THE Average Case Complexity: O(n*log n)~O(n1.25)</em></p>
+</li>
+</ul>
+
+        <h4 id="空间复杂度"   >
+          <a href="#空间复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h4>
+      <ul>
+<li>O(1)</li>
+</ul>
+
+        <h2 id="bubble-sorting"   >
+          <a href="#bubble-sorting" class="heading-link"><i class="fas fa-link"></i></a><a href="#bubble-sorting" class="headerlink" title="bubble sorting"></a>bubble sorting</h2>
+      <ul>
+<li>适用于链表和数组（因为只按照一个方向进行sort和比较）<ul>
+<li>有的算法不一定适用于链表结构</li>
+</ul>
+</li>
+<li>稳定算法</li>
+<li>效率和排序序列的初始顺序有关</li>
+</ul>
+
+        <h3 id="pseudo-code-1"   >
+          <a href="#pseudo-code-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#pseudo-code-1" class="headerlink" title="pseudo code"></a>pseudo code</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/648d87dc4cfc" >加入swapped优化 如果上一次遍历没有交换则已经有序</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Bubble_sort(list):                         // list 表示待排序序列</span><br><span class="line">    for i &lt;- 0 to length(list)-1:          // 对于元素个数为 n 的 list 序列，需遍历 n-1 次，这里用 [0,length(list)-1) 表示。</span><br><span class="line">        for j &lt;- 1 to length(list) - i:    // 从第 1 个元素开始遍历，遍历区间为 [1,length(list)-i)。</span><br><span class="line">            if list[j] &gt; list[j+1]:        // 若进行降序排序，则改成 &lt; 小于号</span><br><span class="line">                 swap(list[j] , list[j+1]) // 交换 2 个相邻元素的位置</span><br><span class="line">    return list                            // 返回排好序的序列</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="c-code-1"   >
+          <a href="#c-code-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#c-code-1" class="headerlink" title="c++ code"></a>c++ code</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Bubble_Sort</span><span class="params">(ElementType A[], <span class="type">int</span> N)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j =<span class="number">1</span>;j&lt;N-i;j++)&#123; <span class="comment">//经过第i趟冒泡 有i个元素已经排好（在队尾）是最大的元素</span></span><br><span class="line">			<span class="keyword">if</span>(A[j]&lt;A[j<span class="number">-1</span>])&#123;</span><br><span class="line">				<span class="built_in">swap</span>(A[j],A[j<span class="number">-1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>优化版本：</p>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Bubble_Sort</span><span class="params">(ElementType A[], <span class="type">int</span> N)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j =<span class="number">1</span>;j&lt;N-i;j++)&#123; <span class="comment">//经过第i趟冒泡 有i个元素已经排好（在队尾）是最大的元素</span></span><br><span class="line">			<span class="keyword">if</span>(A[j]&lt;A[j<span class="number">-1</span>])&#123;</span><br><span class="line">				<span class="built_in">swap</span>(A[j],A[j<span class="number">-1</span>]);</span><br><span class="line">				flag = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(flag==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="复杂度-2"   >
+          <a href="#复杂度-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度-2" class="headerlink" title="复杂度"></a>复杂度</h3>
+      
+        <h4 id="稳定性"   >
+          <a href="#稳定性" class="heading-link"><i class="fas fa-link"></i></a><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h4>
+      <ul>
+<li>因为每次比较后如果两个相邻元素相等我们并不会将他们交换，所以冒泡不会改变相同元素的下标，所以冒泡排序是一个稳定的排序</li>
+</ul>
+
+        <h4 id="时间复杂度-1"   >
+          <a href="#时间复杂度-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4>
+      <ul>
+<li><p>最好情况下的时间复杂度：如果元素本来就是有序的，那么一趟冒泡排序既可以完成排序工作 因此最好情况的时间复杂度为O(n)</p>
+<p>比较次数：n-1</p>
+<p>移动次数：0</p>
+</li>
+<li><p>最差情况的时间复杂度：如果数据元素本来就是逆序的 最坏情况子下的时间复杂度为O(n^2)。</p>
+<p>比较次数：n(n-1)&#x2F;2</p>
+<p>移动次数：3n(n-1)&#x2F;2</p>
+</li>
+<li><p>平均时间复杂度：O(n^2)</p>
+</li>
+</ul>
+
+        <h4 id="空间复杂度-1"   >
+          <a href="#空间复杂度-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#空间复杂度-1" class="headerlink" title="空间复杂度"></a>空间复杂度</h4>
+      <ul>
+<li>O(1)</li>
+</ul>
+
+        <h2 id="selection-sort"   >
+          <a href="#selection-sort" class="heading-link"><i class="fas fa-link"></i></a><a href="#selection-sort" class="headerlink" title="selection sort"></a>selection sort</h2>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zh.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/selection-sort-pseudocode#:~:text=%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E4%BC%AA%E4%BB%A3%E7%A0%81%201%20%E6%89%BE%E5%88%B0%E6%9C%80%E5%B0%8F%E7%9A%84%E5%8D%A1%E7%89%87%E3%80%82%20%E7%94%A8%E7%AC%AC%E4%B8%80%E5%BC%A0%E5%8D%A1%E4%BA%A4%E6%8D%A2%E5%AE%83%E3%80%82%202%20%E6%89%BE%E5%88%B0%E7%AC%AC%E4%BA%8C%E5%B0%8F%E7%9A%84%E5%8D%A1%E3%80%82,%E7%94%A8%E7%AC%AC%E4%BA%8C%E5%BC%A0%E5%8D%A1%E4%BA%A4%E6%8D%A2%E5%AE%83%E3%80%82%203%20%E6%89%BE%E5%88%B0%E7%AC%AC%E4%B8%89%E5%B0%8F%E7%9A%84%E5%8D%A1%E3%80%82%20%E7%94%A8%E7%AC%AC%E4%B8%89%E5%BC%A0%E5%8D%A1%E4%BA%A4%E6%8D%A2%E5%AE%83%E3%80%82%204%20%E9%87%8D%E5%A4%8D%E6%9F%A5%E6%89%BE%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9C%80%E5%B0%8F%E7%9A%84%E5%8D%A1%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E4%BA%A4%E6%8D%A2%E5%88%B0%E6%AD%A3%E7%A1%AE%E7%9A%84%E4%BD%8D%E7%BD%AE%EF%BC%8C%E7%9B%B4%E5%88%B0%E5%AE%8C%E6%88%90%E5%AF%B9%E9%98%B5%E5%88%97%E7%9A%84%E6%8E%92%E5%BA%8F%E3%80%82" >演示</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>类似bubble sort 优点是 交换次数只有n-1 </li>
+<li>缺陷：没有利用前一趟比较遍历获取的信息</li>
+</ul>
+
+        <h3 id="c-code-2"   >
+          <a href="#c-code-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#c-code-2" class="headerlink" title="c++ code"></a>c++ code</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Selection_Sort</span><span class="params">(ElementType A[], <span class="type">int</span> N)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;N<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		<span class="type">int</span> k = i<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;N;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(A[j]&gt;A[i])&#123;</span><br><span class="line">				k=j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(k!=i<span class="number">-1</span>)</span><br><span class="line">		<span class="built_in">swap</span>(A[k],A[i<span class="number">-1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">selectionSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i, j, min_idx;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// One by one move boundary of</span></span><br><span class="line">    <span class="comment">// unsorted subarray</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">       </span><br><span class="line">        <span class="comment">// Find the minimum element in</span></span><br><span class="line">        <span class="comment">// unsorted array</span></span><br><span class="line">        min_idx = i;</span><br><span class="line">        <span class="keyword">for</span> (j = i+<span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">        <span class="keyword">if</span> (arr[j] &lt; arr[min_idx])</span><br><span class="line">            min_idx = j;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Swap the found minimum element</span></span><br><span class="line">        <span class="comment">// with the first element</span></span><br><span class="line">        <span class="keyword">if</span>(min_idx!=i)</span><br><span class="line">            <span class="built_in">swap</span>(&amp;arr[min_idx], &amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="复杂度-3"   >
+          <a href="#复杂度-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#复杂度-3" class="headerlink" title="复杂度"></a>复杂度</h3>
+      
+        <h4 id="稳定性-1"   >
+          <a href="#稳定性-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#稳定性-1" class="headerlink" title="稳定性"></a>稳定性</h4>
+      <ul>
+<li>不稳定算法（存在非相邻元素的交换）</li>
+</ul>
+
+        <h4 id="时间复杂度-2"   >
+          <a href="#时间复杂度-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#时间复杂度-2" class="headerlink" title="时间复杂度"></a>时间复杂度</h4>
+      <ul>
+<li><p>选择排序的复杂度分析。第一次内循环比较N - 1次，然后是N-2次，N-3次，……，最后一次内循环比较1次。<br>共比较的次数是 <code>(N - 1) + (N - 2) + ... + 1</code>，求等差数列和，得 <code>(N - 1 + 1)* N / 2 = N^2 / 2</code>。<br>舍去最高项系数，其时间复杂度为 <code>O(N^2)</code>。</p>
+<p>虽然选择排序和冒泡排序的时间复杂度一样，但实际上，选择排序进行的交换操作很少，最多会发生 N - 1次交换。</p>
+</li>
+<li><p>运行时间和输入无关</p>
+</li>
+<li><p>选择排序的交换操作介于0和(n-1)次之间。选择排序的比较操作为n(n-1)&#x2F;2次之间。选择排序的赋值操作介于0和3(n-1)次之间。</p>
+<p>比较次数O(n^2)，比较次数与关键字的初始状态无关，总的比较次数N &#x3D; (n-1) + (n-2) +…+ 1 &#x3D; n x (n-1)&#x2F;2。交换次数O(n)，最好情况是，已经有序，交换0次；最坏情况是，逆序，交换n-1次。</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211191945893.png" alt="image-20221119194542763"></p>
+
+        <h2 id="heap-sort（优化selection-sort-快速找到最小元）"   >
+          <a href="#heap-sort（优化selection-sort-快速找到最小元）" class="heading-link"><i class="fas fa-link"></i></a><a href="#heap-sort（优化selection-sort-快速找到最小元）" class="headerlink" title="heap sort（优化selection sort 快速找到最小元）"></a>heap sort（优化selection sort 快速找到最小元）</h2>
+      <ul>
+<li>充分利用了每一趟遍历比较的信息</li>
+<li>堆分为<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%A4%A7%E6%A0%B9%E5%A0%86&spm=1001.2101.3001.7020" >大根堆</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>和小根堆，是完全二叉树。大根堆的要求是每个节点的值都不大于其父节点的值，即A[PARENT[i]] &gt;&#x3D; A[i]。在数组的非降序排序中，需要使用的就是大根堆，因为根据大根堆的要求可知，最大的值一定在堆顶。<ul>
+<li>heap可以用priority queue实现</li>
+<li>Heapsort, sorts n numbers in place in O(n lg n) time. It uses an important data structure, called a heap, with which we can also implement a priority queue.</li>
+<li>Using this model, we prove a lower bound of Ω(n lg n) on the worst-case running time of any comparison sort on n inputs, thus showing that heapsort and merge sort are asymptotically optimal comparison sorts.</li>
+</ul>
+</li>
+<li>调整heap的时间复杂度（lgn）</li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309412.png" alt="image-20221027133800119"></li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://visualgo.net/zh/heap?slide=1" >建堆演示</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u010711495/article/details/117386069" >建堆代码</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309584.png" alt="image-20221110220027078"></p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://cs.stackexchange.com/questions/141748/how-is-the-reccurence-of-max-heapify-tn-t2n-3-theta1" >堆的左子树的结点个数的限制</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>计算父节点或者左右子节点的时候*2 或&#x2F;2 可以用计算机的shift bit进行计算</p>
+</li>
+</ul>
+
+        <h4 id="max-heapify的时间复杂度（粗略的O-和-更贴合的Ω）"   >
+          <a href="#max-heapify的时间复杂度（粗略的O-和-更贴合的Ω）" class="heading-link"><i class="fas fa-link"></i></a><a href="#max-heapify的时间复杂度（粗略的O-和-更贴合的Ω）" class="headerlink" title="max-heapify的时间复杂度（粗略的O 和 更贴合的Ω）"></a>max-heapify的时间复杂度（粗略的O 和 更贴合的Ω）</h4>
+      <p>We can compute a simple upper bound on the running time of BUILD-MAX- HEAP as follows. Each call to MAX-HEAPIFY costs O(nlgn) time, and BUILD- MAX-HEAP makes O(n) such calls. Thus, the running time is O(nlgn). This upper bound, though correct, is not asymptotically tight.</p>
+<p>We can derive a tighter bound by observing that the time for MAX-HEAPIFY torun at a node varies with the height of the node in the tree, and the heights of most nodes are small. Our tighter analysis relies on the properties that an  n-element heap has height </p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309702.png" alt="image-20221112091149489"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309638.png" alt="image-20221112203441025"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309827.png" alt="image-20221112203427151"></p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/feliciafay/article/details/12869179" >叶子节点开始的下标</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>只需要求出叶子节点上一层的结点个数 大概为总结点个数的一半</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310023.png" alt="image-20221112092704508"></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310505.png" alt="image-20221112094046683"></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310044.png" alt="image-20221112203126918"></p>
+</li>
+</ul>
+
+        <h3 id="time-complexity"   >
+          <a href="#time-complexity" class="heading-link"><i class="fas fa-link"></i></a><a href="#time-complexity" class="headerlink" title="time complexity"></a>time complexity</h3>
+      <ul>
+<li><p>best case(all elements are identical) <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://cs.stackexchange.com/questions/138432/running-time-of-heap-sort-when-all-number-are-identical" >proof</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>The best case for heapsort would happen when all elements in the list to be sorted are identical. In such a case, for ‘n’ number of nodes-</p>
+</li>
+<li><p>Removing each node from the heap would take only a constant runtime, O(1). There would be no need to bring any node down or bring max valued node up, as all items are identical.</p>
+</li>
+<li><p>Since we do this for every node, the total number of moves would be n * O(1).</p>
+<p>Therefore, the runtime in the best case would be O(n).</p>
+</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="code-c"   >
+          <a href="#code-c" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-c" class="headerlink" title="code c++"></a>code c++</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">heapify</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> N, <span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// Find largest among root, left child and right child</span></span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Initialize largest as root</span></span><br><span class="line">    <span class="type">int</span> largest = i;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// left = 2*i + 1</span></span><br><span class="line">    <span class="type">int</span> left = <span class="number">2</span> * i + <span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// right = 2*i + 2</span></span><br><span class="line">    <span class="type">int</span> right = <span class="number">2</span> * i + <span class="number">2</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// If left child is larger than root</span></span><br><span class="line">    <span class="keyword">if</span> (left &lt; N &amp;&amp; arr[left] &gt; arr[largest])</span><br><span class="line"> </span><br><span class="line">        largest = left;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// If right child is larger than largest</span></span><br><span class="line">    <span class="comment">// so far</span></span><br><span class="line">    <span class="keyword">if</span> (right &lt; N &amp;&amp; arr[right] &gt; arr[largest])</span><br><span class="line"> </span><br><span class="line">        largest = right;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Swap and continue heapifying if root is not largest</span></span><br><span class="line">    <span class="comment">// If largest is not root</span></span><br><span class="line">    <span class="keyword">if</span> (largest != i) &#123;</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">swap</span>(&amp;arr[i], &amp;arr[largest]);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Recursively heapify the affected</span></span><br><span class="line">        <span class="comment">// sub-tree</span></span><br><span class="line">        <span class="built_in">heapify</span>(arr, N, largest);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// Main function to do heap sort</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">heapSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Build max heap</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = N / <span class="number">2</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">heapify</span>(arr, N, i);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Heap sort</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">swap</span>(&amp;arr[<span class="number">0</span>], &amp;arr[i]);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Heapify root element to get highest element at</span></span><br><span class="line">        <span class="comment">// root again</span></span><br><span class="line">        <span class="built_in">heapify</span>(arr, i, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// A utility function to print array of size n</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printArray</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// Driver&#x27;s code</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123; <span class="number">12</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span> &#125;;</span><br><span class="line">    <span class="type">int</span> N = <span class="built_in">sizeof</span>(arr) / <span class="built_in">sizeof</span>(arr[<span class="number">0</span>]);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Function call</span></span><br><span class="line">    <span class="built_in">heapSort</span>(arr, N);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sorted array is\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printArray</span>(arr, N);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/cpp-program-for-heap-sort/" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+        <h2 id="merge-sorting"   >
+          <a href="#merge-sorting" class="heading-link"><i class="fas fa-link"></i></a><a href="#merge-sorting" class="headerlink" title="merge sorting"></a>merge sorting</h2>
+      <ul>
+<li><p>对两个有序的子序列 </p>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/124356219" >basics</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309476.png" alt="image-20221112232227825"></p>
+</li>
+<li><p>The recursion “bottoms out” when the sequence to be sorted has length 1, in which</p>
+<p>case there is no work to be done, since every sequence of length 1 is already in</p>
+<p>sorted order.</p>
+</li>
+</ul>
+
+        <h3 id="merge"   >
+          <a href="#merge" class="heading-link"><i class="fas fa-link"></i></a><a href="#merge" class="headerlink" title="merge"></a>merge</h3>
+      <p>When merging two sorted arrays into a single larger one, we need space to hold the merged result. Since the arrays we’ll be combining have O(n) items, we’ll need O(n) space in total but because we are doing recursion calls so this extra array is goin to be copied log (n) times so the space complexity is O(n log n) here.</p>
+<ul>
+<li>merge用两个辅助数组</li>
+</ul>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void Merge(T Data[], int start, int mid, int end)&#123;</span><br><span class="line">	int len1 = mid-start+1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>merge用一个辅助数组</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Merge</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> low, <span class="type">int</span> mid, <span class="type">int</span> high)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> i = low; <span class="type">int</span> j = mid + <span class="number">1</span>; <span class="type">int</span> k = low;</span><br><span class="line">	<span class="type">int</span>[] auxiliaryArr = <span class="keyword">new</span> <span class="type">int</span>[high+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= high)&#123;</span><br><span class="line">		<span class="keyword">if</span> (arr[i] &lt; arr[j])&#123;</span><br><span class="line">			auxiliaryArr[k++] = arr[i++];&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			auxiliaryArr[k++] = arr[j++];&#125;</span><br><span class="line">         &#125;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= mid)&#123;</span><br><span class="line">		auxiliaryArr[k++] = arr[i++];&#125;</span><br><span class="line">	<span class="keyword">while</span> (j &lt;= high)&#123;</span><br><span class="line">         auxiliaryArr[k++] = arr[j++];&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> r = low; r &lt;= high; r++)&#123;</span><br><span class="line">		arr[r] = auxiliaryArr[r];&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310564.png" alt="image-20221113111430021"></p>
+</li>
+<li><p>&#96;&#96;&#96;c++<br>void merge(vector<Comparable>&amp; a, int L, int R, int RightEnd) {<br>int size &#x3D; a.size();<br>int LeftEnd &#x3D; R - 1;<br>int p &#x3D; L;<br>int num &#x3D; RightEnd - L + 1;<br>vector<Comparable> tmp(size);<br>while (L &lt;&#x3D; LeftEnd &amp;&amp; R &lt;&#x3D; RightEnd) {<br>    if (a[L] &lt;&#x3D; a[R])<br>        tmp[p++] &#x3D; a[L++];<br>    else<br>        tmp[p++] &#x3D; a[R++];<br>}<br>while (L &lt;&#x3D; LeftEnd)<br>    tmp[p++] &#x3D; a[L++];<br>while (R &lt;&#x3D; RightEnd)<br>    tmp[p++] &#x3D; a[R++];<br>for (int i &#x3D; 0; i &lt;num; i++,RightEnd–)<br>    a[RightEnd] &#x3D; tmp[RightEnd];<br>}</p>
+<p>template <class Comparable><br>void mergeImproved( vector<Comparable> &amp;a ) {<br>int n &#x3D; a.size();<br>int i, s;<br>int t &#x3D; 1;<br>while (t &lt; n) {<br>    s &#x3D; t;<br>    t <em>&#x3D; 2;<br>    i &#x3D; 0;<br>    while (i + t &lt; n) {<br>        merge(a, i, i + s, i + 2</em>s - 1);<br>        i &#x3D; i + t;<br>    }<br>    if (i + s &lt; n) {<br>        merge(a, i, i + s, n - 1);<br>    }<br>}<br>}</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">### top-down(recursive)</span><br><span class="line"></span><br><span class="line">- References: http://csg.sph.umich.edu/abecasis/class/2006/615.09.pdf</span><br><span class="line"></span><br><span class="line">### bottom-up(non-recursive)</span><br><span class="line"></span><br><span class="line">- ![image-20221113112739158](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309346.png)</span><br><span class="line"></span><br><span class="line">### time complexity</span><br><span class="line"></span><br><span class="line">#### 次数分析（时间复杂度）</span><br><span class="line"></span><br><span class="line">- ![image-20221113113901708](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309672.png)</span><br><span class="line"></span><br><span class="line">[reference](https://zhuanlan.zhihu.com/p/341225128#:~:text=%E5%90%88%E5%B9%B6%E6%93%8D%E4%BD%9C%E7%9A%84%E6%9C%80%E5%9D%8F%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%3A%20%E6%A0%B8%E5%BF%83%E7%82%B9%3A%E4%B8%A4%E4%B8%AA%E5%BA%8F%E5%88%97%E5%90%84%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%A4%A7%E5%B0%8F%E4%BA%A4%E5%8F%89%E6%8E%92%E5%88%97%EF%BC%8C%E6%AD%A4%E6%97%B6%E9%9C%80%E8%A6%81%20m%2Bn-1%20%E6%AD%A4%E6%AF%94%E8%BE%83%20%E5%BD%92%E5%B9%B6%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%3A%20%E8%AE%BE%20n%20%E4%B8%BA%E5%BE%85%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%EF%BC%8C,%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E7%9A%84%E5%BA%8F%E5%88%97%E5%90%88%E5%B9%B6%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%90%AB%E6%9C%89%20n%20%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E7%9A%84%E5%BA%8F%E5%88%97%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0%20%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%3A%20O%20%28n%29%2C%E9%9C%80%E8%A6%81%E4%B8%80%E4%B8%AA%E9%A2%9D%E5%A4%96%E7%9A%84n%E7%BB%B4%E6%95%B0%E7%BB%84%20I%20%5B%5D)</span><br><span class="line"></span><br><span class="line">[数比较次数](https://math.stackexchange.com/questions/3649182/merge-sort-maximum-comparisons)</span><br><span class="line"></span><br><span class="line">- 例子：</span><br><span class="line">  假设二路归并</span><br><span class="line">  1 2 3 4</span><br><span class="line">  12  34   **2次**</span><br><span class="line">  2&lt;4  2&lt;3  **2次**   不用再继续  共4次</span><br><span class="line">  1 2 3 4 有序</span><br><span class="line"></span><br><span class="line">  2314 </span><br><span class="line">  23  14  **2次**</span><br><span class="line">  3&lt;4  3&gt;1  **2次**   再用2比较</span><br><span class="line">  2&gt;1       **1次**   插入</span><br><span class="line">  1 2 3 4 有序  共5次</span><br><span class="line"></span><br><span class="line">- 极端的例子 1357 2468 ：每一个都要互相比较 m+n-1可以比完一个序列 然后最后一个数字没有比较直接加在尾巴就好</span><br><span class="line"></span><br><span class="line">- [非递归](https://www.cnblogs.com/xing901022/p/3671771.html)</span><br><span class="line"></span><br><span class="line">- [非递归](https://www.cnblogs.com/liushang0419/archive/2011/09/19/2181476.html#:~:text=%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%9D%9E%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%EF%BC%8C%E6%80%9D%E6%83%B3%E5%92%8C%E9%80%92%E5%BD%92%E6%AD%A3%E5%A5%BD%E7%9B%B8%E5%8F%8D%EF%BC%8C%E5%8E%9F%E6%9D%A5%E7%9A%84%E9%80%92%E5%BD%92%E8%BF%87%E7%A8%8B%E6%98%AF%E5%B0%86%E5%BE%85%E6%8E%92%E5%BA%8F%E9%9B%86%E5%90%88%E4%B8%80%E5%88%86%E4%B8%BA%E4%BA%8C%EF%BC%8C%E7%9B%B4%E8%87%B3%E6%8E%92%E5%BA%8F%E9%9B%86%E5%90%88%E5%B0%B1%E5%89%A9%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE%EF%BC%8C%E7%84%B6%E5%90%8E%E4%B8%8D%E6%96%AD%E7%9A%84%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%A5%BD%E5%BA%8F%E7%9A%84%E6%95%B0%E7%BB%84%E3%80%82,%E6%89%80%E4%BB%A5%E9%9D%9E%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3%E4%B8%BA%EF%BC%8C%E5%B0%86%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%9B%B8%E9%82%BB%E5%85%83%E7%B4%A0%E4%B8%A4%E4%B8%A4%E9%85%8D%E5%AF%B9%E3%80%82%20%E7%94%A8merge%E5%87%BD%E6%95%B0%E5%B0%86%E4%BB%96%E4%BB%AC%E6%8E%92%E5%BA%8F%EF%BC%8C%E6%9E%84%E6%88%90n%2F2%E7%BB%84%E9%95%BF%E5%BA%A6%E4%B8%BA2%E7%9A%84%E6%8E%92%E5%BA%8F%E5%A5%BD%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%AE%B5%EF%BC%8C%E7%84%B6%E5%90%8E%E5%86%8D%E5%B0%86%E4%BB%96%E4%BB%AC%E6%8E%92%E5%BA%8F%E6%88%90%E9%95%BF%E5%BA%A6%E4%B8%BA4%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%AE%B5%EF%BC%8C%E5%A6%82%E6%AD%A4%E7%BB%A7%E7%BB%AD%E4%B8%8B%E5%8E%BB%EF%BC%8C%E7%9B%B4%E8%87%B3%E6%95%B4%E4%B8%AA%E6%95%B0%E7%BB%84%E6%8E%92%E5%A5%BD%E5%BA%8F%E3%80%82)</span><br><span class="line"></span><br><span class="line">#### every element is same</span><br><span class="line"></span><br><span class="line">- [还是O(nlogn)](https://stackoverflow.com/questions/66921626/running-time-of-merge-sort-all-elements-are-identical)</span><br><span class="line"></span><br><span class="line">### space complexity</span><br><span class="line"></span><br><span class="line">- ![image-20221117230415591](https://raw.githubusercontent.com/pinkyrie/pic/main/202211172318365.png)</span><br><span class="line"></span><br><span class="line">- O(n)</span><br><span class="line"></span><br><span class="line">## redix sort</span><br><span class="line"></span><br><span class="line">- [animation](https://yongdanielliang.github.io/animation/web/RadixSort.html)</span><br><span class="line"></span><br><span class="line">- 次位优先 （least significant digit first</span><br><span class="line"></span><br><span class="line">  ![image-20221027144856339](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309963.png)</span><br><span class="line"></span><br><span class="line">- ![image-20221112231135913](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309253.png)</span><br><span class="line"></span><br><span class="line">- ![image-20221119214322667](https://raw.githubusercontent.com/pinkyrie/pic/main/202211192143157.png)</span><br><span class="line"></span><br><span class="line">## heap sort</span><br><span class="line"></span><br><span class="line">- heap可以用priority queue实现</span><br><span class="line">- Heapsort, presented in Chapter 6, sorts n numbers in place in O(n lg n) time. It uses an important data structure, called a heap, with which we can also implement a priority queue.</span><br><span class="line">- Using this model, we prove a lower bound of Ω(n lg n) on the worst-case running time of any comparison sort on n inputs, thus showing that heapsort and merge sort are asymptotically optimal comparison sorts.</span><br><span class="line"></span><br><span class="line">堆总是一棵完全二叉树。</span><br><span class="line"></span><br><span class="line">[建堆演示](https://visualgo.net/zh/heap?slide=1)</span><br><span class="line"></span><br><span class="line">[建堆代码](https://blog.csdn.net/u010711495/article/details/117386069)</span><br><span class="line"></span><br><span class="line">- ![image-20221110220027078](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309584.png)</span><br><span class="line"></span><br><span class="line">- [堆的左子树的结点个数的限制](https://cs.stackexchange.com/questions/141748/how-is-the-reccurence-of-max-heapify-tn-t2n-3-theta1)</span><br><span class="line"></span><br><span class="line">- 计算父节点或者左右子节点的时候*2 或/2 可以用计算机的shift bit进行计算</span><br><span class="line"></span><br><span class="line">#### max-heapify的时间复杂度（粗略的O 和 更贴合的Ω）</span><br><span class="line"></span><br><span class="line">We can compute a simple upper bound on the running time of BUILD-MAX- HEAP as follows. Each call to MAX-HEAPIFY costs O(nlgn) time, and BUILD- MAX-HEAP makes O(n) such calls. Thus, the running time is O(nlgn). This upper bound, though correct, is not asymptotically tight.</span><br><span class="line"></span><br><span class="line">We can derive a tighter bound by observing that the time for MAX-HEAPIFY torun at a node varies with the height of the node in the tree, and the heights of most nodes are small. Our tighter analysis relies on the properties that an  n-element heap has height </span><br><span class="line"></span><br><span class="line">![image-20221112091149489](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309702.png)</span><br><span class="line"></span><br><span class="line">![image-20221112203441025](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309638.png)</span><br><span class="line"></span><br><span class="line">![image-20221112203427151](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152309827.png)</span><br><span class="line"></span><br><span class="line">[叶子节点开始的下标](https://blog.csdn.net/feliciafay/article/details/12869179)</span><br><span class="line"></span><br><span class="line">- 只需要求出叶子节点上一层的结点个数 大概为总结点个数的一半</span><br><span class="line">- ![image-20221112092704508](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310023.png)</span><br><span class="line">- ![image-20221112094046683](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310505.png)</span><br><span class="line"></span><br><span class="line">- ![image-20221112203126918](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310044.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### time complexity </span><br><span class="line"></span><br><span class="line">- best case(all elements are identical) [proof](https://cs.stackexchange.com/questions/138432/running-time-of-heap-sort-when-all-number-are-identical)</span><br><span class="line"></span><br><span class="line">  - The best case for heapsort would happen when all elements in the list to be sorted are identical. In such a case, for &#x27;n&#x27; number of nodes-</span><br><span class="line"></span><br><span class="line">  - Removing each node from the heap would take only a constant runtime, O(1). There would be no need to bring any node down or bring max valued node up, as all items are identical.</span><br><span class="line"></span><br><span class="line">  - Since we do this for every node, the total number of moves would be n * O(1).</span><br><span class="line"></span><br><span class="line">    Therefore, the runtime in the best case would be O(n).</span><br><span class="line"></span><br><span class="line">### code c++</span><br><span class="line"></span><br><span class="line">[reference](https://www.geeksforgeeks.org/cpp-program-for-heap-sort/)</span><br><span class="line"></span><br><span class="line">## quick sort</span><br><span class="line"></span><br><span class="line">- ![image-20221112205348607](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310677.png)</span><br><span class="line"></span><br><span class="line">### features:</span><br><span class="line"></span><br><span class="line">-  divide-and-conquer</span><br><span class="line"></span><br><span class="line">  - 1. Divide: Partition the list.To partition the list, we first choose some element from the list for which we hope about half the elements will come before and half after. Call this element the pivot. Then we partition the elements so that all those with values less than the pivot come in one sublist and all those with greater values come in another. 2. Recursion: Recursively sort the sublists separately. 3. Conquer: Put the sorted sublists together.</span><br><span class="line"></span><br><span class="line">  - 3 steps</span><br><span class="line"></span><br><span class="line">  - ![image-20221112205710744](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310063.png)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">  ![image-20221112205746761](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310327.png)</span><br><span class="line"></span><br><span class="line">### partitioning: </span><br><span class="line"></span><br><span class="line">- ![image-20221112211056367](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310514.png)</span><br><span class="line"></span><br><span class="line">- The running time of quicksort depends on whether the partitioning is balanced or unbalanced, which in turn depends on which elements are used for partitioning. If the partitioning is balanced, the algorithm runs asymptotically as fast as merge sort. If the partitioning is unbalanced, however, it can run asymptotically as slowly as insertion sort.</span><br><span class="line"></span><br><span class="line">#### wost case partition</span><br><span class="line"></span><br><span class="line">- ![image-20221112212238759](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310967.png)</span><br><span class="line"></span><br><span class="line">#### bast case partition</span><br><span class="line"></span><br><span class="line">- ![image-20221112212327125](https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310289.png)</span><br><span class="line"></span><br><span class="line">### code</span><br><span class="line"></span><br><span class="line">```c++</span><br><span class="line">template &lt;class Comparable&gt;</span><br><span class="line">void choosePivot( vector&lt;Comparable&gt; &amp;a, int first, int last ) &#123;</span><br><span class="line">	srand(time(NULL));</span><br><span class="line">	int random = first + rand() % (last - first);</span><br><span class="line">	objectSwap(a[random], a[first]);//随机找到第一个数字作为pivot</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">template &lt;class Comparable&gt;</span><br><span class="line">void partition( vector&lt;Comparable&gt; &amp;a, int first, int last, int &amp;pivotIndex )&#123;</span><br><span class="line">	choosePivot(a, first, last);</span><br><span class="line">	int i = first, j = last;</span><br><span class="line">	while (i &lt;= j) &#123;</span><br><span class="line">		while (i &lt;= j &amp;&amp; a[i] &lt;= a[pivotIndex])</span><br><span class="line">			i++;</span><br><span class="line">		while (i &lt;= j &amp;&amp; a[j] &gt; a[pivotIndex])</span><br><span class="line">			j--;</span><br><span class="line">		if (i &lt; j) &#123;</span><br><span class="line">			objectSwap(a[j], a[i]);</span><br><span class="line">			i++;</span><br><span class="line">			j--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	objectSwap(a[pivotIndex], a[j]);</span><br><span class="line">	pivotIndex = j;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">template &lt;class Comparable&gt;</span><br><span class="line">void quicksort( vector&lt;Comparable&gt; &amp;a, int first, int last ) &#123;</span><br><span class="line">	if (last &lt;= first)</span><br><span class="line">		return;</span><br><span class="line">	if (first &lt; last) &#123;</span><br><span class="line">		int pivotIndex = first;</span><br><span class="line">		partition(a, first, last, pivotIndex);</span><br><span class="line">		quicksort(a, first, pivotIndex - 1);</span><br><span class="line">		quicksort(a, pivotIndex + 1, last);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">template &lt;class Comparable&gt;</span><br><span class="line">void quicksort( vector&lt;Comparable&gt; &amp;a ) &#123;</span><br><span class="line">	int first = 0;</span><br><span class="line">	int last = a.size() - 1;</span><br><span class="line">	quicksort(a, first, last);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure></li>
+</ul>
+
+        <h3 id="比较次数-x2F-移动次数"   >
+          <a href="#比较次数-x2F-移动次数" class="heading-link"><i class="fas fa-link"></i></a><a href="#比较次数-x2F-移动次数" class="headerlink" title="比较次数&#x2F;移动次数"></a>比较次数&#x2F;移动次数</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/XueWang1/article/details/78118758" >compare times</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h3 id="time-complexity-1"   >
+          <a href="#time-complexity-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#time-complexity-1" class="headerlink" title="time complexity"></a>time complexity</h3>
+      
+        <h4 id="worst-case"   >
+          <a href="#worst-case" class="heading-link"><i class="fas fa-link"></i></a><a href="#worst-case" class="headerlink" title="worst case"></a>worst case</h4>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/when-does-the-worst-case-of-quicksort-occur/" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>\1) Array is already sorted in the same order.<br>\2) Array is already sorted in reverse order.<br>\3) All elements are the same (a special case of cases 1 and 2) </p>
+</li>
+<li><p>演示比较次数和交换次数（worst case）<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://iq.opengenus.org/worst-case-of-quick-sort/" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="space-complexity"   >
+          <a href="#space-complexity" class="heading-link"><i class="fas fa-link"></i></a><a href="#space-complexity" class="headerlink" title="space complexity"></a>space complexity</h3>
+      <ul>
+<li>Choose a pivot somehow.</li>
+<li>Partition the array into two parts (smaller than the pivot, larger than the pivot).</li>
+<li>Recursively sort the first part, then recursively sort the second part.</li>
+</ul>
+<p>Each recursive call uses O(1) words in local variables, hence the total space complexity is proportional to the height of the recursion tree.</p>
+<p>The height of the recursion tree is always at least Ω(log⁡n), hence this is a <em>lower bound</em> on the space complexity. If you choose the pivot at random or using a good heuristic, then the recursion tree will have height O(log⁡n), and so the space complexity is Θ(logn)Θ(log⁡n). If the pivot can be chosen adversarially, you can cause the recursion tree to have height Θ(n)Θ(n), causing the worst-case space complexity to be Θ(n).</p>
+
+        <h2 id="decision-tree-model"   >
+          <a href="#decision-tree-model" class="heading-link"><i class="fas fa-link"></i></a><a href="#decision-tree-model" class="headerlink" title="decision tree model"></a>decision tree model</h2>
+      <p>- </p>
+
+        <h2 id="递归树推算递归的时间复杂度"   >
+          <a href="#递归树推算递归的时间复杂度" class="heading-link"><i class="fas fa-link"></i></a><a href="#递归树推算递归的时间复杂度" class="headerlink" title="递归树推算递归的时间复杂度"></a>递归树推算递归的时间复杂度</h2>
+      <ul>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310697.png" alt="image-20221113103554258"></p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211152310442.png" alt="image-20221113103710337"></p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192134408.png" alt="image-20221119213401509"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/10/16/leetcode/">1-n的数字中一共出现了多少个1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-17</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/" >题目</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<hr>
+
+        <h2 id="思路"   >
+          <a href="#思路" class="heading-link"><i class="fas fa-link"></i></a><a href="#思路" class="headerlink" title="思路"></a>思路</h2>
+      
+        <h3 id="数字-gt-字符串"   >
+          <a href="#数字-gt-字符串" class="heading-link"><i class="fas fa-link"></i></a><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3>
+      <ul>
+<li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li>
+<li>拆成每个数位单独进行计算</li>
+</ul>
+
+        <h3 id="sidenote：数字和字符串的互换"   >
+          <a href="#sidenote：数字和字符串的互换" class="heading-link"><i class="fas fa-link"></i></a><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null" >strcpy会把string的结尾0也复制过去</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li></li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/10/16/leetcode-1/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-18</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="十种常见排序算法可以分为两大类："   >
+          <a href="#十种常见排序算法可以分为两大类：" class="heading-link"><i class="fas fa-link"></i></a><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/796f23a96596" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li>
+<li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li>
+</ul>
+
+        <h2 id="归并排序"   >
+          <a href="#归并排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>
+      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/pinkyrie/2022/09/25/post/">post</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-09-25</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-09-25</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/pinkyrie/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/pinkyrie/">1</a><a class="page-number" href="/pinkyrie/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/pinkyrie/page/4/">4</a><a class="page-number" href="/pinkyrie/page/5/">5</a><a class="extend next" rel="next" href="/pinkyrie/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/pinkyrie/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/pinkyrie/js/utils.js?v=2.6.2"></script><script src="/pinkyrie/js/stun-boot.js?v=2.6.2"></script><script src="/pinkyrie/js/scroll.js?v=2.6.2"></script><script src="/pinkyrie/js/header.js?v=2.6.2"></script><script src="/pinkyrie/js/sidebar.js?v=2.6.2"></script></body></html>
