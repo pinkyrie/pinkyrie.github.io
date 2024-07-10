@@ -30,13 +30,262 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/30/post/">tetris开发笔记</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-30</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-01-30</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/23/sys-1/">sys-1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-24</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="chap3"   >
+          <a href="#chap3" class="heading-link"><i class="fas fa-link"></i></a><a href="#chap3" class="headerlink" title="chap3"></a>chap3</h1>
+      
+        <h2 id="数组"   >
+          <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
+      <ul>
+<li><p>申请数组时注意数组的元素type 每一个元素所占内存大小由type决定</p>
+</li>
+<li><img src="assets/image-20230223215804804.png" alt="image-20230223215804804" style="zoom:50%;" />
+</li>
+<li><p><img src="/assets/image-20230223220019851.png" alt="image-20230223220019851"></p>
+</li>
+<li><p><img src="/assets/image-20230223220045434.png" alt="image-20230223220045434"></p>
+</li>
+<li><p>a pointer of any kind is 8 bytes long</p>
+</li>
+</ul>
+
+        <h2 id="指针"   >
+          <a href="#指针" class="heading-link"><i class="fas fa-link"></i></a><a href="#指针" class="headerlink" title="指针"></a>指针</h2>
+      <ul>
+<li>一元运算符<code>&amp;</code>和<code>*</code>允许生成和解引用指针。</li>
+<li>That is, for an expression <em><code>Expr</code></em> denoting some object, <code>&amp;Expr</code> is a pointer giving the address of the object. For an expression <em><code>AExpr</code></em> denoting an address, <em><code>*AExpr</code></em> gives the value at that address. </li>
+<li>The array reference <code>A[i]</code> is identical to the expression <code>*(A+i)</code> .因为A表示的数组最开头的地址 A+i就是第i个的地址 因此对地址进行解引用就是拿到这个地址上的object</li>
+<li><img src="assets/image-20230223222643822.png" alt="image-20230223222643822" style="zoom:80%;" /></li>
+</ul>
+
+        <h3 id="nested-array"   >
+          <a href="#nested-array" class="heading-link"><i class="fas fa-link"></i></a><a href="#nested-array" class="headerlink" title="nested array"></a>nested array</h3>
+      <ul>
+<li><p>Suppose <em>array <code>A</code></em> (5*3 int array) , <code>i</code> , and <code>j</code> are in registers <code>%rdi</code>, <code>%rsi</code> , and <code>%rdx</code> , respectively. Then array element <code>A[i][j]</code> can be copied to register <code>%eax</code> by the following code: </p>
+</li>
+<li><p>一行3个int 一共有5行</p>
+<ul>
+<li><pre><code class="assembly">A in %rdi, i in %rsi, and j in %rdx 
+leaq (%rsi,%rsi,3), %rax Compute 3i 
+leaq (%rdi,%rax,4), %rax Compute x + 12i 
+movl (%rax,%rdx,4), %eax Read from M[x + 12i + 4]
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 例子</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    long P[M][N]; </span><br><span class="line">    long Q[N][M]; </span><br><span class="line">    long sum_element(long i, long j) </span><br><span class="line">    &#123; return P[i][j] + Q[j][i]; &#125;</span><br></pre></td></tr></table></div></figure>
+</code></pre>
+</li>
+<li><pre><code class="assembly">long sum_element(long i, long j) 
+i in %rdi, j in %rsi 
+sum_element: 
+leaq 0(,%rdi,8), %rdx # 8*i
+subq %rdi, %rdx # 7*i
+addq %rsi, %rdx # j+7*i
+leaq (%rsi,%rsi,4), %rax # 5*j
+addq %rax, %rdi # i+5*j
+movq Q(,%rdi,8), %rax # Retrieve M[x + 8 (5j + i)] i-&gt;M=5
+addq P(,%rdx,8), %rax # Add M[x + 8 (7i + j)] j-&gt;N=7
+ret
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>leaw #2个字节<br>leal #4个字节<br>leaq #8个字节</p>
+</li>
+<li><p>leaq a(b, c, d), %rax 先计算地址a + b + c * d，然后把最终地址载到寄存器rax中</p>
+</li>
+</ul>
+
+        <h3 id="对矩阵乘法的优化"   >
+          <a href="#对矩阵乘法的优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#对矩阵乘法的优化" class="headerlink" title="对矩阵乘法的优化"></a>对矩阵乘法的优化</h3>
+      <p>- </p>
+
+        <h2 id="data-alignment"   >
+          <a href="#data-alignment" class="heading-link"><i class="fas fa-link"></i></a><a href="#data-alignment" class="headerlink" title="data alignment"></a>data alignment</h2>
+      <ul>
+<li>对原始数据类型的可分配地址进行了限制Many computer systems place restrictions on the allowable addresses for the primitive data types, requiring that the address for some objects must be a multiple of some value <em>K</em> (typically 2, 4, or 8).</li>
+<li>目的是：读取内存时不会一个数据需要读两次或以上</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/22/c-4/">c-4</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-22</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-24</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-18"   >
+          <a href="#item-18" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-18" class="headerlink" title="item 18"></a>item 18</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Date</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="built_in">Date</span>(<span class="type">int</span> month, <span class="type">int</span> day, <span class="type">int</span> year);</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">30</span>, <span class="number">3</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// Oops! Should be “3, 30” , not “30, 3”</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">3</span>, <span class="number">40</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// Oops! Should be “3, 30” , not “3, 40”</span></span><br></pre></td></tr></table></div></figure>
+
+
+
+<ul>
+<li>为了防止输入不合法 可以引入新的类型进行封装</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Day</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Day</span><span class="params">(<span class="type">int</span> d)</span>:val(d)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Month</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Month</span><span class="params">(<span class="type">int</span> m)</span>:val(m)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Year</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Year</span><span class="params">(<span class="type">int</span> y)</span>:val(y)&#123;</span>&#125;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Date</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Date</span>(<span class="type">const</span> Month&amp;m,<span class="type">const</span> Day&amp;d,<span class="type">const</span> Year&amp;y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(<span class="number">30</span>, <span class="number">3</span>, <span class="number">1995</span>)</span></span>; <span class="comment">// error! wrong types</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Day(<span class="number">30</span>), Month(<span class="number">3</span>), Year(<span class="number">1995</span>))</span></span>; <span class="comment">// error! wrong types</span></span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Month(<span class="number">3</span>), Day(<span class="number">30</span>), Year(<span class="number">1995</span>))</span></span>; <span class="comment">// okay, types are correct</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>如果需要对输入的数据进行更多限制（月份只有1-12）</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Month</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Jan</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">1</span>); &#125; <span class="comment">// functions returning all valid</span></span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Feb</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">2</span>); &#125; <span class="comment">// Month values; see below for ... // why these are functions, not</span></span><br><span class="line"><span class="function"><span class="type">static</span> Month <span class="title">Dec</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">Month</span>(<span class="number">12</span>); &#125; <span class="comment">// objects</span></span><br><span class="line">... <span class="comment">// other member functions </span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">Month</span><span class="params">(<span class="type">int</span> m)</span></span>; <span class="comment">// prevent creation of new</span></span><br><span class="line"><span class="comment">// Month values</span></span><br><span class="line">... <span class="comment">// month-specific data</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">Date <span class="title">d</span><span class="params">(Month::Mar(), Day(<span class="number">30</span>), Year(<span class="number">1995</span>))</span></span>;  </span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="cross-DLL-problem"   >
+          <a href="#cross-DLL-problem" class="heading-link"><i class="fas fa-link"></i></a><a href="#cross-DLL-problem" class="headerlink" title="cross DLL problem"></a>cross DLL problem</h3>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1958643/is-it-ok-to-use-boostshared-ptr-in-dll-interface#:~:text=According%20to%20Scott%20Meyers%20in%20Effective%20C%2B%2B%20%283rd,the%20destructor%20from%20the%20dll%20that%20created%20it." >ref:dll和exe都停止时保证删除资源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li></li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/09/c-02/">c++-02</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-22</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-1"   >
+          <a href="#item-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-1-1"   >
+          <a href="#item-1-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1-1" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题-1"   >
+          <a href="#场景-amp-问题-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-1" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-1-2"   >
+          <a href="#item-1-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-1-2" class="headerlink" title="item 1"></a>item 1</h1>
+      
+        <h2 id="场景-amp-问题-2"   >
+          <a href="#场景-amp-问题-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-2" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h1 id="item-4"   >
+          <a href="#item-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-4" class="headerlink" title="item 4"></a>item 4</h1>
+      
+        <h2 id="场景-amp-问题-3"   >
+          <a href="#场景-amp-问题-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-3" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/09/C-01/">C++-01</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-10</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="item-8"   >
+          <a href="#item-8" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-8" class="headerlink" title="item  8"></a>item  8</h1>
+      
+        <h2 id="场景-amp-问题"   >
+          <a href="#场景-amp-问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <ul>
+<li>c++并不喜欢在destructor中emit exception<ul>
+<li>因为如果在容器或数组中，多个widget销毁都在emit exception 同一时刻有两个异常对C++很难处理，所以会terminate或者undefined behavior</li>
+<li>就算是普通的destructor发出异常也容易导致提前terminate或者undefined behavior</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="solution"   >
+          <a href="#solution" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution" class="headerlink" title="solution"></a>solution</h2>
+      
+        <h3 id="code-example"   >
+          <a href="#code-example" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example" class="headerlink" title="code example"></a>code example</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DBConnection</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line"><span class="function"><span class="type">static</span> DBConnection <span class="title">create</span><span class="params">()</span></span>;  <span class="comment">// function to return</span></span><br><span class="line">							<span class="comment">// DBConnection objects; params</span></span><br><span class="line">							<span class="comment">// omitted for simplicity</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">close</span><span class="params">()</span></span>; 				 <span class="comment">// close connection; throw an</span></span><br><span class="line">&#125;; 						    <span class="comment">// exception if closing fails</span></span><br><span class="line">---------------------------------------------------------------</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DBConn</span> &#123; 				<span class="comment">// class to manage DBConnection</span></span><br><span class="line"><span class="keyword">public</span>: 				   <span class="comment">// objects ...</span></span><br><span class="line">~<span class="built_in">DBConn</span>() 				   <span class="comment">// make sure database connections</span></span><br><span class="line">&#123; 						  <span class="comment">// are always closed</span></span><br><span class="line">db.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">DBConnection db;</span><br><span class="line">&#125;;</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">&#123; <span class="comment">// open a block</span></span><br><span class="line"><span class="function">DBConn <span class="title">dbc</span><span class="params">(DBConnection::create())</span></span>; <span class="comment">// create DBConnection object</span></span><br><span class="line"><span class="comment">// and turn it over to a DBConn</span></span><br><span class="line"><span class="comment">// object to manage</span></span><br><span class="line">... <span class="comment">// use the DBConnection object</span></span><br><span class="line"><span class="comment">// via the DBConn interface</span></span><br><span class="line">&#125; <span class="comment">// at end of block, the DBConn</span></span><br><span class="line"><span class="comment">// object is destroyed, thus</span></span><br><span class="line"><span class="comment">// automatically calling close on </span></span><br><span class="line"><span class="comment">// the DBConnection object</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>create a resource-managing class 来帮助该类进行关闭和退出</li>
+<li>如果destructor执行没有异常这样是可以的 如果有异常抛出 DBConn’s destructor will propagate that exception, i.e. allow it to leave the destructor.</li>
+</ul>
+
+        <h3 id="方案1-terminate-the-program"   >
+          <a href="#方案1-terminate-the-program" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案1-terminate-the-program" class="headerlink" title="方案1 terminate the program"></a>方案1 terminate the program</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DBConn::~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">try</span> &#123; db.<span class="built_in">close</span>(); &#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123;</span><br><span class="line">	make log entry that the call to close failed;</span><br><span class="line">	std::<span class="built_in">abort</span>();</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>if allowing the exception to propagate from the destructor would lead to undefined behavior, this prevents that from happening. That is, calling abort may forestall undefined behavior.</li>
+<li></li>
+</ul>
+
+        <h3 id="方案2-Swallow-the-exception"   >
+          <a href="#方案2-Swallow-the-exception" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案2-Swallow-the-exception" class="headerlink" title="方案2 Swallow the exception"></a>方案2 Swallow the exception</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DBConn::~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">try</span> &#123; db.<span class="built_in">close</span>(); &#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123;</span><br><span class="line">	make log entry that the call to close failed;</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>通常来说swallow exception并不好因为 it suppresses important information压缩了重要信息</li>
+<li>但是有时候比起过早终止程序和ub 需要这种方法来让程序无论如何也要执行完毕</li>
+</ul>
+<blockquote>
+<p>评价方案1 2 ：都无法让程序对最初的导致抛出异常的条件进行反应</p>
+</blockquote>
+
+        <h3 id="方案3-包装一个函数来检测异常-并用destructor调用该函数"   >
+          <a href="#方案3-包装一个函数来检测异常-并用destructor调用该函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#方案3-包装一个函数来检测异常-并用destructor调用该函数" class="headerlink" title="方案3 包装一个函数来检测异常 并用destructor调用该函数"></a>方案3 包装一个函数来检测异常 并用destructor调用该函数</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DBConn</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">close</span><span class="params">()</span> <span class="comment">// new function for</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="comment">// client use</span></span><br><span class="line">db.<span class="built_in">close</span>();</span><br><span class="line">closed = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">~<span class="built_in">DBConn</span>()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (!closed) &#123;</span><br><span class="line"><span class="keyword">try</span> &#123; <span class="comment">// close the connection</span></span><br><span class="line">db.<span class="built_in">close</span>(); <span class="comment">// if the client didn’t</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> (...) &#123; <span class="comment">// if closing fails,</span></span><br><span class="line">make log entry that call to close failed; <span class="comment">// note that and ... // terminate or swallow</span></span><br><span class="line">&#125; &#125; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">DBConnection db;</span><br><span class="line"><span class="type">bool</span> closed;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>如果一个操作涉及抛出异常和处理异常 则该异常必须来自非析构函数</li>
+<li></li>
+</ul>
+
+        <h1 id="item-9"   >
+          <a href="#item-9" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-9" class="headerlink" title="item 9"></a>item 9</h1>
+      
+        <h2 id="场景-amp-问题-1"   >
+          <a href="#场景-amp-问题-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-1" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h3 id="code-example-1"   >
+          <a href="#code-example-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example-1" class="headerlink" title="code example"></a>code example</h3>
+      <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transaction</span> &#123; <span class="comment">// base class for all</span></span><br><span class="line"><span class="keyword">public</span>: <span class="comment">// transactions</span></span><br><span class="line"><span class="built_in">Transaction</span>();</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span> </span>= <span class="number">0</span>; <span class="comment">// make type-dependent</span></span><br><span class="line"><span class="comment">// log entry ...</span></span><br><span class="line">&#125;;</span><br><span class="line">Transaction::<span class="built_in">Transaction</span>() <span class="comment">// implementation of</span></span><br><span class="line">&#123; <span class="comment">// base class ctor</span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">logTransaction</span>(); <span class="comment">// as final action, log this</span></span><br><span class="line">&#125; <span class="comment">// transaction</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BuyTransaction</span>: <span class="keyword">public</span> Transaction &#123; <span class="comment">// derived class</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// how to log trans-</span></span><br><span class="line"><span class="comment">// actions of this type ...</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SellTransaction</span>: <span class="keyword">public</span> Transaction &#123; <span class="comment">// derived class</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">logTransaction</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// how to log trans-</span></span><br><span class="line"><span class="comment">// actions of this type ...</span></span><br><span class="line">&#125;;</span><br><span class="line">BuyTransaction b;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p>这里基类的Transaction的constructor会调用一个virtual函数 但是这个函数virtual函数并非子类的版本而是积累的版本 因为此时子类尚未构建 子类的所有成员都是未初始化的 会导致ub</p>
+</li>
+<li><p>During base class construction, virtual functions never go down into derived classes. Instead, the object behaves as if it were of the base type.</p>
+</li>
+<li><p>During base class construction of a derived class object, the type of the object <em>is</em> that of the base class.</p>
+</li>
+<li><p>当在执行基类的初始化部分时 这个object就会被视为是基类类型 所有virtual函数会被解析成基类，所有运行和类型信息都是基类</p>
+</li>
+<li><p>因为派生类的成员都还没有初始化 所以此时需要假设他们都不存在 即此时这个object当作基类类型</p>
+</li>
+<li><p>An object doesn’t become a derived class object until execution of a derived class constructor begins. 一旦派生类析构函数运行，对象的派生类数据成员就会假定未定义的值，因此C++将它们视为它们不再存在。在进入基类析构函数时，对象就成为一个基类对象</p>
+</li>
+</ul>
+
+        <h2 id="solution-1"   >
+          <a href="#solution-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution-1" class="headerlink" title="solution"></a>solution</h2>
+      <ul>
+<li>Turn logTransaction into a non-virtual function in Transaction, then require that derived class constructors pass the necessary log information to the Transaction constructor. That function can then safely call the non virtual logTransaction.</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transaction</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">Transaction</span><span class="params">(<span class="type">const</span> std::string&amp; logInfo)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">logTransaction</span><span class="params">(<span class="type">const</span> std::string&amp; logInfo)</span> <span class="type">const</span></span>; <span class="comment">// now a non-virtual func ...</span></span><br><span class="line">&#125;;</span><br><span class="line">Transaction::<span class="built_in">Transaction</span>(<span class="type">const</span> std::string&amp; logInfo) &#123;</span><br><span class="line">...</span><br><span class="line"><span class="built_in">logTransaction</span>(logInfo); <span class="comment">// now a non-</span></span><br><span class="line">&#125; <span class="comment">// virtual call</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BuyTransaction</span>: <span class="keyword">public</span> Transaction &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="built_in">BuyTransaction</span>( parameters )</span><br><span class="line">: <span class="built_in">Transaction</span>(<span class="built_in">createLogString</span>( parameters )) <span class="comment">// pass log info</span></span><br><span class="line">&#123; ... &#125; <span class="comment">// to base class ... // constructor</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="type">static</span> std::string <span class="title">createLogString</span><span class="params">( parameters )</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/7405740/how-can-i-initialize-base-class-member-variables-in-derived-class-constructor" >在派生类中对基类的成员进行初始化</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="item-10"   >
+          <a href="#item-10" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-10" class="headerlink" title="item 10"></a>item 10</h1>
+      
+        <h2 id="场景-amp-问题-2"   >
+          <a href="#场景-amp-问题-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-2" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      <ul>
+<li>c++允许连续等号赋值 而且 that assignment is right-associative, so the above assignment chain is parsed like</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x, y, z;</span><br><span class="line">x = y = z = <span class="number">15</span>; <span class="comment">// chain of assignments</span></span><br><span class="line">x = (y = (z = <span class="number">15</span>));</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>原理：assignment returns a reference to its left-hand argument</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Widget&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Widget&amp; rhs) <span class="comment">// return type is a reference to</span></span><br><span class="line">&#123; <span class="comment">// the current class</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>; <span class="comment">// return the left-hand object</span></span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Widget</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">...</span><br><span class="line">Widget&amp; <span class="keyword">operator</span>+=(<span class="type">const</span> Widget&amp; rhs) <span class="comment">// the convention applies to</span></span><br><span class="line">&#123; <span class="comment">// +=, -=, *=, etc.</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">Widget&amp; <span class="keyword">operator</span>=(<span class="type">int</span> rhs) <span class="comment">// it applies even if the</span></span><br><span class="line">&#123; <span class="comment">// operator’s parameter type</span></span><br><span class="line">... <span class="comment">// is unconventional</span></span><br><span class="line"><span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="solution-2"   >
+          <a href="#solution-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#solution-2" class="headerlink" title="solution"></a>solution</h2>
+      <ul>
+<li>记住约定：Have assignment operators return a reference to <code>*this</code></li>
+</ul>
+
+        <h1 id="item-11"   >
+          <a href="#item-11" class="heading-link"><i class="fas fa-link"></i></a><a href="#item-11" class="headerlink" title="item 11"></a>item 11</h1>
+      
+        <h2 id="场景-amp-问题-3"   >
+          <a href="#场景-amp-问题-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景-amp-问题-3" class="headerlink" title="场景&amp;问题"></a>场景&amp;问题</h2>
+      
+        <h3 id="code-example-2"   >
+          <a href="#code-example-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#code-example-2" class="headerlink" title="code example"></a>code example</h3>
+      <ul>
+<li>assignment to self</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Widget</span> &#123; ... &#125;;</span><br><span class="line">Widget w;</span><br><span class="line">...</span><br><span class="line">w = w; <span class="comment">// assignment to self</span></span><br></pre></td></tr></table></div></figure>
+
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/30/post/">tetris开发笔记</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-30</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-01-30</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="多个头文件-定义类的h文件中的全局变量的问题"   >
           <a href="#多个头文件-定义类的h文件中的全局变量的问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#多个头文件-定义类的h文件中的全局变量的问题" class="headerlink" title="多个头文件 定义类的h文件中的全局变量的问题"></a>多个头文件 定义类的h文件中的全局变量的问题</h2>
       <figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br></pre></td></tr></table></div></figure>
 
 <p>为什么.h文件中不能定义全局变量</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/27/DS-0/">DS-0</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-01-27</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/09/vue-3/">vue-3</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/09/vue-3/">vue-3</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h3 id="键盘事件"   >
           <a href="#键盘事件" class="heading-link"><i class="fas fa-link"></i></a><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3>
       <p><img src="/assets/image-20230110160411408.png" alt="image-20230110160411408"></p>
@@ -76,70 +325,6 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <img src="assets/image-20230201103105598.png" alt="image-20230201103105598" style="zoom:50%;" />
 
 <p><img src="/assets/image-20230201103245975.png" alt="image-20230201103245975"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/07/Untitled/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-01-09</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>导热系数也叫导热率（thermal conductivity），导热系数是指在稳定传热条件下，1m厚的材料，两侧表面的温差为1度（K,°C）,在1秒钟的时间内，通过1平方米面积传递的热量，单位为瓦&#x2F;米.度（W&#x2F;m.K，此处的K也可以用°C代替）。是表示材料热传导能力大小的物理量，使用傅立叶定律作为其导热系数的计算公式</p>
-<p><img src="/assets/image-20230107163856272.png" alt="image-20230107163856272"></p>
-<p><img src="/assets/image-20230107170411564.png" alt="image-20230107170411564"></p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://webvpn.dlut.edu.cn/https/77726476706e69737468656265737421fbe5449d23357a1e7d0682a5d65b2621/Kreader/CatalogViewPage.aspx?dbCode=cdmd&filename=1021031498.nh&tablename=CMFD202102&compose=&first=1&uid=WEEvREcwSlJHSldSdmVqMVc3L25vSktXQmU0TWVXRXRUZk1rRWoyaG03MD0=$" >论文在线阅读—中国知网 (dlut.edu.cn)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p>They have found that as the power input level increases, so does the rate of sensible heat accumulation. Hosseinizadeh et al. [14] reported a parametric study on a plate fin PCM heat sink and found that increasing the number and the height of fins results in a considerable improvement in the heat sink performance, whereas increasing fin thickness just leads to a slight enhancement.</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0196890415006548" >A numerical method for PCM-based pin fin heat sinks optimization - ScienceDirect</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><p>Phase change heat storage tanks with fins are designed to store thermal energy in the form of a phase change material (PCM). The fins on the outside of the tank help to increase the surface area of the tank, which allows for more efficient heat transfer.</p>
-<p>Here’s how it works:</p>
-<p>The PCM is charged by heating it up to its melting point. This can be done using a variety of methods, such as solar thermal energy, electricity, or a combination of both.</p>
-<p>As the PCM melts, it absorbs a large amount of heat. This heat is stored in the PCM in the form of latent heat of fusion.</p>
-<p>The heat stored in the PCM can then be used to meet a variety of thermal energy needs, such as space heating or hot water.</p>
-<p>When the PCM needs to release its stored heat, it is cooled down below its melting point. This causes the PCM to solidify and release its stored heat in the form of sensible heat.</p>
-<p>The fins on the outside of the tank help to dissipate the heat released by the PCM, making it more readily available for use.</p>
-<p>Overall, phase change heat storage tanks with fins are a highly efficient way to store and release thermal energy, making them a valuable tool for meeting a variety of energy needs.</p>
-</li>
-<li></li>
-<li><p>计算多个翅片的相变储热罐的传热量可以使用传热学方程来计算。这个方程的形式是：</p>
-<p>Q &#x3D; U * A * ΔT</p>
-<p>其中，Q是传热量，U是翅片的传热系数，A是翅片的面积，ΔT是温度差。</p>
-<p>要计算多个翅片的传热量，可以将每个翅片的传热量求和。</p>
-<p>例如，如果有三个翅片，则传热量为：</p>
-<p>Q &#x3D; (U1 * A1 * ΔT1) + (U2 * A2 * ΔT2) + (U3 * A3 * ΔT3)</p>
-<p>注意，传热系数U、面积A和温度差ΔT均为每个翅片的值。</p>
-</li>
-<li><p><img src="/assets/image-20230108114453503.png" alt="image-20230108114453503"></p>
-</li>
-</ul>
-<p><img src="/assets/image-20230108114539639.png" alt="image-20230108114539639"></p>
-<p>E:\codepractice\亚太杯&gt;echo %PATH%<br>C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;</p>
-<p>E:\soft\Nodejs;</p>
-<p>E:\soft\nvm\v16.17.1\node_global\node_modules\hexo\bin;</p>
-<p>D:\mingw\mingw64\bin;E:\soft\nvm\v16.17.1\node_global;</p>
-<p>E:\soft\nvm;E:\soft\Nodejs;</p>
-<p>D:\MySQL\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\95436\AppData\Local\Microsoft\WindowsApps;</p>
-<p>C:\Users\95436\AppData\Local\Programs\Microsoft VS Code\bin;E:\soft\nvm;</p>
-<p>E:\soft\Nodejs;D:\PyCharm 2022.3\bin;</p>
-<ul>
-<li><p>For the numerical analysis of the thermal process, the following assumptions were made: (1) the melting was Newtonian and incompressible; (2) the flow in the melting process was laminar and unsteady, with negligible viscous dissipations; (3) the thermos-physical properties of the HTF and the PCM were independent of the temperature; (4) the heat-transfer was both conduction and convection-controlled. The three-dimensional convection is not considered, because a two-dimensional model is used.</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0038092X17305273" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>The viscous dissipation term is neglected.</p>
-<ul>
-<li>The Boussinesq approximation is used to consider the effect of<br>natural convection</li>
-<li></li>
-</ul>
-</li>
-<li><p><img src="/assets/image-20230108181641124.png" alt="image-20230108181641124"></p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S092702482100444X" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>对比</p>
-<p>4.3.3. Total energy stored for PCM-fins<br>Fig. 15 illustrates the total energy stored for the PCM in TTHX-longitudinal&#x2F;triangular fins simulated using Fluent 15 software at different times of the melting process. PCM-longitudinal fins for the internal fins configuration has lower energy stored capacity, compared with the same PCM mass with triangular fins. In addition, Table 4 shows that the liquid fraction values for PCM-triangular fin models were higher than those of the PCM-longitudinal fin models. Consequently, the energy transfer rate by triangular fins takes shorter time than longitudinal fins. The PCM-triangular fins model exhibits effective energy storage because of the enhancement in heat-transfer.</p>
-<p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0038092X17305273"><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0038092X17305273" >Experimental and computational study of melting phase-change material in a triplex tube heat exchanger with longitudinal&#x2F;triangular fins - ScienceDirect</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></a></p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/20414508" >(99+ 封私信 &#x2F; 80 条消息) 物体的单位时间内能吸热多少怎么计算？ - 知乎 (zhihu.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/135038522.html" >热传导率与比热容算物体升温时间_百度知道 (baidu.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ul>
-<p>\frac{\partial H}{\partial t} &#x3D; \nabla(K_k(\nabla\ T))</p>
-<ul>
-<li>fins  are  introduced  to  enhance  heat  transfer</li>
-</ul>
-<p>Using the basic heat exchanger equation, we can determine the heat transfer area required for the design  basic heat exchanger.</p>
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/01/03/vue-2/">vue-2</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-01-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h3 id="数据双向绑定"   >
           <a href="#数据双向绑定" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据双向绑定" class="headerlink" title="数据双向绑定"></a>数据双向绑定</h3>
@@ -348,206 +533,4 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li>限制条件：必须二部图的两个子集是元素个数相等的</li>
 <li>O(n^3)</li>
 </ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/09/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-16</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h3 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
-      
-        <h4 id="流网络"   >
-          <a href="#流网络" class="heading-link"><i class="fas fa-link"></i></a><a href="#流网络" class="headerlink" title="流网络"></a>流网络</h4>
-      <ul>
-<li><p>flow network: the graph is connected and since each vertex other than s(source) has at least one entering edge</p>
-<ul>
-<li>so |E| &gt;&#x3D; |V| - 1</li>
-</ul>
-</li>
-<li><p>两个constraints</p>
-<ul>
-<li>capacity constraint:</li>
-<li>flow conservation: flow in equals flow out</li>
-</ul>
-</li>
-<li><p>flow：实际流量</p>
-</li>
-<li><p>capacity：最大容量</p>
-</li>
-<li><p>residual：余量&#x3D;最大容量-实际流量</p>
-</li>
-<li><p>blocking flow: A blocking flow is a union of flows along admissible paths that <strong>saturate at least one arc</strong> on every admissible path. (也就是naive algorithm得到的解)</p>
-</li>
-</ul>
-
-        <h4 id="最小割-min-cut"   >
-          <a href="#最小割-min-cut" class="heading-link"><i class="fas fa-link"></i></a><a href="#最小割-min-cut" class="headerlink" title="最小割 min cut"></a>最小割 min cut</h4>
-      <ul>
-<li><p>a cut whose capacity is minimum over all cuts of the network</p>
-<ul>
-<li>区分一下capacity and flow</li>
-<li>flow是有方向的 （向量）必须带符号进行加减</li>
-<li>capacity是无方向（标量） 只考虑一个方向最大的即可</li>
-</ul>
-</li>
-<li><p>最小割的capacity 会 限制最大流的值 因为最大流</p>
-</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/flying_coding/article/details/106973854" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li>思考这样一个问题：在给定的图中，如何判断一个源点s到终点t是否有路径存在呢？<ul>
-<li><strong>若从S到T的路径为零，则不存在s到t的路径，其中s∈S，t∈T。</strong></li>
-<li><strong>一个图中从s到t的路径最多不超过其S,T最小割的数量,其中s∈S，t∈T。</strong></li>
-</ul>
-</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65793018" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li>[对最大流最小割定理的证明]([Max-flow Min-cut Algorithm | Brilliant Math &amp; Science Wiki](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://brilliant.org/wiki/max-flow-min-cut-algorithm/#:~:text=The" >https://brilliant.org/wiki/max-flow-min-cut-algorithm/#:~:text=The</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> max-flow min-cut theorem is a network flow,would totally disconnect the source from the sink.))</li>
-<li></li>
-</ul>
-
-        <h3 id="Naive-algorithm"   >
-          <a href="#Naive-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#Naive-algorithm" class="headerlink" title="Naive algorithm"></a>Naive algorithm</h3>
-      
-        <h4 id="步骤"   >
-          <a href="#步骤" class="heading-link"><i class="fas fa-link"></i></a><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4>
-      <ul>
-<li>初始化的residual 图 &#x3D;&#x3D; original 图</li>
-<li>选择Augmenting path（a path from 𝑠 to 𝑡 that does not contain cycles.）</li>
-</ul>
-
-        <h3 id="Ford-Fulkerson"   >
-          <a href="#Ford-Fulkerson" class="heading-link"><i class="fas fa-link"></i></a><a href="#Ford-Fulkerson" class="headerlink" title="Ford-Fulkerson"></a>Ford-Fulkerson</h3>
-      
-        <h4 id="basics-1"   >
-          <a href="#basics-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics-1" class="headerlink" title="basics"></a>basics</h4>
-      <ul>
-<li><p>核心：residual networks, augmenting paths, cuts</p>
-</li>
-<li><p>although each iteration of the method increases the value of the flow, we shall see that the flow on any particular edge of G may increase or decrease.</p>
-<p>decreasing the flow on some edges may INCREASE the total flow from source to sink.</p>
-</li>
-<li><p>residual graph中引入了相反方向的edge是为了表达decrease这条边的流量（sending the flow back along an edge is equivalent to decreasing the flow on the edge)</p>
-<p>residual graph中的edge数量小于等于原本edges数量的两倍</p>
-</li>
-<li><p>结束条件：residual network contains no augmenting path</p>
-</li>
-</ul>
-
-        <h4 id="reference"   >
-          <a href="#reference" class="heading-link"><i class="fas fa-link"></i></a><a href="#reference" class="headerlink" title="reference"></a>reference</h4>
-      <ul>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.desgard.com/algo/docs/part4/ch03/2-ford-fulkerson/" >basics</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><strong>通过将流量推回这种操作，从而得到新的流</strong> 。为什么要这么做呢？其实原因就是 <strong>因为对一条增广路不一定输入这条增广路的上限流量就能保证全局的最大流量</strong> 。再提高一个维度来看我们之前的思路，<strong>其实一直是“贪心”思想在引导我们加流和拆边操作，但是贪心并不能获得全局最大流量，这也是之前动态规划能够解决贪心对于全局最优解无法实现的问题</strong> 。</li>
-<li>贪心只能得到局部的最优解 因此naive算法得到的不会是最终的最大流解</li>
-</ul>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://emory.gitbook.io/dsa-java/network-flow/ford-fulkerson-algorithm" >演示worst case为什么是f*m</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>Ford-Fulkerson算法的时间复杂度取决于增广路径如何决定</p>
-<p>如果所有的容量都是整数，有一个Ford-Fulkerson算法的直接实现的时间复杂度O(|E||f*|),其中f*由算法决定</p>
-</li>
-</ul>
-
-        <h4 id="步骤-1"   >
-          <a href="#步骤-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h4>
-      <ul>
-<li><p>允许undo path</p>
-</li>
-<li><p>最后删除所有的undo path</p>
-</li>
-<li><p>时间复杂度</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33565995/time-complexity-of-the-ford-fulkerson-method-in-a-flow-network-with-unit-capacit" >algorithm - Time complexity of the Ford-Fulkerson method in a flow network with unit capacity edges - Stack Overflow</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ul>
-
-        <h3 id="Edmonds-Karp-algorithm"   >
-          <a href="#Edmonds-Karp-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#Edmonds-Karp-algorithm" class="headerlink" title="Edmonds-Karp algorithm"></a>Edmonds-Karp algorithm</h3>
-      
-        <h4 id="基本思想"   >
-          <a href="#基本思想" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4>
-      <ul>
-<li><p><strong>Edmonds–Karp algorithm</strong> is an optimized implementation of the Ford–Fulkerson method for computing the maximum flow in a flow network in <strong>O(V E^2)</strong> time instead of <strong>O(E |max_flow|)</strong> in case of Ford-Fulkerson algorithm.</p>
-</li>
-<li><p>The algorithm is identical to the Ford–Fulkerson algorithm, except that the search order when finding the augmenting path is defined. The path found must be a shortest path that has available capacity.</p>
-</li>
-<li><p><img src="/assets/image-20221006221449948.png" alt="image-20221006221449948"></p>
-</li>
-<li><p>This can be found by a <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Breadth-first_search" >breadth-first search</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>, where we apply a weight of 1 to each edge. The running time of {\displaystyle O(|V||E|^{2})}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae5bc5dfaecce53a04efd47719ac640aa983e706" alt="{\displaystyle O(|V||E|^{2})}"> is found by showing that each augmenting path can be found in {\displaystyle O(|E|)}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/976fe7f1e011d0dcdb3d6163754c877aaad5187f" alt="O(|E|)"> time, that every time at least one of the {\displaystyle E}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4232c9de2ee3eec0a9c0a19b15ab92daa6223f9b" alt="E"> edges becomes saturated (an edge which has the maximum possible flow), that the distance from the saturated edge to the source along the augmenting path must be longer than last time it was saturated, and that the length is at most {\displaystyle |V|}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9ddcffc28643ac01a14dd0fb32c3157859e365a7" alt="|V|">.</p>
-</li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/07/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h1 id="拓扑排序"   >
-          <a href="#拓扑排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1>
-      
-        <h2 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h2>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">小明有 2 个小时的作业，回家一共有 4 个小时做作业的时间。他可以选择一开始就做，或者因为「ddl 综合征」最后 2 小时才开始做。此时「做作业最早的时间」和「做作业的最晚时间」是不等的。</span><br><span class="line">老师知道小明的情况后将小明的作业增加到了 4 个小时的量，小明做作业的时间还是 4 个小时。小明只能回家就开始做作业才能做完。此时「做作业最早的时间」和「做作业的最晚时间」是相等的。</span><br><span class="line">「做作业最早的时间」和「做作业的最晚时间」是相等的说明：如果做作业的时间延误，将会导致整个工期延误，做作业的时间缩短，整个工期的最短时间就会缩短。</span><br><span class="line">我们将「做作业」抽象为「活动」Activity，「作业完成」抽象为「事件」Event</span><br><span class="line">关键路径定义：活动的最早发生时间和最晚发生时间相等的路径就是关键路径</span><br></pre></td></tr></table></div></figure>
-
-<ul>
-<li>DAG（Directed Acyclic Graph简称DAG），就是有向无环图，DAG这种图中的所有边都是有向边，而且从任意一个顶点开始，都找不到回到起始点的环路。当且仅当一个有向图为有向无环图（directed acyclic graph，或称DAG）时，才能得到对应于该图的拓扑排序。每一个有向无环图都至少存在一种拓扑排序</li>
-<li>一个可以进行拓扑排序的DAG图的基本特征，必然存在至少一个入度为0的节点，如此才可以排序。有向无环图（DAG）才有拓扑排序，非DAG图没有拓扑排序一说。</li>
-<li>顶点表示事件 边表示活动 边的权值表示活动所需要的时间</li>
-<li>边的方向表示活动可以在起点事件之后开始 在终点事件之前完成</li>
-<li>AOE网</li>
-<li>完成工程的最短时间是从源点到汇点的最长路径的长度 称为关键路径</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tiemchart.com/blogs/training/forward-pass-and-backward-pass/#:~:text=Forward%20pass%20is%20a%20technique%20to%20move%20forward,if%20there%20is%20any%20slack%20in%20the%20activity." >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><p>forward pass：计算最早结束时间</p>
-<p>In order to calculate Early Finish, we use forward pass. Means moving from Early Start towards right to come up with Early Finish of the project.</p>
-</li>
-<li><p>backward pass：计算最晚开始时间</p>
-<p>Late Start (LS) is the latest date that the activity can finish without causing a delay to the project completion date.</p>
-</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/337438327" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><strong>最早发生时间：从前往后，前驱结点到当前结点所需时间，取最大值。</strong></li>
-<li><strong>最迟发生时间：从后往前，后继结点的最迟发生时间-边权值，取最小值。</strong></li>
-</ul>
-<p>1  3 2 4 5 6</p>
-<p>13246</p>
-<p>13256</p>
-
-        <h2 id="steps"   >
-          <a href="#steps" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps" class="headerlink" title="steps"></a>steps</h2>
-      <ul>
-<li>Identify vertices that have no incoming edges （The “in-degree” of these vertices is zero）<ul>
-<li>If no such vertices, graph has only cycle(s) (cyclic graph) Topological sort not possible – Halt.</li>
-</ul>
-</li>
-<li>Delete this vertex of in-degree 0 and all its outgoing edges from the graph. Place it in the output.</li>
-<li>Repeat Step 1 and Step 2 until graph is empty</li>
-</ul>
-
-        <h3 id="判断是否为有向图"   >
-          <a href="#判断是否为有向图" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断是否为有向图" class="headerlink" title="判断是否为有向图"></a>判断是否为有向图</h3>
-      <ul>
-<li>在图论中，如果一个<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%89%E5%90%91%E5%9B%BE?fromModule=lemma_inlink" >有向图</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>无法从某个顶点出发经过若干条边回到该点，则这个图是一个<strong>有向无环图</strong>（DAG图）。</li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229111.png" alt="image-20221119150809245"></li>
-</ul>
-<p>这是有向无环图</p>
-
-        <h3 id="code"   >
-          <a href="#code" class="heading-link"><i class="fas fa-link"></i></a><a href="#code" class="headerlink" title="code"></a>code</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;int&gt;&gt; adj;</span><br><span class="line">vector&lt;int&gt; indegree(n,0);</span><br><span class="line">int n,m;</span><br><span class="line">int cnt=0;</span><br><span class="line">cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">	int u,v;</span><br><span class="line">	cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">	adj[u].push_back(v);</span><br><span class="line">	indeg[v]++</span><br><span class="line">&#125;</span><br><span class="line">queue&lt;int&gt; pq;</span><br><span class="line">for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">	if(indeg[i]==0)&#123;</span><br><span class="line">		pq.push(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">while(!pq.empty())&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	int x = pq.front();</span><br><span class="line">	pq.pop();</span><br><span class="line">	cout&lt;&lt;x&lt;&lt;&quot; &quot;;</span><br><span class="line">	for(auto it:adj[x])&#123;</span><br><span class="line">		indeg[it]--;</span><br><span class="line">		if(indeg[it]==0)</span><br><span class="line">			pq.push(it);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
-
-<ul>
-<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/cpp-program-for-topological-sorting/" >stack实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-</ul>
-<p>复杂度分析</p>
-<ul>
-<li><p>version 1</p>
-<ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229814.png" alt="image-20221119160556133"></li>
-</ul>
-</li>
-<li><p>version 2 Initialize and maintain a queue (or stack) of vertices with In-Degree 0</p>
-<ul>
-<li>Store each vertex’s In-Degree in an array Initialize a queue with all in-degree zero vertices While there are vertices remaining in the queue:       ➭ Dequeue and output a vertex       ➭ Reduce In-Degree of all vertices adjacent to it by 1       ➭ Enqueue any of these vertices whose In-Degree became zero</li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229866.png" alt="image-20221119160658194"></li>
-<li><img src="/assets/image-20221119160731648.png" alt="image-20221119160731648"></li>
-</ul>
-</li>
-</ul>
-<p>​		</p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">40</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

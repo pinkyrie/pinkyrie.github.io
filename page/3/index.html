@@ -30,7 +30,209 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/05/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/09/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-16</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h3 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
+      
+        <h4 id="流网络"   >
+          <a href="#流网络" class="heading-link"><i class="fas fa-link"></i></a><a href="#流网络" class="headerlink" title="流网络"></a>流网络</h4>
+      <ul>
+<li><p>flow network: the graph is connected and since each vertex other than s(source) has at least one entering edge</p>
+<ul>
+<li>so |E| &gt;&#x3D; |V| - 1</li>
+</ul>
+</li>
+<li><p>两个constraints</p>
+<ul>
+<li>capacity constraint:</li>
+<li>flow conservation: flow in equals flow out</li>
+</ul>
+</li>
+<li><p>flow：实际流量</p>
+</li>
+<li><p>capacity：最大容量</p>
+</li>
+<li><p>residual：余量&#x3D;最大容量-实际流量</p>
+</li>
+<li><p>blocking flow: A blocking flow is a union of flows along admissible paths that <strong>saturate at least one arc</strong> on every admissible path. (也就是naive algorithm得到的解)</p>
+</li>
+</ul>
+
+        <h4 id="最小割-min-cut"   >
+          <a href="#最小割-min-cut" class="heading-link"><i class="fas fa-link"></i></a><a href="#最小割-min-cut" class="headerlink" title="最小割 min cut"></a>最小割 min cut</h4>
+      <ul>
+<li><p>a cut whose capacity is minimum over all cuts of the network</p>
+<ul>
+<li>区分一下capacity and flow</li>
+<li>flow是有方向的 （向量）必须带符号进行加减</li>
+<li>capacity是无方向（标量） 只考虑一个方向最大的即可</li>
+</ul>
+</li>
+<li><p>最小割的capacity 会 限制最大流的值 因为最大流</p>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/flying_coding/article/details/106973854" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li>思考这样一个问题：在给定的图中，如何判断一个源点s到终点t是否有路径存在呢？<ul>
+<li><strong>若从S到T的路径为零，则不存在s到t的路径，其中s∈S，t∈T。</strong></li>
+<li><strong>一个图中从s到t的路径最多不超过其S,T最小割的数量,其中s∈S，t∈T。</strong></li>
+</ul>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65793018" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li>[对最大流最小割定理的证明]([Max-flow Min-cut Algorithm | Brilliant Math &amp; Science Wiki](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://brilliant.org/wiki/max-flow-min-cut-algorithm/#:~:text=The" >https://brilliant.org/wiki/max-flow-min-cut-algorithm/#:~:text=The</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> max-flow min-cut theorem is a network flow,would totally disconnect the source from the sink.))</li>
+<li></li>
+</ul>
+
+        <h3 id="Naive-algorithm"   >
+          <a href="#Naive-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#Naive-algorithm" class="headerlink" title="Naive algorithm"></a>Naive algorithm</h3>
+      
+        <h4 id="步骤"   >
+          <a href="#步骤" class="heading-link"><i class="fas fa-link"></i></a><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4>
+      <ul>
+<li>初始化的residual 图 &#x3D;&#x3D; original 图</li>
+<li>选择Augmenting path（a path from 𝑠 to 𝑡 that does not contain cycles.）</li>
+</ul>
+
+        <h3 id="Ford-Fulkerson"   >
+          <a href="#Ford-Fulkerson" class="heading-link"><i class="fas fa-link"></i></a><a href="#Ford-Fulkerson" class="headerlink" title="Ford-Fulkerson"></a>Ford-Fulkerson</h3>
+      
+        <h4 id="basics-1"   >
+          <a href="#basics-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics-1" class="headerlink" title="basics"></a>basics</h4>
+      <ul>
+<li><p>核心：residual networks, augmenting paths, cuts</p>
+</li>
+<li><p>although each iteration of the method increases the value of the flow, we shall see that the flow on any particular edge of G may increase or decrease.</p>
+<p>decreasing the flow on some edges may INCREASE the total flow from source to sink.</p>
+</li>
+<li><p>residual graph中引入了相反方向的edge是为了表达decrease这条边的流量（sending the flow back along an edge is equivalent to decreasing the flow on the edge)</p>
+<p>residual graph中的edge数量小于等于原本edges数量的两倍</p>
+</li>
+<li><p>结束条件：residual network contains no augmenting path</p>
+</li>
+</ul>
+
+        <h4 id="reference"   >
+          <a href="#reference" class="heading-link"><i class="fas fa-link"></i></a><a href="#reference" class="headerlink" title="reference"></a>reference</h4>
+      <ul>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.desgard.com/algo/docs/part4/ch03/2-ford-fulkerson/" >basics</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><strong>通过将流量推回这种操作，从而得到新的流</strong> 。为什么要这么做呢？其实原因就是 <strong>因为对一条增广路不一定输入这条增广路的上限流量就能保证全局的最大流量</strong> 。再提高一个维度来看我们之前的思路，<strong>其实一直是“贪心”思想在引导我们加流和拆边操作，但是贪心并不能获得全局最大流量，这也是之前动态规划能够解决贪心对于全局最优解无法实现的问题</strong> 。</li>
+<li>贪心只能得到局部的最优解 因此naive算法得到的不会是最终的最大流解</li>
+</ul>
+</li>
+<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://emory.gitbook.io/dsa-java/network-flow/ford-fulkerson-algorithm" >演示worst case为什么是f*m</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+<li><p>Ford-Fulkerson算法的时间复杂度取决于增广路径如何决定</p>
+<p>如果所有的容量都是整数，有一个Ford-Fulkerson算法的直接实现的时间复杂度O(|E||f*|),其中f*由算法决定</p>
+</li>
+</ul>
+
+        <h4 id="步骤-1"   >
+          <a href="#步骤-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h4>
+      <ul>
+<li><p>允许undo path</p>
+</li>
+<li><p>最后删除所有的undo path</p>
+</li>
+<li><p>时间复杂度</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33565995/time-complexity-of-the-ford-fulkerson-method-in-a-flow-network-with-unit-capacit" >algorithm - Time complexity of the Ford-Fulkerson method in a flow network with unit capacity edges - Stack Overflow</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+
+        <h3 id="Edmonds-Karp-algorithm"   >
+          <a href="#Edmonds-Karp-algorithm" class="heading-link"><i class="fas fa-link"></i></a><a href="#Edmonds-Karp-algorithm" class="headerlink" title="Edmonds-Karp algorithm"></a>Edmonds-Karp algorithm</h3>
+      
+        <h4 id="基本思想"   >
+          <a href="#基本思想" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4>
+      <ul>
+<li><p><strong>Edmonds–Karp algorithm</strong> is an optimized implementation of the Ford–Fulkerson method for computing the maximum flow in a flow network in <strong>O(V E^2)</strong> time instead of <strong>O(E |max_flow|)</strong> in case of Ford-Fulkerson algorithm.</p>
+</li>
+<li><p>The algorithm is identical to the Ford–Fulkerson algorithm, except that the search order when finding the augmenting path is defined. The path found must be a shortest path that has available capacity.</p>
+</li>
+<li><p><img src="/assets/image-20221006221449948.png" alt="image-20221006221449948"></p>
+</li>
+<li><p>This can be found by a <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Breadth-first_search" >breadth-first search</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>, where we apply a weight of 1 to each edge. The running time of {\displaystyle O(|V||E|^{2})}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae5bc5dfaecce53a04efd47719ac640aa983e706" alt="{\displaystyle O(|V||E|^{2})}"> is found by showing that each augmenting path can be found in {\displaystyle O(|E|)}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/976fe7f1e011d0dcdb3d6163754c877aaad5187f" alt="O(|E|)"> time, that every time at least one of the {\displaystyle E}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4232c9de2ee3eec0a9c0a19b15ab92daa6223f9b" alt="E"> edges becomes saturated (an edge which has the maximum possible flow), that the distance from the saturated edge to the source along the augmenting path must be longer than last time it was saturated, and that the length is at most {\displaystyle |V|}<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9ddcffc28643ac01a14dd0fb32c3157859e365a7" alt="|V|">.</p>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/07/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="拓扑排序"   >
+          <a href="#拓扑排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1>
+      
+        <h2 id="basics"   >
+          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h2>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">小明有 2 个小时的作业，回家一共有 4 个小时做作业的时间。他可以选择一开始就做，或者因为「ddl 综合征」最后 2 小时才开始做。此时「做作业最早的时间」和「做作业的最晚时间」是不等的。</span><br><span class="line">老师知道小明的情况后将小明的作业增加到了 4 个小时的量，小明做作业的时间还是 4 个小时。小明只能回家就开始做作业才能做完。此时「做作业最早的时间」和「做作业的最晚时间」是相等的。</span><br><span class="line">「做作业最早的时间」和「做作业的最晚时间」是相等的说明：如果做作业的时间延误，将会导致整个工期延误，做作业的时间缩短，整个工期的最短时间就会缩短。</span><br><span class="line">我们将「做作业」抽象为「活动」Activity，「作业完成」抽象为「事件」Event</span><br><span class="line">关键路径定义：活动的最早发生时间和最晚发生时间相等的路径就是关键路径</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>DAG（Directed Acyclic Graph简称DAG），就是有向无环图，DAG这种图中的所有边都是有向边，而且从任意一个顶点开始，都找不到回到起始点的环路。当且仅当一个有向图为有向无环图（directed acyclic graph，或称DAG）时，才能得到对应于该图的拓扑排序。每一个有向无环图都至少存在一种拓扑排序</li>
+<li>一个可以进行拓扑排序的DAG图的基本特征，必然存在至少一个入度为0的节点，如此才可以排序。有向无环图（DAG）才有拓扑排序，非DAG图没有拓扑排序一说。</li>
+<li>顶点表示事件 边表示活动 边的权值表示活动所需要的时间</li>
+<li>边的方向表示活动可以在起点事件之后开始 在终点事件之前完成</li>
+<li>AOE网</li>
+<li>完成工程的最短时间是从源点到汇点的最长路径的长度 称为关键路径</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tiemchart.com/blogs/training/forward-pass-and-backward-pass/#:~:text=Forward%20pass%20is%20a%20technique%20to%20move%20forward,if%20there%20is%20any%20slack%20in%20the%20activity." >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><p>forward pass：计算最早结束时间</p>
+<p>In order to calculate Early Finish, we use forward pass. Means moving from Early Start towards right to come up with Early Finish of the project.</p>
+</li>
+<li><p>backward pass：计算最晚开始时间</p>
+<p>Late Start (LS) is the latest date that the activity can finish without causing a delay to the project completion date.</p>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/337438327" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><strong>最早发生时间：从前往后，前驱结点到当前结点所需时间，取最大值。</strong></li>
+<li><strong>最迟发生时间：从后往前，后继结点的最迟发生时间-边权值，取最小值。</strong></li>
+</ul>
+<p>1  3 2 4 5 6</p>
+<p>13246</p>
+<p>13256</p>
+
+        <h2 id="steps"   >
+          <a href="#steps" class="heading-link"><i class="fas fa-link"></i></a><a href="#steps" class="headerlink" title="steps"></a>steps</h2>
+      <ul>
+<li>Identify vertices that have no incoming edges （The “in-degree” of these vertices is zero）<ul>
+<li>If no such vertices, graph has only cycle(s) (cyclic graph) Topological sort not possible – Halt.</li>
+</ul>
+</li>
+<li>Delete this vertex of in-degree 0 and all its outgoing edges from the graph. Place it in the output.</li>
+<li>Repeat Step 1 and Step 2 until graph is empty</li>
+</ul>
+
+        <h3 id="判断是否为有向图"   >
+          <a href="#判断是否为有向图" class="heading-link"><i class="fas fa-link"></i></a><a href="#判断是否为有向图" class="headerlink" title="判断是否为有向图"></a>判断是否为有向图</h3>
+      <ul>
+<li>在图论中，如果一个<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%89%E5%90%91%E5%9B%BE?fromModule=lemma_inlink" >有向图</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>无法从某个顶点出发经过若干条边回到该点，则这个图是一个<strong>有向无环图</strong>（DAG图）。</li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229111.png" alt="image-20221119150809245"></li>
+</ul>
+<p>这是有向无环图</p>
+
+        <h3 id="code"   >
+          <a href="#code" class="heading-link"><i class="fas fa-link"></i></a><a href="#code" class="headerlink" title="code"></a>code</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;int&gt;&gt; adj;</span><br><span class="line">vector&lt;int&gt; indegree(n,0);</span><br><span class="line">int n,m;</span><br><span class="line">int cnt=0;</span><br><span class="line">cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">	int u,v;</span><br><span class="line">	cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">	adj[u].push_back(v);</span><br><span class="line">	indeg[v]++</span><br><span class="line">&#125;</span><br><span class="line">queue&lt;int&gt; pq;</span><br><span class="line">for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">	if(indeg[i]==0)&#123;</span><br><span class="line">		pq.push(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">while(!pq.empty())&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	int x = pq.front();</span><br><span class="line">	pq.pop();</span><br><span class="line">	cout&lt;&lt;x&lt;&lt;&quot; &quot;;</span><br><span class="line">	for(auto it:adj[x])&#123;</span><br><span class="line">		indeg[it]--;</span><br><span class="line">		if(indeg[it]==0)</span><br><span class="line">			pq.push(it);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/cpp-program-for-topological-sorting/" >stack实现</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<p>复杂度分析</p>
+<ul>
+<li><p>version 1</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229814.png" alt="image-20221119160556133"></li>
+</ul>
+</li>
+<li><p>version 2 Initialize and maintain a queue (or stack) of vertices with In-Degree 0</p>
+<ul>
+<li>Store each vertex’s In-Degree in an array Initialize a queue with all in-degree zero vertices While there are vertices remaining in the queue:       ➭ Dequeue and output a vertex       ➭ Reduce In-Degree of all vertices adjacent to it by 1       ➭ Enqueue any of these vertices whose In-Degree became zero</li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192229866.png" alt="image-20221119160658194"></li>
+<li><img src="/assets/image-20221119160731648.png" alt="image-20221119160731648"></li>
+</ul>
+</li>
+</ul>
+<p>​		</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/19/05/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="Minimum-cost-spanning-trees"   >
           <a href="#Minimum-cost-spanning-trees" class="heading-link"><i class="fas fa-link"></i></a><a href="#Minimum-cost-spanning-trees" class="headerlink" title="Minimum-cost spanning trees"></a>Minimum-cost spanning trees</h1>
       <ul>
@@ -1392,23 +1594,4 @@ public:
 
         <h2 id="归并排序"   >
           <a href="#归并排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>
-      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/10/16/leetcode/">1-n的数字中一共出现了多少个1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-17</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/" >题目</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<hr>
-
-        <h2 id="思路"   >
-          <a href="#思路" class="heading-link"><i class="fas fa-link"></i></a><a href="#思路" class="headerlink" title="思路"></a>思路</h2>
-      
-        <h3 id="数字-gt-字符串"   >
-          <a href="#数字-gt-字符串" class="heading-link"><i class="fas fa-link"></i></a><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3>
-      <ul>
-<li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li>
-<li>拆成每个数位单独进行计算</li>
-</ul>
-
-        <h3 id="sidenote：数字和字符串的互换"   >
-          <a href="#sidenote：数字和字符串的互换" class="heading-link"><i class="fas fa-link"></i></a><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3>
-      <ul>
-<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null" >strcpy会把string的结尾0也复制过去</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-<li></li>
-</ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/09/25/post/">post</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-09-25</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-09-25</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">43</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+      </div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">40</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
