@@ -30,294 +30,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/16/13/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="hash"   >
-          <a href="#hash" class="heading-link"><i class="fas fa-link"></i></a><a href="#hash" class="headerlink" title="hash"></a>hash</h2>
-      <ul>
-<li>A hash function maps key values to positions.</li>
-</ul>
-
-        <h3 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
-      <ul>
-<li>Load factor lambda λ&#x3D; (number of keys &#x2F; Table Size)</li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323021.png" alt="image-20221113220132476"></li>
-</ul>
-
-        <h3 id="构造方法"   >
-          <a href="#构造方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3>
-      
-        <h4 id="folding"   >
-          <a href="#folding" class="heading-link"><i class="fas fa-link"></i></a><a href="#folding" class="headerlink" title="folding"></a>folding</h4>
-      <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323599.png" alt="image-20221113223514997"></li>
-</ul>
-
-        <h2 id="开放定址法（不使用链表-也叫闭散列法）"   >
-          <a href="#开放定址法（不使用链表-也叫闭散列法）" class="heading-link"><i class="fas fa-link"></i></a><a href="#开放定址法（不使用链表-也叫闭散列法）" class="headerlink" title="开放定址法（不使用链表 也叫闭散列法）"></a>开放定址法（不使用链表 也叫闭散列法）</h2>
-      <ul>
-<li>包括</li>
-<li>线性探查法</li>
-<li>二次探查法</li>
-<li>伪随机探查法</li>
-<li>二次散列法</li>
-</ul>
-
-        <h2 id="linear-probing"   >
-          <a href="#linear-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#linear-probing" class="headerlink" title="linear probing"></a>linear probing</h2>
-      
-        <h3 id="unsuccessful-ASL"   >
-          <a href="#unsuccessful-ASL" class="heading-link"><i class="fas fa-link"></i></a><a href="#unsuccessful-ASL" class="headerlink" title="unsuccessful ASL"></a>unsuccessful ASL</h3>
-      <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162323273.png" alt="image-20221027112336074"></li>
-<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/calculate23/article/details/100577469" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-</ul>
-
-        <h3 id="primary-clustering"   >
-          <a href="#primary-clustering" class="heading-link"><i class="fas fa-link"></i></a><a href="#primary-clustering" class="headerlink" title="primary clustering"></a>primary clustering</h3>
-      <ul>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>In computer programming, primary clustering is one of two major failure modes of open addressing based hash tables, especially those using linear probing. It occurs after a hash collision causes two of the records in the hash table to hash to the same position, and causes one of the records to be moved to the next location in its probe sequence. Once this happens, the cluster formed by this pair of records is more likely to grow by the addition of even more colliding records, regardless of whether the new records hash to the same location as the first two. This phenomenon causes searches for keys within the cluster to be longer.[1]</p>
-<p>For instance, in linear probing, a record involved in a collision is always moved to the next available hash table cell subsequent to the position given by its hash function, creating a contiguous cluster of occupied hash table cells. Whenever another record is hashed to anywhere within the cluster, it grows in size by one cell. Because of this phenomenon, it is likely that a linear-probing hash table with a constant load factor (that is, with the size of the table proportional to the </p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Primary_clustering" >ref</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ul>
-
-        <h2 id="quadratic-probing"   >
-          <a href="#quadratic-probing" class="heading-link"><i class="fas fa-link"></i></a><a href="#quadratic-probing" class="headerlink" title="quadratic probing"></a>quadratic probing</h2>
-      <ul>
-<li>插入新元素：查找一次插入不成功 则i++ 而且要从最初的插入点开始+i^2 而不是上一次的插入点</li>
-<li>解决了一次聚集</li>
-<li>产生二次聚集</li>
-</ul>
-<p>奇怪的理论：</p>
-<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">If the table size is prime and load factor is not larger than 0.5, all probes will be to different locations and an item can always be inserted.</span><br><span class="line">==</span><br><span class="line">If quadratic probing is used, and the table size is prime, then a new element can always be inserted if the table is at least half empty.</span><br></pre></td></tr></table></div></figure>
-
-
-        <h2 id="伪随机探查法"   >
-          <a href="#伪随机探查法" class="heading-link"><i class="fas fa-link"></i></a><a href="#伪随机探查法" class="headerlink" title="伪随机探查法"></a>伪随机探查法</h2>
-      <ul>
-<li>解决二次聚集</li>
-<li>但是</li>
-</ul>
-
-        <h2 id="double-hashing"   >
-          <a href="#double-hashing" class="heading-link"><i class="fas fa-link"></i></a><a href="#double-hashing" class="headerlink" title="double hashing"></a>double hashing</h2>
-      <ul>
-<li>Techniques that eliminate secondary clustering are available. The most popular is <strong>double hashing.</strong></li>
-<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/double-hashing/" >Double Hashing - GeeksforGeeks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-</ul>
-
-        <h2 id="链接法-x2F-开散列法-x2F-拉链法"   >
-          <a href="#链接法-x2F-开散列法-x2F-拉链法" class="heading-link"><i class="fas fa-link"></i></a><a href="#链接法-x2F-开散列法-x2F-拉链法" class="headerlink" title="链接法&#x2F;开散列法&#x2F;拉链法"></a>链接法&#x2F;开散列法&#x2F;拉链法</h2>
-      <ul>
-<li>不会出现冲突的聚集情况</li>
-<li>如果散列表储存在内存中 链接法容易实现</li>
-<li>如果散列表再磁盘中 一个同义词的链表可能存储在不同的磁盘块 导致查询一个特定记录时多次访问磁盘 增加查找时间</li>
-<li></li>
-</ul>
-
-        <h2 id="桶定址法"   >
-          <a href="#桶定址法" class="heading-link"><i class="fas fa-link"></i></a><a href="#桶定址法" class="headerlink" title="桶定址法"></a>桶定址法</h2>
-      <ul>
-<li>每个槽位不一定放一个元素 可以放多个（类似于拉链）</li>
-<li>但是一个槽位满了就线性探查（或开放寻址）</li>
-<li>会有冲突聚集</li>
-</ul>
-<p>装填因子决定平均查找长度（不是存储的记录个数或散列长度）</p>
-<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">bool</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">search</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span> &amp;&amp; (*ht)[pos].key != k) &#123;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((*ht)[pos].used == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">void</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">remove</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">eq</span>((*ht)[pos].key, k)) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((*ht)[pos].used == <span class="number">1</span>) &#123;</span><br><span class="line">        (*ht)[pos] = <span class="built_in">Entry</span>();</span><br><span class="line">        entries--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;No element found in set&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">void</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">insert</span>(<span class="type">const</span> key_type&amp; k) &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> pos = <span class="built_in">hf</span>(k) % prime_list[prime];</span><br><span class="line">    Entry item&#123; k,<span class="number">1</span> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/*   if (entries != 0 &amp;&amp; entries &gt; prime_list[prime] * load_factor) &#123;</span></span><br><span class="line"><span class="comment">        resize();</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">load_factor</span>() &gt; <span class="number">0.75</span>) &#123;</span><br><span class="line">        <span class="built_in">resize</span>(); <span class="comment">// emmm</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> ((*ht)[pos].used == <span class="number">1</span> &amp;&amp; !<span class="built_in">eq</span>((*ht)[pos].key,k)) &#123;</span><br><span class="line">        pos = <span class="built_in">probe</span>(k, ++i);</span><br><span class="line">    &#125;</span><br><span class="line">    (*ht)[pos] = item;</span><br><span class="line">    entries++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> key_type, <span class="keyword">typename</span> hash_func, <span class="keyword">typename</span> key_equal&gt;</span><br><span class="line"><span class="type">int</span> HashSet&lt;key_type, hash_func, key_equal&gt;::<span class="built_in">resize</span>() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (prime == num_primes - <span class="number">1</span>) &#123;</span><br><span class="line">        cerr &lt;&lt; <span class="string">&quot;maximal table size reached, aborting ... &quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mm = prime_list[prime];</span><br><span class="line">    prime++;</span><br><span class="line">    <span class="type">int</span> m = prime_list[prime];</span><br><span class="line">    vector&lt;Entry&gt;* ptr = <span class="keyword">new</span> <span class="built_in">vector</span>&lt;Entry&gt;(m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; mm; ++i) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ((*ht)[i].used == <span class="number">1</span>) &#123;</span><br><span class="line">            key_type kk = (*ht)[i].key;</span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> p = <span class="built_in">hf</span>(kk) % m; <span class="comment">//Ê¹ÓÃhash_func</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (p &lt; m &amp;&amp; (*ptr)[p].used == <span class="number">1</span>) &#123;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (p == m) &#123;</span><br><span class="line">                p = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> ((*ptr)[p].used == <span class="number">1</span>) &#123;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            (*ptr)[p].key = kk;</span><br><span class="line">            (*ptr)[p].used = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> ht;</span><br><span class="line">    ht = ptr;</span><br><span class="line">    <span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
-
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/16/12/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="sequential-search"   >
-          <a href="#sequential-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#sequential-search" class="headerlink" title="sequential search"></a>sequential search</h2>
-      <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png" alt="image-20221119221445097"></p>
-
-        <h2 id="binary-search"   >
-          <a href="#binary-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search" class="headerlink" title="binary search"></a>binary search</h2>
-      
-        <h3 id="binary-search-tree（区分我们要学的判定树）"   >
-          <a href="#binary-search-tree（区分我们要学的判定树）" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search-tree（区分我们要学的判定树）" class="headerlink" title="binary search tree（区分我们要学的判定树）"></a>binary search tree（区分我们要学的判定树）</h3>
-      <ul>
-<li><p>[树的高度](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" >Self-balancing binary search tree - Wikipedia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>)</p>
-</li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png" alt="image-20221114205329151"></p>
-</li>
-<li><p>Binary Search Tree is a node-based binary tree data structure which has the following properties:</p>
-<p>The left subtree of a node contains only nodes with keys lesser than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>The left and right subtree each must also be a binary search tree.</p>
-</li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BST.html" >构建过程的动画</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ul>
-
-        <h3 id="折半查找判定树"   >
-          <a href="#折半查找判定树" class="heading-link"><i class="fas fa-link"></i></a><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h3>
-      <ul>
-<li><img src="/assets/image-20221119222033400.png" alt="image-20221119222033400"></li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zipeilu/p/14626027.html" >计算ASL</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218737.png" alt="image-20221119221824327"></p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218415.png" alt="image-20221119221854558"></p>
-</li>
-</ul>
-
-        <h2 id="B-tree-x2F-多分树"   >
-          <a href="#B-tree-x2F-多分树" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree-x2F-多分树" class="headerlink" title="B-tree&#x2F;多分树"></a>B-tree&#x2F;多分树</h2>
-      
-        <h3 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
-      <ul>
-<li><p>balanced search tree</p>
-</li>
-<li><p>用途：disks or other direct access secondary storage devices (和红黑树相似 但是better at minimizing disk I&#x2F;O operations)</p>
-<p>many database systems use B-trees or B树的变种 store information</p>
-</li>
-<li><p>如果一个node x有 n 个keys 那么 node x有n+1个children</p>
-</li>
-<li><p>the keys in node x serve as dividing points separating the range of keys handled by x into x.n+1 subranges, each handled by one child of x</p>
-</li>
-<li><p>树的高度是随着结点个数logarithmatically grow</p>
-</li>
-</ul>
-
-        <h3 id="特征"   >
-          <a href="#特征" class="heading-link"><i class="fas fa-link"></i></a><a href="#特征" class="headerlink" title="特征"></a>特征</h3>
-      <ul>
-<li>所有叶子结点出现在同一层</li>
-<li>m阶的B树每个结点至多有m棵子树（All non-leaf nodes (except the root) have at most m and at least m&#x2F;2 children.）</li>
-<li>key的个数比该结点的孩子个数少1（隔板比分割区域少1）</li>
-<li>根结点至少有两棵子树</li>
-</ul>
-
-        <h3 id="基本信息"   >
-          <a href="#基本信息" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3>
-      
-        <h4 id="order-vs-degree"   >
-          <a href="#order-vs-degree" class="heading-link"><i class="fas fa-link"></i></a><a href="#order-vs-degree" class="headerlink" title="order vs degree"></a>order vs degree</h4>
-      <p>Degree represents the lower bound on the number of children. i.e the minimum number possible. Whereas the Order represents the upper bound on the number of children.</p>
-<ul>
-<li><p>minimum degree: </p>
-<ul>
-<li><p>Nodes have lower and upper bounds on the number of keys they can contain. We express these bounds in terms of a fixed integer t &gt;&#x3D;2 called the <strong>minimum degree</strong> of the B-tree:</p>
-<p>a. Every node other than the root must have at least t -1 keys. Every internal node other than the root thus has at least t children. If the tree is nonempty, the root must have at least one key.</p>
-<p>b. Every node may contain at most 2t-1 keys. Therefore, an internal node may have at most 2t children. We say that a node is <strong>full</strong> if it contains exactly 2t -1 keys.</p>
-</li>
-</ul>
-</li>
-<li><p>t度的B树就是2t阶的B树 (这也是B树的分裂机制决定的)</p>
-<p>因为t度的B树节点最多有2t个孩子，2t-1个关键字；m阶的B树最多有m个孩子，其实通过度定义的B树和通过阶数定义的B树，区别就是一个是用的这个B树节点的最小度数一个是用的这个树节点的最大度数。</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.quora.com/Why-is-the-maximum-number-of-keys-in-a-B-tree-equal-to-2-t-1-where-t-is-the-minimum-degree" >reference: 为什么是2t-1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-<li><p>[pointer,key,pointer,key,pointer]: pointer的个数就是degree 所以至少有t-1个key 如果最多的话 就是 2t-1（全都是key）</p>
-</li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png" alt="image-20221115203019698"></p>
-<ul>
-<li>为什么b-tree优于红黑树？</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png" alt="image-20221115203845142"></p>
-<ul>
-<li><p>注意h是base t的log函数 我们通过调整t可以使得h的增长变得很慢 从而提高了访问效率</p>
-<ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png" alt="image-20221115203945028"></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png" alt="image-20221022120147376" style="zoom:50%;" /></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png" alt="image-20221022120405193"></li>
-</ul>
-</li>
-<li><p>order</p>
-</li>
-</ul>
-<p>一棵m阶的B树满足下列条件：</p>
-<p>1.树中每个结点至多有m个孩子。</p>
-<p>2.除根结点和叶子结点外，其它每个结点至少有m&#x2F;2个孩子。</p>
-<p>3.根结点至少有2个孩子（如果B树只有一个结点除外）,这条性质是由B树的插入分裂策略决定的。</p>
-<p>4.所有叶结点在同一层，B树的叶结点可以看成一种外部节点，不包含任何信息。</p>
-<p>4.有k个关键字(关键字按递增次序排列)的非叶结点恰好有k+1个孩子。</p>
-<p>5.一个节点如果由n个关键字，则节点内数据结构为P0，K1，P1，K2，P2………Pn-1 Kn Pn 其中 p为指向其子节点的指针，因为父子的大小 关系和节点内大小关系，满足Kj 大于Pj指针所指向的子树上的所有关键字小雨Pj+1指针所指向子树上的所有关键字</p>
-<ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png" alt="image-20221021112043966"></li>
-</ul>
-
-        <h3 id="opeartion-search-x2F-insert"   >
-          <a href="#opeartion-search-x2F-insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#opeartion-search-x2F-insert" class="headerlink" title="opeartion search&#x2F;insert"></a>opeartion search&#x2F;insert</h3>
-      <ul>
-<li>The procedures we present are all “one-pass” algorithms that proceed downward from the root of the tree, without having to back up.</li>
-</ul>
-
-        <h4 id="insert"   >
-          <a href="#insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#insert" class="headerlink" title="insert"></a>insert</h4>
-      <ul>
-<li><p>non-split insert</p>
-</li>
-<li><p>split insert</p>
-<ul>
-<li>普通split</li>
-<li>root也满了需要h+1的split</li>
-</ul>
-</li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png" alt="image-20221115205201747"></p>
-</li>
-</ul>
-
-        <h4 id="delete"   >
-          <a href="#delete" class="heading-link"><i class="fas fa-link"></i></a><a href="#delete" class="headerlink" title="delete"></a>delete</h4>
-      <ul>
-<li>Delete one record from a leaf node with two records.</li>
-<li>Delete one record from a leaf node with one record. <ul>
-<li>Borrow a record from a brother，modify the record of parent node. </li>
-<li>Brother node does not have enough record，merge two nodes by deleting empty leaf and moving 21 down.</li>
-<li>Brother node does not have enough record，merge two nodes by deleting the empty leaf and moving 12 down. Modify the parent nodes based on the similar process.</li>
-<li>Brother node does not have enough record，merge two nodes，modify parent node. This may reduce the height of the tree.</li>
-</ul>
-</li>
-<li>Delete a record from internal node. The least key Y of right subtree replace the deleted key. Y must be in a leaf node. Then delete it.</li>
-</ul>
-
-        <h3 id="拓展：磁盘读取"   >
-          <a href="#拓展：磁盘读取" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展：磁盘读取" class="headerlink" title="拓展：磁盘读取"></a>拓展：磁盘读取</h3>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tech.meituan.com/2017/05/19/about-desk-io.html" >re1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li>main memory vs secondary storage(disks)</li>
-<li>增加磁盘platter(硬盘盘片)只是增加disk drive’s capacity not its performance</li>
-</ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://medium.com/@andrewjmarkham1/disk-storage-data-indexing-and-a-use-case-for-b-trees-608ff56bffdd" >re2</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><p>数据库应用b-tree metadata 即寻找data 的index是利用b tree储存索引查找</p>
-</li>
-<li><p>the running time of a B-tree algorithm depends primarily on the number of DISK-READ and DISK-WRITE operations it performs, we typically want each of these operations to read or write as much information aspossible. Thus, a B-tree node is usually <strong>as large as a whole disk page</strong>, and this size limits the number of children a B-tree node can have.</p>
-</li>
-<li><p>branching factor指的是这个结点下有多少个孩子 则factor<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%94%AF%E5%9B%A0%E5%AD%90" >就是几</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ul>
-
-        <h3 id="exercise"   >
-          <a href="#exercise" class="heading-link"><i class="fas fa-link"></i></a><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3>
-      <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png" alt="image-20221115204159554"></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png" alt="image-20221115204217841"></li>
-</ul>
-
-        <h2 id="2-3树"   >
-          <a href="#2-3树" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h2>
-      <ul>
-<li>平衡树：任意节点的子树的高度差都小于等于1 2-3树的叶子结点都在同一层因此是平衡树</li>
-<li>Comparison times are not larger than the height of 2-3 tree.</li>
-</ul>
-
-        <h2 id="B-tree"   >
-          <a href="#B-tree" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree" class="headerlink" title="B+ tree"></a>B+ tree</h2>
-      <ul>
-<li><strong>B+ -tree</strong>, stores all the satellite information in the leaves and stores only keys and child pointers in the internal nodes, thus maximizing the branching factor of the internal nodes.</li>
-<li>Special cases: <ul>
-<li>If the root is not a leaf, it has at least 2 children.</li>
-<li>If the root is a leaf (that is, there are no other nodes in the tree), it can have between 0 and (n–1) values.</li>
-</ul>
-</li>
-</ul>
-<p><img src="/assets/image-20221119221136727.png" alt="image-20221119221136727"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/15/15/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/11/15/15/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="评价算法标准"   >
           <a href="#评价算法标准" class="heading-link"><i class="fas fa-link"></i></a><a href="#评价算法标准" class="headerlink" title="评价算法标准"></a>评价算法标准</h2>
       <ul>
@@ -680,7 +393,18 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 </li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192134408.png" alt="image-20221119213401509"></p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/10/16/leetcode/">1-n的数字中一共出现了多少个1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-17</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/" >题目</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/10/16/leetcode-1/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-18</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="十种常见排序算法可以分为两大类："   >
+          <a href="#十种常见排序算法可以分为两大类：" class="heading-link"><i class="fas fa-link"></i></a><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/796f23a96596" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li>
+<li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li>
+</ul>
+
+        <h2 id="归并排序"   >
+          <a href="#归并排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>
+      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/10/16/leetcode/">1-n的数字中一共出现了多少个1</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-17</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/" >题目</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <hr>
 
         <h2 id="思路"   >
@@ -699,18 +423,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null" >strcpy会把string的结尾0也复制过去</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
 <li></li>
 </ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/10/16/leetcode-1/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-10-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-10-18</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="十种常见排序算法可以分为两大类："   >
-          <a href="#十种常见排序算法可以分为两大类：" class="heading-link"><i class="fas fa-link"></i></a><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/796f23a96596" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<ul>
-<li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li>
-<li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li>
-</ul>
-
-        <h2 id="归并排序"   >
-          <a href="#归并排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>
-      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/08/26/springboot/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/08/26/springboot/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="配置环境"   >
           <a href="#配置环境" class="heading-link"><i class="fas fa-link"></i></a><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2>
       
@@ -962,4 +675,96 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li><p>For reading or writing XML documents iteratively (SAX), we recommend using  Qt Core’s <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qxmlstreamreader.html" >QXmlStreamReader</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> and <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qxmlstreamwriter.html" >QXmlStreamWriter</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> classes. The classes are both easier to use and more compliant with the XML standard.</p>
 </li>
 </ul>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">44</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/08/16/post-2/">post</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-16</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="range-based-for-loops"   >
+          <a href="#range-based-for-loops" class="heading-link"><i class="fas fa-link"></i></a><a href="#range-based-for-loops" class="headerlink" title="range-based for-loops"></a>range-based for-loops</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3853.htm" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> elem : range) <span class="comment">//equals to auto elem = *__begin</span></span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p>不是好的写法 但经常被误用</p>
+<ul>
+<li><pre><code>* It might not compile - for example, unique_ptr elements aren&#39;t copyable.
+        This is problematic both for users who won&#39;t understand the resulting
+        compiler errors, and for users writing generic code that&#39;ll happily
+        compile until someone instantiates it for movable-only elements.
+* It might misbehave at runtime - for example, &quot;elem = val;&quot; will modify
+        the copy, but not the original element in the range. Additionally,
+        &amp;elem will be invalidated after each iteration.
+* It might be inefficient - for example, unnecessarily copying std::string.
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/08/11/post-1/">leetcode-位运算</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-08-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-08-11</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="basics-位运算"   >
+          <a href="#basics-位运算" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics-位运算" class="headerlink" title="basics-位运算"></a>basics-位运算</h2>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/bit-operation.html" >reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="与运算"   >
+          <a href="#与运算" class="heading-link"><i class="fas fa-link"></i></a><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0&amp;0=0 0&amp;1=0 1&amp;0=0 1&amp;1=1</span><br></pre></td></tr></table></div></figure>
+
+
+
+<ul>
+<li><p>1）清零</p>
+<p>如果想将一个单元清零，即使其全部二进制位为0，只要与一个各位都为零的数值相与，结果为零。</p>
+<p>2）取一个数的指定位</p>
+<p>比如取数 X&#x3D;1010 1110 的低4位，只需要另找一个数Y，令Y的低4位为1，其余位为0，即Y&#x3D;0000 1111，然后将X与Y进行按位与运算（X&amp;Y&#x3D;0000 1110）即可得到X的指定位。</p>
+<p>3）判断奇偶</p>
+<p>只要根据最未位是0还是1来决定，为0就是偶数，为1就是奇数。因此可以用if ((a &amp; 1) &#x3D;&#x3D; 0)代替if (a % 2 &#x3D;&#x3D; 0)来判断a是不是偶数。</p>
+</li>
+</ul>
+
+        <h3 id="或运算"   >
+          <a href="#或运算" class="heading-link"><i class="fas fa-link"></i></a><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0|0=0  0|1=1  1|0=1  1|1=1</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p>1）常用来对一个数据的某些位设置为1</p>
+<p>比如将数 X&#x3D;1010 1110 的低4位设置为1，只需要另找一个数Y，令Y的低4位为1，其余位为0，即Y&#x3D;0000 1111，然后将X与Y进行按位或运算（X|Y&#x3D;1010 1111）即可得到。</p>
+</li>
+</ul>
+
+        <h3 id="异或运算"   >
+          <a href="#异或运算" class="heading-link"><i class="fas fa-link"></i></a><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0^0=0  0^1=1  1^0=1  1^1=0</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><p>1、交换律</p>
+</li>
+<li><p>2、结合律 (a^b)^c &#x3D;&#x3D; a^(b^c)</p>
+</li>
+<li><p>3、对于任何数x，都有 x^x&#x3D;0，x^0&#x3D;x</p>
+</li>
+<li><p>4、自反性: a^b^b&#x3D;a^0&#x3D;a;</p>
+</li>
+<li><p>1）翻转指定位</p>
+<p>比如将数 X&#x3D;1010 1110 的低4位进行翻转，只需要另找一个数Y，令Y的低4位为1，其余位为0，即Y&#x3D;0000 1111，然后将X与Y进行异或运算（X^Y&#x3D;1010 0001）即可得到。</p>
+<p>2）与0相异或值不变</p>
+<p>例如：1010 1110 ^ 0000 0000 &#x3D; 1010 1110</p>
+<p>3）交换两个数</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void Swap(int &amp;a, int &amp;b)&#123;</span><br><span class="line">   if (a != b)&#123;</span><br><span class="line">     a ^= b;</span><br><span class="line">     b ^= a;</span><br><span class="line">     a ^= b;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></div></figure></li>
+</ul>
+
+        <h3 id="取反运算"   >
+          <a href="#取反运算" class="heading-link"><i class="fas fa-link"></i></a><a href="#取反运算" class="headerlink" title="取反运算"></a>取反运算</h3>
+      
+        <h2 id="example"   >
+          <a href="#example" class="heading-link"><i class="fas fa-link"></i></a><a href="#example" class="headerlink" title="example"></a>example</h2>
+      <ul>
+<li><pre><code>给出两个32位的整数N和M，以及两个二进制位的位置i和j。写一个方法来使得N中的第i到j位等于M（M会是N中从第i为开始到第j位的子串）
+
+样例：
+
+输入: N=(10000000000)2 M=(10101)2 i=2 j=6
+输出: N=(10001010100)2
+输入: N=(10000000000)2 M=(11111)2 i=2 j=6
+输出: N=(10001111100)2
+</code></pre>
+</li>
+<li></li>
+</ul>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">42</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
