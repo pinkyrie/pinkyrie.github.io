@@ -1,9 +1,27 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="sequential search                            binary search                           binary search tree（区分我们要学的判定树）        [树的高度](Self-balancing binary search tree - Wikipedia)">
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/android-chrome-512x512.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#3C3D3F">
+  <meta name="author" content="rye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="sequential search binary searchbinary search tree（区分我们要学的判定树） [树的高度](Self-balancing binary search tree - Wikipedia)    Binary Search Tree is a node-based binary tree data structure which has the follo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rye is coding">
 <meta property="og:url" content="https://pinkyrie.github.io/2022/11/16/12/index.html">
 <meta property="og:site_name" content="rye is coding">
-<meta property="og:description" content="sequential search                            binary search                           binary search tree（区分我们要学的判定树）        [树的高度](Self-balancing binary search tree - Wikipedia)">
+<meta property="og:description" content="sequential search binary searchbinary search tree（区分我们要学的判定树） [树的高度](Self-balancing binary search tree - Wikipedia)    Binary Search Tree is a node-based binary tree data structure which has the follo">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png">
@@ -23,71 +41,320 @@
 <meta property="article:published_time" content="2022-11-16T15:28:47.063Z">
 <meta property="article:modified_time" content="2022-11-19T14:20:34.221Z">
 <meta property="article:author" content="rye">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png"><title>[ 文章无标题 ] | rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/2022/11/16/12/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
-var CONFIG = {
-  root: '/',
-  algolia: undefined,
-  assistSearch: undefined,
-  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
-  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
-  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
-  postWidget: {"endText":true},
-  nightMode: {"enable":true},
-  back2top: {"enable":true},
-  codeblock: {"style":"default","highlight":"light","wordWrap":false},
-  reward: false,
-  fancybox: false,
-  zoomImage: {"gapAside":"20px"},
-  galleryWaterfall: undefined,
-  lazyload: false,
-  pjax: undefined,
-  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
-  shortcuts: undefined,
-  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
-  sourcePath: {"js":"js","css":"css","images":"images"},
-};
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>rye is coding</title>
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-11-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-11-19</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
-        <h2 id="sequential-search"   >
-          <a href="#sequential-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#sequential-search" class="headerlink" title="sequential search"></a>sequential search</h2>
-      <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png" alt="image-20221119221445097"></p>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-        <h2 id="binary-search"   >
-          <a href="#binary-search" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search" class="headerlink" title="binary search"></a>binary search</h2>
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"pinkyrie.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Matoka&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-11-16 23:28" pubdate>
+          2022年11月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          783 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
       
-        <h3 id="binary-search-tree（区分我们要学的判定树）"   >
-          <a href="#binary-search-tree（区分我们要学的判定树）" class="heading-link"><i class="fas fa-link"></i></a><a href="#binary-search-tree（区分我们要学的判定树）" class="headerlink" title="binary search tree（区分我们要学的判定树）"></a>binary search tree（区分我们要学的判定树）</h3>
-      <ul>
-<li><p>[树的高度](<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" >Self-balancing binary search tree - Wikipedia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>)</p>
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2022年11月19日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="sequential-search"><a href="#sequential-search" class="headerlink" title="sequential search"></a>sequential search</h2><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192214030.png" srcset="/img/loading.gif" lazyload alt="image-20221119221445097"></p>
+<h2 id="binary-search"><a href="#binary-search" class="headerlink" title="binary search"></a>binary search</h2><h3 id="binary-search-tree（区分我们要学的判定树）"><a href="#binary-search-tree（区分我们要学的判定树）" class="headerlink" title="binary search tree（区分我们要学的判定树）"></a>binary search tree（区分我们要学的判定树）</h3><ul>
+<li><p>[树的高度](<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">Self-balancing binary search tree - Wikipedia</a>)</p>
 </li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png" alt="image-20221114205329151"></p>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324256.png" srcset="/img/loading.gif" lazyload alt="image-20221114205329151"></p>
 </li>
 <li><p>Binary Search Tree is a node-based binary tree data structure which has the following properties:</p>
 <p>The left subtree of a node contains only nodes with keys lesser than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>The left and right subtree each must also be a binary search tree.</p>
 </li>
-<li><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BST.html" >构建过程的动画</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<li><p><a target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BST.html">构建过程的动画</a></p>
 </li>
 </ul>
-
-        <h3 id="折半查找判定树"   >
-          <a href="#折半查找判定树" class="heading-link"><i class="fas fa-link"></i></a><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h3>
-      <ul>
-<li><img src="/assets/image-20221119222033400.png" alt="image-20221119222033400"></li>
+<h3 id="折半查找判定树"><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h3><ul>
+<li><img src="/assets/image-20221119222033400.png" srcset="/img/loading.gif" lazyload alt="image-20221119222033400"></li>
 </ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zipeilu/p/14626027.html" >计算ASL</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zipeilu/p/14626027.html">计算ASL</a></p>
 <ul>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218737.png" alt="image-20221119221824327"></p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218415.png" alt="image-20221119221854558"></p>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218737.png" srcset="/img/loading.gif" lazyload alt="image-20221119221824327"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211192218415.png" srcset="/img/loading.gif" lazyload alt="image-20221119221854558"></p>
 </li>
 </ul>
-
-        <h2 id="B-tree-x2F-多分树"   >
-          <a href="#B-tree-x2F-多分树" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree-x2F-多分树" class="headerlink" title="B-tree&#x2F;多分树"></a>B-tree&#x2F;多分树</h2>
-      
-        <h3 id="basics"   >
-          <a href="#basics" class="heading-link"><i class="fas fa-link"></i></a><a href="#basics" class="headerlink" title="basics"></a>basics</h3>
-      <ul>
+<h2 id="B-tree-x2F-多分树"><a href="#B-tree-x2F-多分树" class="headerlink" title="B-tree&#x2F;多分树"></a>B-tree&#x2F;多分树</h2><h3 id="basics"><a href="#basics" class="headerlink" title="basics"></a>basics</h3><ul>
 <li><p>balanced search tree</p>
 </li>
 <li><p>用途：disks or other direct access secondary storage devices (和红黑树相似 但是better at minimizing disk I&#x2F;O operations)</p>
@@ -100,22 +367,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li><p>树的高度是随着结点个数logarithmatically grow</p>
 </li>
 </ul>
-
-        <h3 id="特征"   >
-          <a href="#特征" class="heading-link"><i class="fas fa-link"></i></a><a href="#特征" class="headerlink" title="特征"></a>特征</h3>
-      <ul>
+<h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><ul>
 <li>所有叶子结点出现在同一层</li>
 <li>m阶的B树每个结点至多有m棵子树（All non-leaf nodes (except the root) have at most m and at least m&#x2F;2 children.）</li>
 <li>key的个数比该结点的孩子个数少1（隔板比分割区域少1）</li>
 <li>根结点至少有两棵子树</li>
 </ul>
-
-        <h3 id="基本信息"   >
-          <a href="#基本信息" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3>
-      
-        <h4 id="order-vs-degree"   >
-          <a href="#order-vs-degree" class="heading-link"><i class="fas fa-link"></i></a><a href="#order-vs-degree" class="headerlink" title="order vs degree"></a>order vs degree</h4>
-      <p>Degree represents the lower bound on the number of children. i.e the minimum number possible. Whereas the Order represents the upper bound on the number of children.</p>
+<h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><h4 id="order-vs-degree"><a href="#order-vs-degree" class="headerlink" title="order vs degree"></a>order vs degree</h4><p>Degree represents the lower bound on the number of children. i.e the minimum number possible. Whereas the Order represents the upper bound on the number of children.</p>
 <ul>
 <li><p>minimum degree: </p>
 <ul>
@@ -127,23 +385,23 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 </li>
 <li><p>t度的B树就是2t阶的B树 (这也是B树的分裂机制决定的)</p>
 <p>因为t度的B树节点最多有2t个孩子，2t-1个关键字；m阶的B树最多有m个孩子，其实通过度定义的B树和通过阶数定义的B树，区别就是一个是用的这个B树节点的最小度数一个是用的这个树节点的最大度数。</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.quora.com/Why-is-the-maximum-number-of-keys-in-a-B-tree-equal-to-2-t-1-where-t-is-the-minimum-degree" >reference: 为什么是2t-1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://www.quora.com/Why-is-the-maximum-number-of-keys-in-a-B-tree-equal-to-2-t-1-where-t-is-the-minimum-degree">reference: 为什么是2t-1</a></p>
 </li>
 <li><p>[pointer,key,pointer,key,pointer]: pointer的个数就是degree 所以至少有t-1个key 如果最多的话 就是 2t-1（全都是key）</p>
 </li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png" alt="image-20221115203019698"></p>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324799.png" srcset="/img/loading.gif" lazyload alt="image-20221115203019698"></p>
 <ul>
 <li>为什么b-tree优于红黑树？</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png" alt="image-20221115203845142"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326275.png" srcset="/img/loading.gif" lazyload alt="image-20221115203845142"></p>
 <ul>
 <li><p>注意h是base t的log函数 我们通过调整t可以使得h的增长变得很慢 从而提高了访问效率</p>
 <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png" alt="image-20221115203945028"></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png" alt="image-20221022120147376" style="zoom:50%;" /></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png" alt="image-20221022120405193"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162326940.png" srcset="/img/loading.gif" lazyload alt="image-20221115203945028"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324621.png" srcset="/img/loading.gif" lazyload alt="image-20221022120147376" style="zoom:50%;" /></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324305.png" srcset="/img/loading.gif" lazyload alt="image-20221022120405193"></li>
 </ul>
 </li>
 <li><p>order</p>
@@ -157,18 +415,12 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <p>4.有k个关键字(关键字按递增次序排列)的非叶结点恰好有k+1个孩子。</p>
 <p>5.一个节点如果由n个关键字，则节点内数据结构为P0，K1，P1，K2，P2………Pn-1 Kn Pn 其中 p为指向其子节点的指针，因为父子的大小 关系和节点内大小关系，满足Kj 大于Pj指针所指向的子树上的所有关键字小雨Pj+1指针所指向子树上的所有关键字</p>
 <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png" alt="image-20221021112043966"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324077.png" srcset="/img/loading.gif" lazyload alt="image-20221021112043966"></li>
 </ul>
-
-        <h3 id="opeartion-search-x2F-insert"   >
-          <a href="#opeartion-search-x2F-insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#opeartion-search-x2F-insert" class="headerlink" title="opeartion search&#x2F;insert"></a>opeartion search&#x2F;insert</h3>
-      <ul>
+<h3 id="opeartion-search-x2F-insert"><a href="#opeartion-search-x2F-insert" class="headerlink" title="opeartion search&#x2F;insert"></a>opeartion search&#x2F;insert</h3><ul>
 <li>The procedures we present are all “one-pass” algorithms that proceed downward from the root of the tree, without having to back up.</li>
 </ul>
-
-        <h4 id="insert"   >
-          <a href="#insert" class="heading-link"><i class="fas fa-link"></i></a><a href="#insert" class="headerlink" title="insert"></a>insert</h4>
-      <ul>
+<h4 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h4><ul>
 <li><p>non-split insert</p>
 </li>
 <li><p>split insert</p>
@@ -177,13 +429,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li>root也满了需要h+1的split</li>
 </ul>
 </li>
-<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png" alt="image-20221115205201747"></p>
+<li><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324189.png" srcset="/img/loading.gif" lazyload alt="image-20221115205201747"></p>
 </li>
 </ul>
-
-        <h4 id="delete"   >
-          <a href="#delete" class="heading-link"><i class="fas fa-link"></i></a><a href="#delete" class="headerlink" title="delete"></a>delete</h4>
-      <ul>
+<h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><ul>
 <li>Delete one record from a leaf node with two records.</li>
 <li>Delete one record from a leaf node with one record. <ul>
 <li>Borrow a record from a brother，modify the record of parent node. </li>
@@ -194,41 +443,29 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 </li>
 <li>Delete a record from internal node. The least key Y of right subtree replace the deleted key. Y must be in a leaf node. Then delete it.</li>
 </ul>
-
-        <h3 id="拓展：磁盘读取"   >
-          <a href="#拓展：磁盘读取" class="heading-link"><i class="fas fa-link"></i></a><a href="#拓展：磁盘读取" class="headerlink" title="拓展：磁盘读取"></a>拓展：磁盘读取</h3>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://tech.meituan.com/2017/05/19/about-desk-io.html" >re1</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<h3 id="拓展：磁盘读取"><a href="#拓展：磁盘读取" class="headerlink" title="拓展：磁盘读取"></a>拓展：磁盘读取</h3><p><a target="_blank" rel="noopener" href="https://tech.meituan.com/2017/05/19/about-desk-io.html">re1</a></p>
 <ul>
 <li>main memory vs secondary storage(disks)</li>
 <li>增加磁盘platter(硬盘盘片)只是增加disk drive’s capacity not its performance</li>
 </ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://medium.com/@andrewjmarkham1/disk-storage-data-indexing-and-a-use-case-for-b-trees-608ff56bffdd" >re2</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/@andrewjmarkham1/disk-storage-data-indexing-and-a-use-case-for-b-trees-608ff56bffdd">re2</a></p>
 <ul>
 <li><p>数据库应用b-tree metadata 即寻找data 的index是利用b tree储存索引查找</p>
 </li>
 <li><p>the running time of a B-tree algorithm depends primarily on the number of DISK-READ and DISK-WRITE operations it performs, we typically want each of these operations to read or write as much information aspossible. Thus, a B-tree node is usually <strong>as large as a whole disk page</strong>, and this size limits the number of children a B-tree node can have.</p>
 </li>
-<li><p>branching factor指的是这个结点下有多少个孩子 则factor<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%94%AF%E5%9B%A0%E5%AD%90" >就是几</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<li><p>branching factor指的是这个结点下有多少个孩子 则factor<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%94%AF%E5%9B%A0%E5%AD%90">就是几</a></p>
 </li>
 </ul>
-
-        <h3 id="exercise"   >
-          <a href="#exercise" class="heading-link"><i class="fas fa-link"></i></a><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3>
-      <ul>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png" alt="image-20221115204159554"></li>
-<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png" alt="image-20221115204217841"></li>
+<h3 id="exercise"><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3><ul>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324586.png" srcset="/img/loading.gif" lazyload alt="image-20221115204159554"></li>
+<li><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202211162324143.png" srcset="/img/loading.gif" lazyload alt="image-20221115204217841"></li>
 </ul>
-
-        <h2 id="2-3树"   >
-          <a href="#2-3树" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h2>
-      <ul>
+<h2 id="2-3树"><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h2><ul>
 <li>平衡树：任意节点的子树的高度差都小于等于1 2-3树的叶子结点都在同一层因此是平衡树</li>
 <li>Comparison times are not larger than the height of 2-3 tree.</li>
 </ul>
-
-        <h2 id="B-tree"   >
-          <a href="#B-tree" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-tree" class="headerlink" title="B+ tree"></a>B+ tree</h2>
-      <ul>
+<h2 id="B-tree"><a href="#B-tree" class="headerlink" title="B+ tree"></a>B+ tree</h2><ul>
 <li><strong>B+ -tree</strong>, stores all the satellite information in the leaves and stores only keys and child pointers in the internal nodes, thus maximizing the branching factor of the internal nodes.</li>
 <li>Special cases: <ul>
 <li>If the root is not a leaf, it has at least 2 children.</li>
@@ -236,49 +473,403 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 </ul>
 </li>
 </ul>
-<p><img src="/assets/image-20221119221136727.png" alt="image-20221119221136727"></p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://pinkyrie.github.io">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://pinkyrie.github.io/2022/11/16/12/">https://pinkyrie.github.io/2022/11/16/12/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/11/16/13/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/11/15/15/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sequential-search"><span class="toc-number">1.</span> <span class="toc-text">
-          sequential search</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#binary-search"><span class="toc-number">2.</span> <span class="toc-text">
-          binary search</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#binary-search-tree%EF%BC%88%E5%8C%BA%E5%88%86%E6%88%91%E4%BB%AC%E8%A6%81%E5%AD%A6%E7%9A%84%E5%88%A4%E5%AE%9A%E6%A0%91%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">
-          binary search tree（区分我们要学的判定树）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E5%88%A4%E5%AE%9A%E6%A0%91"><span class="toc-number">2.2.</span> <span class="toc-text">
-          折半查找判定树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-tree-x2F-%E5%A4%9A%E5%88%86%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">
-          B-tree&#x2F;多分树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basics"><span class="toc-number">3.1.</span> <span class="toc-text">
-          basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-number">3.2.</span> <span class="toc-text">
-          特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">3.3.</span> <span class="toc-text">
-          基本信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#order-vs-degree"><span class="toc-number">3.3.1.</span> <span class="toc-text">
-          order vs degree</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opeartion-search-x2F-insert"><span class="toc-number">3.4.</span> <span class="toc-text">
-          opeartion search&#x2F;insert</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#insert"><span class="toc-number">3.4.1.</span> <span class="toc-text">
-          insert</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#delete"><span class="toc-number">3.4.2.</span> <span class="toc-text">
-          delete</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%EF%BC%9A%E7%A3%81%E7%9B%98%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.</span> <span class="toc-text">
-          拓展：磁盘读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise"><span class="toc-number">3.6.</span> <span class="toc-text">
-          exercise</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E6%A0%91"><span class="toc-number">4.</span> <span class="toc-text">
-          2-3树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-tree"><span class="toc-number">5.</span> <span class="toc-text">
-          B+ tree</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">40</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
-  var GUEST_INFO = ['nick', 'mail', 'link'];
-  var guest_info = 'nick,mail,link';
+<p><img src="/assets/image-20221119221136727.png" srcset="/img/loading.gif" lazyload alt="image-20221119221136727"></p>
 
-  guest_info = guest_info.split(',').filter(function(item) {
-    return GUEST_INFO.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#valine-container',
-    appId: 'z6kPdFlVkFWWzz9Zmobe3xRx-gzGzoHsz',
-    appKey: 'navfm2ILQsTrHFofwkEkIues',
-    notify: false,
-    verify: false,
-    placeholder: 'Please leave your comments here :)',
-    avatar: 'wavatar',
-    meta: guest_info,
-    pageSize: '10' || 10,
-    visitor: false,
-    recordIP: false,
-    lang: 'zh-cn' || 'zh-cn',
-    path: window.location.pathname
-  });
-}
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
 
-if (false) {
-  loadValine();
-} else {
-  window.addEventListener('DOMContentLoaded', loadValine, false);
-}</script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>https://pinkyrie.github.io/2022/11/16/12/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>rye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年11月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/11/16/13/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/11/15/15/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"z6kPdFlVkFWWzz9Zmobe3xRx-gzGzoHsz","appKey":"navfm2ILQsTrHFofwkEkIues","path":"window.location.pathname","placeholder":"Please leave your comments here :)","avatar":"wavatar","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://z6kpdflv.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

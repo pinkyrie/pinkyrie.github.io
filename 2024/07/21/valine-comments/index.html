@@ -1,9 +1,27 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="需求——个人博客网站评论区       想要让自己的博客网站支持留言，装扮hexo空间:)                     对比技术——Gitalk or Valine+LeanCloud        Gitalk 是一个基于 Github issues 的评论系统。  Gitalk steps:  注册一个新的 GitHub Applicatio">
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/android-chrome-512x512.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#3C3D3F">
+  <meta name="author" content="rye">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="需求——个人博客网站评论区想要让自己的博客网站支持留言，装扮hexo空间:) 对比技术——Gitalk or Valine+LeanCloud Gitalk 是一个基于 Github issues 的评论系统。  Gitalk steps:  注册一个新的 GitHub Application 来授权 修改config配置启用Gitalk  通过Gitalk的readme，自动跳转到了OAuth">
 <meta property="og:type" content="article">
 <meta property="og:title" content="丑丑头像——个人博客评论系统valine部署小记">
 <meta property="og:url" content="https://pinkyrie.github.io/2024/07/21/valine-comments/index.html">
 <meta property="og:site_name" content="rye is coding">
-<meta property="og:description" content="需求——个人博客网站评论区       想要让自己的博客网站支持留言，装扮hexo空间:)                     对比技术——Gitalk or Valine+LeanCloud        Gitalk 是一个基于 Github issues 的评论系统。  Gitalk steps:  注册一个新的 GitHub Applicatio">
+<meta property="og:description" content="需求——个人博客网站评论区想要让自己的博客网站支持留言，装扮hexo空间:) 对比技术——Gitalk or Valine+LeanCloud Gitalk 是一个基于 Github issues 的评论系统。  Gitalk steps:  注册一个新的 GitHub Application 来授权 修改config配置启用Gitalk  通过Gitalk的readme，自动跳转到了OAuth">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341908.png">
@@ -16,39 +34,300 @@
 <meta property="article:modified_time" content="2024-07-21T16:02:05.618Z">
 <meta property="article:author" content="rye">
 <meta property="article:tag" content="valine blog-comments">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png"><title>丑丑头像——个人博客评论系统valine部署小记 | rye is coding</title><link ref="canonical" href="https://pinkyrie.github.io/2024/07/21/valine-comments/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
-var CONFIG = {
-  root: '/',
-  algolia: undefined,
-  assistSearch: undefined,
-  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
-  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
-  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
-  postWidget: {"endText":true},
-  nightMode: {"enable":true},
-  back2top: {"enable":true},
-  codeblock: {"style":"default","highlight":"light","wordWrap":false},
-  reward: false,
-  fancybox: false,
-  zoomImage: {"gapAside":"20px"},
-  galleryWaterfall: undefined,
-  lazyload: false,
-  pjax: undefined,
-  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
-  shortcuts: undefined,
-  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
-  sourcePath: {"js":"js","css":"css","images":"images"},
-};
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>丑丑头像——个人博客评论系统valine部署小记 - rye is coding</title>
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fa fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">rye is coding</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">丑丑头像——个人博客评论系统valine部署小记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-07-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-07-22</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
-        <h2 id="需求——个人博客网站评论区"   >
-          <a href="#需求——个人博客网站评论区" class="heading-link"><i class="fas fa-link"></i></a><a href="#需求——个人博客网站评论区" class="headerlink" title="需求——个人博客网站评论区"></a>需求——个人博客网站评论区</h2>
-      <p>想要让自己的博客网站支持留言，装扮hexo空间:)</p>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-        <h2 id="对比技术——Gitalk-or-Valine-LeanCloud"   >
-          <a href="#对比技术——Gitalk-or-Valine-LeanCloud" class="heading-link"><i class="fas fa-link"></i></a><a href="#对比技术——Gitalk-or-Valine-LeanCloud" class="headerlink" title="对比技术——Gitalk or Valine+LeanCloud"></a>对比技术——<strong>Gitalk</strong> or Valine+LeanCloud</h2>
-      <blockquote>
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"pinkyrie.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Matoka&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="丑丑头像——个人博客评论系统valine部署小记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-21 23:32" pubdate>
+          2024年7月21日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          817 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">丑丑头像——个人博客评论系统valine部署小记</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年7月22日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="需求——个人博客网站评论区"><a href="#需求——个人博客网站评论区" class="headerlink" title="需求——个人博客网站评论区"></a>需求——个人博客网站评论区</h2><p>想要让自己的博客网站支持留言，装扮hexo空间:)</p>
+<h2 id="对比技术——Gitalk-or-Valine-LeanCloud"><a href="#对比技术——Gitalk-or-Valine-LeanCloud" class="headerlink" title="对比技术——Gitalk or Valine+LeanCloud"></a>对比技术——<strong>Gitalk</strong> or Valine+LeanCloud</h2><blockquote>
 <p>Gitalk 是一个基于 Github issues 的评论系统。</p>
 </blockquote>
 <p><strong>Gitalk steps:</strong></p>
@@ -57,34 +336,31 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li>修改config配置启用Gitalk</li>
 </ul>
 <p>通过Gitalk的readme，自动跳转到了OAuth application的注册界面，OAuth application不等同于Github application。虽然两者都是为了能够暴露GitHub的仓库操作API，OAuth application并不能限制使用GitHub的权限限度。OAuth application可以类比qq授权给另一个网站登录使用qq的个人信息，OAuth application的回调（callback）url就是个人博客网站url，即接收GitHub发送的token的一方。由于hexo的明文传输，这个token理论上是会被暴露在前端的某个js文件中</p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p><strong>暴露是否是安全呢？答案：so far so good</strong></p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341908.png" alt="Untitled"></p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341874.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341908.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341874.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <ul>
 <li>关键在于callback url不可改，指向的我们自己的博客是受信任的，安全的。但是当我们点别人的博客提示需要授权的时候，就要小心了</li>
 </ul>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues/444" >https://github.com/gitalk/gitalk/issues/444</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues/444">https://github.com/gitalk/gitalk/issues/444</a></p>
 <p><strong>token权限争议</strong></p>
 <ul>
-<li>引用的博主认为：OAuth application使用的token应该是仅有只读权限 但是这位博主自己的评论区进行GitHub授权时，依然提示需要授权read and write。引用：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://carl-zk.github.io/blog/2020/03/03/gitalk-%E8%BF%90%E4%BD%9C%E5%8E%9F%E7%90%86/" >Gitalk 运作原理 | 一叶轻舟渡万江 (carl-zk.github.io)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>引用的博主认为：OAuth application使用的token应该是仅有只读权限 但是这位博主自己的评论区进行GitHub授权时，依然提示需要授权read and write。引用：<a target="_blank" rel="noopener" href="https://carl-zk.github.io/blog/2020/03/03/gitalk-%E8%BF%90%E4%BD%9C%E5%8E%9F%E7%90%86/">Gitalk 运作原理 | 一叶轻舟渡万江 (carl-zk.github.io)</a></li>
 </ul>
 <p>OAuth App 5年前创建，2019年，此时PR还没提，还是read write</p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341044.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341044.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p>2020.2 PR合并，token的权限从读写权改为read only </p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/pull/344" >https://github.com/gitalk/gitalk/pull/344</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/pull/344">https://github.com/gitalk/gitalk/pull/344</a></p>
 <p>2020.3博主调查之后 写下read only的结论</p>
 <p><strong>Valine+LeanCloud steps:</strong> </p>
 <ul>
-<li>注册LeanCloud<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://console.leancloud.cn/apps" >LeanCloud</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-<li>参考stun主题的valine部署方式<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine" >第三方支持 | hexo-theme-stun</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>注册LeanCloud<a target="_blank" rel="noopener" href="https://console.leancloud.cn/apps">LeanCloud</a></li>
+<li>参考stun主题的valine部署方式<a target="_blank" rel="noopener" href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></li>
 </ul>
 <p>对比Gitalk和Valine，Gitalk有一定的风险w 而Valine虽然不一定稳定，但是删库跑路的风险是0.0000001。所以选择Valine＜（＾－＾）＞</p>
-
-        <h2 id="头像是丑丑人儿怎么办呢"   >
-          <a href="#头像是丑丑人儿怎么办呢" class="heading-link"><i class="fas fa-link"></i></a><a href="#头像是丑丑人儿怎么办呢" class="headerlink" title="头像是丑丑人儿怎么办呢"></a>头像是丑丑人儿怎么办呢</h2>
-      <p>当完成了评论区的基本部署，需要选择默认头像样式。这里可以选择神秘人样式，或者wavatar小怪物。但是没有人想到当VPN+无邮箱测试留言评论，头像是丑丑人儿！（在配置中命名配置的是wavatar！）</p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212340677.png" alt="Untitled"></p>
+<h2 id="头像是丑丑人儿怎么办呢"><a href="#头像是丑丑人儿怎么办呢" class="headerlink" title="头像是丑丑人儿怎么办呢"></a>头像是丑丑人儿怎么办呢</h2><p>当完成了评论区的基本部署，需要选择默认头像样式。这里可以选择神秘人样式，或者wavatar小怪物。但是没有人想到当VPN+无邮箱测试留言评论，头像是丑丑人儿！（在配置中命名配置的是wavatar！）</p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212340677.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p>小坑：需要注意notify：verify：类似这种的配置文件有列出的项目，不能直接注释掉（这是必须项）应该写false来禁用</p>
 <p>经过和cls的一个下午测试，结论如下：</p>
 <ol>
@@ -98,45 +374,415 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <p>一言蔽之：只有在<code>VPN + 无邮箱</code>的情况下，才会显示丑人 (302)</p>
 <p>一旦生成头像，会永久和邮箱绑定</p>
 <p>疑惑：为什么有VPN反而not found (302)</p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341687.png" alt="Untitled"></p>
-<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341955.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341687.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341955.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p>aa 没有mail都是丑丑人儿！</p>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h2><p><a target="_blank" rel="noopener" href="https://valine.js.org/avatar.html">头像配置 | Valine 一款快速、简洁且高效的无后端评论系统。</a>(我们会发现这个里面评论区头像图片获取的链接和我们使用的头像获取url不太一样呢）</p>
+<p><a target="_blank" rel="noopener" href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues?page=1&q=secret">https://github.com/gitalk/gitalk/issues?page=1&q=secret</a></p>
 
-        <h2 id="Ref"   >
-          <a href="#Ref" class="heading-link"><i class="fas fa-link"></i></a><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h2>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://valine.js.org/avatar.html" >头像配置 | Valine 一款快速、简洁且高效的无后端评论系统。</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>(我们会发现这个里面评论区头像图片获取的链接和我们使用的头像获取url不太一样呢）</p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine" >第三方支持 | hexo-theme-stun</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues?page=1&q=secret" >https://github.com/gitalk/gitalk/issues?page=1&q=secret</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://pinkyrie.github.io">rye</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://pinkyrie.github.io/2024/07/21/valine-comments/">https://pinkyrie.github.io/2024/07/21/valine-comments/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://pinkyrie.github.io/tags/valine-blog-comments/">valine blog-comments</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2024/07/10/testpic/"><span class="paginator-prev__text">testpic</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E8%AF%84%E8%AE%BA%E5%8C%BA"><span class="toc-number">1.</span> <span class="toc-text">
-          需求——个人博客网站评论区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94Gitalk-or-Valine-LeanCloud"><span class="toc-number">2.</span> <span class="toc-text">
-          对比技术——Gitalk or Valine+LeanCloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%B4%E5%83%8F%E6%98%AF%E4%B8%91%E4%B8%91%E4%BA%BA%E5%84%BF%E6%80%8E%E4%B9%88%E5%8A%9E%E5%91%A2"><span class="toc-number">3.</span> <span class="toc-text">
-          头像是丑丑人儿怎么办呢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">4.</span> <span class="toc-text">
-          Ref:</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://github.com/pinkyrie/pic/blob/main/202204272046093.JPG?raw=true" alt="avatar"></div><p class="sidebar-ov-author__text">be happy</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/pinkyrie" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="954365771" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">40</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>rye</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
-  var GUEST_INFO = ['nick', 'mail', 'link'];
-  var guest_info = 'nick,mail,link';
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/valine-blog-comments/" class="print-no-link">#valine blog-comments</a>
+      
+    </div>
+  
+</div>
 
-  guest_info = guest_info.split(',').filter(function(item) {
-    return GUEST_INFO.indexOf(item) > -1;
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>丑丑头像——个人博客评论系统valine部署小记</div>
+      <div>https://pinkyrie.github.io/2024/07/21/valine-comments/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>rye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/22/testdate/" title="testdate">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">testdate</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/10/testpic/" title="testpic">
+                        <span class="hidden-mobile">testpic</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"z6kPdFlVkFWWzz9Zmobe3xRx-gzGzoHsz","appKey":"navfm2ILQsTrHFofwkEkIues","path":"window.location.pathname","placeholder":"Please leave your comments here :)","avatar":"wavatar","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://z6kpdflv.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
-  new Valine({
-    el: '#valine-container',
-    appId: 'z6kPdFlVkFWWzz9Zmobe3xRx-gzGzoHsz',
-    appKey: 'navfm2ILQsTrHFofwkEkIues',
-    notify: false,
-    verify: false,
-    placeholder: 'Please leave your comments here :)',
-    avatar: 'wavatar',
-    meta: guest_info,
-    pageSize: '10' || 10,
-    visitor: false,
-    recordIP: false,
-    lang: 'zh-cn' || 'zh-cn',
-    path: window.location.pathname
-  });
-}
+</script>
 
-if (false) {
-  loadValine();
-} else {
-  window.addEventListener('DOMContentLoaded', loadValine, false);
-}</script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
