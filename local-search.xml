@@ -4,17 +4,17 @@
   
   
   <entry>
-    <title>testdate</title>
-    <link href="/2024/07/22/testdate/"/>
-    <url>/2024/07/22/testdate/</url>
+    <title>网络幼儿科普读物-1————internet-https</title>
+    <link href="/2024/09/08/internet-https/"/>
+    <url>/2024/09/08/internet-https/</url>
     
-    <content type="html"><![CDATA[<p>测试一下</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="网络幼儿科普读物-1"><a href="#网络幼儿科普读物-1" class="headerlink" title="网络幼儿科普读物-1"></a>网络幼儿科普读物-1</h1><h2 id="curl-vs-ping"><a href="#curl-vs-ping" class="headerlink" title="curl vs ping"></a>curl vs ping</h2><ul><li>**<code>curl</code>**：用于发送 HTTP&#x2F;HTTPS 等应用层协议的请求，并获取服务器响应，主要用于网络应用层的数据交互。</li><li>**<code>ping</code>**：用于网络层的连接测试，通过 ICMP 协议确认目标设备是否可达，常用于诊断网络连通性问题。</li></ul><p><a href="https://superuser.com/questions/920491/why-does-curl-command-work-normally-while-ping-not">神奇问题：curl通ping不通（计算机网络真是太奇妙le）</a></p><h2 id="为什么需要域名访问？不直接用IP呢"><a href="#为什么需要域名访问？不直接用IP呢" class="headerlink" title="为什么需要域名访问？不直接用IP呢"></a>为什么需要域名访问？不直接用IP呢</h2><p>域名会被解析为ip地址</p><blockquote><p>并不是不能通过 IP 访问，而是转发服务会做访问控制，限制通过 IP 访问，因为直接使用 IP 地址访问网站，可能会遇到以下问题：</p></blockquote><blockquote><p>大多数网站都使用共享主机或虚拟主机，这意味着多个网站可能使用同一个 IP 地址。因此，如果您直接使用 IP 地址访问网站，则可能会访问到错误的网站。</p></blockquote><blockquote><p>一些网站可能使用负载均衡技术，这意味着它们可能有多个服务器，每个服务器都有不同的 IP 地址。如果您直接使用其中一个 IP 地址，您可能无法访问该网站的所有内容或功能。</p></blockquote><blockquote><p>一些网站可能使用 SSL 证书来保护数据的安全性。在这种情况下，您必须使用网站的域名进行访问，否则您可能会遇到证书错误或安全警告。</p><p><strong>证书验证（HTTPS）</strong>：在 HTTPS 协议下，网站通常会有 SSL&#x2F;TLS 证书。即使 IP 地址变化，浏览器仍会通过证书验证网站的身份，确保你访问的是正确的网站。</p></blockquote><p><a href="https://segmentfault.com/a/1190000044035597">IP和域名访问的区别 - 个人文章 - SegmentFault 思否</a></p><h3 id="私有-IP-地址范围"><a href="#私有-IP-地址范围" class="headerlink" title="私有 IP 地址范围"></a>私有 IP 地址范围</h3><p>根据 RFC 1918，以下三个 IP 地址范围被保留为私有地址：</p><p>私有地址 &#x3D;&#x3D; 不能在互联网中被路由</p><ol><li><strong>10.0.0.0 - 10.255.255.255</strong> （<code>10.x.x.x</code>）:<ul><li>支持的地址数量：16,777,216 个</li><li>通常用于大型企业网络</li></ul></li><li><strong>172.16.0.0 - 172.31.255.255</strong> （<code>172.16.x.x</code> 至 <code>172.31.x.x</code>）:<ul><li>支持的地址数量：1,048,576 个</li><li>通常用于中型企业网络</li></ul></li><li><strong>192.168.0.0 - 192.168.255.255</strong> （<code>192.168.x.x</code>）:<ul><li>支持的地址数量：65,536 个</li><li>通常用于家庭网络和小型企业网络</li></ul></li></ol><h3 id="HTTP请求是从哪个端口发出的"><a href="#HTTP请求是从哪个端口发出的" class="headerlink" title="HTTP请求是从哪个端口发出的"></a>HTTP请求是从哪个端口发出的</h3><ul><li><strong>客户端</strong>发起 HTTP 请求时，会从一个随机高位端口（49152-65535）发出。</li><li><strong>服务器</strong>接收 HTTP 请求的默认端口是 80（除非使用了其他自定义端口）。</li></ul><p><a href="https://www.golinuxcloud.com/set-up-proxy-http-proxy-environment-variable/">在 Linux 中使用 http_proxy 和 https_proxy 环境变量设置代理？</a></p><p>环境变量http_proxy https_proxy是会把对应的请求都发到值的ip端口上，由监听该端口的服务再进行转发</p><p><a href="https://about.gitlab.com/blog/2021/01/27/we-need-to-talk-no-proxy/">讨论proxy的大小写问题&amp;NO_PROXY</a></p><p><a href="https://superuser.com/questions/944958/are-http-proxy-https-proxy-and-no-proxy-environment-variables-standard">http - HTTP_PROXY、HTTPS_PROXY 和 NO_PROXY 环境变量是否标准</a></p><h3 id="ip-端口-⇒-socket套接字"><a href="#ip-端口-⇒-socket套接字" class="headerlink" title="ip+端口 ⇒ socket套接字"></a>ip+端口 ⇒ socket套接字</h3><p>有了不同的端口分配给不同的进程，电脑可以进行多个进程运行和切换。端口会不会被占用玩完呢？几乎不可能噢，因为pc会维护端口，进程结束释放端口，并且一个端口可以处理一个程序的多个请求。</p>]]></content>
     
     
     
     <tags>
       
-      <tag>just test</tag>
+      <tag>internet</tag>
       
     </tags>
     
@@ -27,7 +27,7 @@
     <link href="/2024/07/21/valine-comments/"/>
     <url>/2024/07/21/valine-comments/</url>
     
-    <content type="html"><![CDATA[<h2 id="需求——个人博客网站评论区"><a href="#需求——个人博客网站评论区" class="headerlink" title="需求——个人博客网站评论区"></a>需求——个人博客网站评论区</h2><p>想要让自己的博客网站支持留言，装扮hexo空间:)</p><h2 id="对比技术——Gitalk-or-Valine-LeanCloud"><a href="#对比技术——Gitalk-or-Valine-LeanCloud" class="headerlink" title="对比技术——Gitalk or Valine+LeanCloud"></a>对比技术——<strong>Gitalk</strong> or Valine+LeanCloud</h2><blockquote><p>Gitalk 是一个基于 Github issues 的评论系统。</p></blockquote><p><strong>Gitalk steps:</strong></p><ul><li>注册一个新的 <strong>GitHub Application</strong> 来授权</li><li>修改config配置启用Gitalk</li></ul><p>通过Gitalk的readme，自动跳转到了OAuth application的注册界面，OAuth application不等同于Github application。虽然两者都是为了能够暴露GitHub的仓库操作API，OAuth application并不能限制使用GitHub的权限限度。OAuth application可以类比qq授权给另一个网站登录使用qq的个人信息，OAuth application的回调（callback）url就是个人博客网站url，即接收GitHub发送的token的一方。由于hexo的明文传输，这个token理论上是会被暴露在前端的某个js文件中</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png" alt="Untitled"></p><p><strong>暴露是否是安全呢？答案：so far so good</strong></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341908.png" alt="Untitled"></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341874.png" alt="Untitled"></p><ul><li>关键在于callback url不可改，指向的我们自己的博客是受信任的，安全的。但是当我们点别人的博客提示需要授权的时候，就要小心了</li></ul><p><a href="https://github.com/gitalk/gitalk/issues/444">https://github.com/gitalk/gitalk/issues/444</a></p><p><strong>token权限争议</strong></p><ul><li>引用的博主认为：OAuth application使用的token应该是仅有只读权限 但是这位博主自己的评论区进行GitHub授权时，依然提示需要授权read and write。引用：<a href="https://carl-zk.github.io/blog/2020/03/03/gitalk-%E8%BF%90%E4%BD%9C%E5%8E%9F%E7%90%86/">Gitalk 运作原理 | 一叶轻舟渡万江 (carl-zk.github.io)</a></li></ul><p>OAuth App 5年前创建，2019年，此时PR还没提，还是read write</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341044.png" alt="Untitled"></p><p>2020.2 PR合并，token的权限从读写权改为read only </p><p><a href="https://github.com/gitalk/gitalk/pull/344">https://github.com/gitalk/gitalk/pull/344</a></p><p>2020.3博主调查之后 写下read only的结论</p><p><strong>Valine+LeanCloud steps:</strong> </p><ul><li>注册LeanCloud<a href="https://console.leancloud.cn/apps">LeanCloud</a></li><li>参考stun主题的valine部署方式<a href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></li></ul><p>对比Gitalk和Valine，Gitalk有一定的风险w 而Valine虽然不一定稳定，但是删库跑路的风险是0.0000001。所以选择Valine＜（＾－＾）＞</p><h2 id="头像是丑丑人儿怎么办呢"><a href="#头像是丑丑人儿怎么办呢" class="headerlink" title="头像是丑丑人儿怎么办呢"></a>头像是丑丑人儿怎么办呢</h2><p>当完成了评论区的基本部署，需要选择默认头像样式。这里可以选择神秘人样式，或者wavatar小怪物。但是没有人想到当VPN+无邮箱测试留言评论，头像是丑丑人儿！（在配置中命名配置的是wavatar！）</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212340677.png" alt="Untitled"></p><p>小坑：需要注意notify：verify：类似这种的配置文件有列出的项目，不能直接注释掉（这是必须项）应该写false来禁用</p><p>经过和cls的一个下午测试，结论如下：</p><ol><li>丑丑人是not found&#x2F;网络情况不佳等异常的fallback（302）</li><li>不开梯子反而可以看到正常人（mp）也可以有wavatar</li><li>wavatar需要填写qq邮箱 每个邮箱随机对应一个wavatar</li><li>不填写邮箱只能显示mp（or丑丑人）</li><li><code>enableQQ</code>在配置中是无效的</li><li>在开VPN情况下，填写邮箱，可以正确加载头像，这并不是网络原因，只是米有了邮箱用于标识造成的not found (bug maybe)</li></ol><p>一言蔽之：只有在<code>VPN + 无邮箱</code>的情况下，才会显示丑人 (302)</p><p>一旦生成头像，会永久和邮箱绑定</p><p>疑惑：为什么有VPN反而not found (302)</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341687.png" alt="Untitled"></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341955.png" alt="Untitled"></p><p>aa 没有mail都是丑丑人儿！</p><h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h2><p><a href="https://valine.js.org/avatar.html">头像配置 | Valine 一款快速、简洁且高效的无后端评论系统。</a>(我们会发现这个里面评论区头像图片获取的链接和我们使用的头像获取url不太一样呢）</p><p><a href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></p><p><a href="https://github.com/gitalk/gitalk/issues?page=1&q=secret">https://github.com/gitalk/gitalk/issues?page=1&q=secret</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="需求——个人博客网站评论区"><a href="#需求——个人博客网站评论区" class="headerlink" title="需求——个人博客网站评论区"></a>需求——个人博客网站评论区</h2><p>想要让自己的博客网站支持留言，装扮hexo空间:)</p><h2 id="对比技术——Gitalk-or-Valine-LeanCloud"><a href="#对比技术——Gitalk-or-Valine-LeanCloud" class="headerlink" title="对比技术——Gitalk or Valine+LeanCloud"></a>对比技术——<strong>Gitalk</strong> or Valine+LeanCloud</h2><blockquote><p>Gitalk 是一个基于 Github issues 的评论系统。</p></blockquote><p><strong>Gitalk steps:</strong></p><ul><li>注册一个新的 <strong>GitHub Application</strong> 来授权</li><li>修改config配置启用Gitalk</li></ul><p>通过Gitalk的readme，自动跳转到了OAuth application的注册界面，OAuth application不等同于Github application。虽然两者都是为了能够暴露GitHub的仓库操作API，OAuth application并不能限制使用GitHub的权限限度。OAuth application可以类比qq授权给另一个网站登录使用qq的个人信息，OAuth application的回调（callback）url就是个人博客网站url，即接收GitHub发送的token的一方。由于hexo的明文传输，这个token理论上是会被暴露在前端的某个js文件中</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341648.png" alt="screenshot"></p><p><strong>暴露是否是安全呢？答案：so far so good</strong></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341908.png" alt="Untitled"></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341874.png" alt="Untitled"></p><ul><li>关键在于callback url不可改，指向的我们自己的博客是受信任的，安全的。但是当我们点别人的博客提示需要授权的时候，就要小心了</li></ul><p><a href="https://github.com/gitalk/gitalk/issues/444">https://github.com/gitalk/gitalk/issues/444</a></p><p><strong>token权限争议</strong></p><ul><li>引用的博主认为：OAuth application使用的token应该是仅有只读权限 但是这位博主自己的评论区进行GitHub授权时，依然提示需要授权read and write。引用：<a href="https://carl-zk.github.io/blog/2020/03/03/gitalk-%E8%BF%90%E4%BD%9C%E5%8E%9F%E7%90%86/">Gitalk 运作原理 | 一叶轻舟渡万江 (carl-zk.github.io)</a></li></ul><p>OAuth App 5年前创建，2019年，此时PR还没提，还是read write</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341044.png" alt="Untitled"></p><p>2020.2 PR合并，token的权限从读写权改为read only </p><p><a href="https://github.com/gitalk/gitalk/pull/344">https://github.com/gitalk/gitalk/pull/344</a></p><p>2020.3博主调查之后 写下read only的结论</p><p><strong>Valine+LeanCloud steps:</strong> </p><ul><li>注册LeanCloud<a href="https://console.leancloud.cn/apps">LeanCloud</a></li><li>参考stun主题的valine部署方式<a href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></li></ul><p>对比Gitalk和Valine，Gitalk有一定的风险w 而Valine虽然不一定稳定，但是删库跑路的风险是0.0000001。所以选择Valine＜（＾－＾）＞</p><h2 id="头像是丑丑人儿怎么办呢"><a href="#头像是丑丑人儿怎么办呢" class="headerlink" title="头像是丑丑人儿怎么办呢"></a>头像是丑丑人儿怎么办呢</h2><p>当完成了评论区的基本部署，需要选择默认头像样式。这里可以选择神秘人样式，或者wavatar小怪物。但是没有人想到当VPN+无邮箱测试留言评论，头像是丑丑人儿！（在配置中命名配置的是wavatar！）</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212340677.png" alt="Untitled"></p><p>小坑：需要注意notify：verify：类似这种的配置文件有列出的项目，不能直接注释掉（这是必须项）应该写false来禁用</p><p>经过和cls的一个下午测试，结论如下：</p><ol><li>丑丑人是not found&#x2F;网络情况不佳等异常的fallback（302）</li><li>不开梯子反而可以看到正常人（mp）也可以有wavatar</li><li>wavatar需要填写qq邮箱 每个邮箱随机对应一个wavatar</li><li>不填写邮箱只能显示mp（or丑丑人）</li><li><code>enableQQ</code>在配置中是无效的</li><li>在开VPN情况下，填写邮箱，可以正确加载头像，这并不是网络原因，只是米有了邮箱用于标识造成的not found (bug maybe)</li></ol><p>一言蔽之：只有在<code>VPN + 无邮箱</code>的情况下，才会显示丑人 (302)</p><p>一旦生成头像，会永久和邮箱绑定</p><p>疑惑：为什么有VPN反而not found (302)</p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341687.png" alt="Untitled"></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407212341955.png" alt="Untitled"></p><p>aa 没有mail都是丑丑人儿！</p><h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h2><p><a href="https://valine.js.org/avatar.html">头像配置 | Valine 一款快速、简洁且高效的无后端评论系统。</a>(我们会发现这个里面评论区头像图片获取的链接和我们使用的头像获取url不太一样呢）</p><p><a href="https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#valine">第三方支持 | hexo-theme-stun</a></p><p><a href="https://github.com/gitalk/gitalk/issues?page=1&q=secret">https://github.com/gitalk/gitalk/issues?page=1&q=secret</a></p>]]></content>
     
     
     
@@ -36,19 +36,6 @@
       <tag>valine blog-comments</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>testpic</title>
-    <link href="/2024/07/10/testpic/"/>
-    <url>/2024/07/10/testpic/</url>
-    
-    <content type="html"><![CDATA[<p>test a pic test22.40</p><p><img src="/./../../../images/image-20240710224052388.png" alt="image-20240710224052388"></p><p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202407102351941.png" alt="test"></p>]]></content>
-    
-    
     
   </entry>
   
@@ -448,11 +435,11 @@
   
   
   <entry>
-    <title>1-n的数字中一共出现了多少个1</title>
-    <link href="/2022/10/16/leetcode/"/>
-    <url>/2022/10/16/leetcode/</url>
+    <title></title>
+    <link href="/2022/10/16/leetcode-1/"/>
+    <url>/2022/10/16/leetcode-1/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/">题目</a></p><hr><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="数字-gt-字符串"><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3><ul><li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li><li>拆成每个数位单独进行计算</li></ul><h3 id="sidenote：数字和字符串的互换"><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3><ul><li><a href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null">strcpy会把string的结尾0也复制过去</a></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="十种常见排序算法可以分为两大类："><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2><p><a href="https://www.jianshu.com/p/796f23a96596">reference</a></p><ul><li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li><li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li></ul><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>]]></content>
     
     
     <categories>
@@ -467,11 +454,11 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/10/16/leetcode-1/"/>
-    <url>/2022/10/16/leetcode-1/</url>
+    <title>1-n的数字中一共出现了多少个1</title>
+    <link href="/2022/10/16/leetcode/"/>
+    <url>/2022/10/16/leetcode/</url>
     
-    <content type="html"><![CDATA[<h2 id="十种常见排序算法可以分为两大类："><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2><p><a href="https://www.jianshu.com/p/796f23a96596">reference</a></p><ul><li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li><li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li></ul><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/">题目</a></p><hr><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="数字-gt-字符串"><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3><ul><li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li><li>拆成每个数位单独进行计算</li></ul><h3 id="sidenote：数字和字符串的互换"><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3><ul><li><a href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null">strcpy会把string的结尾0也复制过去</a></li><li></li></ul>]]></content>
     
     
     <categories>
@@ -595,19 +582,6 @@
       <category>java</category>
       
     </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>qtjson</title>
-    <link href="/2022/07/25/qtjson/"/>
-    <url>/2022/07/25/qtjson/</url>
-    
-    <content type="html"><![CDATA[<h2 id="signals-and-slots"><a href="#signals-and-slots" class="headerlink" title="signals and slots"></a>signals and slots</h2><p><a href="https://doc.qt.io/qt-5/signalsandslots.html#:~:text=Signals%20and%20slots%20are%20used%20for%20communication%20between,slots%20are%20made%20possible%20by%20Qt%27s%20meta-object%20system.">reference_qt_slot_signal</a></p><ul><li>signal函数的参数可以通过相同的槽函数参数类型传递给槽函数</li><li></li></ul>]]></content>
-    
     
     
   </entry>
