@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>网络幼儿科普读物-1————internet-https</title>
+    <title>网络幼儿科普读物01————internet/https</title>
     <link href="/2024/09/08/internet-https/"/>
     <url>/2024/09/08/internet-https/</url>
     
-    <content type="html"><![CDATA[<h1 id="网络幼儿科普读物-1"><a href="#网络幼儿科普读物-1" class="headerlink" title="网络幼儿科普读物-1"></a>网络幼儿科普读物-1</h1><h2 id="curl-vs-ping"><a href="#curl-vs-ping" class="headerlink" title="curl vs ping"></a>curl vs ping</h2><ul><li>**<code>curl</code>**：用于发送 HTTP&#x2F;HTTPS 等应用层协议的请求，并获取服务器响应，主要用于网络应用层的数据交互。</li><li>**<code>ping</code>**：用于网络层的连接测试，通过 ICMP 协议确认目标设备是否可达，常用于诊断网络连通性问题。</li></ul><p><a href="https://superuser.com/questions/920491/why-does-curl-command-work-normally-while-ping-not">神奇问题：curl通ping不通（计算机网络真是太奇妙le）</a></p><h2 id="为什么需要域名访问？不直接用IP呢"><a href="#为什么需要域名访问？不直接用IP呢" class="headerlink" title="为什么需要域名访问？不直接用IP呢"></a>为什么需要域名访问？不直接用IP呢</h2><p>域名会被解析为ip地址</p><blockquote><p>并不是不能通过 IP 访问，而是转发服务会做访问控制，限制通过 IP 访问，因为直接使用 IP 地址访问网站，可能会遇到以下问题：</p></blockquote><blockquote><p>大多数网站都使用共享主机或虚拟主机，这意味着多个网站可能使用同一个 IP 地址。因此，如果您直接使用 IP 地址访问网站，则可能会访问到错误的网站。</p></blockquote><blockquote><p>一些网站可能使用负载均衡技术，这意味着它们可能有多个服务器，每个服务器都有不同的 IP 地址。如果您直接使用其中一个 IP 地址，您可能无法访问该网站的所有内容或功能。</p></blockquote><blockquote><p>一些网站可能使用 SSL 证书来保护数据的安全性。在这种情况下，您必须使用网站的域名进行访问，否则您可能会遇到证书错误或安全警告。</p><p><strong>证书验证（HTTPS）</strong>：在 HTTPS 协议下，网站通常会有 SSL&#x2F;TLS 证书。即使 IP 地址变化，浏览器仍会通过证书验证网站的身份，确保你访问的是正确的网站。</p></blockquote><p><a href="https://segmentfault.com/a/1190000044035597">IP和域名访问的区别 - 个人文章 - SegmentFault 思否</a></p><h3 id="私有-IP-地址范围"><a href="#私有-IP-地址范围" class="headerlink" title="私有 IP 地址范围"></a>私有 IP 地址范围</h3><p>根据 RFC 1918，以下三个 IP 地址范围被保留为私有地址：</p><p>私有地址 &#x3D;&#x3D; 不能在互联网中被路由</p><ol><li><strong>10.0.0.0 - 10.255.255.255</strong> （<code>10.x.x.x</code>）:<ul><li>支持的地址数量：16,777,216 个</li><li>通常用于大型企业网络</li></ul></li><li><strong>172.16.0.0 - 172.31.255.255</strong> （<code>172.16.x.x</code> 至 <code>172.31.x.x</code>）:<ul><li>支持的地址数量：1,048,576 个</li><li>通常用于中型企业网络</li></ul></li><li><strong>192.168.0.0 - 192.168.255.255</strong> （<code>192.168.x.x</code>）:<ul><li>支持的地址数量：65,536 个</li><li>通常用于家庭网络和小型企业网络</li></ul></li></ol><h3 id="HTTP请求是从哪个端口发出的"><a href="#HTTP请求是从哪个端口发出的" class="headerlink" title="HTTP请求是从哪个端口发出的"></a>HTTP请求是从哪个端口发出的</h3><ul><li><strong>客户端</strong>发起 HTTP 请求时，会从一个随机高位端口（49152-65535）发出。</li><li><strong>服务器</strong>接收 HTTP 请求的默认端口是 80（除非使用了其他自定义端口）。</li></ul><p><a href="https://www.golinuxcloud.com/set-up-proxy-http-proxy-environment-variable/">在 Linux 中使用 http_proxy 和 https_proxy 环境变量设置代理？</a></p><p>环境变量http_proxy https_proxy是会把对应的请求都发到值的ip端口上，由监听该端口的服务再进行转发</p><p><a href="https://about.gitlab.com/blog/2021/01/27/we-need-to-talk-no-proxy/">讨论proxy的大小写问题&amp;NO_PROXY</a></p><p><a href="https://superuser.com/questions/944958/are-http-proxy-https-proxy-and-no-proxy-environment-variables-standard">http - HTTP_PROXY、HTTPS_PROXY 和 NO_PROXY 环境变量是否标准</a></p><h3 id="ip-端口-⇒-socket套接字"><a href="#ip-端口-⇒-socket套接字" class="headerlink" title="ip+端口 ⇒ socket套接字"></a>ip+端口 ⇒ socket套接字</h3><p>有了不同的端口分配给不同的进程，电脑可以进行多个进程运行和切换。端口会不会被占用玩完呢？几乎不可能噢，因为pc会维护端口，进程结束释放端口，并且一个端口可以处理一个程序的多个请求。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="网络幼儿科普读物01"><a href="#网络幼儿科普读物01" class="headerlink" title="网络幼儿科普读物01"></a>网络幼儿科普读物01</h1><blockquote><p>审稿人: MrBeanC 阿里多多^^</p></blockquote><h2 id="curl-vs-ping"><a href="#curl-vs-ping" class="headerlink" title="curl vs ping"></a>curl vs ping</h2><ul><li><strong>curl</strong>：用于发送 HTTP&#x2F;HTTPS 等应用层协议的请求，并获取服务器响应，主要用于网络应用层的数据交互。</li><li><strong>ping</strong>：用于网络层的连接测试，通过 ICMP 协议确认目标设备是否可达，常用于诊断网络连通性问题。</li></ul><p><a href="https://superuser.com/questions/920491/why-does-curl-command-work-normally-while-ping-not">神奇问题：curl通ping不通（计算机网络真是太奇妙le）</a></p><h2 id="为什么需要域名访问？不直接用IP呢"><a href="#为什么需要域名访问？不直接用IP呢" class="headerlink" title="为什么需要域名访问？不直接用IP呢"></a>为什么需要域名访问？不直接用IP呢</h2><p>输入域名浏览器会自动补充为https协议访问，域名会被解析为ip地址</p><p>域名是为了human-readable :)</p><blockquote><p>安全证书也可以给I公共P，保证IP的访问安全性~</p></blockquote><h3 id="私有-IP-地址范围"><a href="#私有-IP-地址范围" class="headerlink" title="私有 IP 地址范围"></a>私有 IP 地址范围</h3><p>根据 RFC 1918，以下三个 IP 地址范围被保留为私有地址：</p><p>私有地址 &#x3D;&#x3D; 不能在互联网中被路由</p><ol><li><strong>10.0.0.0 - 10.255.255.255</strong> （<code>10.x.x.x</code>）:<ul><li>支持的地址数量：16,777,216 个</li><li>通常用于大型企业网络</li></ul></li><li><strong>172.16.0.0 - 172.31.255.255</strong> （<code>172.16.x.x</code> 至 <code>172.31.x.x</code>）:<ul><li>支持的地址数量：1,048,576 个</li><li>通常用于中型企业网络</li></ul></li><li><strong>192.168.0.0 - 192.168.255.255</strong> （<code>192.168.x.x</code>）:<ul><li>支持的地址数量：65,536 个</li><li>通常用于家庭网络和小型企业网络</li></ul></li></ol><h3 id="HTTP请求是从哪个端口发出的"><a href="#HTTP请求是从哪个端口发出的" class="headerlink" title="HTTP请求是从哪个端口发出的"></a>HTTP请求是从哪个端口发出的</h3><ul><li><strong>客户端</strong>发起 HTTP 请求时，会从一个随机高位端口（49152-65535）发出。</li><li><strong>服务器</strong>接收 HTTP 请求的默认端口是 80（除非使用了其他自定义端口）。HTTPS是443端口。</li></ul><p><a href="https://www.golinuxcloud.com/set-up-proxy-http-proxy-environment-variable/">在 Linux 中使用 http_proxy 和 https_proxy 环境变量设置代理？</a></p><p>环境变量http_proxy https_proxy是会把对应的请求都发到值的ip端口上，由监听该端口的服务再进行转发</p><p><a href="https://about.gitlab.com/blog/2021/01/27/we-need-to-talk-no-proxy/">NO_PROXY</a></p><p><a href="https://superuser.com/questions/944958/are-http-proxy-https-proxy-and-no-proxy-environment-variables-standard">HTTP_PROXY、HTTPS_PROXY 和 NO_PROXY 环境变量是否标准</a> </p><h3 id="ip-端口-⇒-socket套接字"><a href="#ip-端口-⇒-socket套接字" class="headerlink" title="ip+端口 ⇒ socket套接字"></a>ip+端口 ⇒ socket套接字</h3><p>有了不同的端口分配给不同的进程，电脑可以进行多个进程运行和切换。端口会不会被占用玩完呢？几乎不可能噢，因为pc会维护端口，进程结束释放端口，并且一个端口可以处理一个程序的多个请求。</p>]]></content>
     
     
     
@@ -435,11 +435,11 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/10/16/leetcode-1/"/>
-    <url>/2022/10/16/leetcode-1/</url>
+    <title>1-n的数字中一共出现了多少个1</title>
+    <link href="/2022/10/16/leetcode/"/>
+    <url>/2022/10/16/leetcode/</url>
     
-    <content type="html"><![CDATA[<h2 id="十种常见排序算法可以分为两大类："><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2><p><a href="https://www.jianshu.com/p/796f23a96596">reference</a></p><ul><li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li><li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li></ul><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/">题目</a></p><hr><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="数字-gt-字符串"><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3><ul><li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li><li>拆成每个数位单独进行计算</li></ul><h3 id="sidenote：数字和字符串的互换"><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3><ul><li><a href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null">strcpy会把string的结尾0也复制过去</a></li><li></li></ul>]]></content>
     
     
     <categories>
@@ -454,11 +454,11 @@
   
   
   <entry>
-    <title>1-n的数字中一共出现了多少个1</title>
-    <link href="/2022/10/16/leetcode/"/>
-    <url>/2022/10/16/leetcode/</url>
+    <title></title>
+    <link href="/2022/10/16/leetcode-1/"/>
+    <url>/2022/10/16/leetcode-1/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/submissions/">题目</a></p><hr><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="数字-gt-字符串"><a href="#数字-gt-字符串" class="headerlink" title="数字-&gt;字符串"></a>数字-&gt;字符串</h3><ul><li>统计所有1出现的次数 &#x3D; 每一位上1出现次数的和</li><li>拆成每个数位单独进行计算</li></ul><h3 id="sidenote：数字和字符串的互换"><a href="#sidenote：数字和字符串的互换" class="headerlink" title="sidenote：数字和字符串的互换"></a>sidenote：数字和字符串的互换</h3><ul><li><a href="https://stackoverflow.com/questions/11830979/c-strcpy-function-copies-null">strcpy会把string的结尾0也复制过去</a></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="十种常见排序算法可以分为两大类："><a href="#十种常见排序算法可以分为两大类：" class="headerlink" title="十种常见排序算法可以分为两大类："></a>十种常见排序算法可以分为两大类：</h2><p><a href="https://www.jianshu.com/p/796f23a96596">reference</a></p><ul><li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li><li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。</li></ul><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>]]></content>
     
     
     <categories>
