@@ -256,14 +256,14 @@
       <h2 class="index-header">
         
         <a href="/2024/10/28/RAII%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" target="_self">
-          02.0.RAII内存管理
+          02.0.智能指针与RAII思想
         </a>
       </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2024/10/28/RAII%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" target="_self">
         <div>
-          02.0.RAII内存管理不可滥用封装——封装的目的是维护相关属性的不变性正面例子：vector  由于对单个元素的增删操作会影响到vector的size以及资源分配大小，因此需要打包操作作为一个原子（不可分割）来避免程序员疏忽犯错  反面例子：三元tuple使用封装 (x) 1234struct Vec3&#123;	float x,y,z;&#125;// struct足够，不需要class和
+          讨论了C++中RAII资源管理与智能指针应该怎么使用？
         </div>
       </a>
 
@@ -277,11 +277,36 @@
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C-parallel101/" class="category-chain-item">C++parallel101</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/C-parallel101/">#C++parallel101</a>
+              <a href="/tags/C/">#C++</a>
+            
+              <a href="/tags/RAII/">#RAII</a>
+            
+              <a href="/tags/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/">#智能指针</a>
             
           </div>
         

@@ -16,18 +16,20 @@
   <meta name="author" content="rye">
   <meta name="keywords" content="">
   
-    <meta name="description" content="02.0.RAII内存管理不可滥用封装——封装的目的是维护相关属性的不变性正面例子：vector  由于对单个元素的增删操作会影响到vector的size以及资源分配大小，因此需要打包操作作为一个原子（不可分割）来避免程序员疏忽犯错  反面例子：三元tuple使用封装 (x) 1234struct Vec3&amp;#123;	float x,y,z;&amp;#125;&#x2F;&#x2F; struct足够，不需要class和">
+    <meta name="description" content="讨论了C++中RAII资源管理与智能指针应该怎么使用？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="02.0.RAII内存管理">
+<meta property="og:title" content="02.0.智能指针与RAII思想">
 <meta property="og:url" content="https://pinkyrie.github.io/2024/10/28/RAII%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="rye is coding">
-<meta property="og:description" content="02.0.RAII内存管理不可滥用封装——封装的目的是维护相关属性的不变性正面例子：vector  由于对单个元素的增删操作会影响到vector的size以及资源分配大小，因此需要打包操作作为一个原子（不可分割）来避免程序员疏忽犯错  反面例子：三元tuple使用封装 (x) 1234struct Vec3&amp;#123;	float x,y,z;&amp;#125;&#x2F;&#x2F; struct足够，不需要class和">
+<meta property="og:description" content="讨论了C++中RAII资源管理与智能指针应该怎么使用？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011146.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011332.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013138.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011876.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011662.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411061424979.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411061424217.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011121.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011100.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012503.png">
@@ -46,9 +48,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013086.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013439.png">
 <meta property="article:published_time" content="2024-10-28T14:00:04.000Z">
-<meta property="article:modified_time" content="2024-11-05T12:15:52.718Z">
+<meta property="article:modified_time" content="2024-11-06T06:30:38.862Z">
 <meta property="article:author" content="rye">
-<meta property="article:tag" content="C++parallel101">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="RAII">
+<meta property="article:tag" content="智能指针">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011146.png">
   
@@ -56,7 +60,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>02.0.RAII内存管理 - rye is coding</title>
+  <title>02.0.智能指针与RAII思想 - rye is coding</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -249,7 +253,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="02.0.RAII内存管理"></span>
+            <span id="subtitle" data-typed-text="02.0.智能指针与RAII思想"></span>
           
         </div>
 
@@ -272,7 +276,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.4k 字
+          3.9k 字
         
       </span>
     
@@ -283,7 +287,7 @@
         
         
         
-          29 分钟
+          33 分钟
         
       </span>
     
@@ -328,12 +332,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">02.0.RAII内存管理</h1>
+            <h1 id="seo-header">02.0.智能指针与RAII思想</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年11月5日 晚上
+                    本文最后更新于 2024年11月6日 下午
                   
                 
               </p>
@@ -341,7 +345,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="02-0-RAII内存管理"><a href="#02-0-RAII内存管理" class="headerlink" title="02.0.RAII内存管理"></a>02.0.RAII内存管理</h1><h2 id="不可滥用封装——封装的目的是维护相关属性的不变性"><a href="#不可滥用封装——封装的目的是维护相关属性的不变性" class="headerlink" title="不可滥用封装——封装的目的是维护相关属性的不变性"></a>不可滥用封装——封装的目的是维护相关属性的不变性</h2><p>正面例子：vector</p>
+                <h1 id="02-0-智能指针与RAII思想"><a href="#02-0-智能指针与RAII思想" class="headerlink" title="02.0.智能指针与RAII思想"></a>02.0.智能指针与RAII思想</h1><h2 id="不可滥用封装——封装的目的是维护相关属性的不变性"><a href="#不可滥用封装——封装的目的是维护相关属性的不变性" class="headerlink" title="不可滥用封装——封装的目的是维护相关属性的不变性"></a>不可滥用封装——封装的目的是维护相关属性的不变性</h2><p>正面例子：vector</p>
 <ul>
 <li>由于对单个元素的增删操作会影响到vector的size以及资源分配大小，因此需要打包操作作为一个原子（不可分割）来避免程序员疏忽犯错</li>
 </ul>
@@ -525,9 +529,47 @@
 
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052011662.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <ul>
-<li>shared_ptr：分别给control block 和 raw pointer分配</li>
-<li>make_shared：一次性分配堆空间（似乎性能和安全上更好）</li>
-<li>销毁时如何释放？<ul>
+<li><p>shared_ptr：分别给control block 和 raw pointer分配</p>
+</li>
+<li><p>make_shared：一次性分配堆空间（似乎性能和安全上更好）</p>
+</li>
+<li><h4 id="不同的构造方式将导致不同的内存布局，同时影响shared-ptr销毁时的具体行为"><a href="#不同的构造方式将导致不同的内存布局，同时影响shared-ptr销毁时的具体行为" class="headerlink" title="不同的构造方式将导致不同的内存布局，同时影响shared_ptr销毁时的具体行为"></a>不同的构造方式将导致不同的内存布局，同时影响<code>shared_ptr</code>销毁时的具体行为</h4><table>
+<thead>
+<tr>
+<th>情况</th>
+<th>Dispose()</th>
+<th>Delete()</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通过裸指针传参构造</td>
+<td>销毁 S 对象并释放对象内存</td>
+<td>销毁控制块并释放控制块内存</td>
+</tr>
+<tr>
+<td>通过 <code>make_shared</code> 创建</td>
+<td>运行 S 对象的析构函数（释放对象内部资源）但不释放内存</td>
+<td>销毁控制块并释放整个内存块（包含对象和控制块）</td>
+</tr>
+</tbody></table>
+<p>这里可能会有同学好奇<code>Dispose()</code>和<code>Delete()</code>都是什么玩意儿</p>
+<p>莫急，莫急，且听我细细道来</p>
+<p><code>Dispose()</code>和<code>Delete()</code>是<code>Control Block</code>的两个函数，用于控制两个不同阶段的递进销毁行为</p>
+<ul>
+<li><code>Dispose()</code>: 该函数在最后一个<code>shared_ptr</code>析构时被调用（aka, share计数为0），用以析构被<strong>管理的对象</strong>指针（但不一定回收内存）</li>
+<li><code>Delete()</code>: 该函数在所有关联的<code>shared_ptr</code>和<code>weak_ptr</code>均析构时被调用（aka, share计数和weak计数均归零），用以回收<strong>控制块</strong></li>
+</ul>
+<p>我们可以发现，这两个阶段是递进关系，<code>Dispose()</code>保留控制块的唯一理由就是怕有<code>weak_ptr</code>惦记，但如果没有，那么这两个函数应该几乎会同步顺序执行</p>
+<p>这样一来，上文的表格相信各位客官都已经心知肚明了</p>
+<p>在第一种情况下，<code>shared_ptr</code>通过裸指针构造，由于被管理的对象先于<code>shared_ptr</code>被创建，他们的内存分布想必也是没什么联系，那么在<code>Dispose()</code>时即可回收其内存</p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411061424979.png" srcset="/img/loading.gif" lazyload alt="通过shared_ptr创建"></p>
+<p>而在第二种情况下，<strong>被管理的对象</strong>以及<code>shared_ptr</code>均通过 <code>make_shared</code>创建，那么出于优化考虑，<strong>控制块</strong>和<strong>被管理的对象</strong>是不是可以在统一分配的<strong>大块内存</strong>上构造呢</p>
+<p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411061424217.png" srcset="/img/loading.gif" lazyload alt="通过make_shared创建"></p>
+<p>是的，那么这种情况下，<code>Dispose()</code>肯定也就不能单独回收该对象所占用的部分内存，必须等到<code>Delete()</code>时，析构控制块后，统一回收整体内存</p>
+<p>详情请见：<a target="_blank" rel="noopener" href="https://devblogs.microsoft.com/oldnewthing/20230815-00/?p=108602">Inside STL: The shared_ptr constructor vs make_shared - The Old New Thing</a></p>
+</li>
+<li><p>销毁时如何释放？</p>
+<ul>
 <li>请参考： <a target="_blank" rel="noopener" href="https://devblogs.microsoft.com/oldnewthing/20230815-00/?p=108602">STL 内部：shared_ptr 构造函数与 make_shared - 老新事物 — Inside STL: The shared_ptr constructor vs make_shared - The Old New Thing</a></li>
 </ul>
 </li>
@@ -546,9 +588,7 @@
 <li>可以发现raw ptr和control block的内存地址并不相邻</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012493.png" srcset="/img/loading.gif" lazyload alt="raw ptr 内存地址"></p>
-<p>raw ptr 内存地址</p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012654.png" srcset="/img/loading.gif" lazyload alt="control block (_Rep) 内存地址"></p>
-<p>control block (_Rep) 内存地址</p>
 <ul>
 <li>可以发现control block后面存了一个raw ptr的地址</li>
 </ul>
@@ -556,13 +596,10 @@
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012639.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p>下图是weak ptr里面的<code>_Rep</code>视图：</p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012604.png" srcset="/img/loading.gif" lazyload alt="control block的Uses计数 = 0  Weaks计数 - 1 = 1"></p>
-<p>control block的Uses计数 &#x3D; 0  Weaks计数 - 1 &#x3D; 1</p>
 <p>下图是weak ptr里面的raw ptr视图：</p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012947.png" srcset="/img/loading.gif" lazyload alt="raw ptr 已经先于control block被释放了资源了"></p>
-<p>raw ptr 已经先于control block被释放了资源了</p>
 <p><strong>为什么访问不到value？</strong></p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012630.png" srcset="/img/loading.gif" lazyload alt="expired()表示dying和dead（快要释放和已经删除释放）"></p>
-<p>expired()表示dying和dead（快要释放和已经删除释放）</p>
 <p><code>Test</code> 对象已经似了QAQ，连同ta地址前面的内存chunk，都是ta死亡的证明！</p>
 <h3 id="make-shared-创建方式"><a href="#make-shared-创建方式" class="headerlink" title="make_shared 创建方式"></a><code>make_shared</code> 创建方式</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-type">int</span> value;<br>    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Test</span><span class="hljs-params">(<span class="hljs-type">int</span> val)</span> </span>&#123;<br>        value = val;<br>        std::cout &lt;&lt; <span class="hljs-string">&quot;Test object created.\n&quot;</span>;<br>    &#125;<br>    ~<span class="hljs-built_in">Test</span>() &#123;<br>        std::cout &lt;&lt; <span class="hljs-string">&quot;Test object destroyed.\n&quot;</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    std::shared_ptr&lt;Test&gt; sp3 = std::<span class="hljs-built_in">make_shared</span>&lt;Test&gt;(<span class="hljs-number">1</span>);<br>    std::weak_ptr&lt;Test&gt; w4 = sp3;<br>    sp3.<span class="hljs-built_in">reset</span>();<br>    <span class="hljs-comment">// std::cout &lt;&lt; w4.lock()-&gt;value &lt;&lt; std::endl; //无法访问到</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -571,9 +608,7 @@
 <li>可以发现raw ptr和control block的内存地址是相邻的</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012147.png" srcset="/img/loading.gif" lazyload alt="raw ptr的内存地址位置就在control block下方"></p>
-<p>raw ptr的内存地址位置就在control block下方</p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012419.png" srcset="/img/loading.gif" lazyload alt="control block内存地址"></p>
-<p>control block内存地址</p>
 <p>当执行了<code>sp3.reset()**;</code>** 后</p>
 <p>weak ptr的raw ptr视图</p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012495.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
@@ -581,7 +616,6 @@
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052012728.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p><strong>为什么访问不到value？</strong></p>
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013497.png" srcset="/img/loading.gif" lazyload alt="虽然此时内存的value是1没错，但Test已经行将就木"></p>
-<p>虽然此时内存的value是1没错，但Test已经行将就木</p>
 <blockquote>
 <p><code>expired()</code> is equivalent to <code>use_count() == 0</code>. The destructor for the managed object may not yet have been called, but this object’s destruction is imminent (or may have already happened).相当于use_count ( ) &#x3D;&#x3D; 0 。托管对象的析构函数可能尚未被调用，但该对象的销毁即将发生（或者可能已经发生）。</p>
 </blockquote>
@@ -589,7 +623,7 @@
 <h3 id="使用shared-from-this-√"><a href="#使用shared-from-this-√" class="headerlink" title="使用shared_from_this (√)"></a>使用shared_from_this (√)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span> : <span class="hljs-keyword">public</span> std::enable_shared_from_this&lt;MyClass&gt; &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">std::shared_ptr&lt;MyClass&gt; <span class="hljs-title">getSharedPtr</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">shared_from_this</span>(); <span class="hljs-comment">// 使用 enable_shared_from_this 的正确方式</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span> </span>&#123;<br>        std::cout &lt;&lt; <span class="hljs-string">&quot;MyClass instance&quot;</span> &lt;&lt; std::endl;<br>    &#125;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-comment">// 正确方式：使用 std::make_shared 创建 shared_ptr</span><br>    std::shared_ptr&lt;MyClass&gt; obj1 = std::<span class="hljs-built_in">make_shared</span>&lt;MyClass&gt;();<br>    <span class="hljs-comment">// 使用成员函数创建另一个共享的 shared_ptr</span><br>    std::shared_ptr&lt;MyClass&gt; obj2 = obj1-&gt;<span class="hljs-built_in">getSharedPtr</span>();<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013086.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<h3 id="shared-ptr-weak-ptr伪代码实现"><a href="#shared-ptr-weak-ptr伪代码实现" class="headerlink" title="shared_ptr weak_ptr伪代码实现"></a><strong>shared_ptr weak_ptr伪代码实现</strong></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">control_block</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">Dispose</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br>    std::atomic&lt;<span class="hljs-type">unsigned</span> <span class="hljs-type">long</span>&gt; shareds;<br>    std::atomic&lt;<span class="hljs-type">unsigned</span> <span class="hljs-type">long</span>&gt; weaks;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">shared_ptr</span><br>&#123;<br>    T* object;<br>    control_block* control;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">weak_ptr</span><br>&#123;<br>    T* object;<br>    control_block* control;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="shared-ptr-weak-ptr伪代码实现"><a href="#shared-ptr-weak-ptr伪代码实现" class="headerlink" title="shared_ptr weak_ptr伪代码实现"></a><strong>shared_ptr weak_ptr伪代码实现</strong></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">control_block</span><br>&#123;<br>    T* object;<br>    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">Dispose</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br>    std::atomic&lt;<span class="hljs-type">unsigned</span> <span class="hljs-type">long</span>&gt; shareds;<br>    std::atomic&lt;<span class="hljs-type">unsigned</span> <span class="hljs-type">long</span>&gt; weaks;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">shared_ptr</span><br>&#123;<br>    control_block&lt;T&gt;* control;<br>&#125;;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">weak_ptr</span><br>&#123;<br>    control_block&lt;T&gt;* control;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/pinkyrie/pic/main/202411052013439.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <ul>
@@ -616,11 +650,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C-parallel101/" class="category-chain-item">C++parallel101</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/C-parallel101/" class="print-no-link">#C++parallel101</a>
+        <a href="/tags/C/" class="print-no-link">#C++</a>
+      
+        <a href="/tags/RAII/" class="print-no-link">#RAII</a>
+      
+        <a href="/tags/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/" class="print-no-link">#智能指针</a>
       
     </div>
   
@@ -632,7 +691,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>02.0.RAII内存管理</div>
+      <div>02.0.智能指针与RAII思想</div>
       <div>https://pinkyrie.github.io/2024/10/28/RAII内存管理/</div>
     </div>
     <div class="license-meta">
